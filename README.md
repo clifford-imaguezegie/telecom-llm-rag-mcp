@@ -32,7 +32,7 @@ The completed baseline establishes a controlled comparison between:
 - **General LLM:** `EssentialAI/rnj-1-instruct`
 - **Telecom LLM:** `farbodtavakkoli/OTel-LLM-8.3B-IT`
 
-The evaluation uses two complementary benchmark tracks:
+The evaluation uses two complementary benchmark tracks.
 
 ### Track 1 — Custom Telecom Benchmark
 
@@ -103,14 +103,14 @@ The project will progressively evolve towards:
                      └─────────┬─────────┘
                                │
                      ┌─────────▼─────────┐
-                     │ AI Network Ops   │
+                     │  AI Network Ops   │
                      └─────────┬─────────┘
                                │
                      ┌─────────▼─────────┐
                      │ Autonomous Ops    │
                      └───────────────────┘
 
-## Repository Structure
+Repository Structure
 ├── notebooks/
 │   └── 001_llm_base.ipynb
 │
@@ -128,15 +128,12 @@ The project will progressively evolve towards:
 │
 └── src/
     └── llm/
+Development Approach
 
-## Development Approach
-
-The project is being developed incrementally, with each module
-establishing a controlled baseline for the next stage.
+The project is being developed incrementally, with each module establishing a controlled baseline for the next stage.
 
 The intended progression is:
 
-```text
 LLM
   ↓
 LLM + RAG
@@ -147,34 +144,26 @@ LLM + RAG + MCP + Agents
   ↓
 Autonomous Telecom Operations
 
-The objective is not only to improve answer quality, but to evaluate
-how progressively adding **knowledge grounding, controlled tools,
-reasoning workflows, and automation** changes the reliability and
-practical applicability of telecom AI systems.
+The objective is not only to improve answer quality, but to evaluate how progressively adding knowledge grounding, controlled tools, reasoning workflows, and automation changes the reliability and practical applicability of telecom AI systems.
 
-## Scope Boundary
+Scope Boundary
 
-The completed Module 1 intentionally focuses on **standalone LLM capability**.
+The completed Module 1 intentionally focuses on standalone LLM capability.
 
 It does not yet include:
 
-- Retrieval-Augmented Generation
-- Vector databases or embeddings
-- External knowledge retrieval
-- Model fine-tuning
-- Model Context Protocol
-- External operational tools
-- Autonomous agents or workflows
+Retrieval-Augmented Generation
+Vector databases or embeddings
+External knowledge retrieval
+Model fine-tuning
+Model Context Protocol
+External operational tools
+Autonomous agents or workflows
 
-These capabilities will be introduced progressively in subsequent
-modules.
+These capabilities will be introduced progressively in subsequent modules.
 
-## Disclaimer
+Disclaimer
 
-This project is an independent technical experiment and is not
-affiliated with or endorsed by any telecom vendor or standards
-organisation.
+This project is an independent technical experiment and is not affiliated with or endorsed by any telecom vendor or standards organisation.
 
-All datasets, documentation, and examples used in the project will
-respect applicable licensing, copyright, confidentiality, and data
-protection requirements.
+All datasets, documentation, and examples used in the project will respect applicable licensing, copyright, confidentiality, and data protection requirements.
