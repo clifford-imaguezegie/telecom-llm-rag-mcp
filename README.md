@@ -109,3 +109,72 @@ The project will progressively evolve towards:
                      ┌─────────▼─────────┐
                      │ Autonomous Ops    │
                      └───────────────────┘
+
+## Repository Structure
+├── notebooks/
+│   └── 001_llm_base.ipynb
+│
+├── results/
+│   └── 001_llm_base/
+│       ├── track1_custom_benchmark/
+│       │   ├── track1_20_questions.json
+│       │   └── track1_expert_review.md
+│       │
+│       ├── track2_industry_benchmark/
+│       │   ├── track2_final_32_questions.json
+│       │   └── track2_expert_review.md
+│       │
+│       └── cross_track_analysis.md
+│
+└── src/
+    └── llm/
+
+## Development Approach
+
+The project is being developed incrementally, with each module
+establishing a controlled baseline for the next stage.
+
+The intended progression is:
+
+```text
+LLM
+  ↓
+LLM + RAG
+  ↓
+LLM + RAG + MCP
+  ↓
+LLM + RAG + MCP + Agents
+  ↓
+Autonomous Telecom Operations
+
+The objective is not only to improve answer quality, but to evaluate
+how progressively adding **knowledge grounding, controlled tools,
+reasoning workflows, and automation** changes the reliability and
+practical applicability of telecom AI systems.
+
+## Scope Boundary
+
+The completed Module 1 intentionally focuses on **standalone LLM capability**.
+
+It does not yet include:
+
+- Retrieval-Augmented Generation
+- Vector databases or embeddings
+- External knowledge retrieval
+- Model fine-tuning
+- Model Context Protocol
+- External operational tools
+- Autonomous agents or workflows
+
+These capabilities will be introduced progressively in subsequent
+modules.
+
+## Disclaimer
+
+This project is an independent technical experiment and is not
+affiliated with or endorsed by any telecom vendor or standards
+organisation.
+
+All datasets, documentation, and examples used in the project will
+respect applicable licensing, copyright, confidentiality, and data
+protection requirements.
