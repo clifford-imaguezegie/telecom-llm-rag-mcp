@@ -1,0 +1,494 @@
+[
+  {
+    "evaluation_id":"T2-01",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"3gpp_tsg",
+    "original_index":6,
+    "candidate_selection_score":3.0,
+    "question_length":5727,
+    "question":"As a distinguished expert in telecommunication domain you are skilled in understanding and classifying 3GPP techincal documents. Please help user to classify text into 3GPP working group. Give answer in this format: {\"WORKING GROUP\": \"working group name\"}. Do not include any other information.\nClassify the following text, extracted from a 3GPP technical document, into one of the 3GPP working groups. You MUST select ONE working group name from this list: {'CT1', 'CT3', 'CT4', 'CT6', 'RAN1', 'RAN2', 'RAN3', 'RAN4', 'RAN5', 'RAN_AH1', 'SA1', 'SA2', 'SA3', 'SA4', 'SA5', 'SA6'}.\n\n###TEXT:\n{(RRC impact) Agreements: Adopt the following TP to TS 38.212, Sec. 7.3.1.1.2 (changes in red): Agreements: For Type 2 CG PUSCH activated by a DCI format configured with PUSCH repetition Type B, the frequency hopping enabling\/disabling and the frequency offset follows the indication in the activation DCI, and the frequency hopping scheme follows the corresponding RRC parameter for the activation DCI format. Agreements: The semi-static and dynamic indication of invalid symbols (related to InvalidSymbolPattern) for DG PUSCH repetition Type B in case dynamic SFI is not configured follows the same behaviour as for DG PUSCH repetition Type B in case dynamic SFI is configured. For Type 1 CG PUSCH with repetition Type B, regardless of whether dynamic SFI is configured or not, if InvalidSymbolPattern is configured, the configured pattern is applied (that is, segmentation occurs around semi-static DL symbols and invalid symbols indicated by InvalidSymbolPattern). For the first Type 2 CG PUSCH with repetition Type B (including all repetitions) after activation, regardless of whether dynamic SFI is configured or not, if InvalidSymbolPattern is configured, whether the configured pattern is applied follows the same procedure as specified for DG PUSCH according to the activation DCI. For Type 2 CG PUSCH with repetition Type B (excluding the first Type 2 CG PUSCH, with all repetitions, after activation), regardless of whether dynamic SFI is configured or not, if InvalidSymbolPattern is configured, whether the configured pattern is applied follows the activation DCI. Agreements: For PUSCH repetition Type B, a UE is not expected to be indicated with an antenna port configuration that is invalid for the duration of any actual repetition. For PUSCH with repetition Type B, an actual repetition with a single symbol is not transmitted. In this contribution, we provide detailed discussion on the remaining issues of PUSCH enhancements. 2. Discussion: Repetition number of PUSCH carrying A-CSI\/SP-CSI only: One remaining issue is the number of repetition for PUSCH with repetition Type B carrying A-CSI\/SP-CSI only. To keep consistence with Rel-15 behaviour, we support to confirm the FFS below: Proposal 2.3-1a: Introduce reportSlotOffsetList-r16-ForDCIFormat0_1and reportSlotOffsetList-r16-ForDCIFormat0_2 and update TS 38.214 accordingly. (RRC impact) FFS whether to always assume the number of nominal repetitions is equal to 1 for PUSCH with repetition Type B carrying A-CSI\/SP-CSI only. Proposal 1: The number of nominal repetitions is equal to 1 for PUSCH with repetition Type B carrying A-CSI\/SP-CSI only. Impact to UCI on PUSCH repetitions: One remaining issue is that when UCI transmission collides PUSCH, which actual PUSCH repetition(s) should UCI be piggybacked, and how the timeline condition should be defined. To keep the Rel-15 rule as much as possible, it is fine to multiplex UCI on one or more overlapping actual repetitions that satisfies the timeline conditions defined in Section 9.2.5 of TS 38.213. Proposal 2: UCI can be multiplexed on all overlapped nominal repetitions, and for each nominal repetition with multiple segmented actual repetitions, UCI can only be piggybacked on one or more actual repetitions with largest number of symbols. Regarding the issue of UCI resource determination, the number of coded modulation symbols for HARQ-ACK on PUSCH transmission is given by the following equation: where is the total number of OFDM symbols of the PUSCH and denotes the TBS of the PUSCH. For the left part of the min function, since the PUSCH TBS is calculation based on length of nominal repetition, it is reasonable that the number of REs for UCI is calculated based on nominal repetition to maintain the decoding performance of UCI. For the UCI resource upper in the right part, it is appropriate to use the length of the actual repetition carrying the UCI due to the reason that UCI can be piggybacked on actual repetitions with various lengths. Proposal 3: For equation to determine UCI resources when multiplexing on PUSCH repetition Type B, the calculation is based on the nominal repetition, and the upper bound resources is constrained by the actual repetition carrying UCI. Whether to have a limit on the number of nominal repetitions for PUSCH repetition Type B: For PUSCH transmission with repetition type B, gNB may configure quite a few repetitions transmitting in a slot through setting small L and large K. In this case, UE needs to separately modulate and code these transmission blocks on different repetitions, which cause large implementation burden to UE. Considering this, we support to have a limit on the number of nominal repetitions for PUSCH repetition Type B, and it can be a UE capability optionally. Proposal 4: Limit on the number of nominal repetitions for PUSCH repetition Type B, and it can be a UE capability optionally. Whether to specially handle actual repetitions with 2-symbol length: Agreements: For PUSCH repetition Type B, a UE is not expected to be indicated with an antenna port configuration that is invalid for the duration of any actual repetition.}\n",
+    "choices":null,
+    "answer":"RAN1",
+    "explanation":null
+  },
+  {
+    "evaluation_id":"T2-02",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"3gpp_tsg",
+    "original_index":29,
+    "candidate_selection_score":3.0,
+    "question_length":5142,
+    "question":"As a distinguished expert in telecommunication domain you are skilled in understanding and classifying 3GPP techincal documents. Please help user to classify text into 3GPP working group. Give answer in this format: {\"WORKING GROUP\": \"working group name\"}. Do not include any other information.\nClassify the following text, extracted from a 3GPP technical document, into one of the 3GPP working groups. You MUST select ONE working group name from this list: {'CT1', 'CT3', 'CT4', 'CT6', 'RAN1', 'RAN2', 'RAN3', 'RAN4', 'RAN5', 'RAN_AH1', 'SA1', 'SA2', 'SA3', 'SA4', 'SA5', 'SA6'}.\n\n###TEXT:\n{- For a specific reference, subsequent revisions do not apply. - For a non-specific reference, the latest version applies. In the case of a reference to a 3GPP document (including a GSM document), a non-specific reference implicitly refers to the latest version of that document in the same Release as the present document. 3GPP TR 21.905: “Vocabulary for 3GPP Specifications”. R4-112429, “Information on band usage plan in 900 MHz band in Japan” , RAN4#59 RP-110901, “New Study item proposal for 900MHz UMTS\/LTE operation”, RAN#52 “Report of technical conditions for mobile communications in 900 MHz band” (In Japanese, May, 2011) RP-110447, “Study Item proposal for 800~900MHz interference issue”, RAN#51 R4-113677: “Japanese 900 MHz: A-MPR study and whether to create new band or re-use band 8”, Nokia R4-113792: “Band 5 and Band 8 coexistence”, Qualcomm R4-113678: “A-MPR study for 905-915 MHz uplink in Korea”, Nokia R4-113328: “LTE A-MPR Consideration for Band 8 in Japan”, SOFTBANK MOBILE R4-113525 “Coexistence in 900 MHz bands for UMTS”, Qualcomm Incorporated R4-113506 “Band XIX DL protection from UMTS Band VIII UEs in Japan”, NTT DOCOMO, NEC, Fujitsu, Panasonic R4-121387 “Way Forward Proposal for Japanese 900MHz”, SOFTBANK MOBILE R4-122134 “Updated WF for Japanese 900MHz”, SOFTBANK MOBILE R4-122508 “Coexistence Study for LTE 900MHz”, LG Electronics R4-122825 “UL emissions study for Band 8 in Japan”, Nokia R4-122915 “Japanese LTE900 study”, Renesas Mobile Europe R4-123012 “Band 8 UE in Japan\", Ericsson, ST-Ericsson R4-123231 “Spurious Emission Simulation Results”, Intel R4-123284 “900 MHz UE coexistence in Japan”, Qualcomm [Unchanged Portions Skipped] 9.2 Definition of a new band for Japanese and\/or Korean 900 MHz bands 9.2.1 900MHz band with Band 8 duplex filter There are a couple of RF frontend configurations possible for defining a new band for Japanese\/Korean 900MHz. One approach is to reuse Band 8 RF components to minimize diversity with the introduction of the new band. This scheme will be advantageous from economical standpoint, i.e. merit of scale of UE or RF parts. Apparently this scheme will inherit the same RF issues discussed in 9.1 but is considered easier to introduce new capabilities than reusing Band 8. The discussion in 9.1 can be applied directly in terms of A-MPR. 9.2.2 900MHz band with dedicated duplex filter An alternative approach is to provide RF frontend tuned for Japan\/Korea spectrum arrangement. While this approach promises the best possible RF performance, concerns are beyond technical aspects, such as UE\/parts supply. So far no technical evaluation has been done for this scheme but further study and conclusion are expected. 9.3 Finalized spectrum allocation and relevant studies for Japan 9.3.1 Finalized spectrum allocation In February 2012, SOFTBANK MOBILE was awarded for full 15MHz. Spectrum usage plan was proposed in , which assumed the reuse of Band 8 UE. For E-UTRA, spectrum is divided into 5MHz (900 – 905MHz) and 10 MHz (905 – 915MHz) for compatibility with the existing Band 8 specification and 15MHz is to be realized with intra-band carrier aggregation (out of the scope of the SI). The arrangement is shown in Figure 9.3.1. SLEEP LTE(5MHz) 900905 910 915 LTE(10MHz) SLEEP LTE(5MHz) 945950 955 960 LTE(10MHz) W-CDMA 900905 910 915 LTE(10MHz) SLEEP W-CDMA 945950 955 960 LTE(10MHz) Intra-Band Carrier Aggregation (Rel.10UE) Intra-Band Carrier Aggregation (Rel.10UE) LTE(5MHz) 900905 910 915 LTE(10MHz) LTE(5MHz) 945950 955 960 LTE(10MHz) 900905 910 915 LTE(10MHz) 945950 955 960 LTE(10MHz) Intra-Band Carrier Aggregation (Rel.10UE) Intra-Band Carrier Aggregation (Rel.10UE) Figure 9.3.1: Spectrum Allocation Plan for Japanese 900MHz 9.3.2 UE evaluation results A number of evaluation results for UE performance were presented in in response to the spectrum allocation proposal in the previous section. Note that, in the course of discussion, it was confirmed impossible to introduce a newly defined A-MPR to Band 8. Instead, evaluations are conducted for the necessity of RB allocation limitation and PUCCH over-provisioning for both 5MHz and 10MHz cases. Proposed results are summarized in Table 9.3.2. Note that the following results are based on Rel-8 performance assumptions, i.e. -25dBc for I\/Q impairment and LO leakage. Table 9.3.2: UE evaluation results for Band 8 for Japan While there is some diversity observed among results, it can be understood that the diversity reflects possible different implementations, esp. on the performance of power amplifiers.}\n",
+    "choices":null,
+    "answer":"RAN4",
+    "explanation":null
+  },
+  {
+    "evaluation_id":"T2-03",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"3gpp_tsg",
+    "original_index":55,
+    "candidate_selection_score":3.0,
+    "question_length":5181,
+    "question":"As a distinguished expert in telecommunication domain you are skilled in understanding and classifying 3GPP techincal documents. Please help user to classify text into 3GPP working group. Give answer in this format: {\"WORKING GROUP\": \"working group name\"}. Do not include any other information.\nClassify the following text, extracted from a 3GPP technical document, into one of the 3GPP working groups. You MUST select ONE working group name from this list: {'CT1', 'CT3', 'CT4', 'CT6', 'RAN1', 'RAN2', 'RAN3', 'RAN4', 'RAN5', 'RAN_AH1', 'SA1', 'SA2', 'SA3', 'SA4', 'SA5', 'SA6'}.\n\n###TEXT:\n{Nevertheless some exceptions appear, for which this closed loop is interrupted during a certain time period. Compressed mode in the uplink and downlink are one example, which requests an extraordinary attention. Therefore the \"Recovery Period power control mode\" and the so called \"Initial Transmit Power mode\" are introduced obtaining a balanced power control after the gap as fast as possible. frame n frame n+1 frame n+2 gap Disturbed Power Control Figure 1: Disturbed Power control due to Compressed mode Maximum power level Total transmit Power time step date 1 date 2 date 3 Too low power Figure 2: Power behaviour scenario at the maximum power level At the minimum power level an equivalent problem occurs (see figure 3). Looking at a UE residing immediately next to the base station, the total transmit power could be very low. In the case of reducing the data rate the mobile is not forced to reduce the transmit power below its minimum power level. minimum power level Total transmit Power time TPC step date 1 date 2 date 3 Intracell interference minimum power level Total transmit Power time step date 1 date 2 date 3 Intracell interference Figure 3: Power behaviour scenario at the minimum power level If the UE shall increase the total date rate again (date 3), the power adjustment due to gain factor readjustment would increase the power in the conventional way i. e. adding the power amount to the actual transmitted power and not to the previously requested transmit power. That means the UE commences always with too much power while leaving the minimum power limit due to gain factor readjustments. This wrong transmit power value must be correct and adapted to a suitable attitude. During this adaptation phase the UE causes intra cell interference (see the blue hatched field in figure 3). 3. Proposed modified Power Control Algorithm Maximum power level Total transmit Power time trace gain factor readjustments 1dB or 2dB step trace Only as a result gain factor readjustment, not because of TPC_cmd=1 As a result gain factor readjustment and TPC_cmd date 1 date 2 date 3 Figure 4: Improved power control at the maximum power level minimum power level Total transmit Power time trace gain factor readjustments 1dB or 2dB step Only as a result gain factor readjustment, not because of TPC_cmd=-1 As a result gain factor readjustment and TPC_cmd date 1 date 2 date 3 Intracell interference Figure 5: Improved power control at the minimum power level 4. Simulation results In order to investigate the benefit of the proposed method at the maximum power limit we had to determine some representative parameters. So we consider a UE operating close to the maximum power limit while conveying data with a rate of 8 kbit\/sec (DPDCH). After a request for an additional data rate of about 384 kbit\/sec the DPCCH maintains the Spreading Factor (SF) of 265 and the DPDCH uses the SF 4. Due to the data rate increase the transmitted power would (in most of the cases) exceed the maximum power limit specified in . Scaling is applied and after 10 ms the higher data rate should be released again and the previous data rate is applied again. The conducted simulations compare the achieved BER in the first frame after releasing the high data rate. The convolutional 1\/3 coder with an adequate rate matching scheme is applied. In figure 6 we consider a UE having a speed of 3 km\/h in the vehicular A model. The achieved gain is about 0.3 dB by using the proposed method. The x-axis represents the received bit power Eb in relation to the prevailing noise power N0. Vehicular A (v=3 km\/h) 0,001 0,01 0,1 1,002,003,004,005,006,007,008,009,00 Eb\/No BER Current Scheme Proposed Scheme Vehicular A (v=3 km\/h) 0,001 0,01 0,1 1,002,003,004,005,006,007,008,009,00 Eb\/No Current Scheme Proposed Scheme Figure 6: BER after releasing higher data rates (speed: 3 km\/h) Vehicular A (v=30 km\/h) 0,001 0,01 0,1 1,002,003,004,005,006,007,008,009,00 Eb\/No Current Scheme Proposed Scheme Figure 7: BER after releasing higher data rates (speed: 30 km\/h) Vehicular A (v=120 km\/h) 0,001 0,01 0,1 4,005,006,007,008,009,0010,00 Eb\/No Current Scheme Proposed Scheme Figure 8: BER after releasing higher data rates (speed: 120 km\/h) Again we observe a gain at 120 km\/h. The reason is, the fast power control cannot follow the fast fading but is able to adjust to the slow lognormal fading. Ptrace as well cannot follow the fast fading but is a good measure for the expected lognormal fading after reducing the data rate so that the power after the higher data rate period can rely on the value of Ptrace.}\n",
+    "choices":null,
+    "answer":"RAN1",
+    "explanation":null
+  },
+  {
+    "evaluation_id":"T2-04",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"3gpp_tsg",
+    "original_index":68,
+    "candidate_selection_score":3.0,
+    "question_length":6067,
+    "question":"As a distinguished expert in telecommunication domain you are skilled in understanding and classifying 3GPP techincal documents. Please help user to classify text into 3GPP working group. Give answer in this format: {\"WORKING GROUP\": \"working group name\"}. Do not include any other information.\nClassify the following text, extracted from a 3GPP technical document, into one of the 3GPP working groups. You MUST select ONE working group name from this list: {'CT1', 'CT3', 'CT4', 'CT6', 'RAN1', 'RAN2', 'RAN3', 'RAN4', 'RAN5', 'RAN_AH1', 'SA1', 'SA2', 'SA3', 'SA4', 'SA5', 'SA6'}.\n\n###TEXT:\n{3) The bearer binding for the PCC rule with the application identifier is same as the bearer binding for the PCC rule with the service data flow filters in the downlink direction. 4) The PCC rule with the application identifier can be bound to multiple bearers in the uplink direction and uplink traffic verification is not applicable in this case. 5) Bearer binding is performed when the PCC rule with the application identifier is installed and activated at the PCEF. 6) It is not clear whether the PCC rule is applied to the whole traffic of the IP-CAN session to detect the application. Following issues shall be considered when the SA2 requirements are implemented by CT3. 1) When to perform the bearer binding According the current bearer mechanism, when the PCC rule is installed and activated at the PCEF, the PCEF shall perform the bearer binding and enforce the policy to the traffic. But because the service data descriptions are not available when the PCC rule with application identifier is installed and activated, even the PCC rule is bound to the dedicated bearer, the PCEF still needs to apply to the PCC rule to all the traffic of the IP-CAN session to detect the traffic and the PCEF can’t enforce the policy to the application traffic which the PCC rule is going to control at this time until the application is detected. So it is not necessary to perform the bearer binding for the PCC rule with the application identifier until the corresponding application is detected. And it will be confused that the PCC rule which has been already bound to a detected bearer but it still need to detect all the traffic of the IP-CAN session to detect the application if the bearer binding is performed when the PCC rule is installed or activated. Conclusion 1: It shall be clarified either the bearer binding for the PCC rule with the application identifier is perform when the corresponding application is detected or even the bearer binding for the PCC rule with the application identifier is performed when the rule is installed or activated, but the PCC rule is applied to all the traffic of the IP-CAN session to detect the application. 2) How to perform session management after the bearer binding According the current bearer mechanism, after the bearer binding, the PCEF shall initiate the bearer modification or establishment procedure to reserve the resource or provide the TFT to the UE if necessary. The PCEF shall compare the QCI and ARP of the PCC rule with the existing bearer when the bearer binding is performed. If there was suitable bearer which has the same QCI and ARP as the PCC rule, the PCEF shall bind the PCC rule to this appropriate bearer. If the QCI of the PCC rule is non-GBR QCI, the PCEF doesn’t need to reserve the resource. But if the service data flow descriptions are deducible when the application is detected, the PCEF can initiate the bearer modification procedure to provide updated TFT to the UE so that UE can shift the uplink traffic to this bearer (i.e the downlink and uplink traffic are transported via the same dedicated bearer); otherwise the PCEF does not initiate any procedure but send the downlink traffic via this dedicated bearer, while the UE still sends the uplink traffic via the bearer which transports the application traffic before the application is detected( i.e. via the original bearer that is default bearer). So it is not necessary to initiate the bearer modification procedure until the application is detected. If the QCI of the PCC rule is GBR QCI, the PCEF shall initiate the bearer modification procedure to reserve the resource for this PCC rule. But since at this time, the service data flow descriptions are not available, the PCEF can’t initiate bearer modification procedure with TFT provisioning. If the service data flow descriptions are deducible when the application is detected, the PCEF can initiate the bearer modification procedure to reserve the resource and provide the updated TFT (i.e GBR resource is reserved in downlink and uplink, and the downlink and uplink traffic are transported via the same dedicated bearer); otherwise, the PCEF can initiate bearer modification procedure to reserve the resource without updating the TFT(i.e GBR resource is reserved in the downlink, and the downlink traffic is shifted to the dedicated bearer, but the uplink traffic is still transported via the original barer that is default bearer). If there was not suitable bearer, the PCEF shall initiate a new dedicated bearer. Because it is not allowed that there is no TFT for the dedicated bearer, when the PCC rule is installed or activated, the PCEF can’t initiate a new dedicated bearer. If the service data flow descriptions are deducible when the application is detected, the PCEF initiate the bearer modification procedure to reserve the resource and provide the corresponding TFT to the UE so that UE can shift the uplink traffic to this bearer (i.e the downlink and uplink traffic are transported via the same dedicated bearer); otherwise the PCEF initiate the bearer modification procedure to reserve the resource and provide a uplink TFT which disallow any uplink traffic to UE. In this case, PCEF send the downlink traffic via the dedicated bearer and the UE still sends the uplink traffic via the bearer which transports the application traffic before the application is detected. All above session management procedures can be initiated by the PCEF without notifying the PCRF.}\n",
+    "choices":null,
+    "answer":"CT3",
+    "explanation":null
+  },
+  {
+    "evaluation_id":"T2-05",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"oranbench",
+    "original_index":40,
+    "candidate_selection_score":3.0,
+    "question_length":208,
+    "question":"What type of handover scenario requires the E2 node to invoke Handover Preparation procedures related to UE Mobility Management, Bearer Context Modification, UE Context Modification, and RRC Message Transfer?",
+    "choices":[
+      "1. Intra-gNB handover",
+      "2. F1 conditional handover",
+      "3. Xn\/X2 or NG or inter-RAT conditional handovers",
+      "4. All of the above"
+    ],
+    "answer":2,
+    "explanation":null
+  },
+  {
+    "evaluation_id":"T2-06",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"oranbench",
+    "original_index":55,
+    "candidate_selection_score":3.0,
+    "question_length":158,
+    "question":"What is a key requirement for validating the user plane transmission during a PSCell Change using SRB1 for RRC Reconfiguration (full configuration) procedure?",
+    "choices":[
+      "1. Ensuring the X2 interface is properly configured for data transfer.",
+      "2. Verifying that the user plane data transferred over the X2 interface in both directions is successfully received without packet losses.",
+      "3. Confirming the Test UE or UE emulator is connected to both the eNB and en-gNB cells.",
+      "4. Establishing a successful Attach procedure and Service Request procedure."
+    ],
+    "answer":1,
+    "explanation":null
+  },
+  {
+    "evaluation_id":"T2-07",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"oranbench",
+    "original_index":94,
+    "candidate_selection_score":3.0,
+    "question_length":165,
+    "question":"When mapping an O-RU NETCONF fault notification to an ONAP VES Fault3gpp notification, what is the equivalent field for \"fault-severity\" in the NETCONF notification?",
+    "choices":[
+      "1. alarmId",
+      "2. additionalInformation",
+      "3. perceivedSeverity",
+      "4. notificationType"
+    ],
+    "answer":2,
+    "explanation":null
+  },
+  {
+    "evaluation_id":"T2-08",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"oranbench",
+    "original_index":120,
+    "candidate_selection_score":3.0,
+    "question_length":168,
+    "question":"What is the name of the YANG data model element that represents the connection profile for the CTI (Common Transport Interface) in an Open Radio Access Network (O-RAN)?",
+    "choices":[
+      "1. CTIClientServerConnStatus",
+      "2. CTISessionGroup",
+      "3. ctiConnProfileRef",
+      "4. CTISession"
+    ],
+    "answer":2,
+    "explanation":null
+  },
+  {
+    "evaluation_id":"T2-09",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"sixg_bench",
+    "original_index":93,
+    "candidate_selection_score":3.0,
+    "question_length":1481,
+    "question":"At turn 9 the UAV has battery at 100 percent, speed 18.0 mps, altitude 20.0 m within the policy band of 5.0 to 120.0, and is flying in 8.5 mps crosswind. Network telemetry shows URLLC latency 8 ms with jitter 1.2 ms and loss 0.06 percent, while recent URLLC turns ranged from 7 to 10 ms latency and edge load from 0.18 to 0.25. The thermal sensor remains offline, but sensor fusion was activated at turn 7 and has relied on lidar and radar status unchanged since then. Earlier eMBB imaging at turn 8 showed higher latency 16 ms and loss 0.3 percent with edge load 0.4, indicating capacity sensitivity under payload demand. The operator must decide whether to conservatively continue the mission for the next two turns before return or to terminate earlier under uncertainty. If crosswind persists and network slice selection stays on URLLC, worst case latency must stay well below the typical control tolerance implied by prior stable operation. If edge load drifts upward toward 0.25 again, jitter accumulation rather than mean latency becomes the dominant risk. Returning immediately sacrifices remaining mission value but avoids compounding network and sensor uncertainty. Continuing aggressively for imaging risks reverting to eMBB conditions seen at turn 8 under the same wind. A conservative continuation implies accepting some risk now to reduce maximum regret if conditions neither improve nor catastrophically fail over the next two turns. Which option should be selected?",
+    "choices":[
+      "Continue for two turns on URLLC at current altitude 20.0 m, accepting latency up to 10 ms and edge load up to 0.25 while relying on sensor fusion.",
+      "Immediately return to base now because edge load already reached 0.25 previously and wind is 8.5 mps.",
+      "Switch to eMBB to gain throughput near 780 to 800 Mbps for one more imaging turn despite 16 ms latency and 0.3 percent loss observed before.",
+      "Climb toward the upper policy bound of 120.0 m to reduce wind impact while keeping URLLC latency near 8 to 9 ms."
+    ],
+    "answer":0,
+    "explanation":null
+  },
+  {
+    "evaluation_id":"T2-10",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"sixg_bench",
+    "original_index":105,
+    "candidate_selection_score":3.0,
+    "question_length":1490,
+    "question":"At turn 7 the digital twin must remain synchronized while the UAV proceeds to the final waypoint under icing conditions. Recent telemetry shows mMTC latency increased from 45 to 52 ms with jitter from 12 to 15 ms and loss from 1.8 to 2.1 percent while throughput fell from 1.2 to 0.9 Mbps and edge load rose from 0.75 to 0.8. URLLC in adjacent turns showed latency between 7 and 10 ms, jitter between 1 and 2 ms, loss between 0.08 and 0.12 percent, throughput between 100 and 130 Mbps, and edge load between 0.4 and 0.55. eMBB previously provided latency between 12 and 16 ms, jitter between 2 and 4 ms, loss between 0.1 and 0.3 percent, throughput between 780 and 850 Mbps, and edge load between 0.45 and 0.6. The digital twin requires frequent state updates for collision avoidance and altitude adjustment over the next two turns, not just the current snapshot. Assume worst case that the higher end of each observed range persists for the next two turns and no recovery occurs. Also assume sensor throttling remains in effect from turn 7, reducing raw data volume but increasing reliance on timely command feedback. If the network choice causes excessive delay or loss for two consecutive turns, the twin state error compounds and cannot be corrected within one turn. Each candidate slice has enough capacity for one turn but may saturate or degrade over two turns as edge load increases. Which network supply option should be selected to minimize maximum regret over the next two turns?",
+    "choices":[
+      "Keep all telemetry and commands on URLLC with latency up to 10 ms, loss up to 0.12 percent, throughput near 100 Mbps, and edge load potentially rising from 0.55.",
+      "Switch fully to eMBB with latency up to 16 ms, loss up to 0.3 percent, high throughput near 780 Mbps, and edge load near 0.6.",
+      "Remain on mMTC with latency up to 52 ms, loss up to 2.1 percent, very low throughput near 0.9 Mbps, and edge load near 0.8 to avoid slice switching.",
+      "Split commands on URLLC and telemetry on eMBB, accepting URLLC throughput near 100 Mbps and eMBB latency up to 16 ms with combined edge load effects."
+    ],
+    "answer":3,
+    "explanation":null
+  },
+  {
+    "evaluation_id":"T2-11",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"sixg_bench",
+    "original_index":112,
+    "candidate_selection_score":3.0,
+    "question_length":1471,
+    "question":"The mission begins with a safety focused flight under icing conditions while maintaining stable URLLC connectivity at 5 to 7 ms latency and edge load near 0.3 to 0.4. Over subsequent turns the network slice alternates across eMBB and mMTC with latency rising to 25 ms and then 50 ms while edge load peaks at 0.85. At turn 7 the agent explicitly notes network degradation when mMTC latency reaches 60 ms with jitter 25 ms, loss 2.1 percent, throughput 0.8 Mbps, and edge load 0.92. Immediately after, the user switches back to collision avoidance and then requests return to base at turn 10 while URLLC metrics recover to 5 ms latency and 0.3 edge load. The altitude policy remains between 30.0 and 300.0 meters and the UAV speed stays at 45.0 mps with battery at 100.0 percent, so platform constraints do not force termination. The implicit intent can be either continued area coverage despite degradation or a subtle shift toward risk minimization and early termination. Because edge load has shown rapid swings between 0.3 and 0.92, a worst case assumption is that high load could recur in the next one to two turns. If high load recurs, coordination or imaging intents would again rely on mMTC or eMBB behavior rather than URLLC. A single turn view suggests recovery and normal completion, but a multi turn view must consider regret if congestion returns. Which option best identifies the correct moment and nature of intent drift to minimize worst case future regret?",
+    "choices":[
+      "No intent drift occurred because URLLC latency returned to 5 ms and edge load fell back to 0.3 by turn 10, indicating stable execution.",
+      "Intent drift begins at turn 4 when mMTC latency hits 50 ms and edge load 0.85, implying immediate abandonment of the original flight intent.",
+      "Intent drift emerges at turn 7 where degradation to 60 ms latency and 0.92 edge load shifts intent from area coverage toward conservative continuation under uncertainty.",
+      "Intent drift only occurs at turn 10 when return to base is commanded with URLLC metrics of 5 ms latency and 0.3 edge load."
+    ],
+    "answer":2,
+    "explanation":null
+  },
+  {
+    "evaluation_id":"T2-12",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"sixg_bench",
+    "original_index":131,
+    "candidate_selection_score":3.0,
+    "question_length":1464,
+    "question":"At turn 8 the operator restores URLLC with latency 3 ms, jitter 0.7 ms, loss 0.01 percent, throughput 52 Mbps, and edge load 0.32 while the UAV flies at 15 m altitude inside the policy band of 10 to 120 m. Earlier at turns 6 and 7 the mission intent to reroute for weather forced mMTC with latency rising to 55 ms, jitter 18 ms, loss 3.0 percent, throughput 0.8 Mbps, and edge load peaking at 0.95. At turn 9 the agent queues a data upload while resuming high precision navigation, which increases contention risk on URLLC despite its low latency. The microburst risk and wind of 8.0 mps imply potential control sensitivity if network quality degrades again. The policy requires staying within altitude bounds and maintaining safe command responsiveness, which conflicts with the intent to push high fidelity data immediately. Over the next two turns the edge load could rebound toward the recent worst case if uploads proceed, even if the slice remains URLLC. If the system instead delays data, navigation accuracy may slightly degrade but control margins remain. If the system switches back to eMBB, latency increases to 15 to 20 ms as seen earlier with higher jitter and loss, which may be acceptable short term but risky if weather persists. If the system reverts to mMTC, throughput collapses and loss spikes, which previously forced sensor reduction. Considering worst case edge load recurrence and the altitude policy range, which option should be selected?",
+    "choices":[
+      "Proceed with immediate high fidelity data upload on URLLC at 52 Mbps since current latency is 3 ms and edge load is only 0.32.",
+      "Switch to eMBB with latency around 15 to 20 ms and throughput near 180 to 200 Mbps to offload data while maintaining flight at 15 m.",
+      "Delay data upload and keep URLLC for control only, accepting reduced throughput to prevent edge load from rising toward 0.95.",
+      "Revert to mMTC despite 50 to 55 ms latency and 2.0 to 3.0 percent loss to prioritize network stability under weather risk."
+    ],
+    "answer":2,
+    "explanation":null
+  },
+  {
+    "evaluation_id":"T2-13",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"srsranbench",
+    "original_index":0,
+    "candidate_selection_score":3.0,
+    "question_length":54,
+    "question":"What is the purpose of the lower_phy_controller class?",
+    "choices":[
+      "1. It provides a start and stop methods for the lower physical layer.",
+      "2. It manages the synchronization of the lower physical layer.",
+      "3. It handles the data transmission and reception between the physical and data layers.",
+      "4. It defines the interface for the upper physical layer."
+    ],
+    "answer":0,
+    "explanation":null
+  },
+  {
+    "evaluation_id":"T2-14",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"srsranbench",
+    "original_index":6,
+    "candidate_selection_score":2.5,
+    "question_length":87,
+    "question":"What is the purpose of the `deallocate` function in the `polar_deallocator_impl` class?",
+    "choices":[
+      "1. To calculate the polar code.",
+      "2. To handle the decoding of the message.",
+      "3. To deallocate the polar code.",
+      "4. To handle the encoding of the message."
+    ],
+    "answer":2,
+    "explanation":null
+  },
+  {
+    "evaluation_id":"T2-15",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"srsranbench",
+    "original_index":127,
+    "candidate_selection_score":2.5,
+    "question_length":90,
+    "question":"What is the purpose of the `specific_init()` function in the `ldpc_decoder_generic` class?",
+    "choices":[
+      "1. To initialize the node size byte.",
+      "2. To compute the hard bits.",
+      "3. To compute the soft bits.",
+      "4. To analyze the var to check messages."
+    ],
+    "answer":0,
+    "explanation":null
+  },
+  {
+    "evaluation_id":"T2-16",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"srsranbench",
+    "original_index":136,
+    "candidate_selection_score":2.5,
+    "question_length":84,
+    "question":"What is the purpose of the `SetUp()` method in the `pdcp_rx_reestablish_test` class?",
+    "choices":[
+      "1. To initialize the logger for the test.",
+      "2. To initialize the RLC logger for the test.",
+      "3. To set the level of the logger to debug.",
+      "4. To flush the logger after each test."
+    ],
+    "answer":0,
+    "explanation":null
+  },
+  {
+    "evaluation_id":"T2-17",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"telelogs",
+    "original_index":32,
+    "candidate_selection_score":3.0,
+    "question_length":4899,
+    "question":"Analyze the 5G wireless network drive-test user plane data and engineering parameters.\nIdentify the reason for the throughput dropping below 600Mbps in certain road sections.\nFrom the following 8 potential root causes, select the most likely one and enclose its number in \\boxed{{}} in the final answer.\n\nC1: The serving cell's downtilt angle is too large, causing weak coverage at the far end.\nC2: The serving cell's coverage distance exceeds 1km, resulting in over-shooting.\nC3: A neighboring cell provides higher throughput.\nC4: Non-colocated co-frequency neighboring cells cause severe overlapping coverage.\nC5: Frequent handovers degrade performance.\nC6: Neighbor cell and serving cell have the same PCI mod 30, leading to interference.\nC7: Test vehicle speed exceeds 40km\/h, impacting user throughput.\nC8: Average scheduled RBs are below 160, affecting throughput.\n\nGiven:\n- The default electronic downtilt value is 255, representing a downtilt angle of 6 degrees. Other values represent the actual downtilt angle in degrees.\n\nBeam Scenario and Vertical Beamwidth Relationships:\n- When the cell's Beam Scenario is set to Default or SCENARIO_1 to SCENARIO_5, the vertical beamwidth is 6 degrees.\n- When the cell's Beam Scenario is set to SCENARIO_6 to SCENARIO_11, the vertical beamwidth is 12 degrees.\n- When the cell's Beam Scenario is set to SCENARIO_12 or above, the vertical beamwidth is 25 degrees.\n\nUser plane drive test data as follows：\n\nTimestamp|Longitude|Latitude|GPS Speed (km\/h)|5G KPI PCell RF Serving PCI|5G KPI PCell RF Serving SS-RSRP [dBm]|5G KPI PCell RF Serving SS-SINR [dB]|5G KPI PCell Layer2 MAC DL Throughput [Mbps]|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 1 PCI|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 2 PCI|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 3 PCI|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 4 PCI|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 5 PCI|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 1 Filtered Tx BRSRP [dBm]|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 2 Filtered Tx BRSRP [dBm]|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 3 Filtered Tx BRSRP [dBm]|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 4 Filtered Tx BRSRP [dBm]|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 5 Filtered Tx BRSRP [dBm]|5G KPI PCell Layer1 DL RB Num (Including 0)\n2025-05-07 10:30:54.000000|128.141094|32.623494|38|919|-81.99|15.52|1081.67|737|218|420|352|980|-93.92|-100.94|-106.54|-116.35|-122.65|210.73\n2025-05-07 10:30:55.000000|128.141151|32.623516|34|919|-81.14|15.51|985.76|737|218|291|271|352|-93.62|-106.99|-109.98|-114.93|-119.92|210.87\n2025-05-07 10:30:56.000000|128.141216|32.623524|7|919|-82.23|15.07|1030.96|737|218|420|980|352|-94.7|-104.98|-112.0|-114.08|-123.39|210.33\n2025-05-07 10:30:57.000000|128.14128|32.623546|5|919|-80.97|19.39|1105.76|737|218|352|-|-|-93.95|-105.31|-108.43|-|-|211.03\n2025-05-07 10:30:58.000000|128.141353|32.623564|38|919|-80.58|19.62|1183.18|737|218|-|-|-|-100.33|-103.93|-|-|-|210.99\n2025-05-07 10:30:59.000000|128.141425|32.623583|17|919|-82.67|14.91|328.11|218|737|291|-|-|-85.65|-102.2|-110.98|-|-|210.24\n2025-05-07 10:31:00.000000|128.141504|32.623601|36|919|-87.09|12.59|239.42|218|737|980|984|271|-90.04|-105.51|-110.45|-116.04|-121.5|210.05\n2025-05-07 10:31:01.000000|128.141575|32.623619|21|737|-89.93|13.85|233.7|218|919|-|-|-|-92.06|-107.4|-|-|-|210.24\n2025-05-07 10:31:02.000000|128.141662|32.623642|37|737|-79.96|19.79|274.35|218|919|-|-|-|-82.54|-101.03|-|-|-|207.51\n2025-05-07 10:31:03.000000|128.141748|32.62366|39|737|-81.48|17.07|704.24|919|218|889|980|352|-95.32|-100.44|-107.1|-111.55|-122.69|207.83\n\n\nEngeneering parameters data as follows：\n\ngNodeB ID|Cell ID|Longitude|Latitude|Mechanical Azimuth|Mechanical Downtilt|Digital Tilt|Digital Azimuth|Beam Scenario|Height|PCI|TxRx Mode|Max Transmit Power|Antenna Model\n0000258|1|128.139578|32.623042|45|3|7|5|SCENARIO_7|9.0|737|32T32R|34.9|NR AAU 1\n0000258|15|128.139578|32.623049|70|4|0|0|SCENARIO_1|15.0|919|32T32R|34.9|NR AAU 1\n0000258|26|128.139578|32.623042|145|6|255|0|DEFAULT|9.0|291|32T32R|34.9|NR AAU 1\n0000258|24|128.140953|32.621699|55|0|6|0|DEFAULT|14.7|420|32T32R|34.9|NR AAU 1\n0000556|62|128.135263|32.621879|32|9|8|0|DEFAULT|37.8|352|32T32R|34.9|NR AAU 3\n0000277|28|128.146975|32.624726|300|2|9|0|DEFAULT|21.0|980|32T32R|34.9|NR AAU 1\n0000556|53|128.13669|32.620527|30|18|255|0|DEFAULT|65.0|271|32T32R|34.9|NR AAU 1\n0000660|3|128.139724|32.625323|160|20|255|0|DEFAULT|41.0|218|64T64R|34.9|NR AAU 2\n0000659|51|128.149368|32.625624|310|4|8|5|SCENARIO_8|16.0|491|32T32R|34.9|NR AAU 1\n0000659|49|128.149406|32.625644|230|4|13|0|SCENARIO_3|18.0|984|64T64R|34.9|NR AAU 2\n0000277|17|128.142577|32.625332|190|0|6|0|DEFAULT|7.8|971|32T32R|34.9|NR AAU 1\n0000277|26|128.141355|32.626862|195|14|6|5|SCENARIO_9|47.8|889|32T32R|34.9|NR AAU 3\n",
+    "choices":null,
+    "answer":"C4",
+    "explanation":null
+  },
+  {
+    "evaluation_id":"T2-18",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"telelogs",
+    "original_index":37,
+    "candidate_selection_score":3.0,
+    "question_length":4799,
+    "question":"Analyze the 5G wireless network drive-test user plane data and engineering parameters.\nIdentify the reason for the throughput dropping below 600Mbps in certain road sections.\nFrom the following 8 potential root causes, select the most likely one and enclose its number in \\boxed{{}} in the final answer.\n\nC1: The serving cell's downtilt angle is too large, causing weak coverage at the far end.\nC2: The serving cell's coverage distance exceeds 1km, resulting in over-shooting.\nC3: A neighboring cell provides higher throughput.\nC4: Non-colocated co-frequency neighboring cells cause severe overlapping coverage.\nC5: Frequent handovers degrade performance.\nC6: Neighbor cell and serving cell have the same PCI mod 30, leading to interference.\nC7: Test vehicle speed exceeds 40km\/h, impacting user throughput.\nC8: Average scheduled RBs are below 160, affecting throughput.\n\nGiven:\n- The default electronic downtilt value is 255, representing a downtilt angle of 6 degrees. Other values represent the actual downtilt angle in degrees.\n\nBeam Scenario and Vertical Beamwidth Relationships:\n- When the cell's Beam Scenario is set to Default or SCENARIO_1 to SCENARIO_5, the vertical beamwidth is 6 degrees.\n- When the cell's Beam Scenario is set to SCENARIO_6 to SCENARIO_11, the vertical beamwidth is 12 degrees.\n- When the cell's Beam Scenario is set to SCENARIO_12 or above, the vertical beamwidth is 25 degrees.\n\nUser plane drive test data as follows：\n\nTimestamp|Longitude|Latitude|GPS Speed (km\/h)|5G KPI PCell RF Serving PCI|5G KPI PCell RF Serving SS-RSRP [dBm]|5G KPI PCell RF Serving SS-SINR [dB]|5G KPI PCell Layer2 MAC DL Throughput [Mbps]|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 1 PCI|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 2 PCI|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 3 PCI|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 4 PCI|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 5 PCI|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 1 Filtered Tx BRSRP [dBm]|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 2 Filtered Tx BRSRP [dBm]|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 3 Filtered Tx BRSRP [dBm]|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 4 Filtered Tx BRSRP [dBm]|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 5 Filtered Tx BRSRP [dBm]|5G KPI PCell Layer1 DL RB Num (Including 0)\n2025-05-07 10:53:33.000000|128.144091|32.62114|28|650|-90.1|18.29|957.17|433|189|236|676|871|-100.97|-108.4|-115.12|-114.21|-126.21|192.41\n2025-05-07 10:53:34.000000|128.144068|32.620441|31|650|-82.45|24.04|1083.83|433|189|-|-|-|-103.24|-111.55|-|-|-|190.73\n2025-05-07 10:53:35.000000|128.144093|32.621324|25|650|-82.36|21.13|947.82|433|189|405|871|-|-99.61|-110.51|-118.68|-119.24|-|206.04\n2025-05-07 10:53:36.000000|128.144102|32.621411|36|650|-87.8|14.5|865.98|433|189|405|240|-|-93.44|-105.1|-116.28|-120.19|-|210.47\n2025-05-07 10:53:37.000000|128.144103|32.621503|8|650|-91.36|10.81|299.49|433|189|236|240|818|-88.24|-103.54|-117.25|-117.37|-126.71|211.2\n2025-05-07 10:53:38.000000|128.14411|32.621591|35|650|-86.68|14.32|127.36|433|189|871|676|405|-99.7|-115.46|-117.24|-126.9|-130.65|163.0\n2025-05-07 10:53:39.000000|128.144112|32.621694|12|433|-87.17|12.63|386.29|650|189|990|236|871|-99.97|-107.52|-114.79|-118.54|-117.97|194.89\n2025-05-07 10:53:40.000000|128.144128|32.621781|6|433|-77.17|25.06|412.98|650|189|405|990|236|-102.41|-107.52|-114.21|-115.17|-119.63|178.75\n2025-05-07 10:53:41.000000|128.144129|32.621881|38|433|-66.97|30.41|1051.92|650|189|454|-|-|-105.22|-109.88|-116.22|-|-|166.16\n2025-05-07 10:53:42.000000|128.144137|32.621972|28|433|-76.58|21.65|941.63|650|189|871|240|405|-99.06|-106.75|-113.38|-122.64|-126.19|191.23\n\n\nEngeneering parameters data as follows：\n\ngNodeB ID|Cell ID|Longitude|Latitude|Mechanical Azimuth|Mechanical Downtilt|Digital Tilt|Digital Azimuth|Beam Scenario|Height|PCI|TxRx Mode|Max Transmit Power|Antenna Model\n0000570|15|128.145446|32.619994|340|10|9|-30|SCENARIO_4|88.0|454|64T64R|34.9|NR AAU 2\n0000570|13|128.143533|32.620078|130|15|13|-5|SCENARIO_2|63.5|818|64T64R|34.9|NR AAU 2\n0000277|12|128.144411|32.62217|290|17|6|0|DEFAULT|30.1|433|32T32R|34.9|NR AAU 1\n0000285|15|128.14375|32.612843|10|23|6|0|DEFAULT|72.0|236|32T32R|34.9|NR AAU 3\n0000570|27|128.147871|32.621484|220|15|10|0|DEFAULT|35.0|871|64T64R|34.9|NR AAU 2\n0000570|41|128.143533|32.620081|10|15|6|0|SCENARIO_7|63.0|189|64T64R|34.9|NR AAU 2\n0000277|13|128.144462|32.62215|200|21|9|-10|SCENARIO_8|30.1|650|32T32R|34.9|NR AAU 1\n0000570|40|128.145729|32.620051|40|10|6|-20|SCENARIO_3|90.0|405|64T64R|34.9|NR AAU 2\n0000255|17|128.143594|32.618031|140|16|9|0|DEFAULT|61.0|240|32T32R|34.9|NR AAU 3\n0000277|24|128.144467|32.622169|25|2|10|0|DEFAULT|30.1|990|32T32R|34.9|NR AAU 1\n",
+    "choices":null,
+    "answer":"C1",
+    "explanation":null
+  },
+  {
+    "evaluation_id":"T2-19",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"telelogs",
+    "original_index":38,
+    "candidate_selection_score":3.0,
+    "question_length":4845,
+    "question":"Analyze the 5G wireless network drive-test user plane data and engineering parameters.\nIdentify the reason for the throughput dropping below 600Mbps in certain road sections.\nFrom the following 8 potential root causes, select the most likely one and enclose its number in \\boxed{{}} in the final answer.\n\nC1: The serving cell's downtilt angle is too large, causing weak coverage at the far end.\nC2: The serving cell's coverage distance exceeds 1km, resulting in over-shooting.\nC3: A neighboring cell provides higher throughput.\nC4: Non-colocated co-frequency neighboring cells cause severe overlapping coverage.\nC5: Frequent handovers degrade performance.\nC6: Neighbor cell and serving cell have the same PCI mod 30, leading to interference.\nC7: Test vehicle speed exceeds 40km\/h, impacting user throughput.\nC8: Average scheduled RBs are below 160, affecting throughput.\n\nGiven:\n- The default electronic downtilt value is 255, representing a downtilt angle of 6 degrees. Other values represent the actual downtilt angle in degrees.\n\nBeam Scenario and Vertical Beamwidth Relationships:\n- When the cell's Beam Scenario is set to Default or SCENARIO_1 to SCENARIO_5, the vertical beamwidth is 6 degrees.\n- When the cell's Beam Scenario is set to SCENARIO_6 to SCENARIO_11, the vertical beamwidth is 12 degrees.\n- When the cell's Beam Scenario is set to SCENARIO_12 or above, the vertical beamwidth is 25 degrees.\n\nUser plane drive test data as follows：\n\nTimestamp|Longitude|Latitude|GPS Speed (km\/h)|5G KPI PCell RF Serving PCI|5G KPI PCell RF Serving SS-RSRP [dBm]|5G KPI PCell RF Serving SS-SINR [dB]|5G KPI PCell Layer2 MAC DL Throughput [Mbps]|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 1 PCI|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 2 PCI|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 3 PCI|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 4 PCI|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 5 PCI|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 1 Filtered Tx BRSRP [dBm]|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 2 Filtered Tx BRSRP [dBm]|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 3 Filtered Tx BRSRP [dBm]|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 4 Filtered Tx BRSRP [dBm]|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 5 Filtered Tx BRSRP [dBm]|5G KPI PCell Layer1 DL RB Num (Including 0)\n2025-05-07 10:28:54.000000|128.143174|32.621751|39|433|-74.31|7.99|1010.79|650|189|990|871|359|-80.91|-91.57|-96.97|-102.1|-104.97|209.37\n2025-05-07 10:28:55.000000|128.143167|32.621793|22|433|-83.64|0.52|419.42|650|189|440|420|871|-78.5|-90.25|-93.18|-95.97|-101.44|208.78\n2025-05-07 10:28:56.000000|128.143168|32.621831|20|650|-84.22|0.54|379.8|433|189|440|405|818|-79.93|-89.51|-95.24|-104.69|-107.6|207.37\n2025-05-07 10:28:57.000000|128.143168|32.621873|23|433|-88.46|3.33|370.31|650|189|359|405|440|-81.89|-96.66|-100.85|-105.13|-108.6|206.54\n2025-05-07 10:28:58.000000|128.143169|32.621904|34|650|-79.83|5.51|477.58|433|189|359|871|990|-77.64|-91.69|-100.13|-99.24|-103.57|199.64\n2025-05-07 10:28:59.000000|128.143176|32.62193|2|650|-76.82|7.37|1237.31|433|189|359|990|-|-79.41|-90.69|-93.31|-102.33|-|203.54\n2025-05-07 10:29:00.000000|128.143184|32.621953|36|650|-74.64|8.52|1079.74|433|189|990|359|-|-80.51|-90.72|-96.19|-103.1|-|180.59\n2025-05-07 10:29:01.000000|128.143185|32.621991|7|650|-63.97|19.71|1279.59|433|189|-|-|-|-76.01|-91.46|-|-|-|200.12\n2025-05-07 10:29:02.000000|128.143178|32.622033|6|650|-67.55|12.39|1206.2|433|189|454|-|-|-86.86|-92.03|-100.81|-|-|194.78\n2025-05-07 10:29:03.000000|128.143178|32.622083|17|650|-71.18|10.63|1078.08|433|189|420|871|-|-89.24|-92.27|-96.0|-100.3|-|209.37\n\n\nEngeneering parameters data as follows：\n\ngNodeB ID|Cell ID|Longitude|Latitude|Mechanical Azimuth|Mechanical Downtilt|Digital Tilt|Digital Azimuth|Beam Scenario|Height|PCI|TxRx Mode|Max Transmit Power|Antenna Model\n0000277|12|128.144408|32.62217|250|8|6|0|DEFAULT|30.1|433|32T32R|34.9|NR AAU 1\n0000570|15|128.145443|32.619993|340|10|9|-30|SCENARIO_4|88.0|454|64T64R|34.9|NR AAU 2\n0000258|24|128.141131|32.621724|55|0|6|0|DEFAULT|14.7|420|32T32R|34.9|NR AAU 1\n0000277|24|128.144465|32.622169|25|2|10|0|DEFAULT|30.1|990|32T32R|34.9|NR AAU 1\n0000570|27|128.147868|32.621484|220|15|10|0|DEFAULT|35.0|871|64T64R|34.9|NR AAU 2\n0000570|12|128.1429|32.619579|245|15|4|0|SCENARIO_8|17.0|359|64T64R|34.9|NR AAU 2\n0000570|25|128.147823|32.621643|310|18|9|0|DEFAULT|36.0|440|32T32R|34.9|NR AAU 3\n0000570|40|128.145726|32.620051|40|10|6|-20|SCENARIO_3|90.0|405|64T64R|34.9|NR AAU 2\n0000570|13|128.143531|32.620078|130|15|13|-5|SCENARIO_2|63.5|818|64T64R|34.9|NR AAU 2\n0000277|13|128.14446|32.62215|130|6|9|-10|SCENARIO_8|30.1|650|32T32R|34.9|NR AAU 1\n0000570|41|128.143531|32.620081|10|15|6|0|SCENARIO_7|63.0|189|64T64R|34.9|NR AAU 2\n",
+    "choices":null,
+    "answer":"C5",
+    "explanation":null
+  },
+  {
+    "evaluation_id":"T2-20",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"telelogs",
+    "original_index":65,
+    "candidate_selection_score":3.0,
+    "question_length":4999,
+    "question":"Analyze the 5G wireless network drive-test user plane data and engineering parameters.\nIdentify the reason for the throughput dropping below 600Mbps in certain road sections.\nFrom the following 8 potential root causes, select the most likely one and enclose its number in \\boxed{{}} in the final answer.\n\nC1: The serving cell's downtilt angle is too large, causing weak coverage at the far end.\nC2: The serving cell's coverage distance exceeds 1km, resulting in over-shooting.\nC3: A neighboring cell provides higher throughput.\nC4: Non-colocated co-frequency neighboring cells cause severe overlapping coverage.\nC5: Frequent handovers degrade performance.\nC6: Neighbor cell and serving cell have the same PCI mod 30, leading to interference.\nC7: Test vehicle speed exceeds 40km\/h, impacting user throughput.\nC8: Average scheduled RBs are below 160, affecting throughput.\n\nGiven:\n- The default electronic downtilt value is 255, representing a downtilt angle of 6 degrees. Other values represent the actual downtilt angle in degrees.\n\nBeam Scenario and Vertical Beamwidth Relationships:\n- When the cell's Beam Scenario is set to Default or SCENARIO_1 to SCENARIO_5, the vertical beamwidth is 6 degrees.\n- When the cell's Beam Scenario is set to SCENARIO_6 to SCENARIO_11, the vertical beamwidth is 12 degrees.\n- When the cell's Beam Scenario is set to SCENARIO_12 or above, the vertical beamwidth is 25 degrees.\n\nUser plane drive test data as follows：\n\nTimestamp|Longitude|Latitude|GPS Speed (km\/h)|5G KPI PCell RF Serving PCI|5G KPI PCell RF Serving SS-RSRP [dBm]|5G KPI PCell RF Serving SS-SINR [dB]|5G KPI PCell Layer2 MAC DL Throughput [Mbps]|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 1 PCI|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 2 PCI|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 3 PCI|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 4 PCI|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 5 PCI|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 1 Filtered Tx BRSRP [dBm]|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 2 Filtered Tx BRSRP [dBm]|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 3 Filtered Tx BRSRP [dBm]|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 4 Filtered Tx BRSRP [dBm]|Measurement PCell Neighbor Cell Top Set(Cell Level) Top 5 Filtered Tx BRSRP [dBm]|5G KPI PCell Layer1 DL RB Num (Including 0)\n2025-05-07 10:31:04.000000|128.141879|32.623686|13|455|-82.53|12.76|1149.08|971|919|980|889|530|-91.12|-96.42|-103.09|-111.12|-119.81|204.58\n2025-05-07 10:31:05.000000|128.141966|32.623704|16|455|-85.31|11.08|1020.83|971|919|-|-|-|-92.06|-100.49|-|-|-|183.55\n2025-05-07 10:31:06.000000|128.142052|32.623726|37|455|-84.55|10.41|1078.98|971|919|218|491|352|-93.75|-100.46|-106.54|-114.33|-114.64|194.34\n2025-05-07 10:31:07.000000|128.142145|32.623744|49|455|-86.8|9.47|245.1|971|919|218|889|984|-94.24|-98.82|-104.95|-117.21|-121.23|210.0\n2025-05-07 10:31:08.000000|128.142232|32.623762|49|455|-86.64|9.06|249.05|971|919|218|-|-|-91.24|-96.89|-108.07|-|-|202.32\n2025-05-07 10:31:09.000000|128.142325|32.623781|60|971|-86.96|7.04|258.39|455|919|218|-|-|-91.75|-98.34|-107.04|-|-|204.02\n2025-05-07 10:31:10.000000|128.142412|32.623803|66|971|-84.58|5.69|282.59|455|919|218|980|354|-86.24|-98.24|-103.76|-111.53|-111.2|208.54\n2025-05-07 10:31:11.000000|128.142498|32.623833|28|971|-86.04|1.26|709.71|455|919|-|-|-|-83.37|-94.42|-|-|-|210.85\n2025-05-07 10:31:12.000000|128.142577|32.623851|39|971|-87.51|4.26|1155.17|455|919|530|737|420|-79.49|-85.89|-95.45|-106.16|-107.03|171.49\n2025-05-07 10:31:13.000000|128.142664|32.62387|23|971|-76.13|8.03|880.03|455|919|530|889|980|-85.8|-94.46|-103.2|-103.76|-111.61|206.41\n\n\nEngeneering parameters data as follows：\n\ngNodeB ID|Cell ID|Longitude|Latitude|Mechanical Azimuth|Mechanical Downtilt|Digital Tilt|Digital Azimuth|Beam Scenario|Height|PCI|TxRx Mode|Max Transmit Power|Antenna Model\n0000258|1|128.13964|32.623051|45|3|7|5|SCENARIO_7|9.0|737|32T32R|34.9|NR AAU 1\n0000660|3|128.139786|32.625332|160|20|255|0|DEFAULT|41.0|218|64T64R|34.9|NR AAU 2\n0000258|15|128.13964|32.623058|330|4|8|0|SCENARIO_1|15.0|919|32T32R|34.9|NR AAU 1\n0000277|28|128.147036|32.624734|300|2|9|0|DEFAULT|21.0|980|32T32R|34.9|NR AAU 1\n0000277|26|128.141417|32.626871|195|14|6|5|SCENARIO_9|47.8|889|32T32R|34.9|NR AAU 3\n0000277|0|128.142698|32.627084|230|0|13|-20|SCENARIO_3|18.0|530|64T64R|34.9|NR AAU 2\n0000277|17|128.142639|32.625341|190|0|6|0|DEFAULT|7.8|971|32T32R|34.9|NR AAU 1\n0000659|51|128.149429|32.625633|310|4|8|5|SCENARIO_8|16.0|491|32T32R|34.9|NR AAU 1\n0000277|27|128.142438|32.622769|340|0|255|0|DEFAULT|13.0|455|32T32R|34.9|NR AAU 1\n0000556|62|128.135325|32.621888|32|9|8|0|DEFAULT|37.8|352|32T32R|34.9|NR AAU 3\n0000659|49|128.149467|32.625653|230|4|13|0|SCENARIO_3|18.0|984|64T64R|34.9|NR AAU 2\n0000570|40|128.145609|32.620034|40|10|6|-20|SCENARIO_3|90.0|405|64T64R|34.9|NR AAU 2\n0000258|24|128.141014|32.621708|55|0|6|0|DEFAULT|14.7|420|32T32R|34.9|NR AAU 1\n",
+    "choices":null,
+    "answer":"C7",
+    "explanation":null
+  },
+  {
+    "evaluation_id":"T2-21",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"telemath",
+    "original_index":7,
+    "candidate_selection_score":3.0,
+    "question_length":552,
+    "question":"Given a radio transmission system where the transmit antenna has a gain of 15 dB and the receive antenna has a gain of 10 dB, with the receive antenna modeled as a resistance having a noise temperature of 150 K, followed by an amplifier that provides a gain of 20 dB and has a noise figure of 10 dB, calculate the maximum allowable distance in kilometers for achieving an output signal-to-noise ratio (SNR) of 25 dB. The system operates at a carrier frequency of 750 MHz, the information signal bandwidth is 10 MHz, and the transmitter power is 20 dBm.",
+    "choices":null,
+    "answer":16.3100781913,
+    "explanation":null
+  },
+  {
+    "evaluation_id":"T2-22",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"telemath",
+    "original_index":13,
+    "candidate_selection_score":3.0,
+    "question_length":819,
+    "question":"To rephrase the given problem while maintaining its original intent and details, we must first understand the task at hand. We are dealing with a quaternary memoryless source that has an alphabet Ax = {0, 1, 2, 3}. The original probabilities given for px(0), px(1), and px(2) are 1\/3, 1\/6, and 1\/12, respectively, but we are instructed to update these values. We replace px(0) with 1\/4, px(1) with 1\/4, and px(2) with 1\/4, as per the provided list. Since the sum of probabilities must equal 1 and px(3) was not explicitly provided, we calculate px(3) as 1 - (1\/4 + 1\/4 + 1\/4) = 1\/4 to ensure the total probability sums to 1. With these updated probabilities, px(0) = 1\/4, px(1) = 1\/4, px(2) = 1\/4, and px(3) = 1\/4, we are tasked with finding the efficiency of a binary code for this source, assuming fixed-length words.",
+    "choices":null,
+    "answer":1.0,
+    "explanation":null
+  },
+  {
+    "evaluation_id":"T2-23",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"telemath",
+    "original_index":20,
+    "candidate_selection_score":3.0,
+    "question_length":565,
+    "question":"On a factory assembly line, a robot typically repairs a bolt every $T$ seconds when functioning correctly. However, the robot may occasionally break down after completing a bolt repair. The probability of a breakdown after each repair is $p = 0.1$, and these breakdowns occur independently of previous repairs. When the robot breaks down, the time required for repair follows a geometric distribution with a mean of $\\frac{1}{q} = \\frac{1}{0.2}$ periods $T$. Determine the proportion of time the robot is out of service, expressed as a decimal in the range \\[0, 1].",
+    "choices":null,
+    "answer":0.3333333333,
+    "explanation":null
+  },
+  {
+    "evaluation_id":"T2-24",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"telemath",
+    "original_index":45,
+    "candidate_selection_score":3.0,
+    "question_length":709,
+    "question":"Determine the normalized throughput $S$ for a Go-Back-N Automatic Repeat Request (GBN-ARQ) protocol operating between two terminals A and B, where $\beta = 20.0$ is the expected number of PDUs transmitted from A to B between the completion of the transmission of a given PDU and the instant the feedback message for that PDU is entirely received at A, and $p = 0.03$ is the probability that a PDU is erroneously received at B. Assume an ideal feedback channel where a correct acknowledgment is received for each PDU, and whenever a negative acknowledgment is received for PDU $i$, terminal A retransmits PDUs $i, i + 1, i + 2, \\dots$. The normalized throughput is defined as $S = \frac{1}{\\gamma}$. Compute $S$.",
+    "choices":null,
+    "answer":0.60625,
+    "explanation":null
+  },
+  {
+    "evaluation_id":"T2-25",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"teleqna",
+    "original_index":1,
+    "candidate_selection_score":3.0,
+    "question_length":156,
+    "question":"What is the core body temperature increase when the added workload is equivalent to a whole-body-average RF energy absorption rate of 0.4 W\/kg? [IEEE C95.1]",
+    "choices":[
+      "Less than 0.5 °C",
+      "Between 0.5 °C and 1.0 °C",
+      "Between 1.0 °C and 1.5 °C",
+      "More than 1.5 °C",
+      "Not mentioned"
+    ],
+    "answer":0,
+    "explanation":"When the added workload is equivalent to a whole-body-average RF energy absorption rate of 0.4 W\/kg, the core body temperature rises only very modestly, less than 0.5 °C."
+  },
+  {
+    "evaluation_id":"T2-26",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"teleqna",
+    "original_index":66,
+    "candidate_selection_score":3.0,
+    "question_length":165,
+    "question":"Under what circumstances would it be desirable to prevent UE users from making access attempts or responding to pages in specified areas of a PLMN? [3GPP Release 18]",
+    "choices":[
+      "During normal operating conditions",
+      "During states of emergency or when one or more co-located PLMNs have failed",
+      "When the access channel is overloaded",
+      "When the serving network is UTRAN",
+      "When broadcast messages are unavailable"
+    ],
+    "answer":1,
+    "explanation":"Access control is desirable during states of emergency or when one or more co-located PLMNs have failed."
+  },
+  {
+    "evaluation_id":"T2-27",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"teleqna",
+    "original_index":97,
+    "candidate_selection_score":3.0,
+    "question_length":174,
+    "question":"Which type of exposure resulted in an increase in apoptotic gene expression and apoptosis, followed by a proliferation increase in the subset of surviving cells? [IEEE C95.1]",
+    "choices":[
+      "Pulsed-waved, 2450 MHz fields",
+      "Mobile phone signals",
+      "Chemical mutagens",
+      "UV-C radiation",
+      "Thermally controlled system"
+    ],
+    "answer":0,
+    "explanation":"The document mentions that in one set of in vitro studies, mobile-phone-type RF exposure at extremely low levels was reported to cause an increase in apoptotic gene expression and a 20% apoptosis, followed by a proliferation increase in the subset of surviving cells."
+  },
+  {
+    "evaluation_id":"T2-28",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"teleqna",
+    "original_index":177,
+    "candidate_selection_score":3.0,
+    "question_length":168,
+    "question":"What does the term 'user perception' refer to in the context of downlink parallel transfer of the same content via broadcast\/multicast and\/or unicast? [3GPP Release 17]",
+    "choices":[
+      "User satisfaction with the delivered content.",
+      "The difference in delay of typically less than 20 ms between receivers in a given area.",
+      "The quality level (i.e. video resolution) of broadcast\/multicast content.",
+      "The capability of the UE to receive content via a broadcast\/multicast radio carrier.",
+      "The availability of the broadcast\/multicast service."
+    ],
+    "answer":1,
+    "explanation":"'User perception' refers to the difference in delay of typically less than 20 ms between receivers in a given area when receiving the same content via broadcast\/multicast and\/or unicast."
+  },
+  {
+    "evaluation_id":"T2-29",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"teletables",
+    "original_index":22,
+    "candidate_selection_score":3.0,
+    "question_length":232,
+    "question":"If the footnote condition (outer MPR = 5.5 dB) applies to all outer bandwidth class B values in DFT-s-OFDM, what is the maximum MPR difference between DFT-s-OFDM and CP-OFDM for outer bandwidth class B across all modulation schemes?",
+    "choices":[
+      "2.0 dB",
+      "1.5 dB",
+      "1.0 dB",
+      "0.5 dB",
+      "0.0 dB"
+    ],
+    "answer":2,
+    "explanation":"Under the footnote condition, DFT-s-OFDM outer MPRs for 256QAM become 5.5 dB (from 6.0 dB). CP-OFDM 256QAM remains at 6.5 dB. The difference is 6.5 - 5.5 = 1.0 dB. This is the maximum difference across all schemes."
+  },
+  {
+    "evaluation_id":"T2-30",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"teletables",
+    "original_index":54,
+    "candidate_selection_score":3.0,
+    "question_length":223,
+    "question":"If the 'Offset (RBs)' represents the starting position of the CORESET in the frequency domain, which of the following best describes the relationship between the offset and the number of symbols in the non-reserved entries?",
+    "choices":[
+      "The offset increases by 1 for each increment in the number of symbols.",
+      "The offset resets to 0 whenever the number of symbols changes.",
+      "The offset and number of symbols are inversely proportional.",
+      "The offset depends on the number of symbols.",
+      "The offset decreases by 1 for every 2 symbols added."
+    ],
+    "answer":1,
+    "explanation":"Observing the non-reserved entries (Indexes 0-7), when the number of symbols changes from 1 to 2 (at Index 4), the offset resets to 0. Similarly, within each group of symbols (1 or 2), the offset increases by 1 for consecutive indexes."
+  },
+  {
+    "evaluation_id":"T2-31",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"teletables",
+    "original_index":80,
+    "candidate_selection_score":3.0,
+    "question_length":180,
+    "question":"A UE is scheduled with co-scheduled UEs that have the same DMRS sequence. In one PRB, these UEs use 16QAM, and in another PRB, they use 64QAM. Which index applies to this scenario?",
+    "choices":[
+      "Index 2",
+      "Index 3",
+      "Index 6",
+      "Index 7",
+      "Index 5"
+    ],
+    "answer":2,
+    "explanation":"Index 6 specifies that in each individual PRB, co-scheduled UEs with the same DMRS sequence use the same modulation scheme. While the modulation varies between PRBs (16QAM in one and 64QAM in another), the condition of consistent modulation within each PRB is satisfied. This scenario is explicitly covered by index 6, as it does not fall under indices 0-5."
+  },
+  {
+    "evaluation_id":"T2-32",
+    "track":"Track 2 (GSMA Benchmark)",
+    "benchmark":"teletables",
+    "original_index":90,
+    "candidate_selection_score":3.0,
+    "question_length":167,
+    "question":"For the 60 MHz channel bandwidth, what is the percentage increase in maximum transmission bandwidth when the Subcarrier Spacing (SCS) is reduced from 60 kHz to 30 kHz?",
+    "choices":[
+      "8%",
+      "10.00%",
+      "14.00%",
+      "22.22%",
+      "25.00%"
+    ],
+    "answer":0,
+    "explanation":"At 60 MHz channel bandwidth, the maximum transmission bandwidth is 54.00 MHz at SCS = 60 kHz and 58.32 MHz at SCS = 30 kHz. The increase is 58.32 - 54.00 = 4.32 MHz. The percentage increase relative to the original value (54.00 MHz) is (4.32 \/ 54.00) * 100 = 8.00%."
+  }
+]
