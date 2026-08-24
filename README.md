@@ -110,7 +110,10 @@ The project will progressively evolve towards:
                      │ Autonomous Ops    │
                      └───────────────────┘
 
-Repository Structure
+## Repository Structure
+
+```text
+.
 ├── notebooks/
 │   └── 001_llm_base.ipynb
 │
@@ -128,41 +131,49 @@ Repository Structure
 │
 └── src/
     └── llm/
-Development Approach
+
+## Development Approach
 
 The project is being developed incrementally, with each module establishing a controlled baseline for the next stage.
 
 The intended progression is:
 
+```text
 LLM
-  ↓
+ │
+ ▼
 LLM + RAG
-  ↓
+ │
+ ▼
 LLM + RAG + MCP
-  ↓
+ │
+ ▼
 LLM + RAG + MCP + Agents
-  ↓
+ │
+ ▼
 Autonomous Telecom Operations
 
-The objective is not only to improve answer quality, but to evaluate how progressively adding knowledge grounding, controlled tools, reasoning workflows, and automation changes the reliability and practical applicability of telecom AI systems.
+The objective is not only to improve answer quality, but to evaluate how progressively adding **knowledge grounding, controlled tools, reasoning workflows, and automation** changes the reliability and practical applicability of telecom AI systems.
 
-Scope Boundary
+## Scope Boundary
 
-The completed Module 1 intentionally focuses on standalone LLM capability.
+The completed Module 1 intentionally focuses on **standalone LLM capability**.
 
 It does not yet include:
 
-Retrieval-Augmented Generation
-Vector databases or embeddings
-External knowledge retrieval
-Model fine-tuning
-Model Context Protocol
-External operational tools
-Autonomous agents or workflows
+- Retrieval-Augmented Generation
+- Vector databases or embeddings
+- External knowledge retrieval
+- Model fine-tuning
+- Model Context Protocol
+- External operational tools
+- Autonomous agents or workflows
 
 These capabilities will be introduced progressively in subsequent modules.
 
-Disclaimer
+---
+
+## Disclaimer
 
 This project is an independent technical experiment and is not affiliated with or endorsed by any telecom vendor or standards organisation.
 
