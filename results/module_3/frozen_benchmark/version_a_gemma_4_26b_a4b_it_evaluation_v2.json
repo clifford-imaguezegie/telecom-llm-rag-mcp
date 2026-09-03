@@ -1,0 +1,2124 @@
+{
+  "metadata": {
+    "experiment": "Telecom AI MCP",
+    "module": "Module 3",
+    "architecture_version": "Version A",
+    "evaluation_type": "8-question end-to-end MCP evaluation",
+    "evaluation_version": "module3_eval_v2",
+    "evaluation_timestamp_utc": "2026-09-02T17:29:10.860908+00:00",
+    "question_count": 8,
+    "benchmark": {
+      "version": "module3_eval_v2",
+      "sha256": "d40c0090c371f0a99ea6057bbb3fa8024e6b7d4174e037e7a6cf9fef9b9667f5",
+      "composition": {
+        "3gpp": 5,
+        "tcc": 2,
+        "hybrid": 1
+      },
+      "questions": [
+        {
+          "id": "Q1",
+          "domain": "5G Core",
+          "knowledge_scope": "3GPP",
+          "expected_route": "3gpp",
+          "expected_source_families": [
+            "3GPP"
+          ],
+          "expected_3gpp_specs": [
+            "23.501",
+            "23.502"
+          ],
+          "expected_tcc_collections": [],
+          "expected_elements": [
+            "AMF",
+            "registration",
+            "mobility management",
+            "NAS",
+            "N1",
+            "N2"
+          ],
+          "question": "Explain the role of the AMF in registration and mobility management procedures in a 5G Standalone network."
+        },
+        {
+          "id": "Q2",
+          "domain": "Mobility",
+          "knowledge_scope": "3GPP",
+          "expected_route": "3gpp",
+          "expected_source_families": [
+            "3GPP"
+          ],
+          "expected_3gpp_specs": [
+            "23.502",
+            "38.300",
+            "38.423"
+          ],
+          "expected_tcc_collections": [],
+          "expected_elements": [
+            "source gNB",
+            "target gNB",
+            "AMF",
+            "handover",
+            "Xn",
+            "N2"
+          ],
+          "question": "Explain how inter-gNB handover operates in a 5G network, including the roles of the source gNB, target gNB and AMF."
+        },
+        {
+          "id": "Q3",
+          "domain": "RAN",
+          "knowledge_scope": "3GPP",
+          "expected_route": "3gpp",
+          "expected_source_families": [
+            "3GPP"
+          ],
+          "expected_3gpp_specs": [
+            "38.331"
+          ],
+          "expected_tcc_collections": [],
+          "expected_elements": [
+            "radio link failure",
+            "RLF",
+            "RRC",
+            "T310",
+            "N310",
+            "RRC re-establishment"
+          ],
+          "question": "Explain how radio link failure is detected and handled in a 5G NR network."
+        },
+        {
+          "id": "Q4",
+          "domain": "QoS",
+          "knowledge_scope": "3GPP",
+          "expected_route": "3gpp",
+          "expected_source_families": [
+            "3GPP"
+          ],
+          "expected_3gpp_specs": [
+            "23.501",
+            "23.503"
+          ],
+          "expected_tcc_collections": [],
+          "expected_elements": [
+            "5QI",
+            "QoS Flow",
+            "QFI",
+            "SMF",
+            "UPF",
+            "QoS rules"
+          ],
+          "question": "Explain how 5QI and QoS flows are handled in a 5G network, including the roles of the SMF and UPF."
+        },
+        {
+          "id": "Q5",
+          "domain": "Security",
+          "knowledge_scope": "3GPP",
+          "expected_route": "3gpp",
+          "expected_source_families": [
+            "3GPP"
+          ],
+          "expected_3gpp_specs": [
+            "33.501"
+          ],
+          "expected_tcc_collections": [],
+          "expected_elements": [
+            "AMF",
+            "AUSF",
+            "UDM",
+            "5G-AKA",
+            "SEAF",
+            "authentication"
+          ],
+          "question": "Explain the 5G authentication procedure and the roles of the AMF, AUSF and UDM."
+        },
+        {
+          "id": "Q6",
+          "domain": "Internet Transport",
+          "knowledge_scope": "TCC",
+          "expected_route": "tcc",
+          "expected_source_families": [
+            "TCC"
+          ],
+          "expected_3gpp_specs": [],
+          "expected_tcc_collections": [
+            "IETF-RFCs",
+            "IETF-Drafts"
+          ],
+          "expected_elements": [
+            "QUIC",
+            "TLS 1.3",
+            "stream multiplexing",
+            "Connection ID",
+            "connection migration"
+          ],
+          "question": "Explain the key mechanisms of QUIC as defined by the IETF, including connection establishment, stream multiplexing and connection migration."
+        },
+        {
+          "id": "Q7",
+          "domain": "Telecom AI Research",
+          "knowledge_scope": "TCC",
+          "expected_route": "tcc",
+          "expected_source_families": [
+            "TCC"
+          ],
+          "expected_3gpp_specs": [],
+          "expected_tcc_collections": [
+            "IEEE-Access",
+            "OpenAlex"
+          ],
+          "expected_elements": [
+            "traffic prediction",
+            "machine learning",
+            "forecasting",
+            "network management",
+            "benefits",
+            "challenges"
+          ],
+          "question": "According to IEEE and research literature, what are the main benefits and technical challenges of using AI/ML-based traffic prediction for mobile network management?"
+        },
+        {
+          "id": "Q8",
+          "domain": "5G SBA + Internet Protocols",
+          "knowledge_scope": "Hybrid",
+          "expected_route": "hybrid",
+          "expected_source_families": [
+            "3GPP",
+            "TCC"
+          ],
+          "expected_3gpp_specs": [
+            "23.501",
+            "33.501"
+          ],
+          "expected_tcc_collections": [
+            "IETF-RFCs",
+            "IETF-Drafts"
+          ],
+          "expected_elements": [
+            "Service-Based Architecture",
+            "AMF",
+            "SMF",
+            "HTTP",
+            "TLS",
+            "3GPP",
+            "IETF"
+          ],
+          "question": "Explain how HTTP and TLS support communication in the 5G Service-Based Architecture. Distinguish the roles and requirements defined by 3GPP for network functions such as the AMF and SMF from the HTTP/TLS transport and security mechanisms defined by the IETF."
+        }
+      ]
+    },
+    "llm": {
+      "provider": "OpenRouter",
+      "model": "google/gemma-4-26b-a4b-it",
+      "max_output_tokens": 1800,
+      "temperature": null,
+      "target_answer_words": "300-500"
+    },
+    "prompt": {
+      "system_prompt": "You are an expert telecommunications network engineer with access to\na telecom knowledge search tool through MCP.\n\nUse retrieved telecom documentation as the authoritative basis for\ntechnical answers.\n\nInstructions:\n\n1. Use the MCP knowledge tool when technical documentation is required.\n   Use ONE search by default, a SECOND only if important evidence is\n   missing, and a THIRD only as an exceptional fallback. Never exceed\n   3 searches.\n\n2. Reason across the retrieved evidence. You may connect facts, compare\n   functions, explain relationships, infer technical implications, and\n   synthesize information from multiple retrieved documents.\n\n3. Do not invent facts. Any reasoning or inference must remain consistent\n   with and supported by the retrieved evidence. If the evidence does not\n   support a required technical point, do not fill the gap with assumptions\n   or unsupported knowledge.\n\n4. Prefer authoritative standards and technical documentation when\n   evaluating conflicting or overlapping evidence. Use no more than\n   5 retrieved sources for the final answer.\n\n5. Answer every technical element requested by the user. Keep the response\n   precise, practical, and suitable for a telecommunications engineer.\n\n6. Target approximately 300–500 words unless the question clearly requires\n   more detail. Prefer concise sections, bullets, or numbered steps where\n   they improve clarity.\n\n7. Do not discuss sources, citations, retrieval mechanics, BM25, DuckDB,\n   shards, candidate terms, search profiles, or other internal implementation\n   details unless the user explicitly asks.\n\n8. If the retrieved documentation is insufficient to answer the question,\n   state:\n   \"The requested details are not available in the documentation.\"",
+      "system_prompt_sha256": "854374b0ea09e63dc8ddde34d722788231c2be860f4b8ac1a709e907966baf09",
+      "system_prompt_words": 241,
+      "system_prompt_chars": 1752
+    },
+    "knowledge_base": {
+      "storage": "Remote raw telecom corpora",
+      "persistent_index": false,
+      "sources": [
+        "GSMA/Telco-Common-Corpus",
+        "GSMA/3GPP"
+      ],
+      "tcc_access": "Remote Parquet via DuckDB httpfs",
+      "3gpp_access": "Remote raw.md direct HTTP"
+    },
+    "retrieval": {
+      "engine": "Remote raw-corpus retrieval",
+      "strategy": "dynamic 3GPP / TCC / hybrid routing + remote TCC lexical retrieval + section-aware direct 3GPP retrieval",
+      "tcc_scoring": "lexical + phrase + proximity",
+      "max_remote_shards": 5,
+      "parallel_shard_concurrency": 5,
+      "top_k": 5
+    },
+    "mcp": {
+      "server": "Telecom Knowledge Service — Version A",
+      "tool": "search_telecom_knowledge",
+      "max_searches_per_question": 3,
+      "max_sources_per_search": 5,
+      "excerpt_chars": 2500
+    },
+    "evidence_capture": {
+      "enabled": true,
+      "location": "results[].tool_trace[].evidence",
+      "full_source_documents_saved": false,
+      "bounded_evidence_excerpts_saved": true,
+      "purpose": [
+        "retrieval relevance",
+        "source authority",
+        "claim-level groundedness",
+        "unsupported-claim analysis",
+        "technical-quality evaluation"
+      ]
+    }
+  },
+  "aggregate_metrics": {
+    "questions": 8,
+    "completed": 8,
+    "check": 0,
+    "errors": 0,
+    "completion_rate_pct": 100.0,
+    "evaluation_wall_time_sec": 95.74,
+    "route_accuracy_pct": 100.0,
+    "source_family_accuracy_pct": 87.5,
+    "evidence_text_coverage_pct": 100.0,
+    "total_mcp_searches": 8,
+    "mean_mcp_searches_per_question": 1.0,
+    "one_search_questions": 8,
+    "two_search_questions": 0,
+    "three_search_questions": 0,
+    "total_sources_returned": 34,
+    "mean_sources_per_search": 4.25,
+    "total_retrieval_latency_sec": 19.108,
+    "mean_retrieval_latency_sec": 2.388,
+    "median_retrieval_latency_sec": 0.509,
+    "global_retrieval_latency_per_search_sec": 2.388,
+    "total_e2e_latency_sec": 95.69,
+    "mean_e2e_latency_sec": 11.961,
+    "median_e2e_latency_sec": 11.214,
+    "total_input_tokens": 39334,
+    "total_output_tokens": 5566,
+    "total_tokens": 44900,
+    "mean_total_tokens_per_question": 5612.5,
+    "mean_answer_words": 430.9,
+    "median_answer_words": 438.5
+  },
+  "results": [
+    {
+      "id": "Q1",
+      "domain": "5G Core",
+      "knowledge_scope": "3GPP",
+      "question": "Explain the role of the AMF in registration and mobility management procedures in a 5G Standalone network.",
+      "expected_route": "3gpp",
+      "expected_source_families": [
+        "3GPP"
+      ],
+      "expected_tcc_collections": [],
+      "expected_3gpp_specs": [
+        "23.501",
+        "23.502"
+      ],
+      "expected_elements": [
+        "AMF",
+        "registration",
+        "mobility management",
+        "NAS",
+        "N1",
+        "N2"
+      ],
+      "status": "COMPLETED",
+      "completion_mode": "normal",
+      "stop_reason": "end_turn",
+      "answer": "In a 5G Standalone (SA) network, the **Access and Mobility Management Function (AMF)** serves as the primary control plane node responsible for handling connection and registration management for the User Equipment (UE). It acts as the central point for signaling between the UE (via the Radio Access Network) and the 5G Core (5GC).\n\nIts roles can be categorized into two main functional areas:\n\n### 1. Registration Management\nThe AMF manages the lifecycle of a UE's registration within the 5G system. Key responsibilities include:\n*   **Registration Procedures:** Handling initial registration, re-registration, and registration updates. This includes processing the `Registration Request` from the UE and sending the `Registration Accept` message.\n*   **Identity Management:** Managing the UE's identity, specifically through the allocation and management of the **5G-GUTI** (Globally Unique Temporary Identifier) to ensure privacy and efficient identification.\n*   **Authentication and Security:** Working in conjunction with other core functions to ensure the UE is authorized to access the network.\n*   **NSSAI Management:** The AMF handles Network Slice Selection Assistance Information (NSSAI). During registration, it determines the **Allowed NSSAI** (which slices the UE is permitted to use) and informs the UE via the `Registration Accept` message.\n*   **Subscription Data Integration:** The AMF interacts with the **UDM (Unified Data Management)** to retrieve subscriber information and configuration parameters required for registration.\n\n### 2. Mobility Management\nThe AMF tracks the UE's location and manages its movement across different network areas to ensure continuous service.\n*   **Registration Area Management:** The AMF allocates and reallocates **Registration Areas** to the UE. This is done by providing a **TAI List** (Tracking Area Identity List), which defines the set of tracking areas where the UE is considered registered.\n*   **Location Tracking:** The AMF monitors the UE's movement. When a UE moves into a new Tracking Area not covered by its current TAI List, the AMF facilitates the **Registration Update** procedure to update the UE's location context.\n*   **Mobility Configuration Updates:** The AMF can trigger a `UE Configuration Update` procedure to push updated access and mobility management parameters (such as new TAI Lists, Mobility Restrictions, or LADN information) to the UE.\n*   **Inter-system Mobility:** The AMF manages mobility transitions, including interworking between 5GS and legacy networks (like EPC/EPS). For example, during EPS to 5GS mobility, the AMF coordinates with the SMF and UDM to ensure session continuity and proper bearer status updates.\n\n### Summary Table for Engineers\n| Feature | AMF Responsibility |\n| :--- | :--- |\n| **Identity** | Allocation of 5G-GUTI. |\n| **Location** | Management of TAI Lists (Registration Areas). |\n| **Slicing** | Management of Allowed NSSAI. |\n| **Connectivity** | Management of CM-IDLE and CM-CONNECTED states. |\n| **Control** | Signaling gateway between (R)AN and the 5G Core. |",
+      "answer_words": 451,
+      "final_answer_tokens": 681,
+      "routes_used": [
+        "3gpp"
+      ],
+      "route_match": true,
+      "observed_source_families": [
+        "3GPP"
+      ],
+      "source_family_match": true,
+      "observed_tcc_collections": [],
+      "tcc_collection_match": true,
+      "observed_3gpp_specs": [
+        "23.501",
+        "23.502"
+      ],
+      "mcp_searches": 1,
+      "mcp_tool_requests": 1,
+      "search_classification": "IDEAL",
+      "claude_turns": 2,
+      "llm_turns": 2,
+      "search_queries": [
+        "AMF role registration and mobility management 5G Standalone architecture"
+      ],
+      "profiles_used": [],
+      "candidate_terms_per_search": [],
+      "sources_used": [
+        [
+          "3GPP"
+        ]
+      ],
+      "source_distributions": [
+        {
+          "3GPP": 4
+        }
+      ],
+      "tool_trace": [
+        {
+          "search_number": 1,
+          "query": "AMF role registration and mobility management 5G Standalone architecture",
+          "top_k": 5,
+          "route": "3gpp",
+          "sources_searched": [
+            "3GPP"
+          ],
+          "source_distribution": {
+            "3GPP": 4
+          },
+          "retrieval_trace": {
+            "architecture": "Version A",
+            "retrieval_architecture": "Remote raw-corpus retrieval",
+            "route": "3gpp",
+            "sources_searched": [
+              "3GPP"
+            ],
+            "retrieval_time_s": 0.46516226699986873,
+            "gpp_specs": [
+              "23.501",
+              "23.502"
+            ],
+            "tcc_collections": [
+              "3GPP-TSG"
+            ],
+            "3gpp": {
+              "requested_specs": [
+                "23.501",
+                "23.502"
+              ],
+              "selected_specs": [
+                {
+                  "spec_number": "23.501",
+                  "release": 20
+                },
+                {
+                  "spec_number": "23.502",
+                  "release": 20
+                }
+              ],
+              "missing_specs": [],
+              "document_errors": 0,
+              "retrieval_time_s": 0.4644722380000985
+            },
+            "tcc": null,
+            "tool_elapsed_s": 0.4657600780001303
+          },
+          "result_count": 4,
+          "retrieval_time_s": 0.46516226699986873,
+          "tool_elapsed_s": 0.4657600780001303,
+          "mcp_roundtrip_s": 0.47060971600012635,
+          "mcp_overhead_s": 0.004849637999996048,
+          "evidence": [
+            {
+              "rank": 1,
+              "relevance_score": 100.375,
+              "matched_terms": 5,
+              "matched_phrases": 1,
+              "proximity_score": 30.0,
+              "primary_coverage": 0.625,
+              "source_family": "3GPP",
+              "collection": "3GPP",
+              "identifier": "23.501",
+              "release": "20",
+              "title": "3GPP TS 23.501 V20.0.0 (2025-12) ---",
+              "section_heading": "5.17.2.4 Mobility between 5GS and GERAN/UTRAN",
+              "source_path": "marked/Rel-20/23_series/23501/raw.md",
+              "source_shard": "https://huggingface.co/datasets/GSMA/3GPP/resolve/main/marked/Rel-20/23_series/23501/raw.md",
+              "evidence": "Section: 5.17.2.4 Mobility between 5GS and GERAN/UTRAN ... S PDN Connection information in any subsequent Forward Relocation Request and Context Response message sent to an MME. NOTE 3: At mobility from EPC, the SMF+PGW-C / V-SMF / I-SMF receives the TI and BSS Container as part of the UE EPS PDN Connection information from the AMF and stores the TI. At mobility to EPC, the SMF+PGW-C / V-SMF / I-SMF provides the AMF with the TI and BSS Container as part of the UE EPS PDN Connection information. The SMF+PGW-C / V-SMF / I-SMF is not meant to understand the TI/BSS Container nor to use it for any other purpose than providing it back to AMF. GERAN/UTRAN Mobility Management Bearer Synchronisation procedures will release any dedicated QoS Flows established in 5GS and then the SMF+PGW-C deletes the PCC rule(s) associated with those QoS Flows and informs the PCF about the removed PCC rule(s) as described in clause 4.11 of TS 23.502 [3]. When the UE accesses the network via GERAN/UTRAN over Gn/Gp interface, Secondary PDP Context Activation Procedure is not supported and the SMF+PGW-C rejects the Secondary PDP Context Activation request if UE requested it. IP address preservation at mobility from EPC to GERAN/UTRAN for PDU sessions established in 5GS is not supported. With regard to interworking between 5GS and the Circuit Switched domain when the GERAN or UTRAN network is operating in NMO II (i.e. no Gs interface between MSC and SGSN): - upon mobility from 5GS to GERAN/UTRAN, the UE shall either: - act as if it is returning after a loss of GERAN/UTRAN coverage (and e.g. only perform a periodic LAU if the periodic LAU timer has expired), or, - perform a Location Update to the MSC. If the UE is registered for IMS voice and is configured, using Device Management or initial provisioning, to perform additional mobility management procedures when it has moved from a RAT that supports IMS voice over PS sessions to one that does not (see TS 23.060 [56]), it shall follow this option. Upon mobility from GERAN/UTRAN to 5GS (e.g. upon selecting an NG-RAN cell) the UE shall perform the Registration procedure of \"initial registration\" type as described in TS 23.502 [3]. The UE shall indicate a 5G-GUTI as UE identity in the Registration procedure if it has a stored valid native 5G-GUTI (e.g. from an earlier registration in the 5G System). Otherwise the UE shall indicate",
+              "evidence_chars": 2387
+            },
+            {
+              "rank": 2,
+              "relevance_score": 100.375,
+              "matched_terms": 5,
+              "matched_phrases": 1,
+              "proximity_score": 20.0,
+              "primary_coverage": 0.625,
+              "source_family": "3GPP",
+              "collection": "3GPP",
+              "identifier": "23.502",
+              "release": "20",
+              "title": "3GPP TS 23.502 V20.0.0 (2025-12)",
+              "section_heading": "4.2.4.2 UE Configuration Update procedure for access and mobility management related parameters",
+              "source_path": "marked/Rel-20/23_series/23502/raw.md",
+              "source_shard": "https://huggingface.co/datasets/GSMA/3GPP/resolve/main/marked/Rel-20/23_series/23502/raw.md",
+              "evidence": "Section: 4.2.4.2 UE Configuration Update procedure for access and mobility management related parameters ... AMF should not request acknowledgement of the NITZ command. The AMF shall request acknowledgement for NSSAI information (e.g. Allowed NSSAI, Partially Allowed NSSAI, S-NSSAI rejected partially in the RA), 5G-GUTI, TAI List, [TAI List for S-NSSAIs in Partially Allowed NSSAI], [TAI List for S-NSSAI(s) rejected partially in RA] and Mobility Restrictions, LADN Information, MICO, Operator-defined access category definitions, PLMN-assigned UE Radio Capability ID, S-NSSAI location availability information and SMS subscription. ![Sequence diagram for UE Configuration Update procedure for access and mobility management related parameters. The diagram shows interactions between UE, (R)AN, AMF, SMF, and UDM. Step 0: AMF decides update of UE configuration or need for re-registration. Step 1: UE Configuration Update Command from AMF to UE. Step 2a: UE Configuration Update Complete from UE to AMF. Step 2b: Nudm_SDM_Info service from AMF to UDM. Step 2c: Update RAN from AMF to (R)AN. Step 2d: Inform lower layers from UE. Step 3a: UE initiates Registration procedure in CM-CONNECTED state as described in clause 4.2.2.2. Steps 3b, 3c and 4 are skipped. Step 3b: Changes does not affect existing connectivity to AMF. Step 3c: Changes affects existing connectivity to AMF. Step 4: AMF triggers AN Release procedure unless there are PDU Session(s) associated with emergency services, and the UE initiates Registration procedure after UE enters CM-IDLE state.](1c79f31a718d63814feb28ab46f64f19_img.jpg) ``` sequenceDiagram participant UE participant RAN as (R)AN participant AMF participant SMF participant UDM Note over AMF: 0. AMF decides update of UE configuration or need for re-registration AMF->>UE: 1. UE Configuration Update Command UE-->>AMF: 2a. UE Configuration Update Complete AMF-->>UDM: 2b. Nudm_SDM_Info service AMF->>RAN: 2c. Update RAN UE->>UE: 2d. Inform lower layers Note over UE, RAN, AMF, SMF, UDM: 3a. UE initiates Registration procedure in CM-CONNECTED state as described in clause 4.2.2.2. Steps 3b, 3c and 4 are skipped Note over UE, RAN, AMF, SMF, UDM: 3b. Changes does not affect existing connectivity to AMF Note over UE, RAN, AMF, SMF, UDM: 3c. Changes affects existing connectivity to AMF Note ove",
+              "evidence_chars": 2332
+            },
+            {
+              "rank": 3,
+              "relevance_score": 96.375,
+              "matched_terms": 5,
+              "matched_phrases": 0,
+              "proximity_score": 30.0,
+              "primary_coverage": 0.625,
+              "source_family": "3GPP",
+              "collection": "3GPP",
+              "identifier": "23.501",
+              "release": "20",
+              "title": "3GPP TS 23.501 V20.0.0 (2025-12) ---",
+              "section_heading": "5.3.2.3 Registration Area management",
+              "source_path": "marked/Rel-20/23_series/23501/raw.md",
+              "source_shard": "https://huggingface.co/datasets/GSMA/3GPP/resolve/main/marked/Rel-20/23_series/23501/raw.md",
+              "evidence": "Section: 5.3.2.3 Registration Area management Registration Area management comprises the functions to allocate and reallocate a Registration area to a UE. Registration area is managed per access type i.e. 3GPP access or Non-3GPP access. When a UE registers with the network over the 3GPP access, the AMF allocates a set of tracking areas in TAI List to the UE. When the AMF allocates registration area, i.e. the set of tracking areas in TAI List, to the UE it may take into account various information (e.g. Mobility Pattern and Allowed/Non-Allowed Area (refer to clause 5.3.4.1)). An AMF which has the whole PLMN as serving area may alternatively allocate the whole PLMN (\"all PLMN\") as registration area to a UE in MICO mode (refer to clause 5.4.1.3). When AMF allocates registration area for UE registered for Disaster Roaming service as specified in clause 5.40.4, AMF shall only consider TAIs covering the area with the Disaster Condition. The 5G System shall support allocating a Registration Area using a single TAI List which includes tracking areas of any NG-RAN nodes in the Registration Area for a UE. In the case of SNPN, the TAI list allocated by AMF does not support Tracking Areas belonging to different SNPNs. TAI used for non-3GPP access shall be dedicated to non-3GPP access. TAI(s) dedicated to Non-3GPP access may be defined in a PLMN and apply within this PLMN. Each N3IWF, TNGF, TWIF and W-AGF is locally configured with one TAI value. Each N3IWF, TNGF, TWIF and W-AGF may be configured with a different TAI value or with the same TAI value as other N3IWFs, TNGFs, TWIFs and/or W-AGFs. The TAI is provided to the AMF during N2 interface setup and as part of the User Location Information in UE associated messages as described in TS 38.413 [34]. When a UE registers with the network over a Non-3GPP access, the AMF allocates to the UE a registration area that only includes the TAI received from the serving N3IWF, TNGF, TWIF or W-AGF. NOTE 1: For example, two W-AGFs can each correspond to a different TAI (one TAI per W-AGF) and thus support different sets of S-NSSAI(s). When generating the TAI list, the AMF shall include only TAIs that are applicable on the access type (i.e. 3GPP access or Non-3GPP access) where the TAI list is sent. NOTE 2: To prevent extra signalling load resulting from Mobility Registration Update occurring at every RAT change, it is prefer",
+              "evidence_chars": 2391
+            },
+            {
+              "rank": 4,
+              "relevance_score": 95.25,
+              "matched_terms": 6,
+              "matched_phrases": 0,
+              "proximity_score": 20.0,
+              "primary_coverage": 0.75,
+              "source_family": "3GPP",
+              "collection": "3GPP",
+              "identifier": "23.502",
+              "release": "20",
+              "title": "3GPP TS 23.502 V20.0.0 (2025-12)",
+              "section_heading": "4.11.1.3.3 EPS to 5GS Mobility Registration Procedure (Idle and Connected State) using N26 interface",
+              "source_path": "marked/Rel-20/23_series/23502/raw.md",
+              "source_shard": "https://huggingface.co/datasets/GSMA/3GPP/resolve/main/marked/Rel-20/23_series/23502/raw.md",
+              "evidence": "Section: 4.11.1.3.3 EPS to 5GS Mobility Registration Procedure (Idle and Connected State) using N26 interface ... . The SMF may use local policy to determine the handling a PDU Session if \"PDU Session continuity at inter RAT mobility\" cannot be retrieved from the UDM. After the step 14a, the SMF+PGW-C receives the SM context create request from AMF and the SMF+PGW-C awares that the UE returns back from EPS. When the SMF+PGW-C notifies the PCF for the PDU session of changing RAT from EPS to 5GS, the PCF for the PDU session checks if there exists a UE policy association in EPS for the UE and in that case, request the termination of such UE Policy Association to the PCF for the UE. 15 - 16a. HSS+UDM cancels the location of the UE in the MME as defined in steps 13 - 14 from clause 5.3.3.1 (Tracking Area Update procedure with Serving GW change) in TS 23.401 [13]. Subsequently, the steps 18 - 19 from clause 5.3.3.1 (Tracking Area Update procedure with Serving GW change) in TS 23.401 [13] are also executed with the following modification: According to configuration, for the PDN connections which are anchored in a standalone PGW, the MME initiates PDN connection release procedure as specified in TS 23.401 [13]. 17-18. These steps follow the steps 21, 21b and 22 of Registration procedure in clause 4.2.2.2.2. The Registration Accept message shall include the updated 5G-GUTI to be used by the UE in that PLMN over any access. If the active flag was included in the Registration request, The AMF may provide NG-RAN with a Mobility Restriction List taking into account the last used EPS PLMN ID and the Return preferred indication. The Mobility Restriction List contains a list of PLMN IDs as specified by TS 23.501 [2]. The Allowed NSSAI in the Registration Accept message shall contain at least the S-NSSAIs corresponding to the active PDN Connection(s) and the corresponding mapping to the HPLMN S-NSSAIs. The AMF shall include the EPS bearer status, which is generated at step 14, in the Registration Accept message. Based on the received EPS bearer status information, the UE shall check whether there are QoS Flow(s) existing locally but no associated EPS bearer(s) in the received EPS bearer status. The UE shall locally delete the 5G QoS Rule(s) and QoS Flow level QoS parameters of the QoS Flow(s) if the associated EPS bearer(s) do not exist in the received EPS bearer sta",
+              "evidence_chars": 2392
+            }
+          ]
+        }
+      ],
+      "turn_usage": [
+        {
+          "turn": 1,
+          "input_tokens": 510,
+          "output_tokens": 30,
+          "elapsed_s": 0.756056,
+          "finish_reason": "tool_calls",
+          "tool_calls": 1
+        },
+        {
+          "turn": 2,
+          "input_tokens": 4402,
+          "output_tokens": 681,
+          "elapsed_s": 9.857805,
+          "finish_reason": "stop",
+          "tool_calls": 0
+        }
+      ],
+      "evidence_items": 4,
+      "evidence_items_with_text": 4,
+      "evidence_text_coverage_pct": 100.0,
+      "retrieval_latency_sec": 0.465,
+      "mean_retrieval_latency_per_search_sec": 0.465,
+      "total_sources_returned": 4,
+      "mean_sources_per_search": 4.0,
+      "mcp_roundtrip_sec": 0.471,
+      "mcp_overhead_sec": 0.005,
+      "total_latency_sec": 11.085,
+      "non_retrieval_latency_sec": 10.62,
+      "retrieval_latency_share_pct": 4.2,
+      "input_tokens": 4912,
+      "output_tokens": 711,
+      "total_tokens": 5623,
+      "errors": []
+    },
+    {
+      "id": "Q2",
+      "domain": "Mobility",
+      "knowledge_scope": "3GPP",
+      "question": "Explain how inter-gNB handover operates in a 5G network, including the roles of the source gNB, target gNB and AMF.",
+      "expected_route": "3gpp",
+      "expected_source_families": [
+        "3GPP"
+      ],
+      "expected_tcc_collections": [],
+      "expected_3gpp_specs": [
+        "23.502",
+        "38.300",
+        "38.423"
+      ],
+      "expected_elements": [
+        "source gNB",
+        "target gNB",
+        "AMF",
+        "handover",
+        "Xn",
+        "N2"
+      ],
+      "status": "COMPLETED",
+      "completion_mode": "normal",
+      "stop_reason": "end_turn",
+      "answer": "In a 5G network, an inter-gNB handover (specifically an Xn-based handover) is a procedure used to transition a User Equipment (UE) from a source gNB to a target gNB while maintaining connectivity. This process is typically divided into three main phases: **Handover Preparation**, **Handover Execution**, and **Handover Completion**.\n\n### 1. Roles of Key Entities\n\n*   **Source gNB:** Acts as the initiator. It makes the handover decision based on measurement reports from the UE. It is responsible for communicating with the target gNB via the Xn interface to prepare the resources and for forwarding RRC reconfiguration commands to the UE.\n*   **Target gNB:** Acts as the recipient. It performs admission control to ensure it can support the UE's required services. Once resources are reserved, it provides the necessary configuration (such as new cell identity and radio parameters) back to the source gNB.\n*   **AMF (Access and Mobility Management Function):** Acts as the control plane anchor in the 5G Core (5GC). In an Xn-based handover where the AMF and UPF do not change, the AMF is primarily involved during the **Handover Completion** phase to manage the path switch.\n\n### 2. Operational Phases\n\n#### Phase I: Handover Preparation\n1.  **Handover Decision:** The source gNB decides to initiate a handover based on UE measurement reports.\n2.  **Handover Request:** The source gNB sends a `HANDOVER REQUEST` message to the target gNB over the **Xn interface**.\n3.  **Admission Control:** The target gNB evaluates if it has sufficient resources to accommodate the UE.\n4.  **Handover Request Acknowledge:** If accepted, the target gNB sends a `HANDOVER REQUEST ACKNOWLEDGE` to the source gNB, which contains the new RRC configuration for the UE.\n\n#### Phase II: Handover Execution\n5.  **RRC Reconfiguration:** The source gNB forwards the RRC configuration to the UE via an `RRCReconfiguration` message.\n6.  **UE Access:** The UE detaches from the source cell and synchronizes with the target cell (often using contention-free or contention-based random access).\n7.  **RRC Reconfiguration Complete:** Once synchronized, the UE sends an `RRCReconfigurationComplete` message to the target gNB, signaling that the radio link is established.\n\n#### Phase III: Handover Completion\n8.  **Path Switch Request:** To update the user plane path, the target gNB sends a `PATH SWITCH REQUEST` to the **AMF** via the N2 interface.\n9.  **Path Switch in UPF:** The AMF instructs the SMF (Session Management Function) to update the User Plane Function (UPF) so that downlink data is routed to the target gNB instead of the source gNB.\n10. **Path Switch Request Acknowledge:** Once the path is switched, the AMF sends an acknowledgment to the target gNB.\n11. **Resource Release:** Finally, the target gNB informs the source gNB to release the old UE context and radio resources.",
+      "answer_words": 445,
+      "final_answer_tokens": 681,
+      "routes_used": [
+        "3gpp"
+      ],
+      "route_match": true,
+      "observed_source_families": [
+        "3GPP"
+      ],
+      "source_family_match": true,
+      "observed_tcc_collections": [],
+      "tcc_collection_match": true,
+      "observed_3gpp_specs": [
+        "23.501",
+        "23.502",
+        "38.300"
+      ],
+      "mcp_searches": 1,
+      "mcp_tool_requests": 1,
+      "search_classification": "IDEAL",
+      "claude_turns": 2,
+      "llm_turns": 2,
+      "search_queries": [
+        "5G inter-gNB handover procedure roles of source gNB target gNB AMF"
+      ],
+      "profiles_used": [],
+      "candidate_terms_per_search": [],
+      "sources_used": [
+        [
+          "3GPP"
+        ]
+      ],
+      "source_distributions": [
+        {
+          "3GPP": 5
+        }
+      ],
+      "tool_trace": [
+        {
+          "search_number": 1,
+          "query": "5G inter-gNB handover procedure roles of source gNB target gNB AMF",
+          "top_k": 5,
+          "route": "3gpp",
+          "sources_searched": [
+            "3GPP"
+          ],
+          "source_distribution": {
+            "3GPP": 5
+          },
+          "retrieval_trace": {
+            "architecture": "Version A",
+            "retrieval_architecture": "Remote raw-corpus retrieval",
+            "route": "3gpp",
+            "sources_searched": [
+              "3GPP"
+            ],
+            "retrieval_time_s": 0.5524323950000962,
+            "gpp_specs": [
+              "23.501",
+              "23.502",
+              "38.300"
+            ],
+            "tcc_collections": [
+              "3GPP-TSG"
+            ],
+            "3gpp": {
+              "requested_specs": [
+                "23.501",
+                "23.502",
+                "38.300"
+              ],
+              "selected_specs": [
+                {
+                  "spec_number": "23.501",
+                  "release": 20
+                },
+                {
+                  "spec_number": "23.502",
+                  "release": 20
+                },
+                {
+                  "spec_number": "38.300",
+                  "release": 19
+                }
+              ],
+              "missing_specs": [],
+              "document_errors": 0,
+              "retrieval_time_s": 0.5517931849999513
+            },
+            "tcc": null,
+            "tool_elapsed_s": 0.5530595249999806
+          },
+          "result_count": 5,
+          "retrieval_time_s": 0.5524323950000962,
+          "tool_elapsed_s": 0.5530595249999806,
+          "mcp_roundtrip_s": 0.555579772999863,
+          "mcp_overhead_s": 0.0025202479998824856,
+          "evidence": [
+            {
+              "rank": 1,
+              "relevance_score": 187.0,
+              "matched_terms": 7,
+              "matched_phrases": 5,
+              "proximity_score": 50.0,
+              "primary_coverage": 0.6667,
+              "source_family": "3GPP",
+              "collection": "3GPP",
+              "identifier": "38.300",
+              "release": "19",
+              "title": "3GPP TS 38.300 V19.2.0 (2026-03)",
+              "section_heading": "9.2.3.1 Overview",
+              "source_path": "marked/Rel-19/38_series/38300/raw.md",
+              "source_shard": "https://huggingface.co/datasets/GSMA/3GPP/resolve/main/marked/Rel-19/38_series/38300/raw.md",
+              "evidence": "Section: 9.2.3.1 Overview ... rce gNB to UE; 4. RRCReconfigurationComplete from UE to Target gNB. A 'Switch to New Cell' box is shown on the UE side between steps 3 and 4.](fa859e4e468bfb2710a94527f2c504af_img.jpg) ``` sequenceDiagram participant UE participant Source gNB participant Target gNB Note right of Target gNB: Admission Control Source gNB->>Target gNB: 1. HANDOVER REQUEST Target gNB->>Source gNB: 2. HANDOVER REQUEST ACKNOWLEDGE Source gNB->>UE: 3. RRCReconfiguration Note left of UE: Switch to New Cell UE->>Target gNB: 4. RRCReconfigurationComplete ``` Sequence diagram of Inter-gNB handover procedures. The diagram shows three main entities: UE, Source gNB, and Target gNB. The sequence of messages is: 1. HANDOVER REQUEST from Source gNB to Target gNB; 2. HANDOVER REQUEST ACKNOWLEDGE from Target gNB (via Admission Control) to Source gNB; 3. RRCReconfiguration from Source gNB to UE; 4. RRCReconfigurationComplete from UE to Target gNB. A 'Switch to New Cell' box is shown on the UE side between steps 3 and 4. **Figure 9.2.3.1-1: Inter-gNB handover procedures** 1. The source gNB initiates handover and issues a HANDOVER REQUEST over the Xn interface. 2. The target gNB performs admission control and provides the new RRC configuration as part of the HANDOVER REQUEST ACKNOWLEDGE. 3. The source gNB provides the RRC configuration to the UE by forwarding the *RRCReconfiguration* message received in the HANDOVER REQUEST ACKNOWLEDGE. The *RRCReconfiguration* message includes at least cell ID and all information required to access the target cell so that the UE can access the target cell without reading system information. For some cases, the information required for contention-based and contention-free random access can be included in the *RRCReconfiguration* message. The access information to the target cell may include beam specific information, if any. 4. The UE moves the RRC connection to the target gNB and replies with the *RRCReconfigurationComplete*. NOTE 1: User Data can also be sent in step 4 if the grant allows. In case of DAPS handover, the UE continues the downlink user data reception from the source gNB until releasing the source cell and continues the uplink user data transmission to the source gNB until successful random access procedure to the target gNB. Only source and target PCell are used during D",
+              "evidence_chars": 2352
+            },
+            {
+              "rank": 2,
+              "relevance_score": 177.66666666666666,
+              "matched_terms": 8,
+              "matched_phrases": 3,
+              "proximity_score": 50.0,
+              "primary_coverage": 0.7778,
+              "source_family": "3GPP",
+              "collection": "3GPP",
+              "identifier": "23.501",
+              "release": "20",
+              "title": "3GPP TS 23.501 V20.0.0 (2025-12) ---",
+              "section_heading": "5.4.14.3 Support for UE-satellite-UE communication when serving satellite changes",
+              "source_path": "marked/Rel-20/23_series/23501/raw.md",
+              "source_shard": "https://huggingface.co/datasets/GSMA/3GPP/resolve/main/marked/Rel-20/23_series/23501/raw.md",
+              "evidence": "Section: 5.4.14.3 Support for UE-satellite-UE communication when serving satellite changes NOTE 1: The following mechanism assumes that the source gNB, UL CL/L-PSA, and IMS-AGW are onboard the same source satellite, and the target gNB, UL CL/L-PSA, and IMS-AGW are onboard the same target satellite. In the UE-SAT-UE communication, if the UE's serving satellite changes (e.g. due to UE movement or the satellite movement), the Xn/N2-based handover procedure can be performed to change the serving gNB from that on the source satellite to that on the target satellite. The AMF includes the target satellite ID in the Nsmf\\_PDUSession\\_UpdateSMContext Request to the SMF. The SMF decides whether to route IMS user plane traffic to the PSA on the ground or retain the UL CL/L-PSA on the satellite based on local configuration and other factors as specified in clause 6.3.3. NOTE 2: The SMF can decide to route the IMS user plane traffic to the PSA on ground, e.g., due to no connection between the source satellite and the target satellite. If the SMF decides to route the IMS user plane traffic to the PSA on the ground and the procedure for removing the UL CL/L-PSA as described in clause 4.3.5.5 of TS 23.502 [3] is to be performed, the SMF provides an early notification without the DNAI associated with satellite ID via Nsmf\\_EventExposure\\_Notify to PCF. The PCF forwards this notification to the P-CSCF via Npcf\\_PolicyAuthorisation\\_Notify, indicating that the 5GC user plane needs to fall back to the ground. If the SMF decides to retain the UL CL/L-PSA on the satellite, the principle in clause 5.6.7.2 is used to enable the coordination between SMF and P-CSCF. Based on the early notification and associated indication of \"AF acknowledgment to be expected\" on AF (P-CSCF) subscription as described in clause AE.5.2.1 of TS 23.228 [15], the SMF provides an early notification with the value of DNAI derived from the target satellite ID via Nsmf\\_EventExposure\\_Notify to PCF and the PCF forwards this DNAI value to the P-CSCF via Npcf\\_PolicyAuthorisation\\_Notify. In this case, the IMS informs 5GC whether the UE-SAT-UE communication can or cannot continue, as outlined in clause AE.5.2.1 of TS 23.228 [15], i.e. the PCF receives a response from the P-CSCF and forwards it to the SMF: - If the response (i.e. a positive AF (P-CSCF) acknowledgement as defined in clause 5.6.7.2) indicate",
+              "evidence_chars": 2394
+            },
+            {
+              "rank": 3,
+              "relevance_score": 177.66666666666666,
+              "matched_terms": 8,
+              "matched_phrases": 3,
+              "proximity_score": 50.0,
+              "primary_coverage": 0.7778,
+              "source_family": "3GPP",
+              "collection": "3GPP",
+              "identifier": "38.300",
+              "release": "19",
+              "title": "3GPP TS 38.300 V19.2.0 (2026-03)",
+              "section_heading": "9.2.3.2.1 C-Plane Handling",
+              "source_path": "marked/Rel-19/38_series/38300/raw.md",
+              "source_shard": "https://huggingface.co/datasets/GSMA/3GPP/resolve/main/marked/Rel-19/38_series/38300/raw.md",
+              "evidence": "Section: 9.2.3.2.1 C-Plane Handling The intra-NR RAN handover performs the preparation and execution phase of the handover procedure performed without involvement of the 5GC, i.e. preparation messages are directly exchanged between the gNBs. The release of the resources at the source gNB during the handover completion phase is triggered by the target gNB. The figure below depicts the basic handover scenario where neither the AMF nor the UPF changes: ![Sequence diagram of Intra-AMF/UPF Handover showing interactions between UE, Source gNB, Target gNB, AMF, and UPF(s).](ff7ce44f3fdd51bae7b231f34df07c6a_img.jpg) The diagram illustrates the sequence of messages for an Intra-AMF/UPF Handover. The participants are UE, Source gNB, Target gNB, AMF, and UPF(s). The process is divided into three phases: Handover Preparation, Handover Execution, and Handover Completion. - Handover Preparation:** - 0. Mobility control information provided by AMF (AMF to Source gNB). - 1. Measurement Control and Reports (Source gNB to UE). - 2. Handover Decision (Source gNB internal process). - 3. HANDOVER REQUEST (Source gNB to Target gNB). - 4. Admission Control (Target gNB internal process). - 5. HANDOVER REQUEST ACKNOWLEDGE (Target gNB to Source gNB). - Handover Execution:** - 6. RAN Handover Initiation (Source gNB to UE). - UE Detach from old cell / Synchronise to new cell (UE internal process). - Deliver buffered data and new data from UPF(s) (UPF(s) to Source gNB). - 7a. EARLY STATUS TRANSFER (Source gNB to Target gNB). - 7. SN STATUS TRANSFER (Source gNB to Target gNB). - User Data (Source gNB to Target gNB). - Buffer User Data from Source gNB (Source gNB internal process). - Handover Completion:** - 8. RAN Handover Completion (Target gNB to Source gNB). - 8a. HANDOVER SUCCESS (Target gNB to Source gNB). - 8b. SN STATUS TRANSFER (Target gNB to Source gNB). - User Data (Target gNB to UPF(s)). - User Data (Target gNB to UE). - 9. PATH SWITCH REQUEST (Target gNB to AMF). - 10. Path Switch in UPF(s) (AMF to UPF(s)). - End Marker (AMF to Target gNB). - User Data (UPF(s) to Target gNB). - 11. PATH SWITCH REQUEST ACKNOWLEDGE (AMF to Target gNB). - 12. UE CONTEXT RELEASE (Target gNB to Source gNB). Sequence diagram of Intra-AMF/UPF Handover showing interactions between UE, Source gNB, Target gNB, AMF, and UPF(s). **Figure 9.2.3.2.1-1:",
+              "evidence_chars": 2345
+            },
+            {
+              "rank": 4,
+              "relevance_score": 137.66666666666666,
+              "matched_terms": 8,
+              "matched_phrases": 0,
+              "proximity_score": 40.0,
+              "primary_coverage": 0.7778,
+              "source_family": "3GPP",
+              "collection": "3GPP",
+              "identifier": "23.501",
+              "release": "20",
+              "title": "3GPP TS 23.501 V20.0.0 (2025-12) ---",
+              "section_heading": "5.41 NR RedCap and NR eRedCap UEs differentiation",
+              "source_path": "marked/Rel-20/23_series/23501/raw.md",
+              "source_shard": "https://huggingface.co/datasets/GSMA/3GPP/resolve/main/marked/Rel-20/23_series/23501/raw.md",
+              "evidence": "Section: 5.41 NR RedCap and NR eRedCap UEs differentiation ... p to the NG-RAN during RRC Connection Establishment, the NG-RAN shall provide an NR RedCap Indication to the AMF in the Initial UE Message (see clause 4.2.2.2.1 of TS 23.502 [3] and TS 38.413 [34]). When the UE has provided an NR eRedCap indication indicating support of NR eRedCap to the NG-RAN during RRC Connection Establishment, the NG-RAN shall provide an NR eRedCap Indication to the AMF in the Initial UE Message (see clause 4.2.2.2.1 of TS 23.502 [3] and TS 38.413 [34]). When the AMF receives an NR RedCap Indication or NR eRedCap Indication from NG-RAN in an Initial UE Message, the AMF shall store the NR RedCap Indication or NR eRedCap Indication in the UE context, consider that the RAT type is NR RedCap or NR eRedCap and signal it accordingly to the SMSF during registration procedure for SMS over NAS, to the SMF during PDU Session Establishment or PDU Session Modification procedure. The PCF can also receive the NR RedCap or NR eRedCap RAT type when applicable from the AMF using the PCRT on Access Type change specified in clause 6.1.2.5 of TS 23.503 [45] during AM Policy Association Establishment or AM Policy Association Modification procedure and from the SMF using the PCRT on Access Type change specified in clause 6.1.3.5 of TS 23.503 [45] during SM Policy Association Establishment or SM Policy Association Modification procedure. During handover from E-UTRA to NR, the target NG-RAN (i.e. gNB) provides the NR RedCap indication or NR eRedCap indication to AMF in NGAP Path Switch Request message during Xn handover, or NGAP Handover Request Acknowledge message during N2 handover (including intra 5GS N2 handover and EPS to 5GS handover) based on the UE capability information provided by the source RAN to the target RAN as specified in TS 38.300 [27]. The NFs interacting with CHF shall include the NR RedCap or NR eRedCap as RAT type. Upon AMF change, the source AMF shall provide the \"NR RedCap Indication\" or \"NR eRedCap Indication\" to the target AMF. If a UE supports either NR RedCap or NR eRedCap as specified in TS 38.306 [69] and the UE NG-RAN Radio Capability information changes following the procedure in clause 5.4.4.1, when the UE performs RRC Connection Establishment procedure, the UE shall report the NR RedCap indication or NR eRedCap indication that applies to the new Radio Capabil",
+              "evidence_chars": 2393
+            },
+            {
+              "rank": 5,
+              "relevance_score": 121.66666666666667,
+              "matched_terms": 8,
+              "matched_phrases": 1,
+              "proximity_score": 20.0,
+              "primary_coverage": 0.7778,
+              "source_family": "3GPP",
+              "collection": "3GPP",
+              "identifier": "23.502",
+              "release": "20",
+              "title": "3GPP TS 23.502 V20.0.0 (2025-12)",
+              "section_heading": "4.9.1.2.2 Xn based inter NG-RAN handover without User Plane function re-allocation",
+              "source_path": "marked/Rel-20/23_series/23502/raw.md",
+              "source_shard": "https://huggingface.co/datasets/GSMA/3GPP/resolve/main/marked/Rel-20/23_series/23502/raw.md",
+              "evidence": "Section: 4.9.1.2.2 Xn based inter NG-RAN handover without User Plane function re-allocation ... : 5. N3 End marker Source_NG_RAN->>Target_NG_RAN: Downlink data AMF->>SMF_s: 6. Nsmf_PDUSession_UpdateSMContext Response SMF_s-->>AMF: 7. N2 Path Switch Request Ack AMF->>Source_NG_RAN: 8. Release Resources Note over Source_NG_RAN: 9. Registration Procedure ``` Sequence diagram for Xn based inter NG-RAN handover without UPF re-allocation. The diagram shows the interaction between UE, Source NG-RAN, Target NG-RAN, AMF, SMF(s), and UPF(s). **Figure 4.9.1.2.2-1: Xn based inter NG-RAN handover without UPF re-allocation** 0. The source NG-RAN initiates the inter NG-RAN Xn handover procedure for UE in RRC\\_CONNECTED state as specified in TS 38.300 [9]. If the source NG RAN and Target NG RAN support RACS as defined in TS 23.501 [2], the source NG-RAN provides the UE's UE Radio Capability ID to the Target NG-RAN. If the source NG-RAN has knowledge that the Target NG-RAN might not have a local copy of the Radio Capability corresponding to the UE Radio Capability ID (i.e. because the source NG-RAN had itself to retrieve the UE's Radio Capability from the AMF) then the source NG-RAN may also send some or all of the UE's Radio Capability to the Target NG-RAN (the size limit based on local configuration) in Xn signalling as defined in TS 38.423 [72]. In the case of inter-PLMN handover, when the source and Target NG-RAN support RACS as defined in TS 23.501 [2] and the source NG-RAN determines based on local configuration that the Target PLMN does not support the UE Radio Capability ID assigned by the source PLMN, then the source NG-RAN shall provide the UE radio access capabilities to the Target NG-RAN and shall not send the UE Radio Capability ID. If, as permitted in TS 38.423 [72], the Target NG-RAN during the handover preparation received the UE radio access capabilities but did not receive the UE Radio Capability ID, NG-RAN shall proceed with handover using the received UE radio access capabilities. If the Target NG-RAN received both the UE radio access capabilities and the UE Radio Capability ID, then the Target NG-RAN shall use any locally stored UE radio access capability information corresponding to the UE Radio Capability ID. If none are stored locally, the Target NG-RAN may request the full UE radio access capability information from the co",
+              "evidence_chars": 2372
+            }
+          ]
+        }
+      ],
+      "turn_usage": [
+        {
+          "turn": 1,
+          "input_tokens": 519,
+          "output_tokens": 35,
+          "elapsed_s": 0.837459,
+          "finish_reason": "tool_calls",
+          "tool_calls": 1
+        },
+        {
+          "turn": 2,
+          "input_tokens": 5378,
+          "output_tokens": 681,
+          "elapsed_s": 9.950157,
+          "finish_reason": "stop",
+          "tool_calls": 0
+        }
+      ],
+      "evidence_items": 5,
+      "evidence_items_with_text": 5,
+      "evidence_text_coverage_pct": 100.0,
+      "retrieval_latency_sec": 0.552,
+      "mean_retrieval_latency_per_search_sec": 0.552,
+      "total_sources_returned": 5,
+      "mean_sources_per_search": 5.0,
+      "mcp_roundtrip_sec": 0.556,
+      "mcp_overhead_sec": 0.003,
+      "total_latency_sec": 11.343,
+      "non_retrieval_latency_sec": 10.791,
+      "retrieval_latency_share_pct": 4.9,
+      "input_tokens": 5897,
+      "output_tokens": 716,
+      "total_tokens": 6613,
+      "errors": []
+    },
+    {
+      "id": "Q3",
+      "domain": "RAN",
+      "knowledge_scope": "3GPP",
+      "question": "Explain how radio link failure is detected and handled in a 5G NR network.",
+      "expected_route": "3gpp",
+      "expected_source_families": [
+        "3GPP"
+      ],
+      "expected_tcc_collections": [],
+      "expected_3gpp_specs": [
+        "38.331"
+      ],
+      "expected_elements": [
+        "radio link failure",
+        "RLF",
+        "RRC",
+        "T310",
+        "N310",
+        "RRC re-establishment"
+      ],
+      "status": "COMPLETED",
+      "completion_mode": "normal",
+      "stop_reason": "end_turn",
+      "answer": "In a 5G NR network, Radio Link Failure (RLF) is a critical event where the connection between the User Equipment (UE) and the gNB (or the Secondary Cell Group, SCG) is lost or becomes unusable. The process is divided into two main phases: **Detection** and **Handling**.\n\n### 1. RLF Detection\nThe UE detects RLF through various timers, MAC-layer indications, and RLC-layer failures. According to 3GPP TS 38.331, detection mechanisms include:\n\n*   **Timer Expiry:**\n    *   **T310 Expiry:** The primary timer for detecting RLF in the Primary Cell (PCell). If T310 expires, the UE considers the radio link failed.\n    *   **T312 Expiry:** Used specifically in the Secondary Cell Group (SCG) to detect failure in the PSCell.\n*   **MAC Layer Indications:**\n    *   **Random Access Problem:** Indication from the SCG MAC that a random access procedure has failed.\n    *   **Uplink LBT Failure:** Consistent uplink Listen-Before-Talk (LBT) failure indications from the SCG MAC.\n*   **RLC Layer Indications:**\n    *   **Max Retransmissions Reached:** If the RLC layer reaches the maximum number of allowed retransmissions for a logical channel, it signals a failure.\n*   **Reference Signal Monitoring:** The network configures `RadioLinkMonitoringConfig` which includes specific reference signals (`failureDetectionResourcesToAddModList`) used by the UE to monitor cell-level RLM or beam failure. If no specific RSs are provided, the UE performs monitoring based on the activated TCI-state of the PDCCH.\n\n### 2. RLF Handling\nOnce RLF is detected, the UE's response depends on whether the failure occurred in the Master Cell Group (MCG) or the SCG, and the UE's current connection configuration (e.g., NR-DC or EN-DC).\n\n*   **SCG Failure Handling:**\n    *   If the SCG fails, the UE may initiate an **SCG Failure Information Procedure** to report the cause.\n    *   In **NR-DC (Dual Connectivity)**, if the UE detects SCG failure while the T316 timer is running, it can use an **RLF-Report** for fast MCG recovery, providing details like the `pSCellId`, `scg-FailureCause`, and `elapsedTimeSCG-Failure`.\n    *   If the SCG is deactivated, the UE stops radio link monitoring on the SCG and instructs lower layers to stop beam failure detection on the PSCell.\n\n*   **Connection Re-establishment:**\n    *   If the failure is critical (e.g., MCG failure or an unrecoverable SCG failure), the UE initiates the **Connection Re-establishment Procedure**.\n    *   The UE attempts to find a suitable cell to re-establish its RRC connection, potentially using stored information or performing random access to a new cell.\n\n*   **Reporting:** The UE generates failure reports (e.g., `VarRLF-Report`) to assist the network in understanding the radio environment and optimizing mobility or beam management.",
+      "answer_words": 411,
+      "final_answer_tokens": 701,
+      "routes_used": [
+        "3gpp"
+      ],
+      "route_match": true,
+      "observed_source_families": [
+        "3GPP"
+      ],
+      "source_family_match": true,
+      "observed_tcc_collections": [],
+      "tcc_collection_match": true,
+      "observed_3gpp_specs": [
+        "38.331"
+      ],
+      "mcp_searches": 1,
+      "mcp_tool_requests": 1,
+      "search_classification": "IDEAL",
+      "claude_turns": 2,
+      "llm_turns": 2,
+      "search_queries": [
+        "5G NR radio link failure detection and handling mechanisms RLF"
+      ],
+      "profiles_used": [],
+      "candidate_terms_per_search": [],
+      "sources_used": [
+        [
+          "3GPP"
+        ]
+      ],
+      "source_distributions": [
+        {
+          "3GPP": 2
+        }
+      ],
+      "tool_trace": [
+        {
+          "search_number": 1,
+          "query": "5G NR radio link failure detection and handling mechanisms RLF",
+          "top_k": 5,
+          "route": "3gpp",
+          "sources_searched": [
+            "3GPP"
+          ],
+          "source_distribution": {
+            "3GPP": 2
+          },
+          "retrieval_trace": {
+            "architecture": "Version A",
+            "retrieval_architecture": "Remote raw-corpus retrieval",
+            "route": "3gpp",
+            "sources_searched": [
+              "3GPP"
+            ],
+            "retrieval_time_s": 0.45415316999992683,
+            "gpp_specs": [
+              "38.331"
+            ],
+            "tcc_collections": [
+              "3GPP-TSG"
+            ],
+            "3gpp": {
+              "requested_specs": [
+                "38.331"
+              ],
+              "selected_specs": [
+                {
+                  "spec_number": "38.331",
+                  "release": 19
+                }
+              ],
+              "missing_specs": [],
+              "document_errors": 0,
+              "retrieval_time_s": 0.45348970899999586
+            },
+            "tcc": null,
+            "tool_elapsed_s": 0.45438524900009725
+          },
+          "result_count": 2,
+          "retrieval_time_s": 0.45415316999992683,
+          "tool_elapsed_s": 0.45438524900009725,
+          "mcp_roundtrip_s": 0.4568780690001404,
+          "mcp_overhead_s": 0.002492820000043139,
+          "evidence": [
+            {
+              "rank": 1,
+              "relevance_score": 188.0,
+              "matched_terms": 6,
+              "matched_phrases": 4,
+              "proximity_score": 40.0,
+              "primary_coverage": 0.6667,
+              "source_family": "3GPP",
+              "collection": "3GPP",
+              "identifier": "38.331",
+              "release": "19",
+              "title": "3GPP TS 38.331 V19.2.0 (2026-03)",
+              "section_heading": "5.3.10.3 Detection of radio link failure",
+              "source_path": "marked/Rel-19/38_series/38331/raw.md",
+              "source_shard": "https://huggingface.co/datasets/GSMA/3GPP/resolve/main/marked/Rel-19/38_series/38331/raw.md",
+              "evidence": "Section: 5.3.10.3 Detection of radio link failure ... or with its child UE(s)) or send *NotificationMessageSidelink* to the connected L2/L3 U2N Remote UE(s) or to the child UE(s)) in accordance with 5.8.9.10. A N3C Relay UE shall: 1> upon detecting radio link failure: 2> indicates to the associated N3C remote UE via the Non-3GPP Connection. NOTE 2: How the N3C Relay UE indicates Uu RLF on the Non-3GPP Connection is left to implementation. The UE shall: 1> upon T310 expiry in PSCell; or 1> upon T312 expiry in PSCell; or 1> upon random access problem indication from SCG MAC; or 1> upon indication from SCG RLC that the maximum number of retransmissions has been reached; or 1> if connected as an IAB-node, upon BH RLF indication received on BAP entity from the SCG; or 1> upon consistent uplink LBT failure indication from SCG MAC: 2> if the indication is from SCG RLC and CA duplication is configured and activated for SCG, and for the corresponding logical channel *allowedServingCells* only includes SCell(s): 3> initiate the failure information procedure as specified in 5.7.5 to report RLC failure. - 2> else: - 3> consider radio link failure to be detected for the SCG, i.e. SCG RLF; - 3> if the SCG is deactivated: - 4> stop radio link monitoring on the SCG; - 4> indicate to lower layers to stop beam failure detection on the PSCell; - 3> if MCG transmission is not suspended: - 4> initiate the SCG failure information procedure as specified in 5.7.3 to report SCG radio link failure. - 3> else: - 4> if the UE is in NR-DC: - 5> if the UE supports RLF-Report for fast MCG recovery procedure and if the UE detected SCG failure while the timer T316 was running: - 6> set the *pSCellId* in the *VarRLF-Report* to the global cell identity of the PSCell, if available, otherwise to the physical cell identity and carrier frequency of the PSCell; - 6> set the *scg-FailureCause* in the *VarRLF-Report* value according to 5.7.3.5; - 6> set the *elapsedTimeSCG-Failure* in the *VarRLF-Report* to the time elapsed between MCG failure and the SCG failure; - 6> include *scg-FailedAfterMCG*; - 5> initiate the connection re-establishment procedure as specified in 5.3.7; - 4> else (the UE is in (NG)EN-DC): - 5> initiate the connection re-establishment procedure as specified in TS 36.331 [10], clause 5.3",
+              "evidence_chars": 2307
+            },
+            {
+              "rank": 2,
+              "relevance_score": 151.0,
+              "matched_terms": 6,
+              "matched_phrases": 4,
+              "proximity_score": 40.0,
+              "primary_coverage": 0.6667,
+              "source_family": "3GPP",
+              "collection": "3GPP",
+              "identifier": "38.331",
+              "release": "19",
+              "title": "3GPP TS 38.331 V19.2.0 (2026-03)",
+              "section_heading": "RadioLinkMonitoringConfig information element",
+              "source_path": "marked/Rel-19/38_series/38331/raw.md",
+              "source_shard": "https://huggingface.co/datasets/GSMA/3GPP/resolve/main/marked/Rel-19/38_series/38331/raw.md",
+              "evidence": "Section: RadioLinkMonitoringConfig information element ... | | <b>failureDetectionResourcesToAddModList</b><br>A list of reference signals for detecting beam failure and/or cell level radio link failure (RLF). The limits of the reference signals that the network can configure are specified in TS 38.213 [13], table 5-1. The network configures at most two <i>detectionResources</i> per BWP for the purpose <i>beamFailure</i> or <i>both</i> . If no RSs are provided for the purpose of beam failure detection, the UE performs beam monitoring based on the activated <i>TCI-State</i> for PDCCH as described in TS 38.213 [13], clause 6. If no RSs are provided in this list for the purpose of RLF detection, the UE performs Cell-RLM based on the activated <i>TCI-State</i> of PDCCH as described in TS 38.213 [13], clause 5. The network ensures that the UE has a suitable set of reference signals for performing cell-RLM. If <i>failureDetectionSet1-r17</i> and <i>failureDetectionSet2-r17</i> are present, the <i>purpose</i> of <i>RadioLinkMonitoringRS</i> in <i>failureDetectionResourcesToAddModList</i> only can be set to <i>rlf</i> . | | <b>failureDetectionSet1, failureDetectionSet2</b><br>Configures parameters for beamfailure detection towards beam failure detection resources configured in the set. If additional PCIs are configured using <i>additionalPCI-ToAddModList</i> for the serving cell, each RS in one set can be associated only with one PCI. Network always configures the <i>failureDetectionSet1</i> and <i>failureDetectionSet2</i> together. <i>failureDetectionSetN</i> is present if and only if <i>candidateBeamRS-List2-r17</i> is configured. When a <i>failureDetectionSetN</i> is present, after the reconfiguration, the UE shall consider all the reference signals for this failure detection set as activated if at most <i>maxBFD-RS-resourcesPerSetPerBWP-r17</i> reference signals are ...",
+              "evidence_chars": 1898
+            }
+          ]
+        }
+      ],
+      "turn_usage": [
+        {
+          "turn": 1,
+          "input_tokens": 505,
+          "output_tokens": 29,
+          "elapsed_s": 0.758733,
+          "finish_reason": "tool_calls",
+          "tool_calls": 1
+        },
+        {
+          "turn": 2,
+          "input_tokens": 2519,
+          "output_tokens": 701,
+          "elapsed_s": 9.018954,
+          "finish_reason": "stop",
+          "tool_calls": 0
+        }
+      ],
+      "evidence_items": 2,
+      "evidence_items_with_text": 2,
+      "evidence_text_coverage_pct": 100.0,
+      "retrieval_latency_sec": 0.454,
+      "mean_retrieval_latency_per_search_sec": 0.454,
+      "total_sources_returned": 2,
+      "mean_sources_per_search": 2.0,
+      "mcp_roundtrip_sec": 0.457,
+      "mcp_overhead_sec": 0.002,
+      "total_latency_sec": 10.235,
+      "non_retrieval_latency_sec": 9.781,
+      "retrieval_latency_share_pct": 4.4,
+      "input_tokens": 3024,
+      "output_tokens": 730,
+      "total_tokens": 3754,
+      "errors": []
+    },
+    {
+      "id": "Q4",
+      "domain": "QoS",
+      "knowledge_scope": "3GPP",
+      "question": "Explain how 5QI and QoS flows are handled in a 5G network, including the roles of the SMF and UPF.",
+      "expected_route": "3gpp",
+      "expected_source_families": [
+        "3GPP"
+      ],
+      "expected_tcc_collections": [],
+      "expected_3gpp_specs": [
+        "23.501",
+        "23.503"
+      ],
+      "expected_elements": [
+        "5QI",
+        "QoS Flow",
+        "QFI",
+        "SMF",
+        "UPF",
+        "QoS rules"
+      ],
+      "status": "COMPLETED",
+      "completion_mode": "normal",
+      "stop_reason": "end_turn",
+      "answer": "In a 5G system, Quality of Service (QoS) is managed through a granular mechanism based on **QoS Flows**. This model allows the network to differentiate traffic within a single PDU (Protocol Data Unit) Session to meet specific application requirements, such as low latency for gaming or high bandwidth for video streaming.\n\n### 1. The QoS Flow and 5QI\nThe **QoS Flow** is the finest granularity of differentiation within a PDU Session. All user plane traffic sharing the same **QoS Flow ID (QFI)** receives the same forwarding treatment, such as scheduling and admission thresholds.\n\n*   **5QI (5G QoS Identifier):** A scalar value that refers to a specific QoS profile. This profile defines key performance characteristics, including:\n    *   Resource type (Guaranteed Bit Rate [GBR] or Non-GBR).\n    *   Priority level.\n    *   Packet Delay Budget (PDB).\n    *   Packet Error Rate (PER).\n*   **QFI Mapping:** The QFI is used to identify the flow in the user plane. It is carried in an encapsulation header on the N3 and N9 interfaces without modifying the original end-to-end packet header.\n\n### 2. Role of the Session Management Function (SMF)\nThe SMF acts as the **control plane orchestrator** for QoS. Its responsibilities include:\n*   **Policy Implementation:** It receives PCC (Policy and Charging Control) rules from the PCF (Policy Control Function) and translates them into QoS rules.\n*   **QoS Flow Management:** The SMF establishes, modifies, and deletes QoS Flows during PDU Session procedures.\n*   **Configuration of Network Elements:**\n    *   **To the Access Network (AN):** It provides the QoS profile via the AMF over the N2 interface.\n    *   **To the UE:** It provides QoS rules (via the AMF over the N1 interface) so the UE knows how to map uplink traffic to the correct QFI.\n    *   **To the UPF:** It provides **PDRs (Packet Detection Rules)** and **FARs (Forwarding Action Rules)** to define how specific packets are handled.\n*   **Enforcement of AMBR:** The SMF ensures the **Aggregate Maximum Bit Rate (AMBR)** is enforced for bandwidth policing at the UPF.\n\n### 3. Role of the User Plane Function (UPF)\nThe UPF acts as the **user plane execution engine**. Its primary roles are:\n*   **Traffic Identification and Marking:** It uses the rules provided by the SMF (PDRs) to identify incoming packets and map them to the appropriate QFI.\n*   **Packet Forwarding:** It performs the actual forwarding of packets according to the specified QoS characteristics (e.g., prioritizing GBR flows).\n*   **Bandwidth Policing:** It enforces rate limits, such as the Session AMBR, to ensure no single PDU session exceeds its authorized bandwidth.\n*   **Data Notification:** If an IP packet arrives for a UE in CM-IDLE state, the UPF sends a \"Data Notification\" to the SMF to trigger paging.",
+      "answer_words": 442,
+      "final_answer_tokens": 676,
+      "routes_used": [
+        "3gpp"
+      ],
+      "route_match": true,
+      "observed_source_families": [
+        "3GPP"
+      ],
+      "source_family_match": true,
+      "observed_tcc_collections": [],
+      "tcc_collection_match": true,
+      "observed_3gpp_specs": [
+        "23.501",
+        "23.503"
+      ],
+      "mcp_searches": 1,
+      "mcp_tool_requests": 1,
+      "search_classification": "IDEAL",
+      "claude_turns": 2,
+      "llm_turns": 2,
+      "search_queries": [
+        "5G QoS flow handling 5QI SMF UPF mechanism"
+      ],
+      "profiles_used": [],
+      "candidate_terms_per_search": [],
+      "sources_used": [
+        [
+          "3GPP"
+        ]
+      ],
+      "source_distributions": [
+        {
+          "3GPP": 4
+        }
+      ],
+      "tool_trace": [
+        {
+          "search_number": 1,
+          "query": "5G QoS flow handling 5QI SMF UPF mechanism",
+          "top_k": 5,
+          "route": "3gpp",
+          "sources_searched": [
+            "3GPP"
+          ],
+          "source_distribution": {
+            "3GPP": 4
+          },
+          "retrieval_trace": {
+            "architecture": "Version A",
+            "retrieval_architecture": "Remote raw-corpus retrieval",
+            "route": "3gpp",
+            "sources_searched": [
+              "3GPP"
+            ],
+            "retrieval_time_s": 0.3913613189999978,
+            "gpp_specs": [
+              "23.501",
+              "23.503"
+            ],
+            "tcc_collections": [
+              "3GPP-TSG"
+            ],
+            "3gpp": {
+              "requested_specs": [
+                "23.501",
+                "23.503"
+              ],
+              "selected_specs": [
+                {
+                  "spec_number": "23.501",
+                  "release": 20
+                },
+                {
+                  "spec_number": "23.503",
+                  "release": 20
+                }
+              ],
+              "missing_specs": [],
+              "document_errors": 0,
+              "retrieval_time_s": 0.39073817000007693
+            },
+            "tcc": null,
+            "tool_elapsed_s": 0.39188251899986426
+          },
+          "result_count": 4,
+          "retrieval_time_s": 0.3913613189999978,
+          "tool_elapsed_s": 0.39188251899986426,
+          "mcp_roundtrip_s": 0.3944482289998632,
+          "mcp_overhead_s": 0.002565709999998944,
+          "evidence": [
+            {
+              "rank": 1,
+              "relevance_score": 183.125,
+              "matched_terms": 7,
+              "matched_phrases": 2,
+              "proximity_score": 50.0,
+              "primary_coverage": 0.875,
+              "source_family": "3GPP",
+              "collection": "3GPP",
+              "identifier": "23.501",
+              "release": "20",
+              "title": "3GPP TS 23.501 V20.0.0 (2025-12) ---",
+              "section_heading": "5.7.1.1 QoS Flow",
+              "source_path": "marked/Rel-20/23_series/23501/raw.md",
+              "source_shard": "https://huggingface.co/datasets/GSMA/3GPP/resolve/main/marked/Rel-20/23_series/23501/raw.md",
+              "evidence": "Section: 5.7.1.1 QoS Flow The 5G QoS model is based on QoS Flows. The 5G QoS model supports both QoS Flows that require guaranteed flow bit rate (GBR QoS Flows) and QoS Flows that do not require guaranteed flow bit rate (Non-GBR QoS Flows). The 5G QoS model also supports Reflective QoS (see clause 5.7.5). The QoS Flow is the finest granularity of QoS differentiation in the PDU Session. A QoS Flow ID (QFI) is used to identify a QoS Flow in the 5G System. User Plane traffic with the same QFI within a PDU Session receives the same traffic forwarding treatment (e.g. scheduling, admission threshold). The QFI is carried in an encapsulation header on N3 (and N9) i.e. without any changes to the e2e packet header. QFI shall be used for all PDU Session Types. The QFI shall be unique within a PDU Session. The QFI may be dynamically assigned or may be equal to the 5QI (see clause 5.7.2.1). Within the 5GS, a QoS Flow is controlled by the SMF and may be preconfigured, or established via the PDU Session Establishment procedure (see clause 4.3.2 of TS 23.502 [3]), or the PDU Session Modification procedure (see clause 4.3.3 of TS 23.502 [3]). Any QoS Flow is characterised by: - A QoS profile provided by the SMF to the AN via the AMF over the N2 reference point or preconfigured in the AN; - One or more QoS rule(s) and optionally QoS Flow level QoS parameters (as specified in TS 24.501 [47]) associated with these QoS rule(s) which can be provided by the SMF to the UE via the AMF over the N1 reference point and/or derived by the UE by applying Reflective QoS control; and - One or more UL and DL PDR(s) provided by the SMF to the UPF. Within the 5GS, a QoS Flow associated with the default QoS rule is required to be established for a PDU Session and remains established throughout the lifetime of the PDU Session. This QoS Flow should be a Non-GBR QoS Flow (further details are described in clause 5.7.2.7). A QoS Flow is associated with QoS requirements as specified by QoS parameters and QoS characteristics. NOTE: The QoS Flow associated with the default QoS rule provides the UE with connectivity throughout the lifetime of the PDU Session. Possible interworking with EPS motivates the recommendation for this QoS Flow to be of type Non-GBR. The PDU Set based handling can be enabled for a QoS Flow as described in clause 5.37.5.",
+              "evidence_chars": 2340
+            },
+            {
+              "rank": 2,
+              "relevance_score": 175.0,
+              "matched_terms": 8,
+              "matched_phrases": 1,
+              "proximity_score": 50.0,
+              "primary_coverage": 1.0,
+              "source_family": "3GPP",
+              "collection": "3GPP",
+              "identifier": "23.501",
+              "release": "20",
+              "title": "3GPP TS 23.501 V20.0.0 (2025-12) ---",
+              "section_heading": "5.22.3 Invocation-related Priority Mechanisms",
+              "source_path": "marked/Rel-20/23_series/23501/raw.md",
+              "source_shard": "https://huggingface.co/datasets/GSMA/3GPP/resolve/main/marked/Rel-20/23_series/23501/raw.md",
+              "evidence": "Section: 5.22.3 Invocation-related Priority Mechanisms ... the PCF selects the ARP and 5QI parameters, plus associated QoS characteristics as appropriate, to provide priority treatment to the QoS Flow(s). - **PCF:** When all active sessions to a particular DN are released and the UE is not configured for priority treatment to that particular PDU Session for a DN, the PCF will downgrade the IMS Signalling QoS Flows from appropriate settings of the ARP and 5QI parameters, plus associated QoS characteristics as appropriate, to those entitled by the UE based on subscription. - **SMF/AMF:** Based on the QoS parameters (e.g. ARP, 5QI) of a PDU Session, the SMF may provide a PDU Session Priority to the AMF. The AMF stores the information for further PDU Session related priority handling (i.e. for determination of Message Priority header of subsequent message related to the PDU Session). Invocation-related mechanisms for Mobile Terminations e.g. via SIP/IMS: - **PCF:** When an indication for a session arrives over the Rx/N5 Interface, mechanisms as described above for Mobile Originations are applied. - **UPF:** If an IP packet arrives at the UPF for a UE that is CM-IDLE, the UPF sends a \"Data Notification\" including the information to identify the QoS Flow for the DL data packet to the SMF, as specified in clause 4.2.3.3 of TS 23.502 [3]. - **SMF:** If a \"Data Notification\" message arrives at the SMF for a QoS Flow associated with an ARP priority level value that is entitled for priority use, delivery of priority indication during the Paging procedure is provided by inclusion of the ARP in the N11 interface \"N1N2MessageTransfer\" message, as specified in clause 4.2.3.3 of TS 23.502 [3]. Based on the QoS parameters (e.g. ARP, 5QI) of a PDU Session, the SMF may also provide a PDU Session Priority to the AMF. - **AMF:** If an \"N1N2MessageTransfer\" message arrives at the AMF: - from an SMF containing an ARP priority level value that is entitled for priority use; - from the SMSF with an MT-SMS related request and either an indication that MPS for Messaging is enabled for the UE from the UDM, or with a Message Priority header value used for MPS for Messaging; - the AMF: - handles the request with priority and includes the \"Paging Priority\" IE in the N2 \"Paging\" message set to a value assigned to indicate that there is an IP packet at the UPF or an MT-SMS at the SMSF",
+              "evidence_chars": 2393
+            },
+            {
+              "rank": 3,
+              "relevance_score": 169.125,
+              "matched_terms": 7,
+              "matched_phrases": 1,
+              "proximity_score": 50.0,
+              "primary_coverage": 0.875,
+              "source_family": "3GPP",
+              "collection": "3GPP",
+              "identifier": "23.503",
+              "release": "20",
+              "title": "3GPP TS 23.503 V20.0.0 (2025-12)",
+              "section_heading": "6.1.3.2.4 QoS Flow binding",
+              "source_path": "marked/Rel-20/23_series/23503/raw.md",
+              "source_shard": "https://huggingface.co/datasets/GSMA/3GPP/resolve/main/marked/Rel-20/23_series/23503/raw.md",
+              "evidence": "Section: 6.1.3.2.4 QoS Flow binding ... default QoS rule exists, the PCF can request that a PCC rule is bound to this QoS Flow by including the Bind to QoS Flow associated with the default QoS rule Indication in a dynamic PCC rule. In this case, the SMF shall bind the dynamic PCC rule to the QoS Flow associated with the default QoS rule (i.e. ignoring the binding parameters) and keep the binding as long as this indication remains set. When the PCF removes the association of a PCC rule to the QoS Flow associated with the default QoS rule, a new binding may need to be created between this PCC rule and a QoS Flow based on the binding mechanism described above. The binding created between a PCC Rule and a QoS Flow causes the downlink part of the service data flow to be directed to the associated QoS Flow at the UPF (as described in clause 5.7.1 of TS 23.501 [2]). In the UE, the QoS rule associated with the QoS Flow (which is generated by the SMF and explicitly signalled to the UE as described in clause 5.7.1 of TS 23.501 [2]) instructs the UE to direct the uplink part of the service data flow to the QoS Flow in the binding. Whenever the binding parameters of a PCC rule changes, the binding of this PCC rule shall be re-evaluated, i.e. the binding mechanism described above is performed again. The re-evaluation may, for a PCC rule, result in a new binding with another QoS Flow. If the PCF requests the same change of the binding parameter value(s) for all PCC rules that are bound to the same QoS Flow, the SMF should not re-evaluate the binding of these PCC rules and instead, modify the QoS parameter value(s) of the QoS Flow accordingly. NOTE 3: A QoS change of the PDU Session related information Authorized default 5QI/ARP values doesn't cause the QoS Flow rebinding for PCC rules with the Bind to QoS Flow associated with the default QoS rule Indication set. When the PCF removes a PCC Rule, the SMF shall remove the association of the PCC Rule to the QoS Flow. If the last PCC rule that is bound to a QoS Flow is removed, the SMF shall delete the QoS Flow. When a QoS Flow is removed, the SMF shall remove the PCC rules bound to this QoS Flow and report to the PCF that the PCC Rules bound to a QoS Flow are removed. The QoS Flow binding shall also ensure that: - when the PCF provisions a PCC rule, and if the PCC rule contains a TSC Assistance Container, the PCC rule",
+              "evidence_chars": 2392
+            },
+            {
+              "rank": 4,
+              "relevance_score": 167.125,
+              "matched_terms": 7,
+              "matched_phrases": 2,
+              "proximity_score": 50.0,
+              "primary_coverage": 0.875,
+              "source_family": "3GPP",
+              "collection": "3GPP",
+              "identifier": "23.503",
+              "release": "20",
+              "title": "3GPP TS 23.503 V20.0.0 (2025-12)",
+              "section_heading": "6.2.2.4 QoS control",
+              "source_path": "marked/Rel-20/23_series/23503/raw.md",
+              "source_shard": "https://huggingface.co/datasets/GSMA/3GPP/resolve/main/marked/Rel-20/23_series/23503/raw.md",
+              "evidence": "Section: 6.2.2.4 QoS control ... able direction, the highest GBR from the set of PCC Rules sharing resources as input for calculating the GBR and may use, for each applicable direction, the highest MBR from the set of PCC Rules as input for calculating the MBR. - For GBR QoS Flows, the SMF shall set the QoS Flow parameter Maximum Packet Loss Rate for UL and DL if the corresponding PCC rule parameters are available in the PCC rule. In the case multiple PCC Rules are bound to the QoS Flow and the SMF received multiple Maximum Packet Loss Rates, the SMF chooses the lowest value per direction in all these PCC rules. - If the PCC rule contains a non-standardized 5QI, the SMF shall also provide the corresponding 5G QoS characteristics parameters (as received in the PDU Session related information Explicitly signalled QoS Characteristics) for the QoS Flow. - If the PCC rule contains Alternative QoS Parameter Sets, the SMF shall provide their attributes as Alternative QoS Profile(s) (see clause 5.7.1.2a of TS 23.501 [2]) in the same prioritized order (in which they occur in the PCC rule) in addition to the QoS parameters for the QoS Flow. The SMF shall set the QoS parameters of the QoS Flow associated with the default QoS rule to: - the PCC rule parameters contained in the PCC rule that is bound to this QoS Flow (in the way it is described above) if the PCC rule attribute Bind to QoS Flow associated with the default QoS rule and apply PCC rule parameters is present; or otherwise - the Authorized default 5QI/ARP received in the PDU Session related information. If the Authorized default 5QI contains a non-standardized 5QI, the SMF shall also provide the corresponding 5G QoS characteristics parameters (as received in the PDU Session related information Explicitly signalled QoS Characteristics) for the QoS Flow associated with the default QoS rule. The SMF receives the Authorized Session-AMBR in the PDU Session related information. The SMF ensures that the Authorized Session-AMBR for a PDU Session is enforced for bandwidth policing at the UPF(s) as described in clause 5.7.1 of TS 23.501 [2]. The SMF generates QoS rule(s) as described in TS 23.501 [2]. For a PDU Session of unstructured type, only one PCC Rule allowing all packets is to be activated in the SMF and only the QoS Flow associated with the default QoS rule exists as described in clause 5.7.1 of TS 23.501",
+              "evidence_chars": 2394
+            }
+          ]
+        }
+      ],
+      "turn_usage": [
+        {
+          "turn": 1,
+          "input_tokens": 517,
+          "output_tokens": 30,
+          "elapsed_s": 0.443111,
+          "finish_reason": "tool_calls",
+          "tool_calls": 1
+        },
+        {
+          "turn": 2,
+          "input_tokens": 4141,
+          "output_tokens": 676,
+          "elapsed_s": 9.785767,
+          "finish_reason": "stop",
+          "tool_calls": 0
+        }
+      ],
+      "evidence_items": 4,
+      "evidence_items_with_text": 4,
+      "evidence_text_coverage_pct": 100.0,
+      "retrieval_latency_sec": 0.391,
+      "mean_retrieval_latency_per_search_sec": 0.391,
+      "total_sources_returned": 4,
+      "mean_sources_per_search": 4.0,
+      "mcp_roundtrip_sec": 0.394,
+      "mcp_overhead_sec": 0.003,
+      "total_latency_sec": 10.624,
+      "non_retrieval_latency_sec": 10.232,
+      "retrieval_latency_share_pct": 3.7,
+      "input_tokens": 4658,
+      "output_tokens": 706,
+      "total_tokens": 5364,
+      "errors": []
+    },
+    {
+      "id": "Q5",
+      "domain": "Security",
+      "knowledge_scope": "3GPP",
+      "question": "Explain the 5G authentication procedure and the roles of the AMF, AUSF and UDM.",
+      "expected_route": "3gpp",
+      "expected_source_families": [
+        "3GPP"
+      ],
+      "expected_tcc_collections": [],
+      "expected_3gpp_specs": [
+        "33.501"
+      ],
+      "expected_elements": [
+        "AMF",
+        "AUSF",
+        "UDM",
+        "5G-AKA",
+        "SEAF",
+        "authentication"
+      ],
+      "status": "COMPLETED",
+      "completion_mode": "normal",
+      "stop_reason": "end_turn",
+      "answer": "In 5G networks, the authentication procedure is designed to provide enhanced security through a decentralized architecture that separates serving network functions from home network security credentials. The process typically utilizes either **5G-AKA** (Authentication and Key Agreement) or **EAP-AKA'** (Extensible Authentication Protocol).\n\n### Roles of Key Network Functions\n\nThe authentication framework relies on the interaction between the following three entities:\n\n1.  **AMF (Access and Mobility Management Function):**\n    *   Acts as the **SEAF (Security Anchor Function)** within the serving network.\n    *   It is the entry point for the UE's authentication request.\n    *   It does **not** possess the permanent authentication credentials (the master keys). Instead, it facilitates the exchange of authentication messages between the UE and the home network's AUSF.\n    *   Upon successful authentication, it receives an \"anchor key\" to secure the access stratum.\n\n2.  **AUSF (Authentication Server Function):**\n    *   Acts as the middle tier within the Home Network.\n    *   It manages the authentication process by requesting authentication vectors from the UDM and verifying the UE's response.\n    *   It serves as the decision-maker that determines if the authentication was successful before notifying the AMF/SEAF.\n\n3.  **UDM (Unified Data Management):**\n    *   Acts as the central repository for subscriber data and security credentials.\n    *   It contains the **ARPF (Authentication Repository and Processing Function)**, which holds the long-term secret keys ($K$).\n    *   Its primary role in authentication is to generate the **Authentication Vector (AV)**—consisting of the RAND, AUTN, XRES, and key material ($CK$, $IK$)—and send it to the AUSF upon request.\n\n### Authentication Procedure Overview (5G-AKA / EAP-AKA')\n\nThe procedure follows a structured flow of requests and responses:\n\n1.  **Initiation:** The UE sends an identification request (often using a concealed SUCI to protect privacy). The AMF receives this and contacts the AUSF in the home network.\n2.  **Vector Retrieval:** The AUSF sends a request to the UDM to obtain authentication vectors. The UDM/ARPF generates the AV using the subscriber's secret key and sends it back to the AUSF.\n3.  **Challenge/Response:**\n    *   The AUSF passes the authentication challenge (RAND, AUTN) to the AMF.\n    *   The AMF forwards this challenge to the UE (**Auth-Req**).\n    *   The UE verifies the network using the AUTN and calculates its own response. It then sends the response (**Auth-Resp**) back to the AMF.\n4.  **Verification:** The AMF forwards the UE's response to the AUSF. The AUSF compares the UE's response with the expected value ($XRES$) provided by the UDM.\n5.  **Finalization:** If they match, the AUSF sends an authentication success message to the AMF. The AUSF also informs the UDM of the result (`Nudm_UEAuthentication_ResultConfirmation`) so the UDM can store the authentication status for fraud prevention and subsequent authorization.",
+      "answer_words": 435,
+      "final_answer_tokens": 697,
+      "routes_used": [
+        "3gpp"
+      ],
+      "route_match": true,
+      "observed_source_families": [
+        "3GPP"
+      ],
+      "source_family_match": true,
+      "observed_tcc_collections": [],
+      "tcc_collection_match": true,
+      "observed_3gpp_specs": [
+        "23.501",
+        "33.501"
+      ],
+      "mcp_searches": 1,
+      "mcp_tool_requests": 1,
+      "search_classification": "IDEAL",
+      "claude_turns": 2,
+      "llm_turns": 2,
+      "search_queries": [
+        "5G authentication procedure AMF AUSF UDM roles"
+      ],
+      "profiles_used": [],
+      "candidate_terms_per_search": [],
+      "sources_used": [
+        [
+          "3GPP"
+        ]
+      ],
+      "source_distributions": [
+        {
+          "3GPP": 4
+        }
+      ],
+      "tool_trace": [
+        {
+          "search_number": 1,
+          "query": "5G authentication procedure AMF AUSF UDM roles",
+          "top_k": 5,
+          "route": "3gpp",
+          "sources_searched": [
+            "3GPP"
+          ],
+          "source_distribution": {
+            "3GPP": 4
+          },
+          "retrieval_trace": {
+            "architecture": "Version A",
+            "retrieval_architecture": "Remote raw-corpus retrieval",
+            "route": "3gpp",
+            "sources_searched": [
+              "3GPP"
+            ],
+            "retrieval_time_s": 0.3139689700001327,
+            "gpp_specs": [
+              "23.501",
+              "33.501"
+            ],
+            "tcc_collections": [
+              "3GPP-TSG"
+            ],
+            "3gpp": {
+              "requested_specs": [
+                "23.501",
+                "33.501"
+              ],
+              "selected_specs": [
+                {
+                  "spec_number": "23.501",
+                  "release": 20
+                },
+                {
+                  "spec_number": "33.501",
+                  "release": 20
+                }
+              ],
+              "missing_specs": [],
+              "document_errors": 0,
+              "retrieval_time_s": 0.31338685999980953
+            },
+            "tcc": null,
+            "tool_elapsed_s": 0.3143956400001571
+          },
+          "result_count": 4,
+          "retrieval_time_s": 0.3139689700001327,
+          "tool_elapsed_s": 0.3143956400001571,
+          "mcp_roundtrip_s": 0.31704248899995946,
+          "mcp_overhead_s": 0.002646848999802387,
+          "evidence": [
+            {
+              "rank": 1,
+              "relevance_score": 159.85714285714286,
+              "matched_terms": 6,
+              "matched_phrases": 1,
+              "proximity_score": 50.0,
+              "primary_coverage": 0.8571,
+              "source_family": "3GPP",
+              "collection": "3GPP",
+              "identifier": "33.501",
+              "release": "20",
+              "title": "3GPP TS 33.501 V20.0.0 (2026-01)",
+              "section_heading": "6.1.4.1a Linking authentication confirmation to Nudm\\_UECM\\_Registration procedure from AMF",
+              "source_path": "marked/Rel-20/33_series/33501/raw.md",
+              "source_shard": "https://huggingface.co/datasets/GSMA/3GPP/resolve/main/marked/Rel-20/33_series/33501/raw.md",
+              "evidence": "Section: 6.1.4.1a Linking authentication confirmation to Nudm\\_UECM\\_Registration procedure from AMF ... se as shown in figure 6.1.4.1a-1. ![Sequence diagram showing the linking of authentication confirmation to subsequent procedures between UE, AMF/SEAF, AUSF, and UDM.](9ae17964ddd9b814c7d905b1af2fddf2_img.jpg) ``` sequenceDiagram participant UE participant AMF_SEAF as AMF/SEAF participant AUSF participant UDM Note over UE, UDM: 0. UE Authentication using an EAP method or 5G-AKA (e.g. as in sections 6.1.3) AUSF->>UDM: 1. Nudm_UEAuthentication_ResultConfirmation Request Note right of UDM: 2. UDM stores authentication status of UE UDM->>AUSF: 3. Nudm_UEAuthentication_ResultConfirmation Response Note over AMF_SEAF, UDM: 4. UDM authorizes subsequent procedures (e.g. from AMF as defined in 6.1.4.2) based on UE authentication status stored in step 2. ``` The diagram illustrates a five-step process. Step 0 involves UE authentication using EAP or 5G-AKA across all entities. Step 1 is a request from AUSF to UDM. Step 2 is an internal UDM action to store status. Step 3 is a response from UDM to AUSF. Step 4 is an internal UDM authorization process affecting subsequent procedures from AMF/SEAF. Sequence diagram showing the linking of authentication confirmation to subsequent procedures between UE, AMF/SEAF, AUSF, and UDM. **Figure 6.1.4.1a-1: Linking increased Home control to subsequent procedures** 1. The AUSF shall inform UDM about the result and time of an authentication procedure with a UE using a `Nudm_UEAuthentication_ResultConfirmation` Request. This shall include the SUPI, a timestamp of the authentication, the authentication type (e.g. EAP method or 5G-AKA), and the serving network name. NOTE: It may be sufficient for the purposes of fraud prevention to send only information about successful authentications, but this is up to operator policy. 2. The UDM shall store the authentication status of the UE (SUPI, authentication result, timestamp, and the serving network name). 3. UDM shall reply to AUSF with a `Nudm_UEAuthentication_ResultConfirmation` Response. 4. Upon reception of subsequent UE related procedures (e.g. `Nudm_UECM_Registration_Request` from AMF) UDM may apply actions according to home operator's policy to detect and achieve protection against certain types of fraud (e.g. as proposed in clause 6.1.4",
+              "evidence_chars": 2350
+            },
+            {
+              "rank": 2,
+              "relevance_score": 151.85714285714286,
+              "matched_terms": 6,
+              "matched_phrases": 1,
+              "proximity_score": 50.0,
+              "primary_coverage": 0.8571,
+              "source_family": "3GPP",
+              "collection": "3GPP",
+              "identifier": "33.501",
+              "release": "20",
+              "title": "3GPP TS 33.501 V20.0.0 (2026-01)",
+              "section_heading": "6.1.3.1 Authentication procedure for EAP-AKA'",
+              "source_path": "marked/Rel-20/33_series/33501/raw.md",
+              "source_shard": "https://huggingface.co/datasets/GSMA/3GPP/resolve/main/marked/Rel-20/33_series/33501/raw.md",
+              "evidence": "Section: 6.1.3.1 Authentication procedure for EAP-AKA' ... e] SEAF->>UE: 4. Auth-Req. [EAP Request / AKA'-Challenge, ngKSI, ABBA] Note over UE: 5. Calculate Auth. Response UE->>SEAF: 6. Auth-Resp. [EAP Response / AKA'-Challenge] SEAF->>AUSF: 7. Nausf_UEAuthentication_ Authenticate Request [EAP Response / AKA'-Challenge] Note over AUSF: 8. Verify Response AUSF-->>UE: 9. Optional exchange of further EAP messages AUSF->>SEAF: 10. Nausf_UEAuthentication_ Authenticate Response [EAP Success || Anchor Key] [SUPI] SEAF->>UE: 11. N1 message [EAP Success, ngKSI, ABBA] ``` Sequence diagram illustrating the Authentication procedure for EAP-AKA' between UE, SEAF, AUSF, and UDM/ARPF. **Figure 6.1.3.1-1: Authentication procedure for EAP-AKA'** The authentication procedure for EAP-AKA' works as follows, cf. also Figure 6.1.3.1-1: 1. The UDM/ARPF shall first generate an authentication vector with Authentication Management Field (AMF) separation bit = 1 as defined in TS 33.102 [9]. The UDM/ARPF shall then compute CK' and IK' as per the normative Annex A and replace CK and IK by CK' and IK'. 2. The UDM shall subsequently send this transformed authentication vector AV' (RAND, AUTN, XRES, CK', IK') to the AUSF from which it received the Nudm\\_UEAuthentication\\_Get Request together with an indication that the AV' is to be used for EAP-AKA' using a Nudm\\_UEAuthentication\\_Get Response message. **NOTE:** The exchange of a Nudm\\_UEAuthentication\\_Get Request message and an Nudm\\_UEAuthentication\\_Get Response message between the AUSF and the UDM/ARPF described in the preceding paragraph is the same as for trusted access using EAP-AKA' described in TS 33.402 [11], sub-clause 6.2, step 10, except for the input parameter to the key derivation, which is the value of <network name>. The \"network name\" is a concept from RFC 5448 [12]; it is carried in the AT\\_KDF\\_INPUT attribute in EAP-AKA'. The value of <network name> parameter is not defined in RFC 5448 [12], but rather in 3GPP specifications. For EPS, it is defined as \"access network identity\" in TS 24.302 [71], and for 5G, it is defined as \"serving network name\" in sub-clause 6.1.1.4 of the present document. In case SUCI was included in the Nudm\\_UEAuthentication\\_Get Request, UDM will include the SUPI in the Nudm\\_UEAuthentication\\_Get Response. If a subscriber has an AK",
+              "evidence_chars": 2337
+            },
+            {
+              "rank": 3,
+              "relevance_score": 134.85714285714286,
+              "matched_terms": 6,
+              "matched_phrases": 0,
+              "proximity_score": 50.0,
+              "primary_coverage": 0.8571,
+              "source_family": "3GPP",
+              "collection": "3GPP",
+              "identifier": "23.501",
+              "release": "20",
+              "title": "3GPP TS 23.501 V20.0.0 (2025-12) ---",
+              "section_heading": "5.30.2.9.2 Credentials Holder using AAA Server for primary authentication and authorization",
+              "source_path": "marked/Rel-20/23_series/23501/raw.md",
+              "source_shard": "https://huggingface.co/datasets/GSMA/3GPP/resolve/main/marked/Rel-20/23_series/23501/raw.md",
+              "evidence": "Section: 5.30.2.9.2 Credentials Holder using AAA Server for primary authentication and authorization The AUSF and the UDM in SNPN may support primary authentication and authorization of UEs using credentials from a AAA Server in a Credentials Holder (CH). - Only NSI based SUPI is supported and the SUPI is used to identify the UE during primary authentication and authorization towards the AAA Server. SUPI privacy is achieved according to methods in clause I.5 of TS 33.501 [29]. - The AMF discovers and selects the AUSF as described in clause 6.3.4 using the Home Network Identifier (realm part) and Routing Indicator present in the SUCI provided by a UE configured as described in clause 5.30.2.3. - The AMF selects the UDM in the same SNPN, based on local configuration (e.g. using the realm part of the SUCI), or using the NRF procedure defined in clause 4.17.4a of TS 23.502 [3]. - If the UDM decides that the primary authentication is performed by AAA Server in CH based on the UE's SUPI and subscription data. The Home Network Identifier, is derived by UDM from the SUCI received from AUSF. If the SUCI was generated using a privacy protection scheme that requires de-concealment, UDM de-conceal the SUCI as defined in TS 33.501 [29]. The UDM then instructs the AUSF that primary authentication by a AAA Server in a CH is required, the AUSF shall discover and select the NSSAAF and then forward EAP messages to the NSSAAF. The NSSAAF selects AAA Server based on the domain name corresponds to the realm part of the SUPI, relays EAP messages between AUSF and AAA Server (or AAA proxy) and performs related protocol conversion. The AAA Server acts as the EAP Server for the purpose of primary authentication. NOTE 1: The UDM in SNPN, based on SLA between Credentials Holder and SNPN, is pre-configured with information indicating whether the UE needs primary authentication from AAA Server. NOTE 2: It is assumed that the SNPN is configured on per Home Network Identifier basis to determine whether to perform primary authentication with AUSF/UDM or AAA server. - The AMF and SMF shall retrieve the UE subscription data from UDM using SUPI. Figure 5.30.2.9.2-1 depicts the 5G System architecture for SNPN with Credentials Holder using AAA Server for primary authentication and authorization. NOTE 3: The SNPN in Figure 5.30.2.9.2-1 can be the subscribed SNPN for the UE (i.e. NG-RAN br",
+              "evidence_chars": 2392
+            },
+            {
+              "rank": 4,
+              "relevance_score": 125.85714285714286,
+              "matched_terms": 6,
+              "matched_phrases": 0,
+              "proximity_score": 30.0,
+              "primary_coverage": 0.8571,
+              "source_family": "3GPP",
+              "collection": "3GPP",
+              "identifier": "23.501",
+              "release": "20",
+              "title": "3GPP TS 23.501 V20.0.0 (2025-12) ---",
+              "section_heading": "5.30.2.9.3 Credentials Holder using AUSF and UDM for primary authentication and authorization",
+              "source_path": "marked/Rel-20/23_series/23501/raw.md",
+              "source_shard": "https://huggingface.co/datasets/GSMA/3GPP/resolve/main/marked/Rel-20/23_series/23501/raw.md",
+              "evidence": "Section: 5.30.2.9.3 Credentials Holder using AUSF and UDM for primary authentication and authorization An SNPN may support primary authentication and authorization of UEs that use credentials from a Credentials Holder using AUSF and UDM. The Credentials Holder may be an SNPN or a PLMN. The Credentials Holder UDM provides to SNPN the subscription data. NOTE 1: A list of functionalities not supported in SNPN is provided in clause 5.30.2.0. Optionally, an SNPN may support network slicing (including Network Slice-Specific Authentication and Authorization, Network Slice Access Control and subscription-based restrictions to simultaneous registration of network slices) for Error: Reference source not found **94** Error: Reference source not found UEs that use credentials from a Credentials Holder using AUSF and UDM. The SNPN retrieves NSSAA and NSSRG information from the UDM of the Credentials Holder. Figure 5.30.2.9.3-1 depicts the 5G System architecture for SNPN with Credentials Holder using AUSF and UDM for primary authentication and authorization and network slicing. NOTE 2: The architecture for SNPN and Credentials Holder using AUSF and UDM is depicted as a non-roaming reference architecture as the UE is not considered to be roaming, even though some of the roaming architecture reference points are also used, e.g. for AMF and SMF in SNPN to register with and retrieve subscription data from UDM of the Credentials Holder. ![Figure 5.30.2.9.3-1: 5G System architecture with access to SNPN using credentials from Credentials Holder using AUSF and UDM](abcab88e34274f6512b9d7d5bf2cf7ce_img.jpg) The diagram illustrates the 5G System architecture for SNPN with a Credentials Holder. Top section (Credentials Holder): Contains NSSAAF, UDM, NRF, and AUSF connected via service-based interfaces (Nnssaaf, Nudm, Nnrf, Nausf) to a bus. A SEPP (Security Edge Protection Proxy) connects this domain to the SNPN domain via an N32 interface. Bottom section (SNPN): Contains NSACF, NSSF, NEF, NRF, PCF, and AF connected via service-based interfaces (Nnsacf, Nnssf, Nnef, Nnrf, Npcf, Naf) to a bus. Below this bus are AMF and SMF (connected via Namf, Nsmf). The user plane consists of a UE connected to (R)AN via N1 and N2 interfaces. (R)AN connects to UPF via N3. UPF connects to DN via N6. There is also an N4 interface between SMF and UPF, and an N9 interface loop on the UPF. .",
+              "evidence_chars": 2386
+            }
+          ]
+        }
+      ],
+      "turn_usage": [
+        {
+          "turn": 1,
+          "input_tokens": 509,
+          "output_tokens": 28,
+          "elapsed_s": 1.243359,
+          "finish_reason": "tool_calls",
+          "tool_calls": 1
+        },
+        {
+          "turn": 2,
+          "input_tokens": 4467,
+          "output_tokens": 697,
+          "elapsed_s": 8.146355,
+          "finish_reason": "stop",
+          "tool_calls": 0
+        }
+      ],
+      "evidence_items": 4,
+      "evidence_items_with_text": 4,
+      "evidence_text_coverage_pct": 100.0,
+      "retrieval_latency_sec": 0.314,
+      "mean_retrieval_latency_per_search_sec": 0.314,
+      "total_sources_returned": 4,
+      "mean_sources_per_search": 4.0,
+      "mcp_roundtrip_sec": 0.317,
+      "mcp_overhead_sec": 0.003,
+      "total_latency_sec": 9.707,
+      "non_retrieval_latency_sec": 9.393,
+      "retrieval_latency_share_pct": 3.2,
+      "input_tokens": 4976,
+      "output_tokens": 725,
+      "total_tokens": 5701,
+      "errors": []
+    },
+    {
+      "id": "Q6",
+      "domain": "Internet Transport",
+      "knowledge_scope": "TCC",
+      "question": "Explain the key mechanisms of QUIC as defined by the IETF, including connection establishment, stream multiplexing and connection migration.",
+      "expected_route": "tcc",
+      "expected_source_families": [
+        "TCC"
+      ],
+      "expected_tcc_collections": [
+        "IETF-RFCs",
+        "IETF-Drafts"
+      ],
+      "expected_3gpp_specs": [],
+      "expected_elements": [
+        "QUIC",
+        "TLS 1.3",
+        "stream multiplexing",
+        "Connection ID",
+        "connection migration"
+      ],
+      "status": "COMPLETED",
+      "completion_mode": "normal",
+      "stop_reason": "end_turn",
+      "answer": "As defined by the IETF, QUIC is a modern transport protocol encapsulated in UDP that integrates cryptographic security and advanced multiplexing capabilities to address the limitations of TCP.\n\nThe three key mechanisms requested are detailed below:\n\n### 1. Connection Establishment\nQUIC integrates the transport handshake with the cryptographic handshake (specifically **TLS 1.3**) to reduce latency. \n* **Combined Handshake:** Unlike the traditional TCP+TLS stack, which requires multiple round-trips (RTTs) to establish both a connection and a secure session, QUIC performs these simultaneously. This allows for a **1-RTT** connection establishment in most cases.\n* **0-RTT Resumption:** For clients that have previously connected to a server, QUIC supports a **0-RTT** mode. This allows the client to send encrypted application data in the very first packet sent to the server, significantly improving perceived performance for recurring connections.\n* **UDP Substrate:** QUIC operates over UDP, which allows it to be implemented in userspace. This facilitates faster innovation and updates compared to kernel-level TCP implementations.\n\n### 2. Stream Multiplexing\nOne of QUIC's primary advantages over TCP is its ability to handle multiple independent data streams within a single connection.\n* **Elimination of Head-of-Line (HoL) Blocking:** In TCP, if a single packet is lost, the entire stream is blocked until the packet is retransmitted, even if subsequent packets belong to different application-level messages. QUIC solves this by treating each stream as an independent entity. If a packet in \"Stream A\" is lost, \"Stream B\" can continue to deliver data to the application without waiting for Stream A's recovery.\n* **Granular Flow Control:** QUIC implements flow control at both the individual stream level and the overall connection level. This allows the receiver to manage resources by limiting data on specific streams while maintaining the throughput of the entire connection.\n\n### 3. Connection Migration\nQUIC is designed to maintain connectivity even when a device's network interface changes (e.g., a mobile user moving from Wi-Fi to LTE).\n* **Connection Identifiers (CIDs):** Traditional protocols like TCP identify connections using a \"4-tuple\" (Source IP, Source Port, Destination IP, Destination Port). If any of these change, the connection breaks. QUIC instead uses a unique **Connection ID (CID)** that remains constant even if the IP address or port changes.\n* **Path Validation:** When a client migrates to a new network path, it uses the CID to inform the server of the change. The protocol then performs path validation to ensure the new path is legitimate and capable of maintaining the session, allowing for a seamless transition without requiring a full reconnection/handshake.",
+      "answer_words": 417,
+      "final_answer_tokens": 582,
+      "routes_used": [
+        "tcc"
+      ],
+      "route_match": true,
+      "observed_source_families": [
+        "TCC"
+      ],
+      "source_family_match": true,
+      "observed_tcc_collections": [
+        "IETF-Drafts",
+        "IETF-RFCs"
+      ],
+      "tcc_collection_match": true,
+      "observed_3gpp_specs": [],
+      "mcp_searches": 1,
+      "mcp_tool_requests": 1,
+      "search_classification": "IDEAL",
+      "claude_turns": 2,
+      "llm_turns": 2,
+      "search_queries": [
+        "IETF QUIC protocol mechanisms connection establishment stream multiplexing connection migration"
+      ],
+      "profiles_used": [],
+      "candidate_terms_per_search": [],
+      "sources_used": [
+        [
+          "TCC"
+        ]
+      ],
+      "source_distributions": [
+        {
+          "TCC": 5
+        }
+      ],
+      "tool_trace": [
+        {
+          "search_number": 1,
+          "query": "IETF QUIC protocol mechanisms connection establishment stream multiplexing connection migration",
+          "top_k": 5,
+          "route": "tcc",
+          "sources_searched": [
+            "TCC"
+          ],
+          "source_distribution": {
+            "TCC": 5
+          },
+          "retrieval_trace": {
+            "architecture": "Version A",
+            "retrieval_architecture": "Remote raw-corpus retrieval",
+            "route": "tcc",
+            "sources_searched": [
+              "TCC"
+            ],
+            "retrieval_time_s": 4.029195013999924,
+            "gpp_specs": [],
+            "tcc_collections": [
+              "IETF-RFCs",
+              "IETF-Drafts"
+            ],
+            "3gpp": null,
+            "tcc": {
+              "collections": [
+                "IETF-RFCs",
+                "IETF-Drafts"
+              ],
+              "shard_selection": "ADAPTIVE",
+              "shards_searched": 5,
+              "shard_errors": 0,
+              "retrieval_time_s": 4.02843229400014
+            },
+            "tool_elapsed_s": 4.030010674000096
+          },
+          "result_count": 5,
+          "retrieval_time_s": 4.029195013999924,
+          "tool_elapsed_s": 4.030010674000096,
+          "mcp_roundtrip_s": 4.03260212400005,
+          "mcp_overhead_s": 0.0025914499999544205,
+          "evidence": [
+            {
+              "rank": 1,
+              "relevance_score": 142.0,
+              "matched_terms": 7,
+              "matched_phrases": 3,
+              "proximity_score": 30.0,
+              "primary_coverage": 0.0,
+              "source_family": "TCC",
+              "collection": "IETF-Drafts",
+              "identifier": "draft-kuehlewind-quic-applicability",
+              "release": null,
+              "title": "Applicability of the QUIC Transport Protocol",
+              "section_heading": "",
+              "source_path": "data/tcc_003.parquet",
+              "source_shard": "https://huggingface.co/datasets/GSMA/Telco-Common-Corpus/resolve/main/data/tcc_003.parquet",
+              "evidence": "### 1 Introduction QUIC [I-D.ietf-quic-transport] is a new transport protocol currently under development in the IETF quic working group, focusing on support of semantics as needed for HTTP/2 [I-D.ietf-quic-http] such as stream-multiplexing to avoid head-of-line blocking. Based on current deployment practices, QUIC is encapsulated in UDP and encrypted by default. This means the version of QUIC that is currently under development will integrate TLS 1.3 [I-D.ietf-quic-tls] to encrypt all payload data and most header information. This document provides guidance for application developers that want to use the QUIC protocol without implementing it on their own. This includes general guidance for application use of HTTP/2 over QUIC as well as the use of other application layer protocols over QUIC. For specific guidance on how to integrate HTTP/2 with QUIC, see [I-D.ietf-quic-http]. In the following sections we discuss specific caveats to QUIC's applicability, and issues that application developers must consider when using QUIC as a transport for their application. ### 1.1 Notational Conventions The words \"MUST\", \"MUST NOT\", \"SHOULD\", and \"MAY\" are used in this document. It's not shouting; when these words are capitalized, they have a special meaning as defined in [RFC2119]. Internet-DraftApplicability of the QUIC Transport Protocol March 2017 ### 2 The Necessity of Fallback QUIC uses UDP as a substrate for userspace implementation and port numbers for NAT and middlebox traversal. While there is no evidence of widespread, systematic disadvantage of UDP traffic compared to TCP in the Internet [Edeline16], somewhere between three [Trammell16] and five [Swett16] percent of networks simply block UDP traffic. All applications running on top of QUIC must therefore either be prepared to accept connectivity failure on such networks, or be engineered to fall back to some other transport protocol. This fallback SHOULD provide TLS 1.3 or equivalent cryptographic protection, if available, in order to keep fallback from being exploited as a downgrade attack. In the case of HTTP, this fallback is TLS 1.3 over TCP. These applications must operate, perhaps with impaired functionality, in the absence of features provided by QUIC not present in the fallback protocol. For fallback to TLS over TCP, the most obvious difference is that TCP does not provide stream multiplexing and therefore stream multiplexing would need to be implemented in the application layer if needed. Further, TC ...",
+              "evidence_chars": 2504
+            },
+            {
+              "rank": 2,
+              "relevance_score": 134.0,
+              "matched_terms": 8,
+              "matched_phrases": 3,
+              "proximity_score": 30.0,
+              "primary_coverage": 0.0,
+              "source_family": "TCC",
+              "collection": "IETF-Drafts",
+              "identifier": "draft-yang-pce-pcep-over-quic-4",
+              "release": null,
+              "title": "pce F. Yang",
+              "section_heading": "",
+              "source_path": "data/tcc_005.parquet",
+              "source_shard": "https://huggingface.co/datasets/GSMA/Telco-Common-Corpus/resolve/main/data/tcc_005.parquet",
+              "evidence": "### 5 Stream multiplexing QUIC offers stream multiplexing but does not provide a mechanism for exchanging stream priority information. Instead, it relies on receiving priority information from the application. PCEPoQ separates streams into control and data channels, assigning different priorities to each, ensuring that control messages receive higher priority processing. ### 6 Network Migration QUIC connections are not strictly bound to a single network path. Connection migration uses connection identifiers to allow connections to transfer to a new network path. In the current version of QUIC, only clients can migrate. The PCEPoQ protocol inherits this feature, allowing PCC over QUIC to conduct network migration. PCE over QUIC should not identify PCC over QUIC by network address but rather use connection identifiers to recognize different PCC over QUIC instances. ### 7 Flow Control QUIC's flow control mechanism manages individual streams as well as the entire connection. A QUIC receiver controls the maximum amount of data a sender can transmit on any single stream and across all streams at any given time. PCEPoQ utilizes QUIC's flow control mechanism, separating control streams from data streams by using a control channel and a data channel. ### 8 Security Considerations Security considerations for the QUIC protocol are described in the corresponding section in [RFC9000]. Security considerations for the TLS handshake used to secure QUIC are described in [RFC9001]. Internet-Draft PCEP over QUIC April 2026 ### 9.1 UDP Port for PCEPoQ IANA is requested to assign a UDP port (TBD1) from the \"Service Name and Transport Protocol Port Number Registry\" as follows: +====================+================+ | Service Name | PCEPoQ | +====================+================+ | Port Number | TBD1 | +--------------------+----------------+ | Transport Protocol | udp | +--------------------+----------------+ | Description | PCEP over QUIC | +--------------------+----------------+ Table 2: UDP Port for PCEPoQ ### 9.2 Registration of the PCEP Identification String This document creates a new registration for the identification of PCEP in the \"TLS Application-Layer Protocol Negotiation (ALPN) Protocol IDs\" registry. The \"pcepoq\" string identifies PCEP over QUIC: protocol: PCEP over QUIC Identification Sequence: \"pcepoq\" Specification: This document ### 9.3 PCEPoQ Capability TLV IANA is asked to assign a new TLV code from PCEP TLV Type Indicators [RFC5440] for the PCEP over QUIC ...",
+              "evidence_chars": 2503
+            },
+            {
+              "rank": 3,
+              "relevance_score": 122.0,
+              "matched_terms": 8,
+              "matched_phrases": 1,
+              "proximity_score": 20.0,
+              "primary_coverage": 0.0,
+              "source_family": "TCC",
+              "collection": "IETF-Drafts",
+              "identifier": "draft-a2a-moqt-transport",
+              "release": null,
+              "title": "Media over QUIC Transport (MOQT) for Agent-to-Agent Protocol",
+              "section_heading": "",
+              "source_path": "data/tcc_002.parquet",
+              "source_shard": "https://huggingface.co/datasets/GSMA/Telco-Common-Corpus/resolve/main/data/tcc_002.parquet",
+              "evidence": "### 5.3 Reliability and Resilience MOQT provides enhanced reliability features critical for production agent deployments: * Connection migration maintains agent sessions during network changes * Automatic retry and recovery mechanisms handle transient failures * Graceful degradation allows agents to continue operating with reduced capabilities * Quality of Service controls prevent cascade failures in agent networks ### 6 MOQT Relay Infrastructure for A2A MOQT relays provide critical infrastructure benefits for large-scale A2A deployments, enabling efficient message distribution and caching. ### 6.1 Relay Network Architecture MOQT relays form a hierarchical distribution network that optimizes A2A message delivery across geographic and organizational boundaries: This hierarchical structure provides: * Regional optimization with local agent clusters * Global connectivity for cross-region agent collaboration * Load distribution to prevent single points of failure Internet-Draft A2A over MOQT October 2025 * Configurable routing policies based on agent requirements ### 6.2 Message Caching Benefits MOQT relays can implement intelligent caching strategies optimized for A2A communication patterns. The most frequently accessed and time-sensitive data with time-to- live values are measured in seconds. This includes real-time agent responses, live data streams, and status updates that require immediate availability. These messages are kept in high-speed memory to ensure minimal latency for active agent interactions. Another layer can serve as an intermediate storage tier with time-to- live values measured in minutes. This layer contains agent capability profiles, metadata about agent configurations, and results from common queries that are accessed regularly. The caching layer can provide a balance between accessibility and resource utilization. Also for archives of historical data with extended retention periods measured in hours or days, can employ a different storage strategy. Examples data might include historical logs, archived computation results, compliance audit data, and debug traces that may be needed for analysis or regulatory purposes but are accessed infrequently. ### 7.1 Normative References [A2A] A2A Project, \"Agent-to-Agent Protocol Specification\", 2025, <https://a2a-protocol.org/latest/specification/>. [MoQ-TRANSPORT] Nandakumar, S., Vasiliev, V., Swett, I., and A. Frindell, \"Media over QUIC Transport\", Work in Progress, Internet- Draft, draft-ietf-mo ...",
+              "evidence_chars": 2504
+            },
+            {
+              "rank": 4,
+              "relevance_score": 116.0,
+              "matched_terms": 8,
+              "matched_phrases": 1,
+              "proximity_score": 20.0,
+              "primary_coverage": 0.0,
+              "source_family": "TCC",
+              "collection": "IETF-Drafts",
+              "identifier": "draft-bonaventure-quic-atsss-overview",
+              "release": null,
+              "title": "3GPP Access Traffic Steering Switching and Splitting (ATSSS) - Overview for IETF Participants",
+              "section_heading": "",
+              "source_path": "data/tcc_003.parquet",
+              "source_shard": "https://huggingface.co/datasets/GSMA/Telco-Common-Corpus/resolve/main/data/tcc_003.parquet",
+              "evidence": "### 7.3 Encapsulation Overhead In 3GPP architectures, a variety of encapsulations are already used to carry user data. The use of QUIC as a tunneling method for ATSSS will add some additional overhead. When the user data is forwarded over a non-3GPP network access, this overhead comes further in addition to an IPsec tunnel between the UE to the 5G Core Network which is already at least 142 octets for an IPv6 packet forwarded over a non-3GPP network access. In contrast, the MPTCP based mechanism in ATSSS Phase 1 does only add a minor overhead during Internet-Draft QUIC ATSSS May 2020 connection establishment, but no additional overhead during the rest of the connection. More investigation is required to assess whether the ATSSS Phase 2 overhead is an issue. Solutions to optimize that overhead could be considered, if needed. ### 7.4 Multiple Encryptions The use of QUIC as a tunneling protocol in ATSSS will add an additional layer of encryption. As there is already encryptions on other layers (e.g., IP Encapsulating Security Payload (ESP)) this leads to multiple layers of encryption, which might be redundant. Such multiple encryptions will have performance implications on the UE, in particular. Means to optimize the various redundant encryptions are for further investigation in 3GPP. ### 7.5 Congestion Control in Congestion Control and Coexistence Many applications that are sending unreliable traffic use various congestion control algorithms to detect congestion and adjust their sending rate based on inferred end-to-end latency and loss characteristics. Examples include Adaptive Video Streaming using e.g. SCREAM [RFC8298], or other media streaming applications that use QUIC as transport layer. When using QUIC version 1 with Unreliable Datagram Extension or Multipath QUIC as ATSSS solution, this leads to nested congestion control, where both inner and outer congestion control coexist. When using Multiple QUICv1 tunnels with Unreliable Datagram Extension or MP-QUIC tunneling, the packet scheduler could have an additional impact on the perceived end-to-end latency and loss due to the potential difference of the individual path characteristics. When deploying ATSSS Phase 1 and Phase 2 in parallel, with the UE serving both reliable and unreliable flows, different congestion control algorithms may coexist on individual paths, which may lead to fairness issues or even meltdown effects. We recognize that nested congestion control mechanisms (such as QUIC encapsulated ...",
+              "evidence_chars": 2504
+            },
+            {
+              "rank": 5,
+              "relevance_score": 116.0,
+              "matched_terms": 7,
+              "matched_phrases": 0,
+              "proximity_score": 40.0,
+              "primary_coverage": 0.0,
+              "source_family": "TCC",
+              "collection": "IETF-Drafts",
+              "identifier": "draft-piraux-quic-plugins",
+              "release": null,
+              "title": "QUIC Plugins",
+              "section_heading": "",
+              "source_path": "data/tcc_002.parquet",
+              "source_shard": "https://huggingface.co/datasets/GSMA/Telco-Common-Corpus/resolve/main/data/tcc_002.parquet",
+              "evidence": "### 4 Exchanging QUIC Plugins Injecting QUIC Plugins locally allows the application to tune the underlying QUIC implementation to its needs. But some use-cases requires adapting the peer behavior. In those cases, being able to exchange plugins helps to fill this gap. QUIC offers both data multiplexing and encryption. Using those mechanisms, the QUIC Plugins used for a given connection could be safely transferred over this connection in a new dedicated stream, akin to the crypto stream. This does not impact the application data transfer, as illustrated in Figure 5. In this example, an HTTP/3 request is interleaved with the transfer from the server to the client of a QUIC Plugin controlling the acknowledgment policy. Client Server | (QUIC connection handshake) | | | | STREAM[0, \"HTTP/3 GET\"] | |------------------------------------>| | | | STREAM[0, \"200 OK...\"] | |<------------------------------------| | | | PLUGIN[\"ack_delay\", bytecode] | |<------------------------------------| | | | STREAM[0, \"...\", FIN] | |<------------------------------------| Figure 5: Interleaving a QUIC Plugin transfer over a QUIC connection A local policy could restrict the type of plugins that can be exchanged and injected, e.g. in terms of connection state accessed and in terms of protocol operations affected. This version of document does not describe further how the negotiation of QUIC Plugins takes place. QUIC Plugins could also be transferred out of band. The application using QUIC can then inject these plugins locally. Internet-Draft QUIC Plugins March 2020 ### 5 Examples of use-cases There exist several cases in which being able to modify the behavior of a QUIC peer, either locally or remotely, is beneficial. This first version of the document focus on enabling the extension of simple QUIC mechanisms. Three of them are documented in this section. Contributions to this document regarding new uses-cases are welcomed. ### 5.1 Tunable acknowledgments policy The large diversity of Internet paths also counts networks involving a significant path asymmetry. Those paths require the receiver to adapt its feedback rate to the sender. The performance of transport protocols such as TCP on those paths has been studied in depth and reported in [RFC3449]. A method for controlling the rate of receiver feedback of TCP, i.e. the rate of ACKs, has been proposed in [RFC5690]. Proposals for controlling the acknowledgment policy of QUIC already exist. [I-D.fairhurst-quic-ack-scaling] proposes a ch ...",
+              "evidence_chars": 2504
+            }
+          ]
+        }
+      ],
+      "turn_usage": [
+        {
+          "turn": 1,
+          "input_tokens": 513,
+          "output_tokens": 30,
+          "elapsed_s": 0.732431,
+          "finish_reason": "tool_calls",
+          "tool_calls": 1
+        },
+        {
+          "turn": 2,
+          "input_tokens": 4391,
+          "output_tokens": 582,
+          "elapsed_s": 7.289478,
+          "finish_reason": "stop",
+          "tool_calls": 0
+        }
+      ],
+      "evidence_items": 5,
+      "evidence_items_with_text": 5,
+      "evidence_text_coverage_pct": 100.0,
+      "retrieval_latency_sec": 4.029,
+      "mean_retrieval_latency_per_search_sec": 4.029,
+      "total_sources_returned": 5,
+      "mean_sources_per_search": 5.0,
+      "mcp_roundtrip_sec": 4.033,
+      "mcp_overhead_sec": 0.003,
+      "total_latency_sec": 12.055,
+      "non_retrieval_latency_sec": 8.026,
+      "retrieval_latency_share_pct": 33.4,
+      "input_tokens": 4904,
+      "output_tokens": 612,
+      "total_tokens": 5516,
+      "errors": []
+    },
+    {
+      "id": "Q7",
+      "domain": "Telecom AI Research",
+      "knowledge_scope": "TCC",
+      "question": "According to IEEE and research literature, what are the main benefits and technical challenges of using AI/ML-based traffic prediction for mobile network management?",
+      "expected_route": "tcc",
+      "expected_source_families": [
+        "TCC"
+      ],
+      "expected_tcc_collections": [
+        "IEEE-Access",
+        "OpenAlex"
+      ],
+      "expected_3gpp_specs": [],
+      "expected_elements": [
+        "traffic prediction",
+        "machine learning",
+        "forecasting",
+        "network management",
+        "benefits",
+        "challenges"
+      ],
+      "status": "COMPLETED",
+      "completion_mode": "normal",
+      "stop_reason": "end_turn",
+      "answer": "Based on recent IEEE research and literature, the use of Artificial Intelligence (AI) and Machine Learning (ML) for mobile traffic prediction offers significant advantages for network optimization but introduces complex technical challenges.\n\n### **Main Benefits**\n\n*   **Smart Network Optimization and Proactive Management:** AI/ML allows networks to recognize current states and make intelligent, proactive decisions. This enables \"self-optimizing networks\" that can predict network behaviors and adapt dynamically to changing conditions rather than merely reacting to them.\n*   **Enhanced Quality of Service (QoS):** By predicting traffic patterns, operators can better manage diverse requirements for throughput, reliability, and latency, particularly in complex Multi-Radio Access Technology (Multi-RAT) and IoT environments.\n*   **Improved Energy Efficiency:** \n    *   **Decentralized Processing:** Moving prediction to the edge (e.g., using Deep Transfer Learning) reduces the need for massive data transmissions to a centralized cloud, significantly lowering the energy footprint of data movement.\n    *   **Resource Allocation:** ML-driven predictive analytics facilitate more efficient resource and slice allocation, reducing unnecessary energy consumption.\n*   **Scalability and Automation:** ML methodologies (supervised, unsupervised, and reinforcement learning) enable the processing of vast volumes of data to uncover hidden patterns, allowing for automated fault management and traffic optimization in increasingly dense networks.\n\n### **Technical Challenges**\n\n*   **Computational Complexity and Energy Consumption:**\n    *   **Centralized Bottlenecks:** Traditional centralized prediction models require massive data transmissions and high computational power in the cloud, leading to high energy consumption and latency.\n    *   **Model Complexity:** While advanced architectures like Deep Reinforcement Learning (DRL) offer high adaptation, they require significant computational resources.\n*   **Dynamic and High-Dimensional Environments:** The wireless environment is highly dynamic. Finding an optimal set of parameters and managing complex inter-layer dependencies (cross-layer design) in multi-RAT networks remains a significant mathematical and operational challenge.\n*   **Data Management and Privacy:** Implementing decentralized solutions like Federated Learning is necessary to preserve privacy and reduce transmission overhead, but it adds complexity to the coordination of distributed intelligence.\n*   **Algorithmic Trade-offs:** Engineers must navigate fundamental trade-offs between different ML paradigms. For example, Multi-Agent Reinforcement Learning (MARL) is excellent for distributed coordination but demands higher computational overhead compared to simpler DRL models.",
+      "answer_words": 344,
+      "final_answer_tokens": 500,
+      "routes_used": [
+        "tcc"
+      ],
+      "route_match": true,
+      "observed_source_families": [
+        "TCC"
+      ],
+      "source_family_match": true,
+      "observed_tcc_collections": [
+        "IEEE-Access",
+        "OpenAlex"
+      ],
+      "tcc_collection_match": true,
+      "observed_3gpp_specs": [],
+      "mcp_searches": 1,
+      "mcp_tool_requests": 1,
+      "search_classification": "IDEAL",
+      "claude_turns": 2,
+      "llm_turns": 2,
+      "search_queries": [
+        "benefits and technical challenges of AI/ML-based traffic prediction for mobile network management IEEE research"
+      ],
+      "profiles_used": [],
+      "candidate_terms_per_search": [],
+      "sources_used": [
+        [
+          "TCC"
+        ]
+      ],
+      "source_distributions": [
+        {
+          "TCC": 5
+        }
+      ],
+      "tool_trace": [
+        {
+          "search_number": 1,
+          "query": "benefits and technical challenges of AI/ML-based traffic prediction for mobile network management IEEE research",
+          "top_k": 5,
+          "route": "tcc",
+          "sources_searched": [
+            "TCC"
+          ],
+          "source_distribution": {
+            "TCC": 5
+          },
+          "retrieval_trace": {
+            "architecture": "Version A",
+            "retrieval_architecture": "Remote raw-corpus retrieval",
+            "route": "tcc",
+            "sources_searched": [
+              "TCC"
+            ],
+            "retrieval_time_s": 9.147907837000048,
+            "gpp_specs": [],
+            "tcc_collections": [
+              "IEEE-Access",
+              "OpenAlex"
+            ],
+            "3gpp": null,
+            "tcc": {
+              "collections": [
+                "IEEE-Access",
+                "OpenAlex"
+              ],
+              "shard_selection": "ADAPTIVE",
+              "shards_searched": 5,
+              "shard_errors": 0,
+              "retrieval_time_s": 9.146954317999871
+            },
+            "tool_elapsed_s": 9.17164743300009
+          },
+          "result_count": 5,
+          "retrieval_time_s": 9.147907837000048,
+          "tool_elapsed_s": 9.17164743300009,
+          "mcp_roundtrip_s": 9.17438537299995,
+          "mcp_overhead_s": 0.002737939999860828,
+          "evidence": [
+            {
+              "rank": 1,
+              "relevance_score": 185.0,
+              "matched_terms": 11,
+              "matched_phrases": 3,
+              "proximity_score": 80.0,
+              "primary_coverage": 0.0,
+              "source_family": "TCC",
+              "collection": "OpenAlex",
+              "identifier": "W4312882975",
+              "release": null,
+              "title": "AI-Enabled Reliable QoS in Multi-RAT Wireless IoT Networks: Prospects, Challenges, and Future Directions",
+              "section_heading": "",
+              "source_path": "data/tcc_005.parquet",
+              "source_shard": "https://huggingface.co/datasets/GSMA/Telco-Common-Corpus/resolve/main/data/tcc_005.parquet",
+              "evidence": "Received 29 August 2022; revised 26 September 2022; accepted 14 October 2022. Date of publication 19 October 2022; date of current version 27 October 2022. Digital Object Identifier 10.1109/OJCOMS.2022.3215731 ## AI-Enabled Reliable QoS in Multi-RAT Wireless IoT Networks: Prospects, Challenges, and Future Directions KAMRAN ZIA<sup>1)</sup>, ALESSANDRO CHIUMENTO<sup>1)</sup>, AND PAUL J. M. HAVINGA<sup>1,2)</sup> <sup>1</sup>Pervasive Systems Research Unit, University of Twente, 7500 AE Enschede, The Netherlands <sup>2</sup>ICT, TNO, 2509 JE The Hague, The Netherlands CORRESPONDING AUTHOR: K. ZIA (e-mail: [email]) This work was supported by the European Project InSecTT under Grant 876038. **ABSTRACT** Wireless IoT networks have seen an unprecedented rise in number of devices, heterogeneity and emerging use cases which led to diverse throughput, reliability and latency (Quality of Service) requirements. Fulfilling these diverse requirements in a rapidly changing and dynamic wireless environment is a complex and challenging task. On top of including new technologies and wireless standards, one solution is to deploy cross-layer Design (CLD) and multiple Radio Access Technologies (Multi-RAT) to develop scalable QoS-aware IoT networks. However, the complexity of such solutions is high as it involves complex inter-layer interactions and dependencies and inter-application dependencies in multi-RAT networks. Moreover, the wireless environment is very dynamic, so having an optimal constellation of parameters is a challenging task. In this paper, we address the possibilities of using Artificial Intelligence (AI) and Machine Learning (ML) to address these high dimensional and dynamic problems. Based on our findings, we have proposed a distributed network management framework employing AI & ML for studying inter-layer dependencies and developing cross-layer design, traffic classification and traffic prediction at the edge devices for reliable QoS in multi-RAT IoT networks. A thorough discussion on future directions and emerging challenges related to our proposed framework has also been provided for further research in this field. **INDEX TERMS** QoS in IoT networks, AI & ML for cross-layer design, cross-layer optimization, reliable QoS, multi-RAT networks, edge intelligence. ## I. INTRODUCTION THE WORLD is seeing a massive expansion of IoT networks with billions of devices requiring network access. According to the Ericsson mobility report of June 2021, cellular IoT de ...",
+              "evidence_chars": 2504
+            },
+            {
+              "rank": 2,
+              "relevance_score": 178.5,
+              "matched_terms": 12,
+              "matched_phrases": 2,
+              "proximity_score": 100.0,
+              "primary_coverage": 0.0,
+              "source_family": "TCC",
+              "collection": "OpenAlex",
+              "identifier": "W7133237064",
+              "release": null,
+              "title": "Machine Learning-Driven Edge Caching for Industry 5.0: A Survey of Collaborative and Inference-Enabled Techniques",
+              "section_heading": "",
+              "source_path": "data/tcc_004.parquet",
+              "source_shard": "https://huggingface.co/datasets/GSMA/Telco-Common-Corpus/resolve/main/data/tcc_004.parquet",
+              "evidence": "Received 2 December 2025; revised 26 January 2026; accepted 19 February 2026. Date of publication 2 March 2026; date of current version 17 March 2026. Digital Object Identifier 10.1109/OJCOMS.2026.3669379 ## Machine Learning-Driven Edge Caching for Industry 5.0: A Survey of Collaborative and Inference-Enabled Techniques RITABRATA MAITI<sup>1,1</sup> (Member, IEEE), AS MADHUKUMAR<sup>1,1</sup> (Senior Member, IEEE), AND TAN ZHENG HUI ERNEST<sup>1,2</sup> (Member, IEEE) > ¹College of Computing and Data Science, Nanyang Technological University, Singapore 639798 > ²Infocomm Technology Cluster, Singapore Institute of Technology, Singapore 828608 CORRESPONDING AUTHOR: AS MADHUKUMAR ([email]) This work was supported by the Ministry of Education, Singapore, under its Academic Research Fund Tier 1 under Grant RG14/25. **ABSTRACT** Industry 5.0 is transforming edge caching from a passive traffic offloading mechanism into an active enabler of distributed intelligence and real-time analytics. However, conventional caching strategies lack the collaborative adaptability, inference-awareness, and domain-specific customization required for dynamic Industry 5.0 workloads. This survey provides a comprehensive and systematic review of machine learning (ML)-driven edge caching organized around two fundamental pillars: *collaborative caching* (distributed, federated, and multi-agent reinforcement learning paradigms) and *inference-enabled caching* (content and model placement accelerating real-time edge analytics). We systematically examine how traditional ML, deep learning (DL), deep reinforcement learning (DRL), and multi-agent RL (MARL) techniques address domain-specific challenges across five Industry 5.0 applications: robotics, manufacturing, logistics, immersive training, and healthcare. For each domain, we provide comparative assessments based on latency requirements, scalability targets, and collaboration needs. Our analysis reveals fundamental tradeoffs: MARL excels for distributed coordination with promising efficiency gains but requires higher computational resources, while DRL balances adaptation and complexity, and federated learning enables privacy-preserving collaboration across multiple sites. Each application section concludes with Key Insights synthesizing technique suitability, domain requirements, performance gains, and unresolved challenges. We identify five critical research directions: Bayesian optimization for sample-efficient learning, federated workf ...",
+              "evidence_chars": 2504
+            },
+            {
+              "rank": 3,
+              "relevance_score": 177.5,
+              "matched_terms": 11,
+              "matched_phrases": 4,
+              "proximity_score": 50.0,
+              "primary_coverage": 0.0,
+              "source_family": "TCC",
+              "collection": "IEEE-Access",
+              "identifier": "W4405429654",
+              "release": null,
+              "title": "Mobile Traffic Prediction at the Edge through Distributed and Deep Transfer Learning",
+              "section_heading": "",
+              "source_path": "data/tcc_004.parquet",
+              "source_shard": "https://huggingface.co/datasets/GSMA/Telco-Common-Corpus/resolve/main/data/tcc_004.parquet",
+              "evidence": "Received 4 November 2024, accepted 8 December 2024, date of publication 16 December 2024, date of current version 24 December 2024. Digital Object Identifier 10.1109/ACCESS.2024.3518483 ## # Mobile Traffic Prediction at the Edge Through Distributed and Deep Transfer Learning ALFREDO PETRELLA<sup>1,2</sup>, MARCO MIOZZO<sup>1,2</sup>, AND PAOLO DINI<sup>1,2</sup> CTTC/CERCA, Castelldefels, 08860 Barcelona, Spain Corresponding author: Alfredo Petrella (petrellalfredo@gmail.com) This work was supported in part by Spanish project under Grant PID2020-113832RB-C22(ORIGIN)/MCIN/AEI/10.13039/50110001103, and in part by the European Coordinated Research on Long-term Challenges in Information and Communication Sciences and Technologies (CHIST-ERA)-20-Sustainable Information and Communication Technology (SICT)-004 (SONATA) under Grant PCI2021-122043-2A/AEI/10.13039/501100011033. **ABSTRACT** Traffic prediction represents one of the crucial tasks for smartly optimizing the mobile network. Recently, Artificial Intelligence (AI) has attracted attention to solve this problem thanks to its ability in recognizing the state of the mobile network and make intelligent decisions. Research on this topic has concentrated on making predictions in a centralized fashion, i.e., by collecting data from the different network elements and process them in a cloud center. This translates into inefficiencies due to the large amount of data transmissions and computations required, leading to high energy consumption. In this work, we investigate a fully decentralized AI solution for mobile traffic prediction that allows data to be kept locally, reducing energy consumption through collaboration among the base station sites. To do so, we propose a novel prediction framework based on edge computing and Deep Transfer Learning (DTL) techniques, using datasets obtained at the edge through a large measurement campaign. Two main Deep Learning architectures are designed based on Convolutional Neural Networks (CNNs) and Recurrent Neural Networks (RNNs) and tested under different training conditions. Simulation results show that the CNN architectures outperform the RNNs in accuracy and consume less energy. In both scenarios, DTL contributes to an accuracy enhancement in 85% of the examined cases compared to their stand-alone counterparts. Additionally, DTL significantly reduces computational complexity and energy consumption during training, resulting in a reduction of the energy footprint by 60% for ...",
+              "evidence_chars": 2503
+            },
+            {
+              "rank": 4,
+              "relevance_score": 174.5,
+              "matched_terms": 12,
+              "matched_phrases": 3,
+              "proximity_score": 80.0,
+              "primary_coverage": 0.0,
+              "source_family": "TCC",
+              "collection": "IEEE-Access",
+              "identifier": "W6941032810",
+              "release": null,
+              "title": "Energy Efficiency in Network Slicing: Survey and Taxonomy",
+              "section_heading": "",
+              "source_path": "data/tcc_004.parquet",
+              "source_shard": "https://huggingface.co/datasets/GSMA/Telco-Common-Corpus/resolve/main/data/tcc_004.parquet",
+              "evidence": "Received 12 June 2025, accepted 7 July 2025, date of publication 18 July 2025, date of current version 4 August 2025. Digital Object Identifier 10.1109/ACCESS.2025.3590365 SURVEY ## # Energy Efficiency in Network Slicing: Survey and Taxonomy ADNEI WILLIAN DONATTI<sup>1</sup>, MARCIA CRISTINA MACHADO<sup>1</sup>, MARVIN ALEXANDER LOPEZ MARTINEZ<sup>2</sup>, SABINO ROGÉRIO S. ANTUNES<sup>2</sup>, ELI CARLOS FIGUEIREDO SOUZA<sup>2</sup>, SAND L. CORRÊA<sup>3</sup>, TIAGO C. FERRETO<sup>4</sup>, (Member, IEEE), JOSÉ AUGUSTO SURUAGY<sup>2,5</sup>, (Life Senior Member, IEEE), JOBERTO S. B. MARTINS<sup>6</sup>, (Life Senior Member, IEEE), AND TEREZA CRISTINA CARVALHO<sup>1</sup> ¹Universidade de São Paulo (USP), São Paulo 05508-090, Brazil ²Universidade Federal de Pernambuco (UFPE), Recife 50740-560, Brazil ³Universidade Federal de Goiás (UFG), Goiânia 74690-900, Brazil ⁴Pontifícia Universidade Católica do Rio Grande do Sul (PUCRS), Porto Alegre 90619-900, Brazil ⁵CESAR School, Recife 50030-220, Brazil ⁶Universidade Salvador (UNIFACS), Salvador 41770-235, Brazil Corresponding author: Adnei Willian Donatti (adnei.donatti@usp.br) This work was supported in part by the Slicing Future Internet Infrastructures (SFI2), Instituto Ânima (IA) under FAPESP/MCTIC/CGI Cooperation Agreement through the Thematic Research Project under Grant 2018/23097-3; and in part by the National Council for Scientific and Technological Development (CNPq). **ABSTRACT** Network Slicing (NS) is a fundamental feature of 5G, 6G, and future mobile networks, enabling logically isolated virtual networks over shared infrastructure. As data demand increases and services diversify, ensuring Energy Efficiency (EE) in NS is vital (not only for operational cost savings but also to reduce the Information and Communication Technology (ICT) sector's environmental footprint). This survey addresses the need for a comprehensive and holistic perspective on energy-efficient NS by reviewing and classifying recent strategies across the NS life cycle. Our contributions are threefold: (i) a thorough review of state-of-the-art techniques aimed at reducing energy consumption in NS; (ii) a novel taxonomy that organizes strategies into infrastructure, path/route, and slice operation levels; and (iii) the identification of open challenges and research directions, with a focus on systemic, cross-layer, and AI-driven approaches. By consolidating insights from recent developments, our work bridges existing gaps in the liter ...",
+              "evidence_chars": 2504
+            },
+            {
+              "rank": 5,
+              "relevance_score": 173.5,
+              "matched_terms": 12,
+              "matched_phrases": 4,
+              "proximity_score": 80.0,
+              "primary_coverage": 0.0,
+              "source_family": "TCC",
+              "collection": "IEEE-Access",
+              "identifier": "W4411142951",
+              "release": null,
+              "title": "Machine Learning in Intelligent Networks: Architectures, Techniques, and Use Cases",
+              "section_heading": "",
+              "source_path": "data/tcc_001.parquet",
+              "source_shard": "https://huggingface.co/datasets/GSMA/Telco-Common-Corpus/resolve/main/data/tcc_001.parquet",
+              "evidence": "Received 11 May 2025, accepted 5 June 2025, date of publication 9 June 2025, date of current version 19 June 2025. Digital Object Identifier 10.1109/ACCESS.2025.3577968 SURVEY ## # Machine Learning in Intelligent Networks: Architectures, Techniques, and Use Cases ELIAS DRITSAS<sup>10</sup> AND MARIA TRIGKA<sup>10</sup> Department of Informatics and Computer Engineering, University of West Attica, Egaleo Park Campus, 122 43 Athens, Greece Corresponding author: Elias Dritsas (idritsas@uniwa.gr) The publication of the article in OA mode was financially supported by HEAL-Link. **ABSTRACT** Integrating machine learning (ML) into intelligent networks (INs) has redefined the capabilities of modern communication systems by enabling real-time decision-making, adaptive optimization, and enhanced security. The present survey systematically analyzes state-of-the-art ML techniques deployed across diverse IN architectures, including centralized, decentralized, and hybrid frameworks. It delves into key ML methodologies, supervised, unsupervised, reinforcement, and deep learning (DL), and highlights their transformative impact on network operations, such as resource allocation, fault management, and traffic optimization. Moreover, the survey emphasizes practical applications, showcasing the role of ML in enhancing performance across domains like telecommunication networks, smart cities, healthcare, and industrial automation. By consolidating fragmented research, this survey presents a unified perspective that bridges theoretical advancements with real-world implementations. The insights offered serve as a comprehensive reference for understanding how ML propels INs toward achieving unparalleled efficiency, reliability, and scalability levels. This work stands out by addressing implementation challenges, synergies across applications, and actionable strategies for leveraging ML in complex network environments. **INDEX TERMS** Intelligent networks, machine learning, network optimization, predictive analytics. ## ## I. INTRODUCTION The rapid evolution of INs is propelled by advancements in ML, which enable these networks to operate with a high degree of autonomy, efficiency, and intelligence. By applying sophisticated ML algorithms, INs can process vast volumes of data, uncover hidden patterns, predict network behaviours, and make proactive, data-driven decisions [1]. This convergence of INs and ML has paved the way for self-optimizing networks that adapt dynamically to chan ...",
+              "evidence_chars": 2504
+            }
+          ]
+        }
+      ],
+      "turn_usage": [
+        {
+          "turn": 1,
+          "input_tokens": 517,
+          "output_tokens": 35,
+          "elapsed_s": 0.995568,
+          "finish_reason": "tool_calls",
+          "tool_calls": 1
+        },
+        {
+          "turn": 2,
+          "input_tokens": 4739,
+          "output_tokens": 500,
+          "elapsed_s": 7.440597,
+          "finish_reason": "stop",
+          "tool_calls": 0
+        }
+      ],
+      "evidence_items": 5,
+      "evidence_items_with_text": 5,
+      "evidence_text_coverage_pct": 100.0,
+      "retrieval_latency_sec": 9.148,
+      "mean_retrieval_latency_per_search_sec": 9.148,
+      "total_sources_returned": 5,
+      "mean_sources_per_search": 5.0,
+      "mcp_roundtrip_sec": 9.174,
+      "mcp_overhead_sec": 0.003,
+      "total_latency_sec": 17.611,
+      "non_retrieval_latency_sec": 8.463,
+      "retrieval_latency_share_pct": 51.9,
+      "input_tokens": 5256,
+      "output_tokens": 535,
+      "total_tokens": 5791,
+      "errors": []
+    },
+    {
+      "id": "Q8",
+      "domain": "5G SBA + Internet Protocols",
+      "knowledge_scope": "Hybrid",
+      "question": "Explain how HTTP and TLS support communication in the 5G Service-Based Architecture. Distinguish the roles and requirements defined by 3GPP for network functions such as the AMF and SMF from the HTTP/TLS transport and security mechanisms defined by the IETF.",
+      "expected_route": "hybrid",
+      "expected_source_families": [
+        "3GPP",
+        "TCC"
+      ],
+      "expected_tcc_collections": [
+        "IETF-RFCs",
+        "IETF-Drafts"
+      ],
+      "expected_3gpp_specs": [
+        "23.501",
+        "33.501"
+      ],
+      "expected_elements": [
+        "Service-Based Architecture",
+        "AMF",
+        "SMF",
+        "HTTP",
+        "TLS",
+        "3GPP",
+        "IETF"
+      ],
+      "status": "COMPLETED",
+      "completion_mode": "normal",
+      "stop_reason": "end_turn",
+      "answer": "In the 5G Service-Based Architecture (SBA), communication between Network Functions (NFs) is fundamentally driven by the use of modern web protocols. This architecture shifts from traditional diameter-based signaling to a RESTful model, utilizing **HTTP/2** for service communication and **TLS** for security.\n\n### 1. The Role of HTTP and TLS in 5G SBA\nThe 5G Control Plane utilizes the **HTTP/2** protocol to facilitate interaction between \"Service Consumers\" and \"Service Producers.\" \n* **HTTP/2 as the Transport Mechanism:** Communication is conducted via RESTful APIs using standard HTTP methods such as `GET`, `POST`, and `PATCH`. This allows NFs to exchange information through structured data, typically encoded in JSON.\n* **TLS for Transport Layer Security:** To ensure the confidentiality and integrity of the control plane signaling, TLS is employed to encrypt the HTTP/2 streams. This provides a secure tunnel for the sensitive signaling data exchanged between NFs.\n\n### 2. Distinguishing 3GPP vs. IETF Roles\n\nThe distinction lies in the separation of **Service Logic/Functional Requirements** (3GPP) and **Protocol/Transport Specifications** (IETF).\n\n#### **3GPP: Functional Roles and Network Requirements**\n3GPP defines the \"What\" and \"Where\" of the 5G core. It specifies the functional requirements of specific NFs and the logical interfaces (Service-Based Interfaces) between them.\n* **AMF (Access and Mobility Management Function):** 3GPP defines the AMF's role in managing UE registration, reachability, and mobility. The AMF acts as a service consumer or producer in the SBA to interact with other NFs (like the SMF or UDM) to fulfill these specific cellular functions.\n* **SMF (Session Management Function):** 3GPP defines the SMF's responsibility for session establishment, modification, and release.\n* **SBA Interface Definition:** 3GPP specifies the specific API structures (e.g., N11, N12) and the business logic that the AMF or SMF must execute when receiving an HTTP request.\n* **Security Perimeters (SEPP):** 3GPP defines specific architectural elements like the **Security Edge Protection Proxy (SEPP)** to secure inter-operator signaling (N32 interface), mandating how HTTP/2 messages are encapsulated and protected when crossing roaming boundaries.\n\n#### **IETF: Protocol and Security Mechanisms**\nThe IETF defines the \"How\" of the communication. It provides the underlying standards that allow the bits to move securely and reliably.\n* **HTTP/2 (RFC 9113):** IETF defines the binary framing layer, stream multiplexing, and header compression (HPACK) that make the HTTP transport efficient for the high-frequency signaling required in 5G.\n* **TLS (e.g., TLS 1.3):** IETF defines the cryptographic handshake, cipher suites, and encryption algorithms that ensure the underlying transport is secure.\n* **JSON/REST Semantics:** IETF standards govern the data formats and the semantics of the methods (GET, POST) used by the NFs.\n\n### Summary Table\n| Feature | 3GPP Responsibility | IETF Responsibility |\n| :--- | :--- | :--- |\n| **Scope** | Cellular Service Logic & NF Roles | Internet/Transport Protocols |\n| **Examples** | AMF mobility management, SMF session control | HTTP/2 framing, TLS encryption |\n| **Focus** | Functional correctness and 5G architecture | Efficient, secure data transport |\n| **Interface** | Defining *what* an AMF asks an SMF | Defining *how* the packet is formatted |",
+      "answer_words": 502,
+      "final_answer_tokens": 799,
+      "routes_used": [
+        "hybrid"
+      ],
+      "route_match": true,
+      "observed_source_families": [
+        "TCC"
+      ],
+      "source_family_match": false,
+      "observed_tcc_collections": [
+        "IETF-Drafts",
+        "IETF-RFCs"
+      ],
+      "tcc_collection_match": true,
+      "observed_3gpp_specs": [],
+      "mcp_searches": 1,
+      "mcp_tool_requests": 1,
+      "search_classification": "IDEAL",
+      "claude_turns": 2,
+      "llm_turns": 2,
+      "search_queries": [
+        "5G Service-Based Architecture HTTP TLS 3GPP IETF roles"
+      ],
+      "profiles_used": [],
+      "candidate_terms_per_search": [],
+      "sources_used": [
+        [
+          "3GPP",
+          "TCC"
+        ]
+      ],
+      "source_distributions": [
+        {
+          "TCC": 5
+        }
+      ],
+      "tool_trace": [
+        {
+          "search_number": 1,
+          "query": "5G Service-Based Architecture HTTP TLS 3GPP IETF roles",
+          "top_k": 5,
+          "route": "hybrid",
+          "sources_searched": [
+            "3GPP",
+            "TCC"
+          ],
+          "source_distribution": {
+            "TCC": 5
+          },
+          "retrieval_trace": {
+            "architecture": "Version A",
+            "retrieval_architecture": "Remote raw-corpus retrieval",
+            "route": "hybrid",
+            "sources_searched": [
+              "3GPP",
+              "TCC"
+            ],
+            "retrieval_time_s": 3.754871446000152,
+            "gpp_specs": [],
+            "tcc_collections": [
+              "IETF-RFCs",
+              "IETF-Drafts"
+            ],
+            "3gpp": {
+              "requested_specs": [],
+              "selected_specs": [],
+              "missing_specs": [],
+              "document_errors": 0,
+              "retrieval_time_s": 4.55999997939216e-06
+            },
+            "tcc": {
+              "collections": [
+                "IETF-RFCs",
+                "IETF-Drafts"
+              ],
+              "shard_selection": "ADAPTIVE",
+              "shards_searched": 5,
+              "shard_errors": 0,
+              "retrieval_time_s": 3.754079835999846
+            },
+            "tool_elapsed_s": 3.7558915760000673
+          },
+          "result_count": 5,
+          "retrieval_time_s": 3.754871446000152,
+          "tool_elapsed_s": 3.7558915760000673,
+          "mcp_roundtrip_s": 3.758696285000042,
+          "mcp_overhead_s": 0.0028047089999745367,
+          "evidence": [
+            {
+              "rank": 1,
+              "relevance_score": 85.0,
+              "matched_terms": 5,
+              "matched_phrases": 1,
+              "proximity_score": 30.0,
+              "primary_coverage": 0.0,
+              "source_family": "TCC",
+              "collection": "IETF-Drafts",
+              "identifier": "draft-ma-bgp-mobile-core-extensions",
+              "release": null,
+              "title": "BGP Extensions for Service Routing of Mobile Core Networks",
+              "section_heading": "",
+              "source_path": "data/tcc_003.parquet",
+              "source_shard": "https://huggingface.co/datasets/GSMA/Telco-Common-Corpus/resolve/main/data/tcc_003.parquet",
+              "evidence": "### 1 Introduction Service discovery in the 5G core network control plane is primarily communicated through the HTTP/2 protocol [TS29.500]. The 3GPP Service-Based Architecture (SBA) defined in [TS23.501] enables flexible deployment models, including multi-access edge computing (MEC), hybrid cloud scenarios, and distributed network function placements. However, these distributed deployments fundamentally challenge existing inter-domain communication and service discovery mechanisms. Current HTTP-based control plane protocols were designed for centralized environments and lack the path awareness, aggregation capabilities, and scalability required for distributed operations. This document proposes a new service discovery mechanism by proposing BGP extensions for mobile core network service routing. The specification introduces a Service Route Address Family Identifier (AFI) and Subsequent Address Family Identifier (SAFI), hierarchical Network Identifier (NID) allocation schemes, and the NID_PATH attribute for path-aware routing and loop prevention. These extensions transform BGP into a capable control plane protocol for mobile core networks, enabling efficient inter-domain service discovery, intelligent route aggregation, and reliable propagation of network function capabilities across distributed domains. ### 2 Terminology The key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\", \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"NOT RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this document are to be interpreted as described in BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all capitals, as shown here. This document uses the following terms: *Network Identifier (NID)*: A hierarchical identifier used to uniquely identify network domains, extending the concept defined in [TS23.501]. Internet-Draft BGP Mobile Core Extensions July 2025 *NID_PATH*: A BGP path attribute that records the sequence of NIDs traversed by a route in non-BGPsec environments, providing basic loop prevention and path traceability. This attribute is superseded by BGPsec's BGPsec_PATH when cryptographic protection is available. *Service Route*: A new BGP Address Family Identifier (AFI) and Subsequent Address Family Identifier (SAFI) for propagating mobile core network service information. Service routes carry aggregated service-level information derived from multiple NF instances. *Service Route ID*: A 16-byte UUID version 7 identifier that uniquely identifies a complete service ro ...",
+              "evidence_chars": 2504
+            },
+            {
+              "rank": 2,
+              "relevance_score": 77.0,
+              "matched_terms": 5,
+              "matched_phrases": 0,
+              "proximity_score": 20.0,
+              "primary_coverage": 0.0,
+              "source_family": "TCC",
+              "collection": "IETF-Drafts",
+              "identifier": "draft-bonaventure-quic-atsss-overview",
+              "release": null,
+              "title": "3GPP Access Traffic Steering Switching and Splitting (ATSSS) - Overview for IETF Participants",
+              "section_heading": "",
+              "source_path": "data/tcc_001.parquet",
+              "source_shard": "https://huggingface.co/datasets/GSMA/Telco-Common-Corpus/resolve/main/data/tcc_001.parquet",
+              "evidence": "### 9 IANA Considerations This document does not make any request to IANA. ### 10 Security Considerations Section 9 of [RFC6459] provides an overview of security considerations in 3GPP networks. ATSSS Phase 1 data plane security considerations are documented in Section 9 of [I-D.ietf-tcpm-converters]. This document discusses the use of QUIC (including Multipath QUIC) as an additional ATSSS steering method. QUIC-specific security Internet-Draft QUIC ATSSS May 2020 considerations are discussed in Section 21 of [I-D.ietf-quic-transport]. This document does not specify specific mechanisms to use QUIC as a tunneling protocol towards an ATSSS proxy, as the intention of this document is to provide an informational overview of the ongoing work in 3GPP on ATSSS to support non-TCP, rather than discussing a detailed solution. Nevertheless, this document cites candidate solutions to provide such tunneling service. Security considerations specific to these solutions are provided below. Multipath QUIC-specific security considerations can be found in Section 8 of [I-D.deconinck-quic-multipath]. Section 6 of {I-D.ietf-quic-datagram} discusses security considerations specific to the use of the Unreliable Datagram Extension to QUIC. ### 11 Acknowledgements Many thanks to Anna Brunstrom, Dieter Gludovacz, Dirk von-Hugo, Tim Costello, Stephen Johnson, and Florin Baboescu for the review, comments, and suggestions. ### 12 Document History (Note to RFC Editor - if this document ever reaches you, please remove this section) Version -00: initial submission ### 13.1 Normative References [TS23501] 3GPP (3rd Generation Partnership Project), ., \"Technical Specification Group Services and System Aspects; System Architecture for the 5G System; Stage 2 (Release 16)\", 2019, <https://www.3gpp.org/ftp/Specs/ archive/23_series/23.501/>. ### 13.2 Informative References [atsssliaison] 3GPP (3rd Generation Partnership Project), ., \"LS on need for Multi-Path QUIC for ATSSS\", April 2020, <https://datatracker.ietf.org/liaison/1678/>. Internet-Draft QUIC ATSSS May 2020 [Hybrid] Keukeleire, N., Hesmans, B., and O. Bonaventure, \"Increasing broadband reach with Hybrid Access Networks\", IEEE Communications and Standards Magazine, Vol. 4, Issue 1 , March 2020, <https://doi.org/10.1109/MCOMSTD.001.1900036>. [I-D.amend-tsvwg-multipath-dccp] Amend, M., Bogenfeld, E., Brunstrom, A., Kassler, A., and V. Rakocevic, \"DCCP Extensions for Multipath Operation with Multiple Addresses\", draft-amend-tsvwg-multipath- ...",
+              "evidence_chars": 2504
+            },
+            {
+              "rank": 3,
+              "relevance_score": 75.0,
+              "matched_terms": 5,
+              "matched_phrases": 1,
+              "proximity_score": 20.0,
+              "primary_coverage": 0.0,
+              "source_family": "TCC",
+              "collection": "IETF-Drafts",
+              "identifier": "draft-ietf-dmm-deployment-models-4",
+              "release": null,
+              "title": "DMM WG S. Gundavelli",
+              "section_heading": "",
+              "source_path": "data/tcc_002.parquet",
+              "source_shard": "https://huggingface.co/datasets/GSMA/Telco-Common-Corpus/resolve/main/data/tcc_002.parquet",
+              "evidence": "### 3.2.5 DMM Functions Mapping to Other Architectures Following table identifies the potential mapping of DMM functions to protocol functions in other system architectures. Internet-Draft DMM Deployment Models May 2018 +=======+=========+========+=========+=============+==========+=======+ | Func. | PMIPv6 | MIPv6 | IPsec | 3GPP-SAE | BBF | 5GC | +=======+=========+========+=========+=============+==========+=======+ | H-CPA | LMA-CPA | HA-CPA | IKE-CPA | PGW-CPA/MME | BNG-CPA |AMF/SMF| +-------+---------+--------+---------+-------------+----------+-------+ | H-DPA | LMA-DPA | HA-DPA | IKE-DPA | PGW-DPA | BNG-DPA | UPF | +-------+---------+--------+---------+-------------+----------+-------+ | A-CPN | MAG-CPN | - | - | SGW-CPN | RG-CPN | SMF | +-------+---------+--------+---------+-------------+----------+-------+ | A-DPN | MAG-DPN | - | - | SGW-DPN | RG-DPN | UPF | +-------+---------+--------+---------+-------------+----------+-------+ Figure 2: Mapping of DMM functions in other system architectures Mapping from the DMM functions to network components in PMIPv6, MIPv6, IPsec, Broadband Forum (BBF) can be given straight-forward. In the 3GPP System Architecture Evolution (SAE), H-CPA functionality is charged by PGW-CPA and Mobility Management Entity (MME), as MME is the key control-plane node involving in such as location management, handoff management, selection of SGW/PGW as well as authorization of UEs. But PGW-CPA is in charge of tunnel control based on UE's subscription and policy between SGW and PGW. The rest of the 3GPP SAE network components are as given in Fig. 2. The 3GPP Release 15 introduces the Service-Based Architecture (SBA) for 5G networks. The 3GPP 5G architecture can be represented by reference point or service-based interfaces [_3GPP.23.501]. Allowing the service-based interface provides greater flexibility for updates and extensions of the 5G control plane system by operator's need or request. The architecture introduces various kinds of network functions granularized in the CP/DP separation concept. In Fig. 2, Access and Mobility Management Function (AMF), Session Management Function (SMF), and User Plane Function (UPF) are picked up among all the network functions introduced in the 5G SBA for mapping to the DMM functions. AMF and SMF take major roles for mobility management in control plane. AMF manages access control and mobility and includes network slice selection functionality. SMF manages sessions based on UE's subscription and n ...",
+              "evidence_chars": 2504
+            },
+            {
+              "rank": 4,
+              "relevance_score": 75.0,
+              "matched_terms": 6,
+              "matched_phrases": 0,
+              "proximity_score": 20.0,
+              "primary_coverage": 0.0,
+              "source_family": "TCC",
+              "collection": "IETF-Drafts",
+              "identifier": "draft-grayson-distributed-roaming-mobility",
+              "release": null,
+              "title": "Distributed Roaming and Mobility Problem Statement",
+              "section_heading": "",
+              "source_path": "data/tcc_005.parquet",
+              "source_shard": "https://huggingface.co/datasets/GSMA/Telco-Common-Corpus/resolve/main/data/tcc_005.parquet",
+              "evidence": "### 7 The Server-Initiated Roaming Challenge In order to avoid the need to operate a central database for roaming onto small, localized, distributed, private wireless network deployments, roaming signaling needs to accommodate the typical enterprise firewall configurations that block server-initiated signaling. ### 7.1 Roaming Transport Alternatives The challenge of how to support server push based signaling across firewall deployments is well understood. Roaming signaling is exchanged using a range of different transports: * Wi-Fi Networks typically authenticate users using RADIUS [RFC2865] based signaling. More recently, Wi-Fi roaming is increasingly adopting RadSec to secure roaming signaling using secured sessions mutually authenticated using x509v3 PKI certificates [RFC6614]. * 4G Networks typically authenticate users using Diameter [RFC6733] based signaling. [_3GPPTS29272] specifies the S6a reference point. The S6a interface protocol is an IETF vendor specific Diameter application, where the Diameter application identifier assigned to Internet-Draft Dist-Roam-Mob October 2025 the application is 16777251. The S6a interface is protected by using 3GPP defined Security Gateways (SEG) used to establish and maintain IPsec secured ESP Security Association in tunnel mode between security domains [_3GPPTS33210]. * 5G Service Based Architecture allows signaling consumers to communicate with different signaling producers. SBA defines the use of RESTful APIs transported using HTTP2 defined methods like GET, POST and PATCH. The 5G System also introduces the Security Edge Protection Proxy (SEPP). The SEPP sits at the perimeter of the 5G public cellular network. The 5G N32 interface is defined by 3GPP for use between two SEPPs to ensure the HTTP2 messages can be securely exchanged. First, N32 control signaling is exchanged to establish N32 forwarding. The N32 forwarding operates by taking the HTTP2 Request or Response messages that need to be exchanged between operators and encoding the HTTP2 header frames and data frames in JSON. ### 7.2 Supporting server-initiated messages Looking at current solutions for supporting server-initiated messages with these different transports: * IETF RADEXT has identified the challenge of how a home RADIUS server can send Change of Authorization (CoA) packets to a Network Access Server (NAS) which is behind a firewall or NAT gateway. [I-D.draft-ietf-radext-reverse-coa] defines a \"reverse change of authorization (CoA)\" path for RADIU ...",
+              "evidence_chars": 2504
+            },
+            {
+              "rank": 5,
+              "relevance_score": 66.0,
+              "matched_terms": 4,
+              "matched_phrases": 0,
+              "proximity_score": 20.0,
+              "primary_coverage": 0.0,
+              "source_family": "TCC",
+              "collection": "IETF-Drafts",
+              "identifier": "draft-ietf-privacypass-auth-scheme-15",
+              "release": null,
+              "title": "The Privacy Pass HTTP Authentication Scheme",
+              "section_heading": "",
+              "source_path": "data/tcc_001.parquet",
+              "source_shard": "https://huggingface.co/datasets/GSMA/Telco-Common-Corpus/resolve/main/data/tcc_001.parquet",
+              "evidence": "### 6.2.1 Reserved Values This document defines several Reserved values, which can be used by clients and servers to send \"greased\" values in token challenges and redemptions to ensure that implementations remain able to handle unknown token types gracefully (this technique is inspired by [RFC8701]). Implementations SHOULD select reserved values at random when including them in greased messages. Servers can include these in TokenChallenge structures, either as the only challenge when no real token type is desired, or as one challenge in a list of challenges that include real values. Clients can include these in Token structures when they are not able to present a real token. The contents of the Token structure SHOULD be filled with random bytes when using greased values. The initial contents for this registry consists of multiple reserved values, with the following attributes, which are repeated for each registration: Value: 0x0000, 0x02AA, 0x1132, 0x2E96, 0x3CD3, 0x4473, 0x5A63, 0x6D32, 0x7F3F, 0x8D07, 0x916B, 0xA6A4, 0xBEAB, 0xC3F3, 0xDA42, 0xE944, 0xF057 Name: RESERVED Token Structure: Random bytes Token Key Encoding: Random bytes TokenChallenge Structure: Random bytes Publicly Verifiable: N/A Public Metadata: N/A Private Metadata: N/A Nk: N/A Nid: N/A Reference: This document Notes: None ### 7 References Internet-Draft Privacy Pass Authentication October 2023 ### 7.1 Normative References [ARCHITECTURE] Davidson, A., Iyengar, J., and C. A. Wood, \"The Privacy Pass Architecture\", Work in Progress, Internet-Draft, draft-ietf-privacypass-architecture-16, 25 September 2023, <https://datatracker.ietf.org/doc/html/draft-ietf- privacypass-architecture-16>. [RFC2119] Bradner, S., \"Key words for use in RFCs to Indicate Requirement Levels\", BCP 14, RFC 2119, DOI 10.17487/RFC2119, March 1997, <https://www.rfc-editor.org/rfc/rfc2119>. [RFC4648] Josefsson, S., \"The Base16, Base32, and Base64 Data Encodings\", RFC 4648, DOI 10.17487/RFC4648, October 2006, <https://www.rfc-editor.org/rfc/rfc4648>. [RFC8126] Cotton, M., Leiba, B., and T. Narten, \"Guidelines for Writing an IANA Considerations Section in RFCs\", BCP 26, RFC 8126, DOI 10.17487/RFC8126, June 2017, <https://www.rfc-editor.org/rfc/rfc8126>. [RFC8174] Leiba, B., \"Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words\", BCP 14, RFC 8174, DOI 10.17487/RFC8174, May 2017, <https://www.rfc-editor.org/rfc/rfc8174>. [RFC9110] Fielding, R., Ed., Nottingham, M., Ed., and J. Reschke, Ed., \"HTTP Semantics\", STD 97, RFC ...",
+              "evidence_chars": 2503
+            }
+          ]
+        }
+      ],
+      "turn_usage": [
+        {
+          "turn": 1,
+          "input_tokens": 544,
+          "output_tokens": 32,
+          "elapsed_s": 0.444999,
+          "finish_reason": "tool_calls",
+          "tool_calls": 1
+        },
+        {
+          "turn": 2,
+          "input_tokens": 5163,
+          "output_tokens": 799,
+          "elapsed_s": 8.826467,
+          "finish_reason": "stop",
+          "tool_calls": 0
+        }
+      ],
+      "evidence_items": 5,
+      "evidence_items_with_text": 5,
+      "evidence_text_coverage_pct": 100.0,
+      "retrieval_latency_sec": 3.755,
+      "mean_retrieval_latency_per_search_sec": 3.755,
+      "total_sources_returned": 5,
+      "mean_sources_per_search": 5.0,
+      "mcp_roundtrip_sec": 3.759,
+      "mcp_overhead_sec": 0.003,
+      "total_latency_sec": 13.03,
+      "non_retrieval_latency_sec": 9.276,
+      "retrieval_latency_share_pct": 28.8,
+      "input_tokens": 5707,
+      "output_tokens": 831,
+      "total_tokens": 6538,
+      "errors": []
+    }
+  ]
+}

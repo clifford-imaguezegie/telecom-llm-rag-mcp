@@ -1,0 +1,9 @@
+question_id,domain,knowledge_scope,expected_route,routes_used,route_match,observed_source_families,source_family_match,status,stop_reason,mcp_searches,search_classification,claude_turns,llm_turns,total_sources_returned,evidence_items,evidence_items_with_text,evidence_text_coverage_pct,mean_sources_per_search,retrieval_latency_sec,mean_retrieval_latency_per_search_sec,total_latency_sec,non_retrieval_latency_sec,retrieval_latency_share_pct,input_tokens,output_tokens,total_tokens,final_answer_tokens,answer_words
+Q1,5G Core,3GPP,3gpp,3gpp,True,3GPP,True,COMPLETED,end_turn,1,IDEAL,2,2,4,4,4,100.0,4.0,0.465,0.465,11.085,10.62,4.2,4912,711,5623,681,451
+Q2,Mobility,3GPP,3gpp,3gpp,True,3GPP,True,COMPLETED,end_turn,1,IDEAL,2,2,5,5,5,100.0,5.0,0.552,0.552,11.343,10.791,4.9,5897,716,6613,681,445
+Q3,RAN,3GPP,3gpp,3gpp,True,3GPP,True,COMPLETED,end_turn,1,IDEAL,2,2,2,2,2,100.0,2.0,0.454,0.454,10.235,9.781,4.4,3024,730,3754,701,411
+Q4,QoS,3GPP,3gpp,3gpp,True,3GPP,True,COMPLETED,end_turn,1,IDEAL,2,2,4,4,4,100.0,4.0,0.391,0.391,10.624,10.232,3.7,4658,706,5364,676,442
+Q5,Security,3GPP,3gpp,3gpp,True,3GPP,True,COMPLETED,end_turn,1,IDEAL,2,2,4,4,4,100.0,4.0,0.314,0.314,9.707,9.393,3.2,4976,725,5701,697,435
+Q6,Internet Transport,TCC,tcc,tcc,True,TCC,True,COMPLETED,end_turn,1,IDEAL,2,2,5,5,5,100.0,5.0,4.029,4.029,12.055,8.026,33.4,4904,612,5516,582,417
+Q7,Telecom AI Research,TCC,tcc,tcc,True,TCC,True,COMPLETED,end_turn,1,IDEAL,2,2,5,5,5,100.0,5.0,9.148,9.148,17.611,8.463,51.9,5256,535,5791,500,344
+Q8,5G SBA + Internet Protocols,Hybrid,hybrid,hybrid,True,TCC,False,COMPLETED,end_turn,1,IDEAL,2,2,5,5,5,100.0,5.0,3.755,3.755,13.03,9.276,28.8,5707,831,6538,799,502

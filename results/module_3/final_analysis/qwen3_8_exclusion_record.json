@@ -1,0 +1,8 @@
+{
+  "model": "Qwen3.8 Flash",
+  "access_path": "OpenRouter shared Alibaba capacity",
+  "benchmark_version": "module3_eval_v2",
+  "status": "EXCLUDED",
+  "reason": "Repeated upstream provider rate limiting (HTTP 429) prevented a valid frozen Benchmark v2 execution.",
+  "scoring_rule": "Excluded from model/MCP/retrieval performance scoring; retained only as an external availability observation."
+}

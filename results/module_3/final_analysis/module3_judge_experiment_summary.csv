@@ -1,0 +1,9 @@
+architecture,model,provider,technical_correctness_score,completeness_score,relevance_score,engineering_quality_score,judge_quality_mean_score,judge_quality_pct,mean_grounding_score_pct,material_claims,supported_claims,partially_supported_claims,unsupported_claims,contradicted_claims,weighted_grounding_score_pct
+Version A,Claude Haiku 4.5,Anthropic API,3.12,3.38,4.25,3.12,3.47,61.72,66.27,117,58,42,16,1,67.52
+Version A,Claude Sonnet 5,Anthropic API,3.5,4.25,4.25,3.5,3.88,71.88,55.72,118,47,43,24,4,58.05
+Version A,DeepSeek V4 Flash 0731,OpenRouter,2.88,3.12,3.75,3.12,3.22,55.47,72.42,94,47,35,10,2,68.62
+Version A,Gemma 4 26B A4B IT,OpenRouter,3.5,3.62,4.75,3.5,3.84,71.09,61.38,95,42,34,18,1,62.11
+Version B,Claude Haiku 4.5,Anthropic API,2.88,3.0,3.88,3.0,3.19,54.69,62.9,129,59,46,22,2,63.57
+Version B,Claude Sonnet 5,Anthropic API,3.75,4.12,4.25,3.62,3.94,73.44,56.07,103,43,34,24,2,58.25
+Version B,DeepSeek V4 Flash 0731,OpenRouter,3.25,3.38,4.25,3.0,3.47,61.72,60.21,95,41,33,21,0,60.53
+Version B,Gemma 4 26B A4B IT,OpenRouter,3.5,3.38,4.62,3.5,3.75,68.75,41.78,93,21,33,39,0,40.32

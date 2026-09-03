@@ -1,0 +1,9 @@
+architecture,model,provider,completion_rate_pct,strict_route_adherence_pct,actual_source_family_accuracy_pct,judge_quality_mean_score,quality_rank,weighted_grounding_score_pct,grounding_rank,mean_mcp_searches,search_efficiency_rank,mean_e2e_sec,latency_rank,mean_tokens,token_efficiency_rank
+Version A,Claude Sonnet 5,Anthropic API,87.5,87.5,100.0,3.88,1.0,58.05,4.0,1.88,2.0,24.92,3.0,19418.75,4.0
+Version A,Gemma 4 26B A4B IT,OpenRouter,100.0,87.5,87.5,3.84,2.0,62.11,3.0,1.0,1.0,11.96,1.0,5612.5,1.0
+Version A,Claude Haiku 4.5,Anthropic API,100.0,87.5,100.0,3.47,3.0,67.52,2.0,2.12,3.0,26.02,4.0,16546.88,3.0
+Version A,DeepSeek V4 Flash 0731,OpenRouter,62.5,87.5,100.0,3.22,4.0,68.62,1.0,2.25,4.0,16.7,2.0,14721.5,2.0
+Version B,Claude Sonnet 5,Anthropic API,100.0,87.5,100.0,3.94,1.0,58.25,3.0,2.0,2.0,22.41,3.0,24495.75,3.0
+Version B,Gemma 4 26B A4B IT,OpenRouter,100.0,100.0,100.0,3.75,2.0,40.32,4.0,1.0,1.0,15.36,1.0,7100.12,1.0
+Version B,DeepSeek V4 Flash 0731,OpenRouter,87.5,100.0,100.0,3.47,3.0,60.53,2.0,2.25,3.0,73.96,4.0,22985.75,2.0
+Version B,Claude Haiku 4.5,Anthropic API,100.0,87.5,100.0,3.19,4.0,63.57,1.0,2.62,4.0,19.42,2.0,30327.38,4.0

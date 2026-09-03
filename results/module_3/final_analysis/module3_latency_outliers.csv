@@ -1,0 +1,11 @@
+architecture,model,provider,question_id,mcp_searches,retrieval_latency_sec,non_retrieval_latency_sec,total_latency_sec,total_tokens,judge_quality_mean_score,grounding_score_pct
+Version B,DeepSeek V4 Flash 0731,OpenRouter,Q8,3,4.05,121.4,125.45,26511,4.5,54.55
+Version B,DeepSeek V4 Flash 0731,OpenRouter,Q1,3,5.47,113.67,119.14,39721,3.0,58.33
+Version B,DeepSeek V4 Flash 0731,OpenRouter,Q4,2,3.56,101.43,104.99,20108,3.5,45.0
+Version B,DeepSeek V4 Flash 0731,OpenRouter,Q2,3,5.29,85.55,90.84,38526,4.25,46.88
+Version B,DeepSeek V4 Flash 0731,OpenRouter,Q6,1,1.77,54.67,56.44,7539,3.5,71.43
+Version B,DeepSeek V4 Flash 0731,OpenRouter,Q3,1,0.53,42.22,42.76,6970,3.25,53.85
+Version A,Claude Sonnet 5,Anthropic API,Q3,2,0.91,37.06,37.97,13740,3.75,32.14
+Version B,DeepSeek V4 Flash 0731,OpenRouter,Q7,3,1.29,28.85,30.14,25170,1.75,75.0
+Version B,Claude Sonnet 5,Anthropic API,Q5,2,3.62,21.84,25.47,25238,4.5,41.67
+Version A,Claude Sonnet 5,Anthropic API,Q5,2,6.75,21.58,28.34,21488,3.5,46.88
