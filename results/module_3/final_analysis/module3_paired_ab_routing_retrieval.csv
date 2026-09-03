@@ -1,0 +1,5 @@
+model,A_strict_route_adherence_pct,B_strict_route_adherence_pct,delta_strict_route_adherence_pct,A_actual_source_family_accuracy_pct,B_actual_source_family_accuracy_pct,delta_actual_source_family_accuracy_pct,A_mean_evidence_element_coverage_pct,B_mean_evidence_element_coverage_pct,delta_mean_evidence_element_coverage_pct,A_mean_evidence_authority_alignment_pct,B_mean_evidence_authority_alignment_pct,delta_mean_evidence_authority_alignment_pct
+Claude Haiku 4.5,87.5,87.5,0.0,100.0,100.0,0.0,89.58,93.75,4.17,70.56,64.1,-6.45
+Claude Sonnet 5,87.5,87.5,0.0,100.0,100.0,0.0,87.08,89.58,2.5,70.83,68.75,-2.08
+DeepSeek V4 Flash 0731,87.5,100.0,12.5,100.0,100.0,0.0,87.08,88.39,1.31,69.58,78.08,8.49
+Gemma 4 26B A4B IT,87.5,100.0,12.5,87.5,100.0,12.5,85.3,67.26,-18.04,88.75,90.0,1.25

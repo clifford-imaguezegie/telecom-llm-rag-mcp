@@ -1,0 +1,22 @@
+[
+  {
+    "stage": "Technical Quality",
+    "calls": 64,
+    "prompt_tokens": 571281,
+    "completion_tokens": 192610,
+    "reasoning_tokens": 142642,
+    "total_tokens": 763891,
+    "reported_cost_credits": 2.816,
+    "total_latency_sec": 1571.769
+  },
+  {
+    "stage": "Claim Grounding",
+    "calls": 64,
+    "prompt_tokens": 2076180,
+    "completion_tokens": 369645,
+    "reasoning_tokens": 131532,
+    "total_tokens": 2445825,
+    "reported_cost_credits": 6.415,
+    "total_latency_sec": 2028.107
+  }
+]

@@ -1,0 +1,9 @@
+architecture,model,provider,completion_rate_pct,mean_mcp_searches,mean_retrieval_sec,mean_non_retrieval_sec,mean_e2e_sec,retrieval_share_pct,non_retrieval_share_pct,mean_tokens,mean_answer_words,judge_quality_mean_score,weighted_grounding_score_pct,latency_driver,search_pattern
+Version A,Gemma 4 26B A4B IT,OpenRouter,100.0,1.0,2.39,9.57,11.96,19.97,80.03,5612.5,430.88,3.84,62.11,Model/provider-dominant,Single-search dominant
+Version A,DeepSeek V4 Flash 0731,OpenRouter,62.5,2.25,4.95,11.74,16.7,29.68,70.32,14721.5,324.62,3.22,68.62,Model/provider-dominant,Moderate iteration
+Version A,Claude Sonnet 5,Anthropic API,87.5,1.88,4.82,20.1,24.92,19.35,80.65,19418.75,436.62,3.88,58.05,Model/provider-dominant,Moderate iteration
+Version A,Claude Haiku 4.5,Anthropic API,100.0,2.12,12.92,13.1,26.02,49.66,50.34,16546.88,447.0,3.47,67.52,Mixed,Moderate iteration
+Version B,Gemma 4 26B A4B IT,OpenRouter,100.0,1.0,5.89,9.47,15.36,38.35,61.65,7100.12,427.0,3.75,40.32,Mixed,Single-search dominant
+Version B,Claude Haiku 4.5,Anthropic API,100.0,2.62,3.57,15.85,19.42,18.39,81.61,30327.38,519.0,3.19,63.57,Model/provider-dominant,High search iteration
+Version B,Claude Sonnet 5,Anthropic API,100.0,2.0,4.43,17.98,22.41,19.78,80.22,24495.75,437.88,3.94,58.25,Model/provider-dominant,Moderate iteration
+Version B,DeepSeek V4 Flash 0731,OpenRouter,87.5,2.25,3.15,70.81,73.96,4.26,95.74,22985.75,404.38,3.47,60.53,Model/provider-dominant,Moderate iteration

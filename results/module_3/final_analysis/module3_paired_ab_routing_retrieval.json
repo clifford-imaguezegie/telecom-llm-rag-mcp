@@ -1,0 +1,62 @@
+[
+  {
+    "model": "Claude Haiku 4.5",
+    "A_strict_route_adherence_pct": 87.5,
+    "B_strict_route_adherence_pct": 87.5,
+    "delta_strict_route_adherence_pct": 0.0,
+    "A_actual_source_family_accuracy_pct": 100.0,
+    "B_actual_source_family_accuracy_pct": 100.0,
+    "delta_actual_source_family_accuracy_pct": 0.0,
+    "A_mean_evidence_element_coverage_pct": 89.58,
+    "B_mean_evidence_element_coverage_pct": 93.75,
+    "delta_mean_evidence_element_coverage_pct": 4.17,
+    "A_mean_evidence_authority_alignment_pct": 70.56,
+    "B_mean_evidence_authority_alignment_pct": 64.1,
+    "delta_mean_evidence_authority_alignment_pct": -6.45
+  },
+  {
+    "model": "Claude Sonnet 5",
+    "A_strict_route_adherence_pct": 87.5,
+    "B_strict_route_adherence_pct": 87.5,
+    "delta_strict_route_adherence_pct": 0.0,
+    "A_actual_source_family_accuracy_pct": 100.0,
+    "B_actual_source_family_accuracy_pct": 100.0,
+    "delta_actual_source_family_accuracy_pct": 0.0,
+    "A_mean_evidence_element_coverage_pct": 87.08,
+    "B_mean_evidence_element_coverage_pct": 89.58,
+    "delta_mean_evidence_element_coverage_pct": 2.5,
+    "A_mean_evidence_authority_alignment_pct": 70.83,
+    "B_mean_evidence_authority_alignment_pct": 68.75,
+    "delta_mean_evidence_authority_alignment_pct": -2.08
+  },
+  {
+    "model": "DeepSeek V4 Flash 0731",
+    "A_strict_route_adherence_pct": 87.5,
+    "B_strict_route_adherence_pct": 100.0,
+    "delta_strict_route_adherence_pct": 12.5,
+    "A_actual_source_family_accuracy_pct": 100.0,
+    "B_actual_source_family_accuracy_pct": 100.0,
+    "delta_actual_source_family_accuracy_pct": 0.0,
+    "A_mean_evidence_element_coverage_pct": 87.08,
+    "B_mean_evidence_element_coverage_pct": 88.39,
+    "delta_mean_evidence_element_coverage_pct": 1.31,
+    "A_mean_evidence_authority_alignment_pct": 69.58,
+    "B_mean_evidence_authority_alignment_pct": 78.08,
+    "delta_mean_evidence_authority_alignment_pct": 8.49
+  },
+  {
+    "model": "Gemma 4 26B A4B IT",
+    "A_strict_route_adherence_pct": 87.5,
+    "B_strict_route_adherence_pct": 100.0,
+    "delta_strict_route_adherence_pct": 12.5,
+    "A_actual_source_family_accuracy_pct": 87.5,
+    "B_actual_source_family_accuracy_pct": 100.0,
+    "delta_actual_source_family_accuracy_pct": 12.5,
+    "A_mean_evidence_element_coverage_pct": 85.3,
+    "B_mean_evidence_element_coverage_pct": 67.26,
+    "delta_mean_evidence_element_coverage_pct": -18.04,
+    "A_mean_evidence_authority_alignment_pct": 88.75,
+    "B_mean_evidence_authority_alignment_pct": 90.0,
+    "delta_mean_evidence_authority_alignment_pct": 1.25
+  }
+]

@@ -1,0 +1,13 @@
+finding_id,finding
+1,**Version A:** Highest judged technical quality was Claude Sonnet 5 (3.88/5).
+2,**Version A:** Highest claim-level grounding was DeepSeek V4 Flash 0731 (68.6%).
+3,"**Version A:** Lowest mean E2E latency was Gemma 4 26B A4B IT (11.96s), while the lowest mean token consumption was Gemma 4 26B A4B IT (5,612 tokens/question)."
+4,**Version B:** Highest judged technical quality was Claude Sonnet 5 (3.94/5).
+5,**Version B:** Highest claim-level grounding was Claude Haiku 4.5 (63.6%).
+6,"**Version B:** Lowest mean E2E latency was Gemma 4 26B A4B IT (15.36s), while the lowest mean token consumption was Gemma 4 26B A4B IT (7,100 tokens/question)."
+7,**Architecture interaction:** The largest Version B technical-quality improvement was observed for DeepSeek V4 Flash 0731 (Δ=+0.25).
+8,Version B did not uniformly improve final-answer quality; the largest decline was observed for Claude Haiku 4.5 (Δ=-0.28).
+9,"Formal route accuracy was 100% across all experiments, while strict route adherence fell as low as 87.5%, confirming that aggregate route success can hide subsequent search drift."
+10,"For Q7, full IEEE-Access/OpenAlex collection coverage was achieved only by: Version A Gemma 4 26B A4B IT; Version B Gemma 4 26B A4B IT. This isolates model-generated search-query specificity as an important retrieval variable."
+11,"Gemma used exactly one MCP search per benchmark question in both architectures, demonstrating materially different tool-use discipline despite the common MCP interface."
+12,"DeepSeek Version B spent only 4.26% of mean E2E latency in retrieval and 95.74% outside retrieval, indicating that the principal latency bottleneck was the model/provider execution path rather than BM25/MCP retrieval."

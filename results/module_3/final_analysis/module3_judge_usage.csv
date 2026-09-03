@@ -1,0 +1,3 @@
+stage,calls,prompt_tokens,completion_tokens,reasoning_tokens,total_tokens,reported_cost_credits,total_latency_sec
+Technical Quality,64,571281,192610,142642,763891,2.816,1571.769
+Claim Grounding,64,2076180,369645,131532,2445825,6.415,2028.107

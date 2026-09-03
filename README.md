@@ -1,49 +1,130 @@
 # Telecom LLM, RAG & MCP
 
-An experimental telecom AI project exploring the progressive integration of **Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), Model Context Protocol (MCP), AI agents, and autonomous network operations**.
+An experimental telecom AI engineering project exploring the progressive integration of **Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), Model Context Protocol (MCP), AI agents, production AI architecture, and autonomous network operations**.
 
-The project investigates how general-purpose and telecom-domain LLMs can be progressively combined with telecom knowledge, network tools, reasoning workflows, and automation to support increasingly capable telecom engineering and operational use cases.
+The project investigates how general-purpose and telecom-domain LLMs can be progressively combined with controlled telecom knowledge, retrieval systems, standardized tool interfaces, reasoning workflows, and network automation to support increasingly capable telecom engineering use cases.
 
 ---
 
-## Project Objective
+# Project Objective
 
-The objective of this project is to evaluate the evolution of telecom AI systems through a controlled sequence of architectural stages:
+The objective is to evaluate the evolution of telecom AI systems through a controlled sequence of architectural stages:
 
-**Standalone LLM → RAG → Knowledge Extension + MCP → AI Agents → RAG V2 / Architecture Optimization → Autonomous Telecom Operations**
+```text
+Standalone LLM
+      ↓
+RAG
+      ↓
+Knowledge-Based MCP
+      ↓
+RAG + MCP Hybrid
+      ↓
+Agentic Telecom AI
+      ↓
+Production Architecture + RAG V2
+      ↓
+Autonomous Telecom Operations
+```
 
-Each major stage is implemented, benchmarked, analyzed, and retained as a reference baseline before progressing to the next phase.
+Each major stage is:
 
-The focus is not only on benchmark performance, but also on:
+1. implemented,
+2. benchmarked,
+3. evaluated,
+4. diagnostically analyzed,
+5. retained as a frozen or controlled baseline,
+6. and then extended in the next architectural stage.
+
+The project focuses not only on benchmark performance, but also on:
 
 * technical accuracy,
 * engineering reasoning,
 * factual reliability,
-* knowledge grounding,
-* operational reliability,
-* tool integration,
-* and practical applicability to telecom network operations.
+* evidence grounding,
+* retrieval quality,
+* tool-use behaviour,
+* runtime reliability,
+* latency,
+* token efficiency,
+* architecture design,
+* and practical applicability to telecom engineering and operations.
 
 ---
 
-## Project Roadmap
+# Project Roadmap
 
-| Module                     | Description                                                                  | Status      |
-| -------------------------- | ---------------------------------------------------------------------------- | ----------- |
-| **001_llm_base**           | Initial general-purpose vs telecom-domain LLM benchmark                      | ✅ Completed |
-| **002_rag_v1**             | Telecom RAG V1, expanded multi-model benchmark and failure analysis          | ✅ Completed |
-| **003_mcp**                | Telecom knowledge-base extension and MCP integration with network data/tools | 🔄 Next     |
-| **004_agents**             | AI agents for telecom reasoning and operational workflows                    | ⏳ Planned   |
-| **005_rag_v2**             | RAG V2 / architecture optimization based on V1 and MCP findings              | ⏳ Planned   |
-| **006_autonomous_telecom** | Integrated closed-loop and autonomous telecom operations                     | ⏳ Planned   |
+| Module       | Architecture                                    | Status      |
+| ------------ | ----------------------------------------------- | ----------- |
+| **Module 1** | Standalone LLM baseline                         | ✅ Completed |
+| **Module 2** | Telecom RAG V1 + expanded multi-model benchmark | ✅ Completed |
+| **Module 3** | Knowledge-Based MCP + cross-LLM evaluation      | ✅ Completed |
+| **Module 4** | RAG + Knowledge-Based MCP Hybrid                | 🔄 Next     |
+| **Module 5** | Agentic Telecom AI                              | ⏳ Planned   |
+| **Module 6** | Production Architecture + RAG V2                | ⏳ Planned   |
+| **Module 7** | Autonomous Telecom Operations                   | ⏳ Planned   |
 
 ---
 
-# Module 1 — Initial LLM Baseline
+# Repository Organization
 
-Module 1 established the original telecom LLM benchmark and provided the experimental foundation for the subsequent RAG work.
+The repository is organized by architecture module so that each stage remains clearly identifiable as the project grows.
 
-The objective was to compare a general-purpose instruction-tuned LLM with a telecom-domain model derived from the same model lineage.
+```text
+.
+├── notebooks/
+│   ├── module_1/
+│   │   └── 01_llm_base.ipynb
+│   │
+│   ├── module_2/
+│   │   ├── 02_rag_stage_1.ipynb
+│   │   ├── 03_essentialai_rag_v1.ipynb
+│   │   ├── 04_essentialai_only.ipynb
+│   │   ├── 05_otel2_only.ipynb
+│   │   ├── 06_gemma4_only.ipynb
+│   │   ├── 07_gemma4_rag_v1.ipynb
+│   │   └── 08_rag_evaluation.ipynb
+│   │
+│   └── module_3/
+│       ├── 09_version_a_claude_sonnet.ipynb
+│       ├── 10_version_a_claude_haiku.ipynb
+│       ├── 11_version_a_gemma4.ipynb
+│       ├── 12_version_a_deepseek_v4.ipynb
+│       ├── 13_qwen3_8_exclusion_record.ipynb
+│       ├── 14_version_b_build.ipynb
+│       ├── 15_version_b_claude_sonnet_runtime.ipynb
+│       ├── 16_version_b_claude_haiku_runtime.ipynb
+│       ├── 17_version_b_gemma4_runtime.ipynb
+│       ├── 18_version_b_deepseek_v4_runtime.ipynb
+│       └── 19_module3_final_ab_cross_llm_analysis.ipynb
+│
+├── results/
+│   ├── module_1/
+│   ├── module_2/
+│   └── module_3/
+│       ├── frozen_benchmark/
+│       └── final_analysis/
+│
+├── docs/
+│   └── module_3/
+│
+├── scripts/
+│   └── module_3/
+│       └── validate_module3_notebooks.py
+│
+├── src/
+│   └── llm/
+│
+├── README.md
+└── .gitignore
+```
+
+Module-specific `docs/` and `scripts/` directories are added only where actual supporting material exists rather than creating empty folders for symmetry.
+
+---
+
+# Module 1 — Standalone LLM Baseline
+
+Module 1 established the initial telecom LLM benchmark and provided the experimental foundation for the later RAG and MCP work.
 
 ## Models Evaluated
 
@@ -51,106 +132,53 @@ The objective was to compare a general-purpose instruction-tuned LLM with a tele
 * **Telecom LLM / OTel 1.0:** `farbodtavakkoli/OTel-LLM-8.3B-IT`
 * **Independent Judge:** `Qwen/Qwen2.5-7B-Instruct`
 
-OTel 1.0 is derived from the `rnj-1-instruct` lineage and underwent telecom-specific post-training, providing a useful controlled comparison of the impact of domain specialization.
+OTel 1.0 is derived from the `rnj-1-instruct` lineage and underwent telecom-specific post-training, providing a useful controlled comparison of general-purpose versus domain-specialized model behaviour.
 
----
+## Benchmark Framework
 
-## Shared Benchmark Framework
-
-Module 1 established two benchmark tracks which were subsequently retained in Module 2.
+Two benchmark tracks were established.
 
 ### Track 1 — Custom Telecom Engineering Benchmark
 
-Track 1 contains **20 custom telecom engineering questions** covering conceptual, procedural, troubleshooting, design, and applied engineering scenarios.
+**20 questions** covering areas including:
 
-Key areas include:
-
-* 5G Core
-* 5G RAN
-* 5G Standalone procedures
-* Open RAN
-* cloud-native telecom
-* Kubernetes
-* capacity and performance
-* troubleshooting
-* fault isolation
-* network architecture
-* end-to-end engineering reasoning
+* 5G Core,
+* 5G RAN,
+* 5G Standalone procedures,
+* Open RAN,
+* Kubernetes,
+* cloud-native telecom,
+* capacity and performance,
+* troubleshooting,
+* fault isolation,
+* network architecture,
+* and end-to-end engineering reasoning.
 
 ### Track 2 — Industry Telecom Benchmark
 
-Track 2 contains **32 industry-oriented telecom questions** covering:
+**32 questions** covering benchmark families including:
 
-* 3GPP working-group classification
-* O-RAN
-* 6G reasoning
-* srsRAN
-* telecom logs
-* telecom mathematics
-* telecom Q&A
-* telecom tables
-
-The same **20 Track 1 questions and 32 Track 2 questions** formed the benchmark foundation reused in Module 2.
-
-This provides continuity between the initial standalone-model experiment and the later RAG V1 evaluation.
+* 3GPP,
+* O-RAN,
+* 6G,
+* srsRAN,
+* telecom logs,
+* telecom mathematics,
+* telecom Q&A,
+* and telecom tables.
 
 ---
 
-## Module 1 Evaluation Approach
+## Module 1 Results
 
-Track 1 included:
-
-* fixed model inference,
-* an independent LLM judge,
-* question-level scoring,
-* and expert telecom engineering review.
-
-The expert review considered:
-
-* technical accuracy,
-* completeness,
-* relevance,
-* engineering reasoning,
-* practical applicability,
-* factual reliability,
-* technical errors,
-* missing important points,
-* and question-level winners.
-
-Track 2 was assessed against the benchmark reference answers and expert technical review.
-
----
-
-## Module 1 — Track 1 Results
+### Track 1
 
 | System                         | Questions Won | Win Rate | Average Expert Score |
 | ------------------------------ | ------------: | -------: | -------------------: |
 | **EssentialAI/rnj-1-instruct** |   **13 / 20** |  **65%** |       **72.8 / 100** |
 | OTel 1.0                       |        7 / 20 |      35% |           60.1 / 100 |
 
-The General LLM showed particular strength in:
-
-* troubleshooting,
-* cloud-native telecom,
-* Kubernetes,
-* complex architecture,
-* and broader engineering reasoning.
-
-OTel 1.0 performed competitively on selected:
-
-* 5G Core,
-* RAN,
-* Open RAN,
-* and focused DL/UL engineering questions.
-
-A notable difference in model behaviour was observed:
-
-* the General LLM provided broader engineering reasoning but could produce confident telecom-specific inaccuracies;
-* OTel 1.0 was generally more concise and focused but showed greater capability gaps on complex open-ended tasks.
-
----
-
-## Module 1 — Track 2 Results
+### Track 2
 
 | System                         | Questions Won |  Win Rate | Average Expert Score |
 | ------------------------------ | ------------: | --------: | -------------------: |
@@ -158,103 +186,83 @@ A notable difference in model behaviour was observed:
 | OTel 1.0                       |        7 / 32 |     21.9% |           32.1 / 100 |
 | Ties                           |        2 / 32 |      6.3% |                    — |
 
-The General LLM demonstrated broader capability across:
+Across the combined **52 questions**, EssentialAI won **36 / 52 (69.2%)**.
 
-* 3GPP classification,
-* software/code-oriented questions,
-* quantitative reasoning,
-* and telecom troubleshooting.
-
-OTel 1.0 performed well on selected focused O-RAN, 6G, and telecom-table questions, but produced more non-responsive outputs on detailed source-dependent and analytical tasks.
-
----
-
-## Module 1 — Cross-Track Outcome
-
-Across the combined **52 benchmark questions**:
-
-| Metric                        | EssentialAI/rnj-1-instruct |        OTel 1.0 |
-| ----------------------------- | -------------------------: | --------------: |
-| Combined Questions Won        |        **36 / 52 (69.2%)** | 14 / 52 (26.9%) |
-| Combined Average Expert Score |             **71.1 / 100** |      42.8 / 100 |
-| Overall Result                |                 **Winner** |               — |
-
-The principal Module 1 conclusion was:
+### Module 1 Conclusion
 
 > **Technical fluency and concise responses do not guarantee technical correctness.**
 
-The experiment also showed that telecom-domain specialization alone does not automatically guarantee stronger engineering performance.
+The experiment also demonstrated that telecom-domain specialization alone does not automatically guarantee stronger engineering performance.
 
-Module 1 therefore established both the initial standalone baseline and the benchmark methodology used for subsequent experimentation.
+Module 1 established the standalone baseline and benchmark methodology carried into Module 2.
 
 ---
 
-# Module 2 — Telecom RAG V1 and Expanded Multi-Model Benchmark
+# Module 2 — Telecom RAG V1
 
-Module 2 reused the established **Track 1 and Track 2 benchmark framework** and expanded the experiment from two systems to five configurations.
+Module 2 expanded the project from standalone LLM evaluation into **Retrieval-Augmented Generation** and multi-model comparison.
 
 ## Systems Evaluated
 
-1. **Essential AI + RAG**
-2. **Essential AI Only**
-3. **Otel 2.0 Only**
-4. **Gemma 4 Only**
-5. **Gemma 4 + RAG**
+1. Essential AI + RAG
+2. Essential AI Only
+3. OTel 2.0 Only
+4. Gemma 4 Only
+5. Gemma 4 + RAG
 
-This phase introduced:
+The module introduced:
 
 * a large telecom knowledge corpus,
 * semantic embeddings,
 * FAISS vector retrieval,
 * RAG generation,
 * newer standalone models,
-* expanded independent evaluation,
-* objective Track 2 scoring,
+* independent engineering evaluation,
+* objective benchmark scoring,
 * and detailed RAG failure diagnosis.
 
 ---
 
 ## RAG V1 Knowledge Architecture
 
-The telecom corpus combines documentation from sources including:
+The indexed telecom corpus includes documentation from sources such as:
 
-* 3GPP
-* ETSI
-* ITU-T
-* GSMA
-* O-RAN
-* TM Forum
-* CAMARA
-* telecom common-corpus material
+* 3GPP,
+* ETSI,
+* ITU-T,
+* GSMA,
+* O-RAN,
+* TM Forum,
+* CAMARA,
+* open-source telecom documentation,
+* and cloud-native/Kubernetes material.
 
-The RAG V1 retriever uses:
+### Retrieval Configuration
 
 * **Embedding model:** `BAAI/bge-m3`
 * **Vector store:** FAISS
 * **Embedding dimension:** 1024
 * **Indexed vectors:** approximately 1.5 million
-* **Production retrieval:** Top-7 chunks
+* **Baseline production retrieval:** Top-7 chunks
 
-The V1 design intentionally emphasized strict grounding in retrieved documentation.
+RAG V1 intentionally emphasized strict grounding in retrieved documentation.
 
 ---
 
 # Module 2 Evaluation
 
-The benchmark question foundation remained unchanged from Module 1:
+The benchmark foundation remained:
 
 * **Track 1:** 20 telecom engineering questions
 * **Track 2:** 32 industry telecom questions
 
-This continuity allows comparison across successive architecture generations.
-
-Module 2 introduced a revised evaluation methodology appropriate to the expanded experiment.
+This preserved continuity with Module 1.
 
 ---
 
-## Track 1 — Independent Engineering Judge
+## Track 1 — Engineering Evaluation
 
-Track 1 responses were evaluated using an independent judge across:
+Responses were evaluated across:
 
 1. Technical Accuracy
 2. Completeness
@@ -264,322 +272,528 @@ Track 1 responses were evaluated using an independent judge across:
 6. Factual Reliability
 7. Overall Score
 
-### Track 1 Overall Results
+### Results
 
 | Rank | System             |    Mean Score |
 | ---- | ------------------ | ------------: |
-| 1    | **Otel 2.0 Only**  | **9.20 / 10** |
+| 1    | **OTel 2.0 Only**  | **9.20 / 10** |
 | 2    | **Gemma 4 Only**   | **9.00 / 10** |
 | 3    | Gemma 4 + RAG      |     6.75 / 10 |
 | 4    | Essential AI Only  |     5.80 / 10 |
 | 5    | Essential AI + RAG |     5.65 / 10 |
 
-### Question-Level Wins
-
-Because ties were allowed:
-
-| System             | Question Wins |
-| ------------------ | ------------: |
-| Otel 2.0 Only      |        **17** |
-| Gemma 4 Only       |        **14** |
-| Gemma 4 + RAG      |             3 |
-| Essential AI + RAG |             1 |
-| Essential AI Only  |             0 |
-
-The strongest Track 1 responses were therefore produced by the standalone Otel 2.0 and Gemma 4 systems.
+The strongest Track 1 responses were produced by the standalone OTel 2.0 and Gemma 4 systems.
 
 ---
 
 ## Track 2 — Objective Expected-Answer Evaluation
 
-Track 2 contains authoritative expected answers and was therefore scored using deterministic answer correctness rather than an LLM judge.
-
-The 32 questions cover eight benchmark families:
-
-* `3gpp_tsg`
-* `oranbench`
-* `sixg_bench`
-* `srsranbench`
-* `telelogs`
-* `telemath`
-* `teleqna`
-* `teletables`
-
-### Track 2 Overall Results
-
 | Rank | System                |     Correct |   Accuracy |
 | ---- | --------------------- | ----------: | ---------: |
-| 1    | **Otel 2.0 Only**     | **18 / 32** | **56.25%** |
+| 1    | **OTel 2.0 Only**     | **18 / 32** | **56.25%** |
 | 2    | **Essential AI Only** | **13 / 32** | **40.62%** |
 | 3    | Essential AI + RAG    |      8 / 32 |     25.00% |
 | 3    | Gemma 4 + RAG         |      8 / 32 |     25.00% |
 | 3    | Gemma 4 Only          |      8 / 32 |     25.00% |
 
-Otel 2.0 demonstrated the strongest objective benchmark performance.
-
 ---
 
 # RAG V1 Findings
 
-Module 2 demonstrated that retrieval augmentation is **not automatically beneficial simply because additional telecom context is provided to a model**.
+Module 2 demonstrated that retrieval augmentation is **not automatically beneficial simply because additional telecom context is provided to an LLM**.
 
-The effect of RAG depended strongly on:
+Performance depended on:
 
 * model capability,
-* question type,
 * retrieved evidence,
+* question type,
+* evidence sufficiency,
 * grounding policy,
 * generation behaviour,
 * and runtime reliability.
 
----
+### Essential AI
 
-## Essential AI RAG Impact
-
-### Track 1
+Track 1:
 
 * Essential AI Only: **5.80**
 * Essential AI + RAG: **5.65**
-* Mean delta: **-0.15**
+* Delta: **−0.15**
 
-Question-level movement:
-
-* RAG better: **9**
-* Same: **4**
-* RAG worse: **7**
-
-The relatively small average difference concealed substantial question-level movement.
-
-### Track 2
+Track 2:
 
 * Essential AI Only: **40.62%**
 * Essential AI + RAG: **25.00%**
-* Delta: **-15.62 percentage points**
+* Delta: **−15.62 percentage points**
 
-Essential AI + RAG also experienced **9 generation failures out of 32 questions**.
+### Gemma 4
 
-Conditional accuracy among successfully generated responses was **34.78%**, still below the standalone model's **40.62%**.
-
-Runtime instability therefore explains part, but not all, of the observed degradation.
-
----
-
-## Gemma 4 RAG Impact
-
-### Track 1
+Track 1:
 
 * Gemma 4 Only: **9.00**
 * Gemma 4 + RAG: **6.75**
-* Mean delta: **-2.25**
+* Delta: **−2.25**
 
-Question-level movement:
-
-* RAG better: **0**
-* Same: **6**
-* RAG worse: **14**
-
-This provided the clearest evidence of the current RAG implementation interfering with an already strong standalone model.
-
-### Track 2
+Track 2:
 
 * Gemma 4 Only: **25.00%**
 * Gemma 4 + RAG: **25.00%**
 
-However:
-
-* RAG better: **7**
-* Same: **18**
-* RAG worse: **7**
-
-Identical overall accuracy therefore concealed substantial question-level changes.
+Identical aggregate accuracy concealed significant question-level changes.
 
 ---
 
 # RAG V1 Failure Diagnosis
 
-A targeted diagnostic was performed on **13 priority Track 1 RAG degradation cases**.
+A targeted analysis was performed on **13 priority Track 1 degradation cases**.
 
 Among those cases:
 
-* **13 / 13** were classified primarily as `STRICT_GROUNDING_ABSTENTION`
+* **13 / 13** were primarily classified as `STRICT_GROUNDING_ABSTENTION`
 * **11 / 13** contained `PARTIAL` retrieved evidence
 * **2 / 13** contained `SUFFICIENT` retrieved evidence
-* **0 / 13** were classified primarily as retrieval failures
+* **0 / 13** were primarily classified as retrieval failures
 * **13 / 13** were classified as generation or prompting failures
 
-This finding applies specifically to the investigated degradation cases and should not be generalized to every RAG response.
+This result applies specifically to the investigated degradation cases.
 
-It indicates that in these priority cases, useful retrieved information generally existed, but the generator did not exploit it effectively.
+It showed that useful evidence often existed, but the generation layer did not exploit it effectively.
 
----
+### Module 2 Conclusion
 
-# Grounding Insight
-
-RAG V1 intentionally prioritized responses grounded in controlled telecom documentation.
-
-This remains an important design principle.
-
-However, the evaluation showed that strict binary grounding can become overly restrictive when:
-
-* evidence is partial,
-* evidence is distributed across several chunks,
-* questions require engineering synthesis,
-* or the standalone model possesses useful domain knowledge.
-
-The desired future architecture is therefore:
+The desired future behaviour became:
 
 > **Evidence-first grounded engineering reasoning rather than strict document extraction.**
 
----
-
-# Task-Dependent RAG Behaviour
-
-The benchmark also demonstrated that different telecom tasks require different AI strategies.
-
-RAG is naturally suited to:
-
-* standards lookup,
-* specification lookup,
-* document-grounded technical questions.
-
-Broader engineering tasks may require:
-
-* retrieved knowledge,
-* engineering reasoning,
-* multi-domain synthesis,
-* and external tools.
-
-Numerical and structured tasks may benefit from:
-
-* Python,
-* calculators,
-* structured-data processing,
-* and specialized analytical tools.
-
-This motivates a future **task-aware routing architecture**.
+RAG V1 is retained as a frozen experimental baseline.
 
 ---
 
-# RAG V2 / Architecture Optimization Roadmap
+# Module 3 — Knowledge-Based MCP + Cross-LLM Evaluation
 
-RAG V1 is now treated as a **frozen experimental baseline**.
+Module 3 introduced **Model Context Protocol (MCP)** as a standardized interface through which heterogeneous LLMs access telecom knowledge.
 
-A future RAG V2 or broader architecture-optimization phase will investigate improvements including:
+Importantly, Module 3 remains a **knowledge-based MCP implementation**.
 
-* graded grounding,
-* explicit evidence-sufficiency classification,
-* controlled engineering inference,
-* improved multi-chunk evidence synthesis,
-* task-aware routing,
-* runtime stabilization,
-* and selective use of external tools.
+It does **not yet expose live network KPI retrieval, OSS actions, configuration changes, alarm handling, or operational control functions**.
 
-The relationship between RAG and MCP may also evolve during subsequent development.
-
-Possible future directions include:
-
-* retaining RAG as an independent retrieval layer,
-* integrating retrieval functions with MCP,
-* exposing selected knowledge-retrieval capabilities as tools,
-* or migrating parts of the current RAG workflow into a broader tool-based architecture.
-
-No final migration approach is assumed at this stage.
+Those capabilities are intentionally deferred to later agentic and operational modules.
 
 ---
 
-# Module 3 — Knowledge-Base Extension and MCP
+# Why MCP Was Introduced
 
-The immediate next phase expands the project in two complementary directions:
+Module 2 showed that embedding-based RAG alone does not solve every telecom knowledge or reasoning problem.
 
-1. **Extend the telecom knowledge base**
-2. **Introduce Model Context Protocol integration**
+Module 3 therefore investigated whether telecom knowledge retrieval could be exposed through a **provider-neutral tool interface** that different LLMs could consume without embedding retrieval logic directly into the model-specific application.
 
----
+The high-level architecture became:
 
-## Telecom Knowledge-Base Extension
-
-A confirmed objective of Module 3 is to extend the existing telecom corpus with important knowledge sources that were not included during RAG V1.
-
-The current corpus already contains material from:
-
-* 3GPP
-* ETSI
-* ITU-T
-* GSMA
-* O-RAN
-* TM Forum
-* CAMARA
-* telecom common-corpus material
-
-Module 3 will review corpus coverage, identify important gaps, and progressively add missing telecom knowledge.
-
-The extension will focus on improving:
-
-* standards coverage,
-* technology coverage,
-* implementation knowledge,
-* operational documentation,
-* troubleshooting knowledge,
-* and support for future network-engineering workflows.
-
-Knowledge-base extension will initially be treated separately from RAG V2 optimization so that corpus improvements and architecture changes can be evaluated independently where practical.
+```text
+LLM
+ │
+ ▼
+Unified MCP Knowledge Tool
+ │
+ ▼
+Telecom Knowledge Retrieval
+ │
+ ├── 3GPP
+ ├── Telecom Common Corpus
+ └── Hybrid
+ │
+ ▼
+Retrieved Evidence
+ │
+ ▼
+LLM Response
+```
 
 ---
 
-## Model Context Protocol Integration
+# Module 3 — Version A
 
-Module 3 will also investigate how LLMs can interact with controlled telecom data and operational capabilities through MCP.
+## Direct Query-Time Remote Retrieval
 
-Potential MCP-accessible capabilities include:
+Version A performs retrieval directly from remote knowledge sources when the LLM invokes the MCP tool.
 
-* network KPI retrieval
-* PM-counter queries
-* alarm inspection
-* network topology lookup
-* configuration retrieval
-* simulated OSS functions
-* diagnostic tools
-* network health checks
-* structured network-data queries
-* controlled operational actions
+Knowledge paths include:
 
-The objective is to evolve from:
+* dedicated 3GPP documentation,
+* GSMA Telecom Common Corpus collections,
+* and hybrid retrieval.
 
-> **AI that primarily answers telecom questions**
+A deterministic router selects:
 
-towards:
+```text
+3GPP Query
+    ↓
+Dedicated 3GPP Retrieval
 
-> **AI that can combine telecom knowledge with network state, invoke controlled tools, interpret results, and support telecom operational workflows.**
+TCC / Non-3GPP Query
+    ↓
+Telecom Common Corpus Retrieval
 
----
+Mixed Query
+    ↓
+Hybrid Retrieval
+```
 
-## Module 3 Architecture Evolution
-
-The relationship between the expanded knowledge base, RAG, and MCP will be evaluated progressively.
-
-The initial priorities are:
-
-1. identify missing telecom knowledge,
-2. extend the knowledge base,
-3. establish MCP connectivity,
-4. expose controlled telecom tools and data sources,
-5. evaluate the resulting architecture,
-6. and then determine whether changes to the RAG integration are justified.
-
-This avoids committing prematurely to a specific RAG-to-MCP migration pattern.
+Version A established that a common MCP interface could successfully support multiple LLMs.
 
 ---
 
-# Future Agent Layer
+# Module 3 — Version B
 
-Following MCP integration, an agent layer can coordinate combinations of:
+## Persistent Knowledge-Base Retrieval
+
+Version B replaces repeated remote query-time retrieval with a persistent normalized and deduplicated telecom knowledge base.
+
+The persistent architecture contains:
+
+* normalized telecom records,
+* hash-based deduplication,
+* telecom-aware tokenization,
+* DuckDB BM25/FTS indexing,
+* dedicated 3GPP source-family shards,
+* Telecom Common Corpus collection shards,
+* and persistent reusable retrieval artifacts.
+
+Version B contains approximately:
+
+* **1.78 million indexed records**
+* across **21 persistent search shards**
+
+Both Version A and Version B expose the same public MCP knowledge-search interface.
+
+The principal experimental variable is therefore the retrieval architecture rather than the LLM-facing MCP API.
+
+---
+
+# Module 3 Benchmark v2
+
+The final controlled benchmark contains **8 telecom knowledge questions**:
+
+* 5 focused primarily on 3GPP,
+* 2 focused primarily on Telecom Common Corpus knowledge,
+* 1 requiring Hybrid retrieval.
+
+Topics include:
+
+* AMF registration and mobility,
+* inter-gNB handover,
+* radio-link failure,
+* QoS flows and 5QI,
+* 5G authentication,
+* QUIC,
+* AI/ML traffic prediction,
+* and HTTP/TLS mechanisms in the 5G Service-Based Architecture.
+
+---
+
+# Cross-LLM Evaluation
+
+The same MCP knowledge service was evaluated largely **out of the box** across:
+
+* **Claude Sonnet 5**
+* **Claude Haiku 4.5**
+* **Gemma 4 26B A4B IT**
+* **DeepSeek V4 Flash 0731**
+
+Qwen3.8 Flash was excluded from the scored comparison because repeated execution was blocked by upstream provider rate limiting through OpenRouter's shared Alibaba capacity.
+
+The exclusion represents an external availability constraint rather than model or MCP failure.
+
+---
+
+# Out-of-the-Box Evaluation Principle
+
+A critical design choice in Module 3 was to evaluate each participating LLM largely **out of the box under common constraints**.
+
+The experiments preserved:
+
+* the same frozen benchmark,
+* the same system prompt,
+* the same MCP interface,
+* the same routing semantics,
+* the same retrieval domains,
+* the same search budget,
+* and common orchestration limits.
+
+No post-hoc model-specific tuning was performed after observing benchmark behaviour.
+
+Therefore, Module 3 answers:
+
+> **How do different LLMs naturally behave when connected to the same telecom MCP knowledge service?**
+
+It does **not** claim to measure the maximum performance achievable after individually optimizing each model.
+
+---
+
+# Module 3 Evaluation Framework
+
+Execution success, retrieval success, answer quality, and evidence grounding were deliberately evaluated as separate dimensions.
+
+The evaluation covered:
+
+* completion / CHECK / error behaviour,
+* MCP search frequency,
+* query reformulation,
+* route adherence,
+* source-family accuracy,
+* expected-element retrieval coverage,
+* evidence authority,
+* answer completeness,
+* technical correctness,
+* relevance,
+* engineering quality,
+* claim-level grounding,
+* retrieval latency,
+* non-retrieval latency,
+* total end-to-end latency,
+* and token usage.
+
+---
+
+# LLM-as-a-Judge Evaluation
+
+An independent **GPT-5.6 Sol Pro** judge was used for two separate evaluation passes.
+
+## Technical Quality
+
+Each of the 64 responses was scored for:
+
+* technical correctness,
+* completeness,
+* relevance,
+* engineering quality.
+
+## Evidence Grounding
+
+Material claims were separately classified as:
+
+* Supported,
+* Partially Supported,
+* Unsupported,
+* Contradicted.
+
+This produced:
+
+* **64 technical-quality assessments**
+* **64 grounding assessments**
+* **844 material claims**
+
+Technical quality and grounding were intentionally kept separate.
+
+---
+
+# Module 3 Key Findings
+
+## 1. MCP Successfully Standardized Knowledge Access
+
+All scored models successfully interacted with the same provider-neutral MCP knowledge tool.
+
+Formal route accuracy reached **100% across the completed experiments**.
+
+However, subsequent search behaviour still differed by model.
+
+---
+
+## 2. Model-Agnostic MCP Did Not Produce Model-Agnostic Behaviour
+
+Different models showed materially different tool-use patterns despite using the same interface.
+
+### Claude Sonnet 5
+
+* strongest overall technical-quality performance,
+* high answer completeness,
+* moderate iterative search behaviour.
+
+### Gemma 4
+
+* strongest runtime efficiency,
+* exactly **one MCP search per benchmark question**,
+* highest relevance scores,
+* strongest preservation of discriminative query terms such as the IEEE/research qualifier in Q7.
+
+### Claude Haiku 4.5
+
+* stronger iterative-search tendency,
+* higher search and token consumption in Version B.
+
+### DeepSeek V4 Flash 0731
+
+* improved execution reliability and structural behaviour under Version B,
+* but significant model/provider-side latency.
+
+---
+
+## 3. Retrieval Architecture Did Not Uniformly Determine Answer Quality
+
+Version B improved important structural properties including:
+
+* persistent indexing,
+* source-family consistency,
+* strict routing for some models,
+* execution reliability,
+* and reduced dependence on query-time remote availability.
+
+However, those improvements did not automatically improve every downstream answer metric.
+
+This demonstrates that:
+
+> **Better retrieval infrastructure does not guarantee better final answers unless the model retrieves and uses sufficiently complete evidence.**
+
+---
+
+## 4. Search-Query Generation Is a Model Capability
+
+The AI/ML traffic-prediction question provided a useful controlled example.
+
+Only Gemma preserved enough of the **IEEE/research** selector to retrieve from both:
+
+* IEEE-Access,
+* OpenAlex.
+
+Other models generalized the generated tool query and retrieved broader sources instead.
+
+The effectiveness of MCP retrieval therefore depends partly on the LLM's ability to formulate discriminative tool queries.
+
+---
+
+## 5. Technical Quality and Grounding Are Different Dimensions
+
+Claude Sonnet produced the highest overall judged technical quality.
+
+Grounding leadership varied by architecture and model.
+
+Gemma Version B produced highly relevant and technically capable answers while exhibiting substantially weaker claim-level evidence support.
+
+This demonstrates that:
+
+```text
+Technical correctness
+        ≠
+Completeness
+        ≠
+Relevance
+        ≠
+Evidence grounding
+```
+
+Each should be measured independently.
+
+---
+
+## 6. Runtime Performance Is Strongly Model/Provider Dependent
+
+DeepSeek Version B provides the strongest example.
+
+Only approximately **4.26%** of its mean end-to-end latency was attributable to retrieval.
+
+Approximately **95.74%** occurred outside the retrieval path.
+
+Therefore:
+
+> **Slow LLM+MCP execution should not automatically be diagnosed as slow retrieval.**
+
+Retrieval latency and model/provider execution latency must be measured separately.
+
+---
+
+## 7. There Is No Single Best Model
+
+Module 3 intentionally does not calculate a universal composite winner.
+
+Different models showed different strengths across:
+
+* technical quality,
+* grounding,
+* latency,
+* token efficiency,
+* search discipline,
+* and execution reliability.
+
+Production model selection is therefore a **multi-objective engineering decision**.
+
+---
+
+# Module 3 Final Conclusion
+
+> **A model-agnostic MCP interface successfully standardizes access to telecom knowledge, but model behaviour remains strongly model-specific.**
+
+The out-of-the-box evaluation demonstrates that different LLMs require different runtime and orchestration settings to achieve the desired balance of:
+
+* technical quality,
+* grounding,
+* latency,
+* search discipline,
+* token consumption,
+* and operational cost.
+
+Module 3 therefore establishes both the value and limitation of knowledge-based MCP:
+
+> **MCP standardizes knowledge access, but does not by itself optimize how individual LLMs search for, interpret, and use that knowledge.**
+
+---
+
+# Module 4 — RAG + Knowledge-Based MCP Hybrid
+
+Module 4 will combine two complementary knowledge mechanisms.
+
+```text
+                     User Query
+                         │
+                         ▼
+                 LLM / Orchestrator
+                         │
+              ┌──────────┴──────────┐
+              │                     │
+              ▼                     ▼
+             RAG                   MCP
+              │                     │
+   Semantic retrieval       Standardized knowledge
+   Controlled corpus        service / tool access
+              │                     │
+              └──────────┬──────────┘
+                         │
+                         ▼
+                  Evidence Synthesis
+                         │
+                         ▼
+                    LLM Response
+```
+
+The objective is not to replace MCP with RAG or RAG with MCP.
+
+Instead:
+
+> **RAG provides controlled semantic retrieval while MCP provides standardized access to specialized knowledge services.**
+
+Module 4 will investigate:
+
+* RAG-only routing,
+* MCP-only routing,
+* hybrid RAG+MCP retrieval,
+* evidence fusion,
+* provenance preservation,
+* retrieval conflict handling,
+* query-specific routing,
+* grounding improvement,
+* and latency/token trade-offs.
+
+---
+
+# Module 5 — Agentic Telecom AI
+
+Once the hybrid knowledge architecture is established, an agent layer can coordinate:
 
 * LLM reasoning,
 * RAG retrieval,
-* MCP tools,
-* diagnostic functions,
-* network state,
-* and workflow logic.
+* MCP knowledge services,
+* diagnostic tools,
+* workflow state,
+* and controlled telecom functions.
 
 Potential workflows include:
 
@@ -589,103 +803,110 @@ Potential workflows include:
 * KPI anomaly investigation,
 * root-cause analysis,
 * recommendation generation,
-* action execution,
-* and post-action verification.
+* and multi-step troubleshooting.
+
+This is the stage where MCP may progressively expand beyond knowledge retrieval into controlled operational tooling.
 
 ---
 
-# Target Architecture
+# Module 6 — Production Architecture + RAG V2
+
+RAG V1 remains frozen as an experimental baseline.
+
+Module 6 will use evidence accumulated across Modules 2–5 to investigate production-oriented improvements including:
+
+* graded grounding,
+* evidence-sufficiency classification,
+* controlled engineering inference,
+* multi-source evidence synthesis,
+* task-aware routing,
+* hybrid retrieval optimization,
+* runtime stabilization,
+* model-specific orchestration,
+* observability,
+* evaluation pipelines,
+* production deployment architecture,
+* and RAG V2.
+
+---
+
+# Module 7 — Autonomous Telecom Operations
+
+The final stage will investigate how the preceding capabilities can be combined into increasingly autonomous operational workflows.
+
+The long-term architecture is:
 
 ```text
                          Telecom AI System
-                                |
-                +---------------+---------------+
-                |                               |
-               RAG                             MCP
-                |                               |
-       Telecom Knowledge                Network / OSS Tools
-                |                               |
-                +---------------+---------------+
-                                |
-                          AI Reasoning
-                                |
-                           Agent Layer
-                                |
-                      Operational Workflow
-                                |
-                       Simulated Network
-                                |
-                        AI Network Ops
-                                |
-                    Autonomous Operations
+                                │
+                  ┌─────────────┴─────────────┐
+                  │                           │
+                 RAG                    MCP Services
+                  │                           │
+          Semantic Knowledge          Knowledge + Tools
+                  │                           │
+                  └─────────────┬─────────────┘
+                                │
+                                ▼
+                        Agentic Reasoning
+                                │
+                                ▼
+                       Operational Workflow
+                                │
+                                ▼
+                      Network State / Tools
+                                │
+                                ▼
+                     Controlled Action Layer
+                                │
+                                ▼
+                    Post-Action Verification
+                                │
+                                ▼
+                  Autonomous Telecom Operations
 ```
 
----
+Any progression toward autonomous actions should preserve:
 
-# Repository Structure
-
-```text
-.
-├── notebooks/
-│   ├── 01_llm_base.ipynb
-│   ├── 02_rag_stage_1.ipynb
-│   ├── 03_essentialai_rag_v1.ipynb
-│   ├── 04_essentialai_only.ipynb
-│   ├── 05_otel2_only.ipynb
-│   ├── 06_gemma4_only.ipynb
-│   ├── 07_gemma4_rag_v1.ipynb
-│   └── 08_rag_evaluation.ipynb
-│
-├── results/
-│   ├── 001_llm_base/
-│   └── 002_rag_v1/
-│
-├── src/
-│
-├── README.md
-└── .gitignore
-```
+* controlled permissions,
+* observability,
+* validation,
+* rollback mechanisms,
+* human oversight where appropriate,
+* and explicit safety boundaries.
 
 ---
 
 # Development Methodology
 
-The project follows an incremental experimental approach.
+The project follows an incremental experimental methodology.
 
-Each architecture phase is:
-
-1. implemented,
-2. benchmarked,
-3. evaluated,
-4. diagnostically analyzed,
-5. retained as a baseline,
-6. and extended in a subsequent phase.
-
-Current development sequence:
+Each architecture is evaluated before the next architectural layer is introduced.
 
 ```text
-Standalone LLM Baseline
-        |
-        v
-      RAG V1
-        |
-        v
-Knowledge Extension + MCP
-        |
-        v
-    AI Agents
-        |
-        v
-RAG V2 / Architecture Optimization
-        |
-        v
-Integrated Telecom AI
-        |
-        v
+Module 1
+Standalone LLM
+      ↓
+Module 2
+RAG V1
+      ↓
+Module 3
+Knowledge-Based MCP
+      ↓
+Module 4
+RAG + MCP Hybrid
+      ↓
+Module 5
+Agentic Telecom AI
+      ↓
+Module 6
+Production Architecture + RAG V2
+      ↓
+Module 7
 Autonomous Telecom Operations
 ```
 
-This approach allows each capability to be assessed independently before multiple architectural layers are combined.
+This provides clear experimental baselines and reduces the risk of attributing improvements or failures to the wrong architectural component.
 
 ---
 
@@ -693,53 +914,87 @@ This approach allows each capability to be assessed independently before multipl
 
 ## Completed
 
-* Initial general-purpose vs telecom-domain LLM baseline
-* 20-question Track 1 benchmark
-* 32-question Track 2 benchmark
-* expert baseline assessment
-* telecom corpus preparation
-* RAG V1 implementation
-* BGE-M3 / FAISS retrieval
-* Essential AI standalone evaluation
-* Essential AI + RAG evaluation
-* Otel 2.0 standalone evaluation
-* Gemma 4 standalone evaluation
-* Gemma 4 + RAG evaluation
-* independent Track 1 judge evaluation
-* objective Track 2 scoring
-* RAG vs standalone analysis
-* RAG grounding diagnostics
-* consolidated cross-track analysis
-* RAG V2 design recommendations
+### Module 1
+
+* standalone general-purpose vs telecom-domain LLM benchmark,
+* 20-question custom telecom benchmark,
+* 32-question industry benchmark,
+* independent evaluation,
+* expert technical review,
+* cross-track analysis.
+
+### Module 2
+
+* telecom RAG V1,
+* BGE-M3 embeddings,
+* FAISS retrieval,
+* approximately 1.5 million indexed chunks,
+* Essential AI standalone and RAG evaluation,
+* OTel 2.0 standalone evaluation,
+* Gemma 4 standalone and RAG evaluation,
+* RAG versus standalone analysis,
+* grounding diagnostics,
+* RAG V1 failure analysis,
+* RAG V2 design recommendations.
+
+### Module 3
+
+* knowledge-based MCP architecture,
+* Version A direct remote retrieval,
+* Version B persistent BM25/FTS knowledge base,
+* deterministic 3GPP/TCC/Hybrid routing,
+* unified provider-neutral MCP knowledge tool,
+* Claude Sonnet evaluation,
+* Claude Haiku evaluation,
+* Gemma 4 evaluation,
+* DeepSeek evaluation,
+* Qwen provider-availability exclusion record,
+* frozen Benchmark v2,
+* paired Version A/B analysis,
+* cross-model evaluation,
+* claim-level evidence grounding,
+* technical-quality LLM-as-a-Judge evaluation,
+* runtime and latency analysis,
+* final integrated Module 3 scorecard.
+
+---
 
 ## Next
 
-* identify and add missing telecom knowledge sources
-* extend the telecom knowledge base
-* implement MCP connectivity
-* expose telecom/network data and operational tools through MCP
+### Module 4 — RAG + Knowledge-Based MCP Hybrid
+
+* define RAG-only / MCP-only / Hybrid routing,
+* integrate semantic RAG retrieval with MCP knowledge access,
+* preserve evidence provenance,
+* evaluate evidence fusion,
+* measure quality/grounding improvements,
+* evaluate latency and token trade-offs.
+
+---
 
 ## Later
 
-* AI agent workflows
-* evaluate RAG/MCP architecture evolution
-* RAG V2 controlled optimization
-* integrated telecom operational workflows
-* closed-loop network actions
-* autonomous telecom operations
+* Agentic Telecom AI,
+* controlled telecom operational tools,
+* RAG V2,
+* production architecture,
+* network-state integration,
+* closed-loop workflows,
+* post-action validation,
+* autonomous telecom operations.
 
 ---
 
-## Key Project Principle
+# Key Project Principle
 
 The project has progressively reinforced a central lesson:
 
-> **Telecom AI performance depends on more than model fluency or the presence of retrieved context. Reliability requires the correct combination of domain capability, factual grounding, reasoning, task selection, tool use, and engineering validation.**
+> **Telecom AI performance depends on more than model fluency or the presence of retrieved context. Reliable engineering systems require the correct combination of domain capability, retrieval quality, factual grounding, reasoning, task selection, tool use, runtime control, and engineering validation.**
 
 ---
 
-## Disclaimer
+# Disclaimer
 
-This project is an independent technical experiment and is not affiliated with or endorsed by any telecom vendor, standards organization, or model provider.
+This project is an independent technical experiment and is not affiliated with or endorsed by any telecom vendor, standards organization, dataset provider, or model provider.
 
 Datasets, documentation, model outputs, and examples used in the project should respect applicable licensing, copyright, confidentiality, and data-protection requirements.

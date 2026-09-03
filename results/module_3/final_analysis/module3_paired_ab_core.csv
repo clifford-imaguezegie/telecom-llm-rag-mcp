@@ -1,0 +1,5 @@
+model,A_completion_rate_pct,B_completion_rate_pct,delta_completion_rate_pct,A_judge_quality_mean_score,B_judge_quality_mean_score,delta_judge_quality_mean_score,A_weighted_grounding_score_pct,B_weighted_grounding_score_pct,delta_weighted_grounding_score_pct,A_mean_mcp_searches,B_mean_mcp_searches,delta_mean_mcp_searches,A_mean_e2e_sec,B_mean_e2e_sec,delta_mean_e2e_sec,A_mean_tokens,B_mean_tokens,delta_mean_tokens
+Claude Haiku 4.5,100.0,100.0,0.0,3.47,3.19,-0.28,67.52,63.57,-3.96,2.12,2.62,0.5,26.02,19.42,-6.6,16546.88,30327.38,13780.5
+Claude Sonnet 5,87.5,100.0,12.5,3.88,3.94,0.06,58.05,58.25,0.2,1.88,2.0,0.12,24.92,22.41,-2.51,19418.75,24495.75,5077.0
+DeepSeek V4 Flash 0731,62.5,87.5,25.0,3.22,3.47,0.25,68.62,60.53,-8.09,2.25,2.25,0.0,16.7,73.96,57.27,14721.5,22985.75,8264.25
+Gemma 4 26B A4B IT,100.0,100.0,0.0,3.84,3.75,-0.09,62.11,40.32,-21.78,1.0,1.0,0.0,11.96,15.36,3.4,5612.5,7100.12,1487.62
