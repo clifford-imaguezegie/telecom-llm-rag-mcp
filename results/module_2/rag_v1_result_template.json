@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "schema": "module2_public_result_v1",
+    "track": "Track 1 or Track 2",
+    "system_name": "<system>",
+    "mode": "RAG_V1",
+    "model_id": "<model id if recorded>",
+    "question_count": 0,
+    "benchmark_sha256": "<canonical benchmark sha256>"
+  },
+  "results": [
+    {
+      "question_id": "<Q01 or T2-01>",
+      "question": "<frozen benchmark question>",
+      "status": "PASS|FAIL",
+      "answer": "<model answer>",
+      "input_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "generation_time_sec": null,
+      "generation_config": null,
+      "error": null,
+      "retriever": {
+        "version": "V1",
+        "k": 7
+      },
+      "retrieval": {
+        "query": "<retrieval query>",
+        "k": 7,
+        "results": [
+          {
+            "rank": 1,
+            "score": null,
+            "vector_id": null,
+            "chunk_id": "<chunk id>",
+            "document_id": "<document id>",
+            "source": "<source family>",
+            "title": "<title>",
+            "evidence_text_chars": 0,
+            "evidence_text_sha256": "<sha256>"
+          }
+        ]
+      }
+    }
+  ]
+}

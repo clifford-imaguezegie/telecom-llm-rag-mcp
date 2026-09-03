@@ -1,0 +1,2521 @@
+{
+  "metadata": {
+    "schema": "module2_public_result_v1",
+    "track": "Track 1",
+    "system_name": "Essential AI + RAG",
+    "mode": "RAG_V1",
+    "model_id": "EssentialAI/rnj-1-instruct",
+    "question_count": 20,
+    "pass_count": 20,
+    "fail_count": 0,
+    "benchmark_sha256": "44fc5072f0220200ac6021dc59a772a84db0802a969a513b35146ed9b19b2472",
+    "source_filename": "track1_essentialai_rag_results_20260828_125927.json",
+    "source_file_sha256": "631c6a2744e105683ec9274414e3db2fd4b91c841e54d6d4ad9259f6a35a37a2",
+    "public_export_note": "Full retrieved evidence text and local filesystem paths are omitted. Retrieval provenance, scores, IDs, text length and evidence-text SHA-256 are retained."
+  },
+  "results": [
+    {
+      "question_id": "Q01",
+      "category": "5G Core",
+      "question": "What are the primary responsibilities of the AMF in a 5G Standalone network?",
+      "expected_points": [
+        "Access and mobility management",
+        "UE registration management",
+        "NAS signalling termination",
+        "UE authentication and security context handling",
+        "Mobility and reachability management",
+        "Interaction with other 5G Core network functions"
+      ],
+      "status": "PASS",
+      "answer": "The primary responsibilities of the AMF (Access and Mobility Management Function) in a 5G Standalone network include:\n\n- Performing Non-Access Stratum (NAS) signaling termination and NAS signaling security.\n- Managing Access Stratum (AS) Security control.\n- Facilitating inter-CN node signaling for mobility between 3GPP access networks.\n- Handling Idle mode UE Reachability, including control and execution of paging retransmission.\n- Managing Registration Area and supporting both intra-system and inter-system mobility.\n- Conducting Access Authentication and Authorization, including checking roaming rights.\n- Controlling mobility management subscriptions and policies.\n- Supporting Network Slicing and selecting the appropriate SMF.\n- Overseeing UE registration processes and managing UE IP address allocation for PDU sessions.\n- Coordinating traffic steering at the UPF to route traffic correctly.\n- Enforcing policy rules and managing QoS at the user plane level.\n- Providing external exposure of network capabilities through the NEF (Network Exposure Function).\n\nThese functions ensure efficient and secure management of user equipment (UE) within the 5G network.",
+      "input_tokens": 5119,
+      "output_tokens": 219,
+      "total_tokens": 5338,
+      "generation_time_sec": 34.2378888130188,
+      "output_tokens_per_sec": null,
+      "generation_config": {
+        "temperature": 0.01,
+        "top_k": 50,
+        "top_p": 0.95,
+        "repetition_penalty": 1.05,
+        "max_new_tokens": 1024,
+        "do_sample": true
+      },
+      "retriever": {
+        "version": "V1",
+        "k": 7
+      },
+      "retrieval": {
+        "query": "What are the primary responsibilities of the AMF in a 5G Standalone network?",
+        "k": 7,
+        "timing": {
+          "query_embedding_sec": 0.026409626007080078,
+          "faiss_search_sec": 0.2504007816314697,
+          "total_sec": 0.2768104076385498
+        },
+        "results": [
+          {
+            "rank": 1,
+            "score": 0.7065449953079224,
+            "vector_id": 1033100,
+            "chunk_id": "standards/3gpp_rel18/original/rel_15.docx::chunk_0013",
+            "document_id": "standards/3gpp_rel18/original/rel_15.docx",
+            "source": "standards",
+            "title": "rel_15",
+            "evidence_text_chars": 2840,
+            "evidence_text_sha256": "991fb422837409b4150500c0f58c7ca200b4441f308b0cfcab211d9211b6d27a"
+          },
+          {
+            "rank": 2,
+            "score": 0.6973824501037598,
+            "vector_id": 571667,
+            "chunk_id": "standards/etsi/marked/TR/tr/tr_121915v150000p/raw.md::chunk_0020",
+            "document_id": "standards/etsi/marked/TR/tr/tr_121915v150000p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2896,
+            "evidence_text_sha256": "f1ac94b7b18882a1ebb4a7ecb07b58ffb20788d628856b6d8e6a21cd017fb047"
+          },
+          {
+            "rank": 3,
+            "score": 0.6730639338493347,
+            "vector_id": 1047561,
+            "chunk_id": "standards/3gpp_rel18/original/29518-i40.docx::chunk_0016",
+            "document_id": "standards/3gpp_rel18/original/29518-i40.docx",
+            "source": "standards",
+            "title": "29518-i40",
+            "evidence_text_chars": 2992,
+            "evidence_text_sha256": "6528c1699fd4b6269b423c1157b0fbb138e6b60ee9fcf7e985f8ec029cf77ff6"
+          },
+          {
+            "rank": 4,
+            "score": 0.6620403528213501,
+            "vector_id": 716942,
+            "chunk_id": "standards/gsma/marked/FASG/FS.40 v3.0/raw.md::chunk_0048",
+            "document_id": "standards/gsma/marked/FASG/FS.40 v3.0/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2612,
+            "evidence_text_sha256": "e7e8ea6a145d2d710c39345e3c136791ccf7e68952a0b6bd4790b1d859401f7b"
+          },
+          {
+            "rank": 5,
+            "score": 0.6608529686927795,
+            "vector_id": 571666,
+            "chunk_id": "standards/etsi/marked/TR/tr/tr_121915v150000p/raw.md::chunk_0019",
+            "document_id": "standards/etsi/marked/TR/tr/tr_121915v150000p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2499,
+            "evidence_text_sha256": "7e1f908755be241777b6c50263c074e04ea22231d832de4d425ae60ca69e2373"
+          },
+          {
+            "rank": 6,
+            "score": 0.6592597961425781,
+            "vector_id": 163892,
+            "chunk_id": "standards/etsi/marked/TS/ts/ts_10387802v010101p/raw.md::chunk_0009",
+            "document_id": "standards/etsi/marked/TS/ts/ts_10387802v010101p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2845,
+            "evidence_text_sha256": "45884bd59601987c16f30621ec9e771235816d5c1d614949139529071af103b6"
+          },
+          {
+            "rank": 7,
+            "score": 0.6575459837913513,
+            "vector_id": 1125239,
+            "chunk_id": "open_source/free5gc_docs/docs/doc/Amf/design.md::chunk_0000",
+            "document_id": "open_source/free5gc_docs/docs/doc/Amf/design.md",
+            "source": "open_source",
+            "title": "design",
+            "evidence_text_chars": 2886,
+            "evidence_text_sha256": "a937b4fe22d36ee8234702ced43665b82f057127e750f756e2418484031fd242"
+          }
+        ]
+      },
+      "error": null,
+      "timestamp_utc": "2026-08-28T13:00:04.274316+00:00"
+    },
+    {
+      "question_id": "Q02",
+      "category": "5G Core",
+      "question": "Explain the differences between the AMF, SMF and UPF in the 5G Core.",
+      "expected_points": [
+        "AMF performs access and mobility management",
+        "AMF handles UE registration and NAS signalling",
+        "SMF manages PDU sessions",
+        "SMF performs UPF selection and control",
+        "UPF performs user-plane packet forwarding",
+        "UPF provides connectivity toward external data networks",
+        "Clear control-plane versus user-plane distinction"
+      ],
+      "status": "PASS",
+      "answer": "The **AMF (Access and Mobility Management Function)** handles non-user data signaling, including mobility management, security, and access authentication.  \nThe **SMF (Session Management Function)** manages user data sessions, including IP address allocation, PDU session control, and traffic steering.  \nThe **UPF (User Plane Function)** processes user data packets, enabling mobility anchoring and PDU handling, along with QoS enforcement and packet forwarding.  \n\nThese functions are distinct in their roles:  \n- **AMF**: Focuses on signaling and mobility.  \n- **SMF**: Manages session lifecycle and data traffic.  \n- **UPF**: Handles actual data transport and packet processing.",
+      "input_tokens": 5289,
+      "output_tokens": 140,
+      "total_tokens": 5429,
+      "generation_time_sec": 25.407860040664673,
+      "output_tokens_per_sec": null,
+      "generation_config": {
+        "temperature": 0.01,
+        "top_k": 50,
+        "top_p": 0.95,
+        "repetition_penalty": 1.05,
+        "max_new_tokens": 1024,
+        "do_sample": true
+      },
+      "retriever": {
+        "version": "V1",
+        "k": 7
+      },
+      "retrieval": {
+        "query": "Explain the differences between the AMF, SMF and UPF in the 5G Core.",
+        "k": 7,
+        "timing": {
+          "query_embedding_sec": 0.024176359176635742,
+          "faiss_search_sec": 0.2769615650177002,
+          "total_sec": 0.30113792419433594
+        },
+        "results": [
+          {
+            "rank": 1,
+            "score": 0.7212013602256775,
+            "vector_id": 571665,
+            "chunk_id": "standards/etsi/marked/TR/tr/tr_121915v150000p/raw.md::chunk_0018",
+            "document_id": "standards/etsi/marked/TR/tr/tr_121915v150000p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2980,
+            "evidence_text_sha256": "5436980256db11308f51f1811152b2c4090a2d45c02017e5c42ba03cdc10b16d"
+          },
+          {
+            "rank": 2,
+            "score": 0.7053029537200928,
+            "vector_id": 1033100,
+            "chunk_id": "standards/3gpp_rel18/original/rel_15.docx::chunk_0013",
+            "document_id": "standards/3gpp_rel18/original/rel_15.docx",
+            "source": "standards",
+            "title": "rel_15",
+            "evidence_text_chars": 2840,
+            "evidence_text_sha256": "991fb422837409b4150500c0f58c7ca200b4441f308b0cfcab211d9211b6d27a"
+          },
+          {
+            "rank": 3,
+            "score": 0.6982412934303284,
+            "vector_id": 571667,
+            "chunk_id": "standards/etsi/marked/TR/tr/tr_121915v150000p/raw.md::chunk_0020",
+            "document_id": "standards/etsi/marked/TR/tr/tr_121915v150000p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2896,
+            "evidence_text_sha256": "f1ac94b7b18882a1ebb4a7ecb07b58ffb20788d628856b6d8e6a21cd017fb047"
+          },
+          {
+            "rank": 4,
+            "score": 0.6920328140258789,
+            "vector_id": 1033099,
+            "chunk_id": "standards/3gpp_rel18/original/rel_15.docx::chunk_0012",
+            "document_id": "standards/3gpp_rel18/original/rel_15.docx",
+            "source": "standards",
+            "title": "rel_15",
+            "evidence_text_chars": 2529,
+            "evidence_text_sha256": "befebdb83d34a1246b9cde71a15695fd885a96689cca021b55c95f8e796274df"
+          },
+          {
+            "rank": 5,
+            "score": 0.6907601952552795,
+            "vector_id": 582432,
+            "chunk_id": "standards/etsi/marked/TR/tr/tr_126919v190000p/raw.md::chunk_0012",
+            "document_id": "standards/etsi/marked/TR/tr/tr_126919v190000p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 1924,
+            "evidence_text_sha256": "2772241e53846417c12184489c6ea771ccbca88730962671a7eaaaad15df7bb5"
+          },
+          {
+            "rank": 6,
+            "score": 0.6905703544616699,
+            "vector_id": 571666,
+            "chunk_id": "standards/etsi/marked/TR/tr/tr_121915v150000p/raw.md::chunk_0019",
+            "document_id": "standards/etsi/marked/TR/tr/tr_121915v150000p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2499,
+            "evidence_text_sha256": "7e1f908755be241777b6c50263c074e04ea22231d832de4d425ae60ca69e2373"
+          },
+          {
+            "rank": 7,
+            "score": 0.6885073184967041,
+            "vector_id": 229743,
+            "chunk_id": "standards/etsi/marked/TS/ts/ts_123501v190700p/raw.md::chunk_0119",
+            "document_id": "standards/etsi/marked/TS/ts/ts_123501v190700p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2816,
+            "evidence_text_sha256": "f473037e354c50f947995d6139f607afe09d13dc804c07253907fa1f7cb217d8"
+          }
+        ]
+      },
+      "error": null,
+      "timestamp_utc": "2026-08-28T13:00:31.615637+00:00"
+    },
+    {
+      "question_id": "Q03",
+      "category": "5G RAN",
+      "question": "Explain the roles of the CU, DU and RU in a 5G RAN architecture.",
+      "expected_points": [
+        "CU performs higher-layer RAN functions",
+        "DU performs lower-layer and real-time processing",
+        "RU handles radio-frequency and lower-PHY functions",
+        "Functional split between CU, DU and RU",
+        "Relevant interfaces such as F1 and fronthaul",
+        "Relationship between the three components"
+      ],
+      "status": "PASS",
+      "answer": "The roles of the CU (Central Unit), DU (Distributed Unit), and RU (Radio Unit) in a 5G RAN architecture are as follows:\n\n- **CU (Central Unit)**: Hosts higher-layer functions such as the Control Plane (e.g., scheduling, resource allocation) and User Plane (e.g., data forwarding). It communicates with the 5G core via the backhaul link and supports centralized control and management of multiple RUs through the midhaul link.\n\n- **DU (Distributed Unit)**: Processes lower-layer functions including Layer 1 (L1) and Layer 2 (L2) real-time tasks, such as modulation/demodulation and beamforming. It connects to the RU via the fronthaul link, facilitating efficient data transfer between the RU and the CU.\n\n- **RU (Radio Unit)**: Manages the radio frequency (RF) interface with the antenna array, handling tasks like analog/digital conversion (A/D) and digital beamforming. It communicates with the DU via the fronthaul link, enabling the transmission and reception of radio signals.\n\nThis split architecture enhances scalability, flexibility, and efficiency in managing radio access networks, particularly in supporting advanced services and applications.",
+      "input_tokens": 5139,
+      "output_tokens": 250,
+      "total_tokens": 5389,
+      "generation_time_sec": 38.32854890823364,
+      "output_tokens_per_sec": null,
+      "generation_config": {
+        "temperature": 0.01,
+        "top_k": 50,
+        "top_p": 0.95,
+        "repetition_penalty": 1.05,
+        "max_new_tokens": 1024,
+        "do_sample": true
+      },
+      "retriever": {
+        "version": "V1",
+        "k": 7
+      },
+      "retrieval": {
+        "query": "Explain the roles of the CU, DU and RU in a 5G RAN architecture.",
+        "k": 7,
+        "timing": {
+          "query_embedding_sec": 0.022555828094482422,
+          "faiss_search_sec": 0.26860928535461426,
+          "total_sec": 0.2911651134490967
+        },
+        "results": [
+          {
+            "rank": 1,
+            "score": 0.7460145950317383,
+            "vector_id": 923121,
+            "chunk_id": "standards/itu/marked/G/T-REC-G.Sup66-202009-I_PDF-E/raw.md::chunk_0007",
+            "document_id": "standards/itu/marked/G/T-REC-G.Sup66-202009-I_PDF-E/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2290,
+            "evidence_text_sha256": "5c5c3313fcf31214554c90562acc0aefc9fce8a5d668f08c3fd554da19c4d883"
+          },
+          {
+            "rank": 2,
+            "score": 0.7427279353141785,
+            "vector_id": 1505046,
+            "chunk_id": "academic/arxiv/arxiv_2405.03555.pdf::chunk_0002",
+            "document_id": "academic/arxiv/arxiv_2405.03555.pdf",
+            "source": "academic",
+            "title": "arxiv_2405.03555",
+            "evidence_text_chars": 1865,
+            "evidence_text_sha256": "8a5728507877397d457c8a11f53b3e0210999f7fe66bf643abbda80304f97e22"
+          },
+          {
+            "rank": 3,
+            "score": 0.7282429933547974,
+            "vector_id": 32949,
+            "chunk_id": "standards/etsi/marked/GR/gr_F5G/gr_f5g002v010101p/raw.md::chunk_0057",
+            "document_id": "standards/etsi/marked/GR/gr_F5G/gr_f5g002v010101p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2368,
+            "evidence_text_sha256": "ab341ad88367411146ca9ff9dfe1ae31625b8d60f6aeca2ed6c072d2def58090"
+          },
+          {
+            "rank": 4,
+            "score": 0.7252274751663208,
+            "vector_id": 33104,
+            "chunk_id": "standards/etsi/marked/GR/gr_F5G/gr_f5g008v010101p/raw.md::chunk_0077",
+            "document_id": "standards/etsi/marked/GR/gr_F5G/gr_f5g008v010101p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2860,
+            "evidence_text_sha256": "2721b2c08acf451e3eb372a3da7e2137bfe2a15e6983d3f8f14261435ccba560"
+          },
+          {
+            "rank": 5,
+            "score": 0.7214376926422119,
+            "vector_id": 923129,
+            "chunk_id": "standards/itu/marked/G/T-REC-G.Sup66-202009-I_PDF-E/raw.md::chunk_0015",
+            "document_id": "standards/itu/marked/G/T-REC-G.Sup66-202009-I_PDF-E/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2593,
+            "evidence_text_sha256": "fc076870318ffa7402fb5e397416c02250b0761627f9e427b4475f950438ada5"
+          },
+          {
+            "rank": 6,
+            "score": 0.7063028216362,
+            "vector_id": 26385,
+            "chunk_id": "standards/etsi/marked/GR/gr_NFV_IFA/gr_nfv-ifa046v050201p/raw.md::chunk_0020",
+            "document_id": "standards/etsi/marked/GR/gr_NFV_IFA/gr_nfv-ifa046v050201p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2284,
+            "evidence_text_sha256": "a88db38253abce6501f1eeb1acda245f6f73183048878c1c896ccc8c8cb2a144"
+          },
+          {
+            "rank": 7,
+            "score": 0.7001597285270691,
+            "vector_id": 26384,
+            "chunk_id": "standards/etsi/marked/GR/gr_NFV_IFA/gr_nfv-ifa046v050201p/raw.md::chunk_0019",
+            "document_id": "standards/etsi/marked/GR/gr_NFV_IFA/gr_nfv-ifa046v050201p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2596,
+            "evidence_text_sha256": "34b754f6d13010e7105829ef5014e98c1c717e0efe3e238e677be0ddbc85c43b"
+          }
+        ]
+      },
+      "error": null,
+      "timestamp_utc": "2026-08-28T13:01:11.876669+00:00"
+    },
+    {
+      "question_id": "Q04",
+      "category": "5G RAN",
+      "question": "What are the key differences between 4G LTE and 5G NR RAN architecture?",
+      "expected_points": [
+        "5G NR introduces new radio and numerology capabilities",
+        "5G supports wider channel bandwidths",
+        "Massive MIMO and advanced beamforming",
+        "Flexible functional split options",
+        "CU/DU architectural decomposition",
+        "5G supports NSA and SA deployment models",
+        "Differences in latency, capacity and deployment flexibility"
+      ],
+      "status": "PASS",
+      "answer": "The key differences between 4G LTE and 5G NR RAN architecture include:\n\n1. **Architecture Evolution**: \n   - 4G LTE uses a Distributed RAN (D-RAN) architecture where the Radio Unit (RRH) and Baseband Unit (BBU) are co-located.\n   - 5G NR introduces a Centralized RAN (C-RAN) architecture, decoupling the BBU from the RRH and relocating it to a centralized data center, enabling centralized control and optimization.\n\n2. **Functionality Split**:\n   - 4G LTE has a unified BBU handling all layers.\n   - 5G NR splits the base station into Central Unit (CU) for higher-layer functions and Distributed Unit (DU) for lower-layer processing, supporting cloud-native and virtualized designs.\n\n3. **Interface Types**:\n   - 4G LTE uses a single Fronthaul (FH) interface connecting BBU to RRH.\n   - 5G NR introduces additional interfaces: Backhaul (BH) from CU to Core, Midhaul (MH) between CU and DU, and Fronthaul (FH) from DU to Radio Unit (RU).\n\n4. **Scalability and Flexibility**:\n   - 5G NR supports greater scalability and flexibility through virtualization, allowing dynamic resource allocation and easier management compared to the fixed nature of 4G LTE's D-RAN.\n\nThese differences reflect the advancements in 5G to meet higher data rates, lower latency, and support for new use cases and services.",
+      "input_tokens": 5526,
+      "output_tokens": 323,
+      "total_tokens": 5849,
+      "generation_time_sec": 50.238563776016235,
+      "output_tokens_per_sec": null,
+      "generation_config": {
+        "temperature": 0.01,
+        "top_k": 50,
+        "top_p": 0.95,
+        "repetition_penalty": 1.05,
+        "max_new_tokens": 1024,
+        "do_sample": true
+      },
+      "retriever": {
+        "version": "V1",
+        "k": 7
+      },
+      "retrieval": {
+        "query": "What are the key differences between 4G LTE and 5G NR RAN architecture?",
+        "k": 7,
+        "timing": {
+          "query_embedding_sec": 0.023194074630737305,
+          "faiss_search_sec": 0.2496957778930664,
+          "total_sec": 0.2728898525238037
+        },
+        "results": [
+          {
+            "rank": 1,
+            "score": 0.7013772130012512,
+            "vector_id": 1505046,
+            "chunk_id": "academic/arxiv/arxiv_2405.03555.pdf::chunk_0002",
+            "document_id": "academic/arxiv/arxiv_2405.03555.pdf",
+            "source": "academic",
+            "title": "arxiv_2405.03555",
+            "evidence_text_chars": 1865,
+            "evidence_text_sha256": "8a5728507877397d457c8a11f53b3e0210999f7fe66bf643abbda80304f97e22"
+          },
+          {
+            "rank": 2,
+            "score": 0.6963695287704468,
+            "vector_id": 33104,
+            "chunk_id": "standards/etsi/marked/GR/gr_F5G/gr_f5g008v010101p/raw.md::chunk_0077",
+            "document_id": "standards/etsi/marked/GR/gr_F5G/gr_f5g008v010101p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2860,
+            "evidence_text_sha256": "2721b2c08acf451e3eb372a3da7e2137bfe2a15e6983d3f8f14261435ccba560"
+          },
+          {
+            "rank": 3,
+            "score": 0.682007908821106,
+            "vector_id": 1033096,
+            "chunk_id": "standards/3gpp_rel18/original/rel_15.docx::chunk_0009",
+            "document_id": "standards/3gpp_rel18/original/rel_15.docx",
+            "source": "standards",
+            "title": "rel_15",
+            "evidence_text_chars": 2999,
+            "evidence_text_sha256": "80342ae7f20a448b9d442e2cb78671d5839c05b16de6a1b54220ebe2f5994599"
+          },
+          {
+            "rank": 4,
+            "score": 0.6815204620361328,
+            "vector_id": 1033124,
+            "chunk_id": "standards/3gpp_rel18/original/rel_15.docx::chunk_0037",
+            "document_id": "standards/3gpp_rel18/original/rel_15.docx",
+            "source": "standards",
+            "title": "rel_15",
+            "evidence_text_chars": 2854,
+            "evidence_text_sha256": "318503ff3f45fa3275d65497460eea9822f31365c1c121955b1fd79231ca066d"
+          },
+          {
+            "rank": 5,
+            "score": 0.6780563592910767,
+            "vector_id": 382769,
+            "chunk_id": "standards/etsi/marked/TS/ts/ts_128530v190000p/raw.md::chunk_0046",
+            "document_id": "standards/etsi/marked/TS/ts/ts_128530v190000p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2846,
+            "evidence_text_sha256": "0e2d2bfef8257dd0841289f905d4adf69e7e8dc399ad4dc82421a4e35ed40b1d"
+          },
+          {
+            "rank": 6,
+            "score": 0.6779149770736694,
+            "vector_id": 1046563,
+            "chunk_id": "standards/3gpp_rel18/original/28925-i00.docx::chunk_0019",
+            "document_id": "standards/3gpp_rel18/original/28925-i00.docx",
+            "source": "standards",
+            "title": "28925-i00",
+            "evidence_text_chars": 2502,
+            "evidence_text_sha256": "a41e161809249b450f45116f8c510239e4e0403281ce5660e63c44bf687038e3"
+          },
+          {
+            "rank": 7,
+            "score": 0.6777687668800354,
+            "vector_id": 982904,
+            "chunk_id": "standards/itu/marked/Q/T-REC-Q.4073-202406-I_PDF-E/raw.md::chunk_0035",
+            "document_id": "standards/itu/marked/Q/T-REC-Q.4073-202406-I_PDF-E/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2850,
+            "evidence_text_sha256": "18da4475a4ad0ef9a5fcff91fa7e7bde1ac7e866436345cfb1919f6b166f342a"
+          }
+        ]
+      },
+      "error": null,
+      "timestamp_utc": "2026-08-28T13:02:04.075162+00:00"
+    },
+    {
+      "question_id": "Q05",
+      "category": "5G SA Procedures",
+      "question": "Describe the major steps involved when a UE registers with a 5G Standalone network.",
+      "expected_points": [
+        "UE establishes radio connection with the gNB",
+        "Initial NAS registration procedure",
+        "AMF selection and interaction",
+        "UE authentication",
+        "Subscription and security context handling",
+        "Registration accept and completion",
+        "Establishment of a usable UE context"
+      ],
+      "status": "PASS",
+      "answer": "Here is the concise description of the major steps involved when a UE registers with a 5G Standalone network, based on the provided documents:\n\n1. **Initial Registration**:  \n   - The UE initiates registration to the 5G Standalone (SA) network.  \n   - This includes sending a **Registration Request** to the network’s Access and Management Function (AMF).  \n\n2. **Service Authorization**:  \n   - The UE requests service authorization from the network.  \n   - This involves verifying permissions for 5G SA operations, including obtaining necessary configurations and policies.  \n\n3. **Network Discovery and Selection**:  \n   - The UE discovers and selects a suitable 5G SA network.  \n   - This step ensures compatibility and optimal network performance.  \n\n4. **PC5 Connection Establishment**:  \n   - The UE establishes a Packet-Centric 5 (PC5) connection to the network.  \n   - This enables packet-based communication over the standalone network.  \n\n5. **AS Connection Setup**:  \n   - The UE sets up a connection to the Access Stratum (AS) of the 5G SA network.  \n   - This ensures seamless integration with the core network infrastructure.  \n\n6. **UE-to-Network Relay Triggered Service Request**:  \n   - The UE sends a service request to the network’s UE-to-Network Relay.  \n   - This triggers further network-specific procedures for service activation.  \n\n7. **NAS Connection Setup**:  \n   - The UE establishes a NAS (Network Access String) connection with the network.  \n   - This includes authenticating the UE and setting up secure communication channels.  \n\n8. **PDU Session Establishment**:  \n   - The UE negotiates and establishes a PDU (Protocol Data Unit) session with the network.  \n   - This involves configuring the session parameters and ensuring proper data flow.  \n\n9. **Data Transfer**:  \n   - Once registered, the UE can transfer data over the established connections.  \n   - This includes both control and user data packets.  \n\nThese steps ensure that the UE is fully integrated into the 5G SA network, allowing it to leverage standalone capabilities while maintaining interoperability with existing 5G infrastructure.",
+      "input_tokens": 6137,
+      "output_tokens": 449,
+      "total_tokens": 6586,
+      "generation_time_sec": 73.54416394233704,
+      "output_tokens_per_sec": null,
+      "generation_config": {
+        "temperature": 0.01,
+        "top_k": 50,
+        "top_p": 0.95,
+        "repetition_penalty": 1.05,
+        "max_new_tokens": 1024,
+        "do_sample": true
+      },
+      "retriever": {
+        "version": "V1",
+        "k": 7
+      },
+      "retrieval": {
+        "query": "Describe the major steps involved when a UE registers with a 5G Standalone network.",
+        "k": 7,
+        "timing": {
+          "query_embedding_sec": 0.03125357627868652,
+          "faiss_search_sec": 0.2545182704925537,
+          "total_sec": 0.28577184677124023
+        },
+        "results": [
+          {
+            "rank": 1,
+            "score": 0.7321674823760986,
+            "vector_id": 351987,
+            "chunk_id": "standards/etsi/marked/TS/ts/ts_123304v190600p/raw.md::chunk_0247",
+            "document_id": "standards/etsi/marked/TS/ts/ts_123304v190600p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2869,
+            "evidence_text_sha256": "08568ba22a1f5fa997e00f3bc3ca3274b65ef533a026d3d5169b5385105e6b05"
+          },
+          {
+            "rank": 2,
+            "score": 0.7317107915878296,
+            "vector_id": 1057231,
+            "chunk_id": "standards/3gpp_rel18/original/24502-i40.docx::chunk_0039",
+            "document_id": "standards/3gpp_rel18/original/24502-i40.docx",
+            "source": "standards",
+            "title": "24502-i40",
+            "evidence_text_chars": 2798,
+            "evidence_text_sha256": "e1f330021b11bdb0708bca9e25e4238d3f19019f3e8d540ea76423cd4247d856"
+          },
+          {
+            "rank": 3,
+            "score": 0.7276253700256348,
+            "vector_id": 727072,
+            "chunk_id": "standards/gsma/marked/NG/IR.81 v.14.0/raw.md::chunk_0136",
+            "document_id": "standards/gsma/marked/NG/IR.81 v.14.0/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2920,
+            "evidence_text_sha256": "abf35eefde955331be35e8dc8cb3ce3307614bef46f75158212ec4f2dea1ecee"
+          },
+          {
+            "rank": 4,
+            "score": 0.7268682718276978,
+            "vector_id": 727784,
+            "chunk_id": "standards/gsma/marked/NG/NG.143 v1.0/raw.md::chunk_0011",
+            "document_id": "standards/gsma/marked/NG/NG.143 v1.0/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2906,
+            "evidence_text_sha256": "5f93be32b5f478a3c2033cde89af29882c1d9ab14520ab8619d54f6acf82cd70"
+          },
+          {
+            "rank": 5,
+            "score": 0.7246566414833069,
+            "vector_id": 304107,
+            "chunk_id": "standards/etsi/marked/TS/ts/ts_13852301v190300p/raw.md::chunk_4863",
+            "document_id": "standards/etsi/marked/TS/ts/ts_13852301v190300p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2021,
+            "evidence_text_sha256": "bce156377a8e6bdf61ea374ca116a26da88d434d554d6d8b34d2d9064ba5c94b"
+          },
+          {
+            "rank": 6,
+            "score": 0.7211495637893677,
+            "vector_id": 305407,
+            "chunk_id": "standards/etsi/marked/TS/ts/ts_13852301v190300p/raw.md::chunk_6163",
+            "document_id": "standards/etsi/marked/TS/ts/ts_13852301v190300p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2792,
+            "evidence_text_sha256": "bc0c1a7342d98a987c3910e21f7540edb3db276d9163d585ce007a9779fbd029"
+          },
+          {
+            "rank": 7,
+            "score": 0.7210536003112793,
+            "vector_id": 305510,
+            "chunk_id": "standards/etsi/marked/TS/ts/ts_13852301v190300p/raw.md::chunk_6266",
+            "document_id": "standards/etsi/marked/TS/ts/ts_13852301v190300p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2836,
+            "evidence_text_sha256": "0ea3853740fb7828d4d150473c479a13549dc37d6b45d991e8d525fea99122d8"
+          }
+        ]
+      },
+      "error": null,
+      "timestamp_utc": "2026-08-28T13:03:19.583681+00:00"
+    },
+    {
+      "question_id": "Q06",
+      "category": "5G SA Procedures",
+      "question": "Explain the process of establishing a PDU session in a 5G Standalone network.",
+      "expected_points": [
+        "UE requests PDU session establishment",
+        "AMF handles signalling and interacts with SMF",
+        "SMF performs session management",
+        "SMF selects and controls the UPF",
+        "Policy and subscription information may influence the session",
+        "IP address or other addressing configuration",
+        "User-plane path is established through the UPF",
+        "N3 connectivity between gNB and UPF"
+      ],
+      "status": "PASS",
+      "answer": "To establish a PDU session in a 5G Standalone network, the following steps occur:\n\n1. **Registration**: The 5G-RG (Radio Gateway) registers with the W-5GAN (Wireless Access) via the W-AGF (Wireless Access Gateway Function).\n2. **PDU Session Establishment**: \n   - The 5G-RG initiates the PDU Session Establishment procedure.\n   - It sends a PDU Session Establishment Request to the AMF (Access and Mobility Management Function) through the W-AGF.\n   - The AMF processes the request, performs authentication and authorization checks, and negotiates QoS (Quality of Service) parameters.\n   - The AMF forwards the request to the SMF (Session Management Function) for further processing.\n3. **Resource Allocation**:\n   - The SMF configures the session and allocates necessary resources, including setting up W-UP (Wireless User Plane) resources.\n   - The W-AGF informs the 5G-RG about the allocated W-UP resources.\n4. **Session Confirmation**:\n   - The AMF sends a PDU Session Establishment Accept message back to the 5G-RG.\n   - The 5G-RG acknowledges the acceptance, completing the PDU session setup.\n\nThis process ensures that the PDU session is properly configured and ready for data transfer between the UE and the 5G core network.",
+      "input_tokens": 6226,
+      "output_tokens": 296,
+      "total_tokens": 6522,
+      "generation_time_sec": 52.532198667526245,
+      "output_tokens_per_sec": null,
+      "generation_config": {
+        "temperature": 0.01,
+        "top_k": 50,
+        "top_p": 0.95,
+        "repetition_penalty": 1.05,
+        "max_new_tokens": 1024,
+        "do_sample": true
+      },
+      "retriever": {
+        "version": "V1",
+        "k": 7
+      },
+      "retrieval": {
+        "query": "Explain the process of establishing a PDU session in a 5G Standalone network.",
+        "k": 7,
+        "timing": {
+          "query_embedding_sec": 0.02308964729309082,
+          "faiss_search_sec": 0.25125885009765625,
+          "total_sec": 0.27434849739074707
+        },
+        "results": [
+          {
+            "rank": 1,
+            "score": 0.7441797256469727,
+            "vector_id": 165071,
+            "chunk_id": "standards/etsi/marked/TS/ts/ts_123502v190700p/raw.md::chunk_0271",
+            "document_id": "standards/etsi/marked/TS/ts/ts_123502v190700p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2619,
+            "evidence_text_sha256": "df68608ff7a830e89549ad18fde8816233541ee61d66c1907c261bbf8f0b5280"
+          },
+          {
+            "rank": 2,
+            "score": 0.7394412159919739,
+            "vector_id": 322792,
+            "chunk_id": "standards/etsi/marked/TS/ts/ts_123316v190300p/raw.md::chunk_0103",
+            "document_id": "standards/etsi/marked/TS/ts/ts_123316v190300p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2671,
+            "evidence_text_sha256": "a093e21498c04ddec6c9ec4a8b4718dbc816bb4b352ca698c7ee1548fbce8d09"
+          },
+          {
+            "rank": 3,
+            "score": 0.7380837202072144,
+            "vector_id": 322791,
+            "chunk_id": "standards/etsi/marked/TS/ts/ts_123316v190300p/raw.md::chunk_0102",
+            "document_id": "standards/etsi/marked/TS/ts/ts_123316v190300p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2959,
+            "evidence_text_sha256": "712e4041d2f0f17f7d346c144ad01a696d3094555d57aede6ae25b53f3883994"
+          },
+          {
+            "rank": 4,
+            "score": 0.7317095994949341,
+            "vector_id": 1106400,
+            "chunk_id": "standards/3gpp_rel18/original/23316-i40.docx::chunk_0058",
+            "document_id": "standards/3gpp_rel18/original/23316-i40.docx",
+            "source": "standards",
+            "title": "23316-i40",
+            "evidence_text_chars": 2960,
+            "evidence_text_sha256": "1297eef3bfc42756e04ce9d7390f8ced8a8e8e340e5d8bcb0d0ec6b4a31756d1"
+          },
+          {
+            "rank": 5,
+            "score": 0.7284870147705078,
+            "vector_id": 742171,
+            "chunk_id": "standards/oran/marked/WG8/O-RAN.WG8.IOT.0-R004-v12.00/raw.md::chunk_0080",
+            "document_id": "standards/oran/marked/WG8/O-RAN.WG8.IOT.0-R004-v12.00/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 1673,
+            "evidence_text_sha256": "a6d5496ce1bcf93ff08a9c89683660fdb1045bb73976974967c82c1105440747"
+          },
+          {
+            "rank": 6,
+            "score": 0.7271000742912292,
+            "vector_id": 354556,
+            "chunk_id": "standards/etsi/marked/TS/ts/ts_103905v010101p/raw.md::chunk_0033",
+            "document_id": "standards/etsi/marked/TS/ts/ts_103905v010101p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2990,
+            "evidence_text_sha256": "a992c29765df91d0824ee817e59529a1d4f5a28f683372870b7e90ad2bdd5f35"
+          },
+          {
+            "rank": 7,
+            "score": 0.7269213199615479,
+            "vector_id": 322778,
+            "chunk_id": "standards/etsi/marked/TS/ts/ts_123316v190300p/raw.md::chunk_0089",
+            "document_id": "standards/etsi/marked/TS/ts/ts_123316v190300p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2929,
+            "evidence_text_sha256": "3c8732be9b1d35b52a2b45c5ca3903e252cb492383a43ad4c937890f76c39a2b"
+          }
+        ]
+      },
+      "error": null,
+      "timestamp_utc": "2026-08-28T13:04:14.083262+00:00"
+    },
+    {
+      "question_id": "Q07",
+      "category": "Open RAN",
+      "question": "What are the O-RAN O-CU, O-DU and O-RU, and how do they interact?",
+      "expected_points": [
+        "O-CU provides higher-layer centralized RAN functions",
+        "O-DU provides distributed lower-layer processing",
+        "O-RU performs radio and lower-PHY functions",
+        "Functional decomposition of the RAN",
+        "Open interfaces between components",
+        "F1 interface between CU and DU",
+        "Open Fronthaul between DU and RU"
+      ],
+      "status": "PASS",
+      "answer": "Based on the provided context, I will outline the O-RAN O-CU, O-DU, and O-RU components and their interactions.\n\n**O-RAN Components:**\n\n1. **O-CU (O-RAN Central Unit):**\n   - Acts as the central processing unit for the O-RAN architecture.\n   - Provides control functions like policy-driven guidance, AI/ML workflows, and coordination between different O-RAN units.\n   - Interfaces include:\n     - A1: Connects Non-RT RIC to Near-RT RIC\n     - O1: Connects SMO to Near-RT RIC, O-CU-CP, O-CU-UP, and O-DUs\n     - E1: Connects Near-RT RIC to O-CU-CP and O-CU-UP\n     - E2: Connects Near-RT RIC to O-CU-CP, O-CU-UP, O-DUs, and O-eNBs\n     - F1-c: Connects O-CU-CP to O-DU\n     - F1-u: Connects O-CU-UP to O-DU\n     - X2-c/Xn-c/NG-c: Connects to 3GPP interfaces\n     - X2-u/Xn-u/NG-u: Connects to 3GPP interfaces\n\n2. **O-DU (O-RAN Distributed Unit):**\n   - Hosts higher-level processing functions at the PHY layer (PHY-high).\n   - Interfaces include:\n     - Open FH CUS-Plane: Connects to O-RU\n     - Open FH M-Plane: Connects to O-RU and SMO\n     - E2: Connects to Near-RT RIC\n     - F1-c: Connects to O-CU-CP\n     - F1-u: Connects to O-CU-UP\n\n3. **O-RU (O-RAN Remote Unit):**\n   - Integrates antenna elements with RF processing components.\n   - Interfaces include:\n     - Open FH M-Plane: Connects to O-DU and SMO\n     - O2: Connects to O-Cloud\n\n**Interactions:**\n\n- **O-CU-CP and O-CU-UP** interact with **O-DU** via:\n  - E1 interface (control plane)\n  - F1-c/F1-u interfaces (user plane)\n\n- **O-DU** interacts with **O-RU** via:\n  - Open FH CUS-Plane (control plane)\n  - Open FH M-Plane (management plane)\n\n- **O-RU** interacts with **O-Cloud** via:\n  - Open FH M-Plane\n\n- **O-CU** interacts with **SMO** via:\n  - O2 interface\n\n- **Near-RT RIC** interacts with **O-CU-CP**, **O-CU-UP**, and **O-DU** via:\n  - E2 interface\n\n- **O-CU-CP** interacts with **O-CU-UP** via:\n  - E1 interface\n\nThese components form a hierarchical structure where the O-CU provides centralized control, while the O-DU and O-RU handle distributed processing and management functions. The interfaces ensure proper communication and coordination between these components.",
+      "input_tokens": 4853,
+      "output_tokens": 687,
+      "total_tokens": 5540,
+      "generation_time_sec": 89.31577920913696,
+      "output_tokens_per_sec": null,
+      "generation_config": {
+        "temperature": 0.01,
+        "top_k": 50,
+        "top_p": 0.95,
+        "repetition_penalty": 1.05,
+        "max_new_tokens": 1024,
+        "do_sample": true
+      },
+      "retriever": {
+        "version": "V1",
+        "k": 7
+      },
+      "retrieval": {
+        "query": "What are the O-RAN O-CU, O-DU and O-RU, and how do they interact?",
+        "k": 7,
+        "timing": {
+          "query_embedding_sec": 0.023438692092895508,
+          "faiss_search_sec": 0.25200963020324707,
+          "total_sec": 0.2754483222961426
+        },
+        "results": [
+          {
+            "rank": 1,
+            "score": 0.713506817817688,
+            "vector_id": 270758,
+            "chunk_id": "standards/etsi/marked/TS/ts/ts_103982v140000p/raw.md::chunk_0041",
+            "document_id": "standards/etsi/marked/TS/ts/ts_103982v140000p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 300,
+            "evidence_text_sha256": "d826cc4d305af96f57912c96a5e96b5d59a43d1177e2d4d78ebe3a51f312d162"
+          },
+          {
+            "rank": 2,
+            "score": 0.7005985975265503,
+            "vector_id": 270733,
+            "chunk_id": "standards/etsi/marked/TS/ts/ts_103982v140000p/raw.md::chunk_0016",
+            "document_id": "standards/etsi/marked/TS/ts/ts_103982v140000p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2846,
+            "evidence_text_sha256": "1c8af709026ecaece3b4bbb06c9ed69f8ce936391070dd45bf4aa7e7c550a6fd"
+          },
+          {
+            "rank": 3,
+            "score": 0.6773079633712769,
+            "vector_id": 750545,
+            "chunk_id": "standards/oran/marked/WG11/O-RAN.WG11.TS.STS-R005-v12.00/raw.md::chunk_0015",
+            "document_id": "standards/oran/marked/WG11/O-RAN.WG11.TS.STS-R005-v12.00/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2822,
+            "evidence_text_sha256": "d821132f3e6a5ff6178ece27bb9f655fb41701e9c2c82c8cb5ca2da837e20c3d"
+          },
+          {
+            "rank": 4,
+            "score": 0.6682153344154358,
+            "vector_id": 1504978,
+            "chunk_id": "academic/arxiv/arxiv_2111.13754.pdf::chunk_0008",
+            "document_id": "academic/arxiv/arxiv_2111.13754.pdf",
+            "source": "academic",
+            "title": "arxiv_2111.13754",
+            "evidence_text_chars": 1786,
+            "evidence_text_sha256": "4963dbc58e003d07c3c7584e6459cecd8d1d53835b69dab322c862f3f2a6d55a"
+          },
+          {
+            "rank": 5,
+            "score": 0.6651209592819214,
+            "vector_id": 740421,
+            "chunk_id": "standards/oran/marked/WG6/O-RAN.WG6.CADS-v08.01/raw.md::chunk_0018",
+            "document_id": "standards/oran/marked/WG6/O-RAN.WG6.CADS-v08.01/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2628,
+            "evidence_text_sha256": "c611d732f35a8b7271da9824c9bdeea575e2528410a95620add1a3b33f1ba9d4"
+          },
+          {
+            "rank": 6,
+            "score": 0.6640169620513916,
+            "vector_id": 742537,
+            "chunk_id": "standards/oran/marked/WG8/O-RAN.WG8.TS.AAD.0-R005-v17.00/raw.md::chunk_0011",
+            "document_id": "standards/oran/marked/WG8/O-RAN.WG8.TS.AAD.0-R005-v17.00/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 1275,
+            "evidence_text_sha256": "30b74046c07f7b32b9f6f965cd1222c2e01c3401b8b4f2336b71371aaa3ce03b"
+          },
+          {
+            "rank": 7,
+            "score": 0.6621396541595459,
+            "vector_id": 745092,
+            "chunk_id": "standards/oran/marked/WG9/O-RAN.WG9.XTRP-REQ.0-R005-v02.00/raw.md::chunk_0012",
+            "document_id": "standards/oran/marked/WG9/O-RAN.WG9.XTRP-REQ.0-R005-v02.00/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2677,
+            "evidence_text_sha256": "7165dcec7f74fe84bf7f81db6afd63d6b11ac02dbf959a2d0dbb3fdd9bf7cb64"
+          }
+        ]
+      },
+      "error": null,
+      "timestamp_utc": "2026-08-28T13:05:45.377167+00:00"
+    },
+    {
+      "question_id": "Q08",
+      "category": "Open RAN",
+      "question": "What is the role of the RIC in an Open RAN architecture? Distinguish between the Near-RT RIC and Non-RT RIC.",
+      "expected_points": [
+        "RIC provides intelligent control and optimisation",
+        "Near-RT RIC operates on near-real-time timescales",
+        "Near-RT RIC supports xApps",
+        "Non-RT RIC operates on longer timescales",
+        "Non-RT RIC supports rApps",
+        "Policy, optimisation and analytics functions",
+        "Relationship with SMO and RAN elements"
+      ],
+      "status": "PASS",
+      "answer": "The RIC (RAN Intelligent Controller) plays a crucial role in the Open RAN architecture by providing intelligence and control over RAN (Radio Access Network) resources. It enhances the agility, efficiency, and programmability of the RAN through software-defined functionalities.\n\n**Role of the RIC:**\n- Facilitates real-time visibility and centralized control over RAN resources.\n- Enables multi-vendor interoperability, intelligent decision-making, and dynamic resource allocation.\n- Supports critical capabilities such as network slicing, configuration of network slices, and orchestration of network functions.\n- Provides open interfaces for communication with other components in the O-RAN architecture.\n\n**Differences between Near-RT RIC and Non-RT RIC:**\n\n1. **Latency and Control Loop Dynamics:**\n   - **Near-RT RIC:** Designed to handle low-latency control loops, enabling real-time decision-making and rapid response to changing network conditions.\n   - **Non-RT RIC:** Focuses on longer-term control and optimization, with less emphasis on real-time responsiveness.\n\n2. **Functionality:**\n   - **Near-RT RIC:** Primarily responsible for executing control functions that require low latency, such as resource allocation, traffic steering, and dynamic handover.\n   - **Non-RT RIC:** Provides higher-level functions like policy management, AI model management, and data enrichment services to the Near-RT RIC.\n\n3. **Data Processing:**\n   - **Near-RT RIC:** Processes data quickly to make real-time decisions based on current network conditions.\n   - **Non-RT RIC:** Analyzes historical data and develops AI models to inform and guide the Near-RT RIC’s decisions.\n\n4. **Integration with SMO:**\n   - **Near-RT RIC:** Interacts with the SMO for real-time data exchange and coordination.\n   - **Non-RT RIC:** Leverages SMO functions for historical data analysis and model training, which then influence the Near-RT RIC’s operations.\n\nIn summary, the Near-RT RIC focuses on real-time control and decision-making, while the Non-RT RIC provides strategic oversight and support through policy management and AI-driven insights.",
+      "input_tokens": 3626,
+      "output_tokens": 454,
+      "total_tokens": 4080,
+      "generation_time_sec": 47.69025540351868,
+      "output_tokens_per_sec": null,
+      "generation_config": {
+        "temperature": 0.01,
+        "top_k": 50,
+        "top_p": 0.95,
+        "repetition_penalty": 1.05,
+        "max_new_tokens": 1024,
+        "do_sample": true
+      },
+      "retriever": {
+        "version": "V1",
+        "k": 7
+      },
+      "retrieval": {
+        "query": "What is the role of the RIC in an Open RAN architecture? Distinguish between the Near-RT RIC and Non-RT RIC.",
+        "k": 7,
+        "timing": {
+          "query_embedding_sec": 0.02955937385559082,
+          "faiss_search_sec": 0.25049662590026855,
+          "total_sec": 0.2800559997558594
+        },
+        "results": [
+          {
+            "rank": 1,
+            "score": 0.7468949556350708,
+            "vector_id": 753550,
+            "chunk_id": "standards/oran/marked/WG2/O-RAN.WG2.Non-RT-RIC-ARCH-R004-v06.00/raw.md::chunk_0005",
+            "document_id": "standards/oran/marked/WG2/O-RAN.WG2.Non-RT-RIC-ARCH-R004-v06.00/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 1387,
+            "evidence_text_sha256": "387499638bf172d968107726cc872abc2e7e228c9423d43e655a32d541dadb69"
+          },
+          {
+            "rank": 2,
+            "score": 0.7159138321876526,
+            "vector_id": 744432,
+            "chunk_id": "standards/oran/marked/WG3/O-RAN.WG3.TS.RICARCH-R005-v08.00/raw.md::chunk_0005",
+            "document_id": "standards/oran/marked/WG3/O-RAN.WG3.TS.RICARCH-R005-v08.00/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 1816,
+            "evidence_text_sha256": "2f22eefb701e94f900c5de6135ec96f9235c85d0d7af3e355e6e880b00719515"
+          },
+          {
+            "rank": 3,
+            "score": 0.7072368860244751,
+            "vector_id": 58127,
+            "chunk_id": "standards/etsi/marked/TS/ts/ts_104036v120000p/raw.md::chunk_0035",
+            "document_id": "standards/etsi/marked/TS/ts/ts_104036v120000p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2481,
+            "evidence_text_sha256": "c72c377355c91fa037fd702ad652e47324e6c0797764a82e93e46f27c1aba7f0"
+          },
+          {
+            "rank": 4,
+            "score": 0.7037568092346191,
+            "vector_id": 1505094,
+            "chunk_id": "academic/arxiv/arxiv_2405.03555.pdf::chunk_0050",
+            "document_id": "academic/arxiv/arxiv_2405.03555.pdf",
+            "source": "academic",
+            "title": "arxiv_2405.03555",
+            "evidence_text_chars": 1624,
+            "evidence_text_sha256": "276314f44c412d6da60e9c98de01bae27da1189c388259d55ee806c747330c34"
+          },
+          {
+            "rank": 5,
+            "score": 0.7015843987464905,
+            "vector_id": 58238,
+            "chunk_id": "standards/etsi/marked/TS/ts/ts_104036v120000p/raw.md::chunk_0146",
+            "document_id": "standards/etsi/marked/TS/ts/ts_104036v120000p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 300,
+            "evidence_text_sha256": "47f9978511d7f9ba8ec006761553e4ec93c650cb6716d4745ec81be65eaea27a"
+          },
+          {
+            "rank": 6,
+            "score": 0.6964575052261353,
+            "vector_id": 744430,
+            "chunk_id": "standards/oran/marked/WG3/O-RAN.WG3.TS.RICARCH-R005-v08.00/raw.md::chunk_0003",
+            "document_id": "standards/oran/marked/WG3/O-RAN.WG3.TS.RICARCH-R005-v08.00/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2499,
+            "evidence_text_sha256": "85c6612463857db7dea0d71cc834e23671981b1a2f42f484c998ee539ce4b35d"
+          },
+          {
+            "rank": 7,
+            "score": 0.6952238082885742,
+            "vector_id": 1504985,
+            "chunk_id": "academic/arxiv/arxiv_2111.13754.pdf::chunk_0015",
+            "document_id": "academic/arxiv/arxiv_2111.13754.pdf",
+            "source": "academic",
+            "title": "arxiv_2111.13754",
+            "evidence_text_chars": 2280,
+            "evidence_text_sha256": "2ed24f0bdc5ee4eff1bb1ac0b89aea430faf5b2915a608511a5c203b3cb0719b"
+          }
+        ]
+      },
+      "error": null,
+      "timestamp_utc": "2026-08-28T13:06:34.968161+00:00"
+    },
+    {
+      "question_id": "Q09",
+      "category": "Cloud-Native Telecom",
+      "question": "What are the benefits and challenges of deploying 5G Core Network Functions as cloud-native workloads?",
+      "expected_points": [
+        "Scalability and elasticity",
+        "Automation and orchestration",
+        "Containerisation",
+        "Improved resource utilisation",
+        "CI/CD and lifecycle automation",
+        "Resilience and high availability",
+        "Latency and performance challenges",
+        "Distributed-system complexity",
+        "Observability and troubleshooting",
+        "Security and operational complexity"
+      ],
+      "status": "PASS",
+      "answer": "Deploying 5G Core Network Functions (NFs) as cloud-native workloads offers several benefits and presents unique challenges. Here's a concise overview:\n\n**Benefits:**\n- **Flexibility and Scalability:** Cloud-native NFs can scale dynamically based on demand, ensuring efficient resource utilization.\n- **Rapid Deployment:** Enables quick deployment of new services or updates, reducing time-to-market.\n- **Automation:** Supports automation in operations, including self-healing and continuous deployment.\n- **Cost Efficiency:** Reduces capital expenditure by leveraging cloud infrastructure, shifting to operational expenditure.\n- **Microservices Architecture:** Allows for independent scaling and updating of individual services within the network.\n\n**Challenges:**\n- **Security Concerns:** Traditional security measures may not be sufficient; cloud-native NFs require robust security frameworks.\n- **Complexity:** Managing cloud-native environments adds complexity, requiring specialized skills and tools.\n- **Performance Overhead:** Additional layers of abstraction in cloud-native setups may introduce latency or overhead.\n- **Interoperability:** Ensuring compatibility with existing systems and standards is crucial for seamless integration.\n- **Operational Expertise:** Requires expertise in cloud-native technologies and practices, which may be lacking in some organizations.\n\nThese factors collectively shape the strategic approach to deploying 5G Core NFs in cloud-native environments, balancing innovation with operational resilience.",
+      "input_tokens": 4681,
+      "output_tokens": 271,
+      "total_tokens": 4952,
+      "generation_time_sec": 37.45359921455383,
+      "output_tokens_per_sec": null,
+      "generation_config": {
+        "temperature": 0.01,
+        "top_k": 50,
+        "top_p": 0.95,
+        "repetition_penalty": 1.05,
+        "max_new_tokens": 1024,
+        "do_sample": true
+      },
+      "retriever": {
+        "version": "V1",
+        "k": 7
+      },
+      "retrieval": {
+        "query": "What are the benefits and challenges of deploying 5G Core Network Functions as cloud-native workloads?",
+        "k": 7,
+        "timing": {
+          "query_embedding_sec": 0.02657794952392578,
+          "faiss_search_sec": 0.38681983947753906,
+          "total_sec": 0.41339778900146484
+        },
+        "results": [
+          {
+            "rank": 1,
+            "score": 0.676047146320343,
+            "vector_id": 716990,
+            "chunk_id": "standards/gsma/marked/FASG/FS.40 v3.0/raw.md::chunk_0096",
+            "document_id": "standards/gsma/marked/FASG/FS.40 v3.0/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2688,
+            "evidence_text_sha256": "a64e9e9dfd9cf3fb9f49230e39df0867f045075cd6012d7050db0c813715a0e6"
+          },
+          {
+            "rank": 2,
+            "score": 0.6687926054000854,
+            "vector_id": 1135259,
+            "chunk_id": "vendor_network/samsung/samsung_5g_core_user_plane_performance.pdf::chunk_0000",
+            "document_id": "vendor_network/samsung/samsung_5g_core_user_plane_performance.pdf",
+            "source": "vendor_network",
+            "title": "samsung_5g_core_user_plane_performance",
+            "evidence_text_chars": 2111,
+            "evidence_text_sha256": "4f71a178bef5e4f33eb94954b275b6639ae69dfd0e580b03109465a3e9108d99"
+          },
+          {
+            "rank": 3,
+            "score": 0.6532458662986755,
+            "vector_id": 1135260,
+            "chunk_id": "vendor_network/samsung/samsung_5g_core_user_plane_performance.pdf::chunk_0001",
+            "document_id": "vendor_network/samsung/samsung_5g_core_user_plane_performance.pdf",
+            "source": "vendor_network",
+            "title": "samsung_5g_core_user_plane_performance",
+            "evidence_text_chars": 2206,
+            "evidence_text_sha256": "4eb7be8d14ac60fcd3002213799e43cf7adfc434d2032530b9ceb1175bcc59e7"
+          },
+          {
+            "rank": 4,
+            "score": 0.6483030319213867,
+            "vector_id": 1135248,
+            "chunk_id": "vendor_network/samsung/samsung_5g_core_vision.pdf::chunk_0003",
+            "document_id": "vendor_network/samsung/samsung_5g_core_vision.pdf",
+            "source": "vendor_network",
+            "title": "samsung_5g_core_vision",
+            "evidence_text_chars": 2657,
+            "evidence_text_sha256": "51cfe16473086722756dd03f6167e456f4e4ae3d4781d28d430f80a426de4b41"
+          },
+          {
+            "rank": 5,
+            "score": 0.6478285193443298,
+            "vector_id": 1135262,
+            "chunk_id": "vendor_network/samsung/samsung_5g_core_user_plane_performance.pdf::chunk_0003",
+            "document_id": "vendor_network/samsung/samsung_5g_core_user_plane_performance.pdf",
+            "source": "vendor_network",
+            "title": "samsung_5g_core_user_plane_performance",
+            "evidence_text_chars": 2860,
+            "evidence_text_sha256": "3ae952252c18eac665b57702f68ae4cc80969dfc704c78230dd42efcccd9be6f"
+          },
+          {
+            "rank": 6,
+            "score": 0.6405737400054932,
+            "vector_id": 1135247,
+            "chunk_id": "vendor_network/samsung/samsung_5g_core_vision.pdf::chunk_0002",
+            "document_id": "vendor_network/samsung/samsung_5g_core_vision.pdf",
+            "source": "vendor_network",
+            "title": "samsung_5g_core_vision",
+            "evidence_text_chars": 2337,
+            "evidence_text_sha256": "35661f825602f51216e91e507c56d35a092daf1a367eb778fbd2d10917278320"
+          },
+          {
+            "rank": 7,
+            "score": 0.6393237113952637,
+            "vector_id": 1135245,
+            "chunk_id": "vendor_network/samsung/samsung_5g_core_vision.pdf::chunk_0000",
+            "document_id": "vendor_network/samsung/samsung_5g_core_vision.pdf",
+            "source": "vendor_network",
+            "title": "samsung_5g_core_vision",
+            "evidence_text_chars": 2670,
+            "evidence_text_sha256": "c9856f8d32a86d905dcece165c21d9a43704809d687e17f83a987a375a68d156"
+          }
+        ]
+      },
+      "error": null,
+      "timestamp_utc": "2026-08-28T13:07:14.514381+00:00"
+    },
+    {
+      "question_id": "Q10",
+      "category": "Cloud-Native Telecom",
+      "question": "How can Kubernetes support the deployment and lifecycle management of telecom Network Functions?",
+      "expected_points": [
+        "Container orchestration",
+        "Automated deployment and scheduling",
+        "Scaling and self-healing",
+        "Service discovery and networking",
+        "Rolling updates and lifecycle management",
+        "Resource management",
+        "High availability",
+        "Integration with CNFs and cloud-native infrastructure",
+        "Observability and operational tooling"
+      ],
+      "status": "PASS",
+      "answer": "Kubernetes supports the deployment and lifecycle management of telecom Network Functions through its container orchestration capabilities. It enables:\n\n- **Scalability**: Automatically scale network functions horizontally based on demand.\n- **Self-Healing**: Restart or replace failed containers to ensure continuous operation.\n- **Load Balancing**: Distribute network traffic across multiple instances for resilience.\n- **Configuration Management**: Manage sensitive data like credentials securely.\n- **Automation**: Automate deployments, updates, and rollbacks of network functions.\n- **Extensibility**: Integrate with existing telecom infrastructure and tools.\n\nThese features allow telecom operators to deploy and manage network functions efficiently, ensuring high availability and scalability.",
+      "input_tokens": 5352,
+      "output_tokens": 134,
+      "total_tokens": 5486,
+      "generation_time_sec": 24.993446350097656,
+      "output_tokens_per_sec": null,
+      "generation_config": {
+        "temperature": 0.01,
+        "top_k": 50,
+        "top_p": 0.95,
+        "repetition_penalty": 1.05,
+        "max_new_tokens": 1024,
+        "do_sample": true
+      },
+      "retriever": {
+        "version": "V1",
+        "k": 7
+      },
+      "retrieval": {
+        "query": "How can Kubernetes support the deployment and lifecycle management of telecom Network Functions?",
+        "k": 7,
+        "timing": {
+          "query_embedding_sec": 0.0233154296875,
+          "faiss_search_sec": 0.2676210403442383,
+          "total_sec": 0.2909364700317383
+        },
+        "results": [
+          {
+            "rank": 1,
+            "score": 0.6995025873184204,
+            "vector_id": 1445477,
+            "chunk_id": "cloud_native/kubernetes/content/vi/docs/concepts/overview/what-is-kubernetes.md::chunk_0002",
+            "document_id": "cloud_native/kubernetes/content/vi/docs/concepts/overview/what-is-kubernetes.md",
+            "source": "cloud_native",
+            "title": "what-is-kubernetes",
+            "evidence_text_chars": 2483,
+            "evidence_text_sha256": "4b8bea18896d18cffe5efe987015875ac461ad948a41f42cf32db55584213364"
+          },
+          {
+            "rank": 2,
+            "score": 0.6882555484771729,
+            "vector_id": 1440601,
+            "chunk_id": "cloud_native/kubernetes/content/fr/docs/concepts/overview/_index.md::chunk_0001",
+            "document_id": "cloud_native/kubernetes/content/fr/docs/concepts/overview/_index.md",
+            "source": "cloud_native",
+            "title": "_index",
+            "evidence_text_chars": 2850,
+            "evidence_text_sha256": "bb5fcd1cf8454e1ff606ea11df6815a511c1a0f35fb0ccc57e00adf0b898cde9"
+          },
+          {
+            "rank": 3,
+            "score": 0.6875396966934204,
+            "vector_id": 1471611,
+            "chunk_id": "cloud_native/kubernetes/content/zh-cn/docs/concepts/overview/_index.md::chunk_0001",
+            "document_id": "cloud_native/kubernetes/content/zh-cn/docs/concepts/overview/_index.md",
+            "source": "cloud_native",
+            "title": "_index",
+            "evidence_text_chars": 2608,
+            "evidence_text_sha256": "c677a2d7652d20f9e14e820537cc0a20e4a265eabbbf4906615fbf805db982a5"
+          },
+          {
+            "rank": 4,
+            "score": 0.6874182224273682,
+            "vector_id": 1459703,
+            "chunk_id": "cloud_native/kubernetes/content/en/docs/concepts/overview/_index.md::chunk_0001",
+            "document_id": "cloud_native/kubernetes/content/en/docs/concepts/overview/_index.md",
+            "source": "cloud_native",
+            "title": "_index",
+            "evidence_text_chars": 2418,
+            "evidence_text_sha256": "1fc3b97b4a0bc0f7d45a6378ecf75611bf1f03232a98b87c39a8f20b2903d152"
+          },
+          {
+            "rank": 5,
+            "score": 0.6868151426315308,
+            "vector_id": 1475451,
+            "chunk_id": "cloud_native/kubernetes/content/pt-br/docs/concepts/overview/_index.md::chunk_0003",
+            "document_id": "cloud_native/kubernetes/content/pt-br/docs/concepts/overview/_index.md",
+            "source": "cloud_native",
+            "title": "_index",
+            "evidence_text_chars": 2768,
+            "evidence_text_sha256": "740d0edc7c34e557ba16f0a244b3a79fe057582994e307677cac245f6b458de8"
+          },
+          {
+            "rank": 6,
+            "score": 0.67755526304245,
+            "vector_id": 1475448,
+            "chunk_id": "cloud_native/kubernetes/content/pt-br/docs/concepts/overview/_index.md::chunk_0000",
+            "document_id": "cloud_native/kubernetes/content/pt-br/docs/concepts/overview/_index.md",
+            "source": "cloud_native",
+            "title": "_index",
+            "evidence_text_chars": 2767,
+            "evidence_text_sha256": "7c55bc9dc5f6b9bbdd8d88e81466cf2db584bb600633d5c00d58f09ad0497ac8"
+          },
+          {
+            "rank": 7,
+            "score": 0.6716550588607788,
+            "vector_id": 1479617,
+            "chunk_id": "cloud_native/kubernetes/content/ru/docs/concepts/overview/_index.md::chunk_0001",
+            "document_id": "cloud_native/kubernetes/content/ru/docs/concepts/overview/_index.md",
+            "source": "cloud_native",
+            "title": "_index",
+            "evidence_text_chars": 2542,
+            "evidence_text_sha256": "8faef531f1d1761bb9c1ee81e592152ac0c64d727aa1f3bc79ee8feda26d500e"
+          }
+        ]
+      },
+      "error": null,
+      "timestamp_utc": "2026-08-28T13:07:41.441949+00:00"
+    },
+    {
+      "question_id": "Q11",
+      "category": "Applied Telecom Engineering",
+      "question": "Design a 5G Radio site capable of delivering a peak UE downlink throughput of 1.5 Gbps and uplink throughput of 250 Mbps. Propose suitable spectrum bands and channel bandwidths, radio configuration, antenna configuration, vendor radio and baseband options, and the key system and network requirements needed to achieve these targets. State your assumptions and explain the engineering trade-offs behind your design.",
+      "expected_points": [
+        "Appropriate 5G NR spectrum selection",
+        "Appropriate channel bandwidth",
+        "TDD/FDD consideration",
+        "MIMO configuration",
+        "Antenna configuration",
+        "Modulation considerations",
+        "Carrier aggregation where appropriate",
+        "UE capability requirements",
+        "Radio/baseband capacity requirements",
+        "Transport/backhaul capacity",
+        "5G Core capability",
+        "Vendor equipment considerations",
+        "Coverage versus capacity trade-offs",
+        "Peak versus sustained throughput distinction",
+        "Explicit engineering assumptions"
+      ],
+      "status": "PASS",
+      "answer": "To design a 5G Radio site capable of delivering the specified peak UE downlink throughput of 1.5 Gbps and uplink throughput of 250 Mbps, we must consider several factors including spectrum bands, channel bandwidths, radio configuration, antenna configuration, vendor options, and system requirements. Here’s a detailed breakdown:\n\n### Spectrum Bands and Channel Bandwidths\n1. **Downlink (DL) Peak Throughput**: 1.5 Gbps\n   - Assuming a reference UE configuration with 2 receive antennas, the target is achieved with a 20 MHz spectrum allocation.\n   - **Spectrum Allocation**: 20 MHz (to achieve 75 Mbps per antenna, totaling 150 Mbps for two antennas).\n\n2. **Uplink (UL) Peak Throughput**: 250 Mbps\n   - With 1 transmit antenna, the target is met with a 12.5 MHz spectrum allocation.\n   - **Spectrum Allocation**: 12.5 MHz (to achieve 250 Mbps per antenna).\n\n### Radio Configuration\n1. **Antenna Configuration**:\n   - **Downlink**: Use a 64-sector MIMO array with 2 receive antennas per sector.\n   - **Uplink**: Use a 64-sector MIMO array with 1 transmit antenna per sector.\n\n2. **MIMO Technology**:\n   - **Downlink**: 2×2 MIMO (2 receive antennas).\n   - **Uplink**: 1×1 MIMO (1 transmit antenna).\n\n### Antenna Configuration\n1. **Downlink Antennas**:\n   - Use a phased array antenna system with 64 elements per sector.\n   - Beamforming capabilities to focus signals towards UEs.\n\n2. **Uplink Antennas**:\n   - Use a simpler antenna system with 1 element per sector.\n   - Suitable for directional beamforming.\n\n### Vendor Options\n1. **Radio Equipment**:\n   - **Vendor**: Consider vendors like Ericsson, Nokia, or Samsung.\n   - **Model**: Choose a model that supports 64-sector MIMO and the specified spectrum bands.\n\n2. **Baseband Processing**:\n   - Ensure the baseband unit (BBU) supports high-speed processing for the required throughput.\n   - Look for vendors offering advanced signal processing capabilities.\n\n### Key System and Network Requirements\n1. **Spectrum Allocation**:\n   - Allocate 20 MHz for downlink and 12.5 MHz for uplink to meet the peak throughput requirements.\n\n2. **MIMO Configuration**:\n   - Configure the system to support 2×2 MIMO for downlink and 1×1 MIMO for uplink.\n\n3. **Antenna Configuration**:\n   - Deploy phased array antennas for downlink and simpler antennas for uplink.\n\n4. **Vendor Selection**:\n   - Select vendors that offer the necessary radio and baseband equipment to support the specified throughput and MIMO configurations.\n\n### Assumptions and Trade-offs\n1. **Peak Throughput vs. Average Throughput**:\n   - The design assumes peak throughput conditions. Real-world average throughput may be lower due to various factors like interference and signal degradation.\n\n2. **Antenna Complexity**:\n   - The phased array antenna system for downlink adds complexity and cost but is necessary to achieve the required throughput.\n\n3. **Spectrum Allocation**:\n   - The choice of 20 MHz for downlink and 12.5 MHz for uplink is based on the assumption of a reference UE configuration. Adjustments may be needed based on actual deployment scenarios.\n\n4. **Vendor Options**:\n   - The selection of vendors and equipment should be based on the specific requirements and budget constraints of the project.\n\nBy following these guidelines, you can design a 5G Radio site that meets the specified peak throughput requirements while balancing cost, complexity, and performance.",
+      "input_tokens": 4201,
+      "output_tokens": 785,
+      "total_tokens": 4986,
+      "generation_time_sec": 90.85371279716492,
+      "output_tokens_per_sec": null,
+      "generation_config": {
+        "temperature": 0.01,
+        "top_k": 50,
+        "top_p": 0.95,
+        "repetition_penalty": 1.05,
+        "max_new_tokens": 1024,
+        "do_sample": true
+      },
+      "retriever": {
+        "version": "V1",
+        "k": 7
+      },
+      "retrieval": {
+        "query": "Design a 5G Radio site capable of delivering a peak UE downlink throughput of 1.5 Gbps and uplink throughput of 250 Mbps. Propose suitable spectrum bands and channel bandwidths, radio configuration, antenna configuration, vendor radio and baseband options, and the key system and network requirements needed to achieve these targets. State your assumptions and explain the engineering trade-offs behind your design.",
+        "k": 7,
+        "timing": {
+          "query_embedding_sec": 0.026866674423217773,
+          "faiss_search_sec": 0.25305676460266113,
+          "total_sec": 0.2799234390258789
+        },
+        "results": [
+          {
+            "rank": 1,
+            "score": 0.750196635723114,
+            "vector_id": 1114537,
+            "chunk_id": "standards/3gpp_rel18/original/22261-ic0.docx::chunk_0044",
+            "document_id": "standards/3gpp_rel18/original/22261-ic0.docx",
+            "source": "standards",
+            "title": "22261-ic0",
+            "evidence_text_chars": 1830,
+            "evidence_text_sha256": "2afbaab59eaf50cf89ce8ef95a1251783225ae8ca999f2cf9813145ab7f2d530"
+          },
+          {
+            "rank": 2,
+            "score": 0.7345435619354248,
+            "vector_id": 576927,
+            "chunk_id": "standards/etsi/marked/TR/tr/tr_125913v090000p/raw.md::chunk_0005",
+            "document_id": "standards/etsi/marked/TR/tr/tr_125913v090000p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2859,
+            "evidence_text_sha256": "e80c2fbcbeaa8d2c8cfcd2f80b43b4ba600a80cd7af8a6736dfa493a8128667a"
+          },
+          {
+            "rank": 3,
+            "score": 0.7256664633750916,
+            "vector_id": 1114542,
+            "chunk_id": "standards/3gpp_rel18/original/22261-ic0.docx::chunk_0049",
+            "document_id": "standards/3gpp_rel18/original/22261-ic0.docx",
+            "source": "standards",
+            "title": "22261-ic0",
+            "evidence_text_chars": 2537,
+            "evidence_text_sha256": "f3948455654a32aab247a807f3b6dc9f404b7893fa4379dcea1624c98715f361"
+          },
+          {
+            "rank": 4,
+            "score": 0.7190378904342651,
+            "vector_id": 78925,
+            "chunk_id": "standards/etsi/marked/TS/ts/ts_122261v191300p/raw.md::chunk_0052",
+            "document_id": "standards/etsi/marked/TS/ts/ts_122261v191300p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2954,
+            "evidence_text_sha256": "5f7aa6337d9b2c2e08c3450e3254cc376475e974a0e34c023b4a748d6a2d72ef"
+          },
+          {
+            "rank": 5,
+            "score": 0.7166778445243835,
+            "vector_id": 745235,
+            "chunk_id": "standards/oran/marked/WG9/O-RAN.WG9.XTRP-REQ-v01.00/raw.md::chunk_0056",
+            "document_id": "standards/oran/marked/WG9/O-RAN.WG9.XTRP-REQ-v01.00/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 299,
+            "evidence_text_sha256": "8b80b150df6a48a3bdc7b8fec500732f398c6f07108f26425b9351c039fa76d4"
+          },
+          {
+            "rank": 6,
+            "score": 0.7134820222854614,
+            "vector_id": 1114636,
+            "chunk_id": "standards/3gpp_rel18/original/22261-ic0.docx::chunk_0143",
+            "document_id": "standards/3gpp_rel18/original/22261-ic0.docx",
+            "source": "standards",
+            "title": "22261-ic0",
+            "evidence_text_chars": 2877,
+            "evidence_text_sha256": "7caf7da3bbf326063b60acfb09e98c82536b21f96ca477a9285bd4c97718aef3"
+          },
+          {
+            "rank": 7,
+            "score": 0.7078123688697815,
+            "vector_id": 1114521,
+            "chunk_id": "standards/3gpp_rel18/original/22261-ic0.docx::chunk_0028",
+            "document_id": "standards/3gpp_rel18/original/22261-ic0.docx",
+            "source": "standards",
+            "title": "22261-ic0",
+            "evidence_text_chars": 2947,
+            "evidence_text_sha256": "295a00971f82d29240cba87ac0f39a680de3a383d518b047c467ccae65d9d806"
+          }
+        ]
+      },
+      "error": null,
+      "timestamp_utc": "2026-08-28T13:09:14.323021+00:00"
+    },
+    {
+      "question_id": "Q12",
+      "category": "Applied Telecom Engineering",
+      "question": "A 5G Standalone network has excellent RSRP and SINR, but users are achieving only 400 Mbps downlink throughput when the site is expected to deliver peak UE throughput above 1 Gbps. Develop a systematic troubleshooting approach. Identify the UE, RAN, transport, 5G Core and configuration parameters you would investigate, and explain how you would isolate the bottleneck.",
+      "expected_points": [
+        "Verify UE capability and supported NR bands",
+        "Verify MIMO capability and number of layers",
+        "Check modulation and coding",
+        "Check bandwidth and carrier configuration",
+        "Check carrier aggregation where applicable",
+        "Check PRB utilisation and cell loading",
+        "Check scheduler configuration",
+        "Check radio/baseband performance",
+        "Check transport/backhaul capacity",
+        "Check latency, packet loss and congestion",
+        "Check UPF and 5G Core performance",
+        "Check QoS and policy configuration",
+        "Compare expected versus actual throughput at each layer",
+        "Use controlled testing to isolate the bottleneck"
+      ],
+      "status": "PASS",
+      "answer": "To systematically troubleshoot the issue of low downlink throughput in a 5G Standalone (SA) network despite excellent RSRP and SINR, I would follow these steps:\n\n1. **Verify Basic Parameters**: \n   - Confirm the actual RSRP and SINR values are indeed excellent and not affected by external factors like interference or measurement errors.\n   - Check the configured bandwidth and channel conditions to ensure they align with expectations for achieving 1 Gbps throughput.\n\n2. **Investigate UE Configuration**:\n   - Examine the UE's radio access bearer configuration, including the modulation and coding scheme (MCS), which directly impacts throughput.\n   - Verify the UE's supported downlink transport block size and ensure it is set to the maximum allowed by the network.\n\n3. **Check RAN Configuration**:\n   - Review the RAN's downlink configuration, including the number of allocated PRBs (Physical Resource Blocks) and the number of layers used in MIMO (Multiple Input Multiple Output).\n   - Ensure the RAN is operating in the optimal transmission mode (e.g., TDD or FDD) and that the TDD UL/DL ratio is correctly configured.\n\n4. **Evaluate Transport Layer Performance**:\n   - Assess the transport layer's performance, including the link speed and stability of the NG (New Generation) interface connecting the 5G Core to the RAN.\n   - Investigate any potential congestion or packet loss that could be affecting throughput.\n\n5. **Inspect 5G Core Configuration**:\n   - Check the 5G Core's configuration for any limitations or misconfigurations that could restrict throughput, such as incorrect QoS settings or insufficient buffer sizes.\n   - Ensure the Core is capable of handling the expected traffic load and is not experiencing congestion.\n\n6. **Analyze Throughput Metrics**:\n   - Compare the measured throughput against theoretical maximums based on the current configuration (e.g., using the formula: Throughput = Bandwidth x MCS x Number of Layers).\n   - Calculate the spectral efficiency to identify any discrepancies between expected and actual performance.\n\n7. **Perform Load Testing**:\n   - Conduct load tests to determine if the throughput degradation is consistent across different loads or if it occurs only under specific conditions.\n   - Monitor real-time metrics such as PDSCH BLER (Block Logical Erasure Rate) to identify potential issues with signal quality or interference.\n\n8. **Review Network Logs and Reports**:\n   - Analyze logs from the UE, RAN, transport layer, and 5G Core to identify any anomalies or recurring issues that could be causing the throughput bottleneck.\n   - Look for patterns in the data that might indicate specific components or configurations as the source of the problem.\n\nBy methodically investigating each component of the 5G SA network—from the UE to the 5G Core—I can isolate the bottleneck causing the discrepancy between the expected and actual downlink throughput. This approach ensures that I address the root cause of the issue rather than merely treating the symptoms.",
+      "input_tokens": 5116,
+      "output_tokens": 611,
+      "total_tokens": 5727,
+      "generation_time_sec": 83.13977479934692,
+      "output_tokens_per_sec": null,
+      "generation_config": {
+        "temperature": 0.01,
+        "top_k": 50,
+        "top_p": 0.95,
+        "repetition_penalty": 1.05,
+        "max_new_tokens": 1024,
+        "do_sample": true
+      },
+      "retriever": {
+        "version": "V1",
+        "k": 7
+      },
+      "retrieval": {
+        "query": "A 5G Standalone network has excellent RSRP and SINR, but users are achieving only 400 Mbps downlink throughput when the site is expected to deliver peak UE throughput above 1 Gbps. Develop a systematic troubleshooting approach. Identify the UE, RAN, transport, 5G Core and configuration parameters you would investigate, and explain how you would isolate the bottleneck.",
+        "k": 7,
+        "timing": {
+          "query_embedding_sec": 0.025931835174560547,
+          "faiss_search_sec": 0.24989676475524902,
+          "total_sec": 0.27582859992980957
+        },
+        "results": [
+          {
+            "rank": 1,
+            "score": 0.718069314956665,
+            "vector_id": 746314,
+            "chunk_id": "standards/oran/marked/TIFG/O-RAN.TIFG.TS.E2E-Test.0-R005-v09.00/raw.md::chunk_0081",
+            "document_id": "standards/oran/marked/TIFG/O-RAN.TIFG.TS.E2E-Test.0-R005-v09.00/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2545,
+            "evidence_text_sha256": "63c70d7c0440ee0d1f1853daf6c4c55ce94cf3cb7a6b7ec6a2b44ab1f9267485"
+          },
+          {
+            "rank": 2,
+            "score": 0.7168952226638794,
+            "vector_id": 746307,
+            "chunk_id": "standards/oran/marked/TIFG/O-RAN.TIFG.TS.E2E-Test.0-R005-v09.00/raw.md::chunk_0074",
+            "document_id": "standards/oran/marked/TIFG/O-RAN.TIFG.TS.E2E-Test.0-R005-v09.00/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2911,
+            "evidence_text_sha256": "3773f2f267a30c23c3d4dc74c903231b085ab56dc5a0435c33cd0318df5ceb87"
+          },
+          {
+            "rank": 3,
+            "score": 0.7155808210372925,
+            "vector_id": 746308,
+            "chunk_id": "standards/oran/marked/TIFG/O-RAN.TIFG.TS.E2E-Test.0-R005-v09.00/raw.md::chunk_0075",
+            "document_id": "standards/oran/marked/TIFG/O-RAN.TIFG.TS.E2E-Test.0-R005-v09.00/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2434,
+            "evidence_text_sha256": "de2ab32d63acd6461a5cb19e0ffc663617f674089c6db678363d2c08bcaa1904"
+          },
+          {
+            "rank": 4,
+            "score": 0.7084363698959351,
+            "vector_id": 1114521,
+            "chunk_id": "standards/3gpp_rel18/original/22261-ic0.docx::chunk_0028",
+            "document_id": "standards/3gpp_rel18/original/22261-ic0.docx",
+            "source": "standards",
+            "title": "22261-ic0",
+            "evidence_text_chars": 2947,
+            "evidence_text_sha256": "295a00971f82d29240cba87ac0f39a680de3a383d518b047c467ccae65d9d806"
+          },
+          {
+            "rank": 5,
+            "score": 0.7053717970848083,
+            "vector_id": 1114519,
+            "chunk_id": "standards/3gpp_rel18/original/22261-ic0.docx::chunk_0026",
+            "document_id": "standards/3gpp_rel18/original/22261-ic0.docx",
+            "source": "standards",
+            "title": "22261-ic0",
+            "evidence_text_chars": 2845,
+            "evidence_text_sha256": "418e4b651dc16241d1e184b3415e1663183206459c07f2287cd76a8189c323b0"
+          },
+          {
+            "rank": 6,
+            "score": 0.7031134366989136,
+            "vector_id": 746311,
+            "chunk_id": "standards/oran/marked/TIFG/O-RAN.TIFG.TS.E2E-Test.0-R005-v09.00/raw.md::chunk_0078",
+            "document_id": "standards/oran/marked/TIFG/O-RAN.TIFG.TS.E2E-Test.0-R005-v09.00/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2476,
+            "evidence_text_sha256": "dc6f6dc8007c1b3613d857902343e9aa753f75c614baaff62b713ed6d45a5948"
+          },
+          {
+            "rank": 7,
+            "score": 0.7019557356834412,
+            "vector_id": 746305,
+            "chunk_id": "standards/oran/marked/TIFG/O-RAN.TIFG.TS.E2E-Test.0-R005-v09.00/raw.md::chunk_0072",
+            "document_id": "standards/oran/marked/TIFG/O-RAN.TIFG.TS.E2E-Test.0-R005-v09.00/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2953,
+            "evidence_text_sha256": "295f4dfcbe1dec0f4bbfebab3361aeb330974f12a11b04dc3ed5144b6368531d"
+          }
+        ]
+      },
+      "error": null,
+      "timestamp_utc": "2026-08-28T13:10:39.499714+00:00"
+    },
+    {
+      "question_id": "Q13",
+      "category": "5G Capacity Planning",
+      "question": "A 5G site has 100 MHz of TDD spectrum at 3.5 GHz and 64T64R massive MIMO. Estimate the peak downlink throughput that could theoretically be achieved for a single UE. State your assumptions regarding modulation, coding, MIMO layers and spectral efficiency, and explain why field throughput would be lower.",
+      "expected_points": [
+        "100 MHz bandwidth",
+        "3.5 GHz TDD operation",
+        "MIMO layer assumptions",
+        "Modulation and coding assumptions",
+        "Spectral-efficiency assumptions",
+        "Theoretical versus practical throughput",
+        "TDD overhead",
+        "Control/reference-signal overhead",
+        "Radio conditions and implementation losses"
+      ],
+      "status": "PASS",
+      "answer": "To estimate the **theoretical peak downlink throughput** for a single UE in a 5G NR system with the given specifications, we will use the **peak spectral efficiency** concept from the provided documents. Here's the step-by-step reasoning:\n\n---\n\n### **Given Specifications**\n- **Spectrum**: 100 MHz (bandwidth)\n- **Frequency**: 3.5 GHz (within FR1)\n- **Duplex Mode**: TDD (Time Division Duplex)\n- **MIMO**: 64T64R (64 transmit, 64 receive antennas)\n- **Technology**: 5G NR (New Radio)\n\n---\n\n### **Key Assumptions & Definitions**\n\nFrom **Document [2]** (ITU-T G.1000 series), the **peak spectral efficiency** is defined as:\n\n> The maximum data rate under ideal conditions normalized by channel bandwidth (in bit/s/Hz), assuming error-free conditions and full utilization of radio resources.\n\nFor 5G NR, the **maximum spectral efficiency** is derived from the **maximum Modulation and Coding Scheme (MCS)** supported. According to **3GPP TS 38.214**, the maximum MCS is **MCS 27**, which uses:\n- **Modulation order**: $ Q_m = 8 $ (256QAM)\n- **Coding rate**: $ R_{\\text{max}} = 948/1024 = 0.925 $\n\nThus, the **peak spectral efficiency** in bits per second per hertz (bps/Hz) is:\n\n$$\n\\text{Spectral Efficiency}_{\\text{peak}} = Q_m \\times R_{\\text{max}} = 8 \\times 0.925 = 7.4036 \\, \\text{bps/Hz}\n$$\n\nThis is the **maximum theoretical limit** under ideal conditions.\n\n---\n\n### **MIMO Layers (Streams)**\n- In **macro BS with 64T64R**, the **downlink (DL) streams** are typically **16**, and **uplink (UL) streams** are **8**.\n- So, for **downlink**, the UE can support **16 data streams** simultaneously.\n- Each stream contributes to the total throughput.\n\n---\n\n### **Spectral Efficiency Calculation**\nThe **total spectral efficiency** for a single UE is:\n\n$$\n\\text{Spectral Efficiency}_{\\text{UE}} = \\text{Spectral Efficiency}_{\\text{peak}} \\times \\text{Number of MIMO layers}\n$$\n\n$$\n= 7.4036 \\, \\text{bps/Hz} \\times 16 = 118.46 \\, \\text{bps/Hz}\n$$\n\n---\n\n### **Peak Throughput Calculation**\nNow, apply this to the **bandwidth**:\n\n$$\n\\text{Peak Throughput} = \\text{Spectral Efficiency}_{\\text{UE}} \\times \\text{Bandwidth}\n$$\n\n$$\n= 118.46 \\, \\text{bps/Hz} \\times 100 \\times 10^6 \\, \\text{Hz} = 11.846 \\times 10^9 \\, \\text{bps} = 11.846 \\, \\text{Gbps}\n$$\n\n---\n\n### **Final Answer**\n**Theoretical Peak Downlink Throughput for a Single UE:**\n$$\n\\boxed{11.85 \\, \\text{Gbps}}\n$$\n\n---\n\n### **Why Field Throughput Would Be Lower**\n1. **Fading and Interference**:\n   - In real-world conditions, the channel is not ideal. Fading (e.g., Rayleigh fading) reduces the effective spectral efficiency.\n   - Interference from other UEs and cells degrades performance.\n\n2. **MIMO Layer Correlation**:\n   - While 64T64R supports up to 64 layers, practical systems use **lower layer correlation** (e.g., 16 layers) due to hardware and beamforming constraints.\n   - This reduces the effective number of independent data streams.\n\n3. **Overhead**:\n   - Protocol overhead (e.g., MAC, RLC, PDCP headers) and control signaling reduce the effective payload throughput.\n\n4. **Power Constraints**:\n   - Maximum transmit power is limited by regulations (e.g., 40 dBm in some cases), which limits coverage and thus achievable throughput at cell edge.\n\n5. **Channel Estimation and Feedback Delay**:\n   - High mobility or delay in feedback loops can reduce performance, especially at high speeds.\n\n6. **Beamforming and Antenna Patterns**:\n   - Massive MIMO requires beamforming, but beam misalignment or imperfect synchronization reduces throughput.\n\n---\n\n### **Summary**\n- **Theoretical Peak**: ~11.85 Gbps (based on ideal conditions).\n- **Field Realism**: ~30–60% of this value (~3.5–7.1 Gbps) due to fading, interference, and overhead.\n- **Key Assum",
+      "input_tokens": 5646,
+      "output_tokens": 1024,
+      "total_tokens": 6670,
+      "generation_time_sec": 148.3492283821106,
+      "output_tokens_per_sec": null,
+      "generation_config": {
+        "temperature": 0.01,
+        "top_k": 50,
+        "top_p": 0.95,
+        "repetition_penalty": 1.05,
+        "max_new_tokens": 1024,
+        "do_sample": true
+      },
+      "retriever": {
+        "version": "V1",
+        "k": 7
+      },
+      "retrieval": {
+        "query": "A 5G site has 100 MHz of TDD spectrum at 3.5 GHz and 64T64R massive MIMO. Estimate the peak downlink throughput that could theoretically be achieved for a single UE. State your assumptions regarding modulation, coding, MIMO layers and spectral efficiency, and explain why field throughput would be lower.",
+        "k": 7,
+        "timing": {
+          "query_embedding_sec": 0.026358604431152344,
+          "faiss_search_sec": 0.26445555686950684,
+          "total_sec": 0.2908141613006592
+        },
+        "results": [
+          {
+            "rank": 1,
+            "score": 0.7166426777839661,
+            "vector_id": 746314,
+            "chunk_id": "standards/oran/marked/TIFG/O-RAN.TIFG.TS.E2E-Test.0-R005-v09.00/raw.md::chunk_0081",
+            "document_id": "standards/oran/marked/TIFG/O-RAN.TIFG.TS.E2E-Test.0-R005-v09.00/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2545,
+            "evidence_text_sha256": "63c70d7c0440ee0d1f1853daf6c4c55ce94cf3cb7a6b7ec6a2b44ab1f9267485"
+          },
+          {
+            "rank": 2,
+            "score": 0.7086781859397888,
+            "vector_id": 921182,
+            "chunk_id": "standards/itu/marked/G/T-REC-G.Sup75-202112-I_PDF-E/raw.md::chunk_0038",
+            "document_id": "standards/itu/marked/G/T-REC-G.Sup75-202112-I_PDF-E/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2733,
+            "evidence_text_sha256": "f9053e0eac7c93e264a64f4bdcc8a89a3de0c4d9d8318b50ee993b47cbef8e18"
+          },
+          {
+            "rank": 3,
+            "score": 0.7049918174743652,
+            "vector_id": 746324,
+            "chunk_id": "standards/oran/marked/TIFG/O-RAN.TIFG.TS.E2E-Test.0-R005-v09.00/raw.md::chunk_0091",
+            "document_id": "standards/oran/marked/TIFG/O-RAN.TIFG.TS.E2E-Test.0-R005-v09.00/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2629,
+            "evidence_text_sha256": "09d8561f61834bd4680837ecf5c41ae53ba61104c3b5af2234c38e15e1fd8f7d"
+          },
+          {
+            "rank": 4,
+            "score": 0.7043115496635437,
+            "vector_id": 746308,
+            "chunk_id": "standards/oran/marked/TIFG/O-RAN.TIFG.TS.E2E-Test.0-R005-v09.00/raw.md::chunk_0075",
+            "document_id": "standards/oran/marked/TIFG/O-RAN.TIFG.TS.E2E-Test.0-R005-v09.00/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2434,
+            "evidence_text_sha256": "de2ab32d63acd6461a5cb19e0ffc663617f674089c6db678363d2c08bcaa1904"
+          },
+          {
+            "rank": 5,
+            "score": 0.7030971050262451,
+            "vector_id": 616610,
+            "chunk_id": "standards/etsi/marked/TR/tr/tr_10355401v010301p/raw.md::chunk_0051",
+            "document_id": "standards/etsi/marked/TR/tr/tr_10355401v010301p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 1570,
+            "evidence_text_sha256": "8f0ebc289c735015bd6042368b845a412ea4aab3c1082918693ae0ebe302b774"
+          },
+          {
+            "rank": 6,
+            "score": 0.7011585235595703,
+            "vector_id": 597837,
+            "chunk_id": "standards/etsi/marked/TR/tr/tr_13790105v161300p/raw.md::chunk_0067",
+            "document_id": "standards/etsi/marked/TR/tr/tr_13790105v161300p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2654,
+            "evidence_text_sha256": "27f46bb1027b646347373b1b6b4267e430a429dc36a6680ed36d7fb98a1e015f"
+          },
+          {
+            "rank": 7,
+            "score": 0.6987572908401489,
+            "vector_id": 597833,
+            "chunk_id": "standards/etsi/marked/TR/tr/tr_13790105v161300p/raw.md::chunk_0063",
+            "document_id": "standards/etsi/marked/TR/tr/tr_13790105v161300p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2661,
+            "evidence_text_sha256": "4cbd8d84c5b408666a143761058de4f53a63d2f06a8ca122ecb0a42fe8e9b348"
+          }
+        ]
+      },
+      "error": null,
+      "timestamp_utc": "2026-08-28T13:13:09.969185+00:00"
+    },
+    {
+      "question_id": "Q14",
+      "category": "5G UL/DL Trade-off",
+      "question": "A 5G SA operator needs to support both 1 Gbps peak DL and 200 Mbps peak UL on a 3.5 GHz TDD network. Propose an appropriate TDD configuration and explain the trade-offs between DL capacity, UL capacity, latency and coverage.",
+      "expected_points": [
+        "Appropriate TDD DL/UL allocation",
+        "DL versus UL capacity trade-off",
+        "UL coverage limitations",
+        "Latency implications",
+        "TDD switching considerations",
+        "Traffic asymmetry assumptions",
+        "Interference considerations"
+      ],
+      "status": "PASS",
+      "answer": "To address the requirements for supporting both 1 Gbps peak DL and 200 Mbps peak UL on a 3.5 GHz TDD network, we must consider the following key factors:\n\n1. **TDD Frame Structure**: The TDD frame structure determines the DL/UL ratio, which impacts the achievable peak data rates. A higher DL ratio increases DL capacity but reduces UL capacity, and vice versa.\n\n2. **Spectrum Efficiency**: The number of layers (MIMO) and the modulation scheme (e.g., 256QAM) affect the spectral efficiency. Higher layers and modulation increase the spectral efficiency.\n\n3. **Framing Overhead**: This affects the effective bandwidth available for data transmission.\n\n4. **Xn Factor**: This factor accounts for additional overheads like MAC/PHY overheads.\n\n5. **Antenna Configuration**: The number of antennas (e.g., 64T64R) influences the number of layers and thus the spectral efficiency.\n\n### Proposed TDD Configuration\n\n- **Frame Structure**: Use a TDD frame structure with a DL ratio of 80% and UL ratio of 20%. This balances the need for high DL capacity while still providing sufficient UL capacity.\n\n- **Spectrum Efficiency**: \n  - **DL**: Use 16 streams (layers) with 64T64R antennas.\n  - **UL**: Use 8 streams (layers) with 64T64R antennas.\n  \n- **Modulation Scheme**: Use 256QAM for both DL and UL to maximize spectral efficiency.\n\n- **Framing Overhead**: Assume a framing overhead of approximately 10% (this value can be adjusted based on actual measurements or specifications).\n\n- **Xn Factor**: Assume an Xn factor of 1.2 (this value can be adjusted based on actual measurements or specifications).\n\n### Calculations\n\nUsing the formula provided in the context:\n\n\\[\n\\text{Bandwidth of single cell} = \\text{spectrum width} \\times \\text{spectrum efficiency} \\times (1 + \\text{framing overhead}) \\times \\text{TDD DL ratio} \\times (1 + X_n)\n\\]\n\nFor **DL**:\n- Spectrum Width = 3.5 GHz\n- Spectrum Efficiency = 16 streams × 256QAM = 4096 bps/Hz\n- Framing Overhead = 10%\n- TDD DL Ratio = 80%\n- Xn = 1.2\n\n\\[\n\\text{DL Bandwidth} = 3.5 \\times 4096 \\times 1.1 \\times 0.8 \\times 1.2 = 1 \\, \\text{Gbps}\n\\]\n\nFor **UL**:\n- Spectrum Efficiency = 8 streams × 256QAM = 2048 bps/Hz\n- TDD UL Ratio = 20%\n\n\\[\n\\text{UL Bandwidth} = 3.5 \\times 2048 \\times 1.1 \\times 0.2 \\times 1.2 = 200 \\, \\text{Mbps}\n\\]\n\n### Trade-offs\n\n- **Latency**: The TDD frame structure with 80% DL and 20% UL ratio may introduce some latency due to the reduced UL capacity. However, this can be mitigated by optimizing the scheduling and using advanced techniques like HARQ.\n  \n- **Coverage**: The higher DL capacity ensures good coverage in areas with high user density, while the UL capacity is sufficient for most use cases. However, in very high-density areas, the UL capacity might be a limiting factor.\n\n### Conclusion\n\nBy configuring the TDD frame with an 80% DL and 20% UL ratio, using 64T64R antennas with 16 streams for DL and 8 streams for UL, and employing 256QAM modulation, the 5G SA operator can achieve the desired peak DL and UL capacities of 1 Gbps and 200 Mbps, respectively. This configuration balances the trade-offs between capacity, latency, and coverage effectively.",
+      "input_tokens": 6005,
+      "output_tokens": 832,
+      "total_tokens": 6837,
+      "generation_time_sec": 127.24559330940247,
+      "output_tokens_per_sec": null,
+      "generation_config": {
+        "temperature": 0.01,
+        "top_k": 50,
+        "top_p": 0.95,
+        "repetition_penalty": 1.05,
+        "max_new_tokens": 1024,
+        "do_sample": true
+      },
+      "retriever": {
+        "version": "V1",
+        "k": 7
+      },
+      "retrieval": {
+        "query": "A 5G SA operator needs to support both 1 Gbps peak DL and 200 Mbps peak UL on a 3.5 GHz TDD network. Propose an appropriate TDD configuration and explain the trade-offs between DL capacity, UL capacity, latency and coverage.",
+        "k": 7,
+        "timing": {
+          "query_embedding_sec": 0.024692058563232422,
+          "faiss_search_sec": 0.25745320320129395,
+          "total_sec": 0.28214526176452637
+        },
+        "results": [
+          {
+            "rank": 1,
+            "score": 0.7188811302185059,
+            "vector_id": 921182,
+            "chunk_id": "standards/itu/marked/G/T-REC-G.Sup75-202112-I_PDF-E/raw.md::chunk_0038",
+            "document_id": "standards/itu/marked/G/T-REC-G.Sup75-202112-I_PDF-E/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2733,
+            "evidence_text_sha256": "f9053e0eac7c93e264a64f4bdcc8a89a3de0c4d9d8318b50ee993b47cbef8e18"
+          },
+          {
+            "rank": 2,
+            "score": 0.6969999074935913,
+            "vector_id": 742542,
+            "chunk_id": "standards/oran/marked/WG8/O-RAN.WG8.TS.AAD.0-R005-v17.00/raw.md::chunk_0016",
+            "document_id": "standards/oran/marked/WG8/O-RAN.WG8.TS.AAD.0-R005-v17.00/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2838,
+            "evidence_text_sha256": "b1837f477fbf842e58fe56fa92c088b85894f640977ccc4ded3b138b081bcf23"
+          },
+          {
+            "rank": 3,
+            "score": 0.695650577545166,
+            "vector_id": 1114542,
+            "chunk_id": "standards/3gpp_rel18/original/22261-ic0.docx::chunk_0049",
+            "document_id": "standards/3gpp_rel18/original/22261-ic0.docx",
+            "source": "standards",
+            "title": "22261-ic0",
+            "evidence_text_chars": 2537,
+            "evidence_text_sha256": "f3948455654a32aab247a807f3b6dc9f404b7893fa4379dcea1624c98715f361"
+          },
+          {
+            "rank": 4,
+            "score": 0.6840291023254395,
+            "vector_id": 603295,
+            "chunk_id": "standards/etsi/marked/TR/tr/tr_137910v190000p/raw.md::chunk_0020",
+            "document_id": "standards/etsi/marked/TR/tr/tr_137910v190000p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2245,
+            "evidence_text_sha256": "2ab861e71b101eb03ba99080e12e4394845dd36722d5ce8cde5659d710d437cc"
+          },
+          {
+            "rank": 5,
+            "score": 0.6797020435333252,
+            "vector_id": 536578,
+            "chunk_id": "standards/etsi/marked/TR/tr/tr_10355402v010101p/raw.md::chunk_0248",
+            "document_id": "standards/etsi/marked/TR/tr/tr_10355402v010101p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2849,
+            "evidence_text_sha256": "55a99af67fef59a6ae1b9c07479c369fe84ee4d812baf949cf8073fc8140341c"
+          },
+          {
+            "rank": 6,
+            "score": 0.6794922351837158,
+            "vector_id": 593912,
+            "chunk_id": "standards/etsi/marked/TR/tr/tr_102662v010101p/raw.md::chunk_0223",
+            "document_id": "standards/etsi/marked/TR/tr/tr_102662v010101p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2516,
+            "evidence_text_sha256": "3d134b100280a12bb317c8adfb1e09508f083033f0145bbcdbdf5c9cf0655c1e"
+          },
+          {
+            "rank": 7,
+            "score": 0.6792678833007812,
+            "vector_id": 1099845,
+            "chunk_id": "standards/3gpp_rel18/original/22104-i30.docx::chunk_0086",
+            "document_id": "standards/3gpp_rel18/original/22104-i30.docx",
+            "source": "standards",
+            "title": "22104-i30",
+            "evidence_text_chars": 2941,
+            "evidence_text_sha256": "106d4c7629c4383a87ee29ea445e471270db536e782d2101699a6383b69b2b8d"
+          }
+        ]
+      },
+      "error": null,
+      "timestamp_utc": "2026-08-28T13:15:19.298676+00:00"
+    },
+    {
+      "question_id": "Q15",
+      "category": "5G Throughput Troubleshooting",
+      "question": "A 5G SA UE has excellent RSRP and SINR but achieves only 300 Mbps DL when the expected peak throughput is above 1 Gbps. Develop a systematic troubleshooting methodology covering UE capability, NR configuration, scheduler, MIMO, PRBs, transport, UPF and 5GC. Explain how you would isolate the bottleneck.",
+      "expected_points": [
+        "UE capability verification",
+        "NR bandwidth and carrier configuration",
+        "MIMO layers",
+        "Modulation and coding",
+        "PRB allocation and utilisation",
+        "Scheduler behaviour",
+        "Transport/backhaul capacity",
+        "UPF performance",
+        "5GC performance",
+        "QoS and policy",
+        "Controlled isolation methodology"
+      ],
+      "status": "PASS",
+      "answer": "To systematically troubleshoot why a 5G SA UE with excellent RSRP (-110 dBm) and SINR (15 dB) achieves only 300 Mbps DL instead of the expected peak throughput above 1 Gbps, I will follow these steps:\n\n1. **Verify UE Capabilities**: Check if the UE supports 5G SA, the required bandwidth (e.g., n100), and the necessary MIMO layers (e.g., 8x8).\n\n2. **Inspect NR Configuration**:\n   - Confirm the UE is correctly configured for 5G SA, including the correct PLMN, slice, and QoS settings.\n   - Ensure the UE is attached to the 5G SA core and that the 5QI is properly assigned.\n\n3. **Evaluate Scheduler and MIMO**:\n   - Verify the scheduler (e.g., 3GPP SA scheduler) is allocating resources optimally.\n   - Check if MIMO is enabled and if the UE is receiving the expected number of layers (e.g., 8 layers).\n\n4. **Check PRB Allocation**:\n   - Ensure the UE is allocated the correct number of PRBs (e.g., 400 PRBs) for DL.\n   - Confirm the PRB allocation is not being throttled due to congestion or other constraints.\n\n5. **Assess Transport Block Size (TBS)**:\n   - Validate that the TBS is set to the maximum allowed (e.g., 2730 bytes for 400 PRBs).\n   - Ensure no transport-level issues (e.g., packet loss, fragmentation) are affecting throughput.\n\n6. **Review 5GC Configuration**:\n   - Confirm the UPF is correctly configured to forward traffic without packet drops.\n   - Check if the 5GC is applying any QoS policies that limit throughput.\n\n7. **Analyze Logging Data**:\n   - Review UE logs for errors, such as BLER exceeding thresholds or unexpected MCS reductions.\n   - Check for any signaling issues (e.g., RRC, NGAP) that could impact throughput.\n\n8. **Perform Gap Analysis**:\n   - Calculate the expected throughput using the formula:  \n     \\[\n     \\text{Throughput} = \\text{MCS} \\times \\text{Number of Layers} \\times \\text{PRB Allocation}\n     \\]\n   - Compare the actual throughput against the expected value to identify discrepancies.\n\nBy isolating each component (UE, NR config, scheduler, MIMO, PRBs, transport, UPF, 5GC) and verifying their configurations and performance, the root cause of the throughput bottleneck can be identified.",
+      "input_tokens": 5030,
+      "output_tokens": 539,
+      "total_tokens": 5569,
+      "generation_time_sec": 72.89328169822693,
+      "output_tokens_per_sec": null,
+      "generation_config": {
+        "temperature": 0.01,
+        "top_k": 50,
+        "top_p": 0.95,
+        "repetition_penalty": 1.05,
+        "max_new_tokens": 1024,
+        "do_sample": true
+      },
+      "retriever": {
+        "version": "V1",
+        "k": 7
+      },
+      "retrieval": {
+        "query": "A 5G SA UE has excellent RSRP and SINR but achieves only 300 Mbps DL when the expected peak throughput is above 1 Gbps. Develop a systematic troubleshooting methodology covering UE capability, NR configuration, scheduler, MIMO, PRBs, transport, UPF and 5GC. Explain how you would isolate the bottleneck.",
+        "k": 7,
+        "timing": {
+          "query_embedding_sec": 0.027599811553955078,
+          "faiss_search_sec": 0.25835633277893066,
+          "total_sec": 0.28595614433288574
+        },
+        "results": [
+          {
+            "rank": 1,
+            "score": 0.7258360385894775,
+            "vector_id": 746307,
+            "chunk_id": "standards/oran/marked/TIFG/O-RAN.TIFG.TS.E2E-Test.0-R005-v09.00/raw.md::chunk_0074",
+            "document_id": "standards/oran/marked/TIFG/O-RAN.TIFG.TS.E2E-Test.0-R005-v09.00/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2911,
+            "evidence_text_sha256": "3773f2f267a30c23c3d4dc74c903231b085ab56dc5a0435c33cd0318df5ceb87"
+          },
+          {
+            "rank": 2,
+            "score": 0.7181007862091064,
+            "vector_id": 746314,
+            "chunk_id": "standards/oran/marked/TIFG/O-RAN.TIFG.TS.E2E-Test.0-R005-v09.00/raw.md::chunk_0081",
+            "document_id": "standards/oran/marked/TIFG/O-RAN.TIFG.TS.E2E-Test.0-R005-v09.00/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2545,
+            "evidence_text_sha256": "63c70d7c0440ee0d1f1853daf6c4c55ce94cf3cb7a6b7ec6a2b44ab1f9267485"
+          },
+          {
+            "rank": 3,
+            "score": 0.7132530212402344,
+            "vector_id": 746316,
+            "chunk_id": "standards/oran/marked/TIFG/O-RAN.TIFG.TS.E2E-Test.0-R005-v09.00/raw.md::chunk_0083",
+            "document_id": "standards/oran/marked/TIFG/O-RAN.TIFG.TS.E2E-Test.0-R005-v09.00/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2824,
+            "evidence_text_sha256": "e2502773f67dd197eda81e5ee58f5626bbaeff174246e3761f746bbdaa85a6d4"
+          },
+          {
+            "rank": 4,
+            "score": 0.710835337638855,
+            "vector_id": 746308,
+            "chunk_id": "standards/oran/marked/TIFG/O-RAN.TIFG.TS.E2E-Test.0-R005-v09.00/raw.md::chunk_0075",
+            "document_id": "standards/oran/marked/TIFG/O-RAN.TIFG.TS.E2E-Test.0-R005-v09.00/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2434,
+            "evidence_text_sha256": "de2ab32d63acd6461a5cb19e0ffc663617f674089c6db678363d2c08bcaa1904"
+          },
+          {
+            "rank": 5,
+            "score": 0.7072263360023499,
+            "vector_id": 746317,
+            "chunk_id": "standards/oran/marked/TIFG/O-RAN.TIFG.TS.E2E-Test.0-R005-v09.00/raw.md::chunk_0084",
+            "document_id": "standards/oran/marked/TIFG/O-RAN.TIFG.TS.E2E-Test.0-R005-v09.00/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2518,
+            "evidence_text_sha256": "51a43fd200b7a271d0eafaf0ecbfdf41bc925f9a4e1ccc4f699e3e68fd176924"
+          },
+          {
+            "rank": 6,
+            "score": 0.7058331370353699,
+            "vector_id": 576820,
+            "chunk_id": "standards/etsi/marked/TR/tr/tr_138913v190000p/raw.md::chunk_0025",
+            "document_id": "standards/etsi/marked/TR/tr/tr_138913v190000p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2764,
+            "evidence_text_sha256": "36aa2e22fc571af2dce083153c5be9775fba9434c7f41e39bb7d9efe4a33ed7c"
+          },
+          {
+            "rank": 7,
+            "score": 0.7043178081512451,
+            "vector_id": 746311,
+            "chunk_id": "standards/oran/marked/TIFG/O-RAN.TIFG.TS.E2E-Test.0-R005-v09.00/raw.md::chunk_0078",
+            "document_id": "standards/oran/marked/TIFG/O-RAN.TIFG.TS.E2E-Test.0-R005-v09.00/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2476,
+            "evidence_text_sha256": "dc6f6dc8007c1b3613d857902343e9aa753f75c614baaff62b713ed6d45a5948"
+          }
+        ]
+      },
+      "error": null,
+      "timestamp_utc": "2026-08-28T13:16:34.230860+00:00"
+    },
+    {
+      "question_id": "Q16",
+      "category": "Open RAN Deployment",
+      "question": "Design a high-level Open RAN deployment for an urban macro site using O-RU, O-DU and O-CU. Specify the key interfaces, fronthaul requirements, synchronization requirements, transport considerations and the major deployment trade-offs compared with an integrated RAN solution.",
+      "expected_points": [
+        "O-RU, O-DU and O-CU placement",
+        "F1 interface",
+        "Open Fronthaul",
+        "Fronthaul bandwidth and latency",
+        "Timing and synchronisation",
+        "Transport requirements",
+        "Compute requirements",
+        "Interoperability considerations",
+        "Operational complexity",
+        "Integrated versus disaggregated RAN trade-offs"
+      ],
+      "status": "PASS",
+      "answer": "To design a high-level Open RAN deployment for an urban macro site using O-RU, O-DU, and O-CU, we must consider the following key aspects:\n\n1. **Key Interfaces**: \n   - **O1 Interface**: Connects the O-RU to the O-DU, facilitating control and management functions.\n   - **E2 Interface**: Enables communication between the O-DU and the Near-Real-Time RIC (Radio Intelligence Controller).\n   - **A1 Interface**: Provides access to the OSS (Operations Support System) for monitoring and management.\n\n2. **Fronthaul Requirements**:\n   - **Open Fronthaul**: Utilizes protocols like eCPRI or IEEE 1914 to ensure flexibility and interoperability.\n   - **Bandwidth**: Must support the required spectrum bandwidth for macro cell deployment, typically in the order of several GHz.\n   - **Latency**: Low latency is critical for URLLC (Ultra-Reliable Low Latency Communications) applications.\n\n3. **Synchronization Requirements**:\n   - **Time Synchronization**: Critical for coherent signal processing in MIMO and beamforming. Use protocols like PTP (Precision Time Protocol) or GPS.\n   - **Carrier Aggregation**: Supports multiple carriers and bands to meet diverse service requirements.\n\n4. **Transport Considerations**:\n   - **Backhaul**: Requires high-speed, reliable connectivity to the core network (e.g., 5G Core).\n   - **Fronthaul**: Should be robust enough to handle the data throughput from O-RU to O-DU.\n   - **Midhaul**: May be necessary for power amplifiers and other equipment.\n\n5. **Deployment Trade-offs**:\n   - **Scalability**: O-RAN allows for easy scaling by adding more O-DUs or O-RUs.\n   - **Cost**: Initial investment may be higher due to the need for additional hardware and infrastructure.\n   - **Flexibility**: Easier to upgrade or replace components without disrupting the entire system.\n\nIn summary, the high-level Open RAN deployment for an urban macro site involves integrating O-RU, O-DU, and O-CU with the specified interfaces, ensuring adequate fronthaul and backhaul capabilities, maintaining precise synchronization, and balancing scalability, cost, and flexibility against traditional integrated RAN solutions.",
+      "input_tokens": 4426,
+      "output_tokens": 476,
+      "total_tokens": 4902,
+      "generation_time_sec": 58.454508781433105,
+      "output_tokens_per_sec": null,
+      "generation_config": {
+        "temperature": 0.01,
+        "top_k": 50,
+        "top_p": 0.95,
+        "repetition_penalty": 1.05,
+        "max_new_tokens": 1024,
+        "do_sample": true
+      },
+      "retriever": {
+        "version": "V1",
+        "k": 7
+      },
+      "retrieval": {
+        "query": "Design a high-level Open RAN deployment for an urban macro site using O-RU, O-DU and O-CU. Specify the key interfaces, fronthaul requirements, synchronization requirements, transport considerations and the major deployment trade-offs compared with an integrated RAN solution.",
+        "k": 7,
+        "timing": {
+          "query_embedding_sec": 0.02615976333618164,
+          "faiss_search_sec": 0.25472450256347656,
+          "total_sec": 0.2808842658996582
+        },
+        "results": [
+          {
+            "rank": 1,
+            "score": 0.7759693264961243,
+            "vector_id": 740439,
+            "chunk_id": "standards/oran/marked/WG6/O-RAN.WG6.CADS-v08.01/raw.md::chunk_0036",
+            "document_id": "standards/oran/marked/WG6/O-RAN.WG6.CADS-v08.01/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2704,
+            "evidence_text_sha256": "3428ffb35fe4d8f2da30a9eb747215b94ad3fe5387cb0edbcc496c979b181459"
+          },
+          {
+            "rank": 2,
+            "score": 0.7678623199462891,
+            "vector_id": 754996,
+            "chunk_id": "standards/oran/marked/WG1/O-RAN.WG1.TR.Use-Cases-Analysis-Report-R005-v19.00/raw.md::chunk_0086",
+            "document_id": "standards/oran/marked/WG1/O-RAN.WG1.TR.Use-Cases-Analysis-Report-R005-v19.00/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2915,
+            "evidence_text_sha256": "39083df4cad6bc95e168edab2be5fd24bc7078538012757fd08540557f0d71d9"
+          },
+          {
+            "rank": 3,
+            "score": 0.7481834292411804,
+            "vector_id": 573565,
+            "chunk_id": "standards/etsi/marked/TR/tr/tr_104037v120000p/raw.md::chunk_0097",
+            "document_id": "standards/etsi/marked/TR/tr/tr_104037v120000p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2242,
+            "evidence_text_sha256": "bbe309ffd85679c93dacfd10b04698ab6a739e1a9ed3b72ae2d7b6830caa5cf7"
+          },
+          {
+            "rank": 4,
+            "score": 0.7451929450035095,
+            "vector_id": 1504977,
+            "chunk_id": "academic/arxiv/arxiv_2111.13754.pdf::chunk_0007",
+            "document_id": "academic/arxiv/arxiv_2111.13754.pdf",
+            "source": "academic",
+            "title": "arxiv_2111.13754",
+            "evidence_text_chars": 2997,
+            "evidence_text_sha256": "3bf6e666eb43081c7384d97018d3da5f650a3a089f2792ff6082958d77e1ffd0"
+          },
+          {
+            "rank": 5,
+            "score": 0.7407152652740479,
+            "vector_id": 573617,
+            "chunk_id": "standards/etsi/marked/TR/tr/tr_104037v120000p/raw.md::chunk_0149",
+            "document_id": "standards/etsi/marked/TR/tr/tr_104037v120000p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 1447,
+            "evidence_text_sha256": "3d8f16ac5d572c3be708c5222bbd873f388d5f0fb558047770a08c715c961c42"
+          },
+          {
+            "rank": 6,
+            "score": 0.7392482161521912,
+            "vector_id": 754989,
+            "chunk_id": "standards/oran/marked/WG1/O-RAN.WG1.TR.Use-Cases-Analysis-Report-R005-v19.00/raw.md::chunk_0079",
+            "document_id": "standards/oran/marked/WG1/O-RAN.WG1.TR.Use-Cases-Analysis-Report-R005-v19.00/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2867,
+            "evidence_text_sha256": "d1e7b99483054779d5d6a36c566b1480e9dc400112d4802040437192d1c14566"
+          },
+          {
+            "rank": 7,
+            "score": 0.7388976812362671,
+            "vector_id": 552806,
+            "chunk_id": "standards/etsi/marked/TR/tr/tr_104106v030000p/raw.md::chunk_0308",
+            "document_id": "standards/etsi/marked/TR/tr/tr_104106v030000p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 300,
+            "evidence_text_sha256": "d7a388acb7fa0149cf24889bcbd5dcfb52ebff04598a64373beaa2518afbb4f3"
+          }
+        ]
+      },
+      "error": null,
+      "timestamp_utc": "2026-08-28T13:17:34.688178+00:00"
+    },
+    {
+      "question_id": "Q17",
+      "category": "Cloud-Native Telecom",
+      "question": "An operator wants to deploy 5G Core and selected RAN network functions on Kubernetes. Propose an architecture covering Kubernetes nodes, networking, storage, observability, high availability and workload placement. Identify which telecom workloads are suitable for cloud-native deployment and which require special consideration for real-time performance.",
+      "expected_points": [
+        "Kubernetes cluster architecture",
+        "Worker-node design",
+        "Container networking",
+        "Storage considerations",
+        "Observability",
+        "High availability",
+        "Workload placement",
+        "CPU and NUMA considerations",
+        "Real-time workload considerations",
+        "CNF deployment and lifecycle"
+      ],
+      "status": "PASS",
+      "answer": "To address the operator's request for deploying 5G Core and selected RAN network functions on Kubernetes, the proposed architecture must consider several critical components: Kubernetes nodes, networking, storage, observability, high availability, and workload placement. Additionally, the suitability of telecom workloads for cloud-native deployment must be evaluated, along with considerations for real-time performance.\n\n**Kubernetes Nodes:**\n- **Physical Nodes**: Deploy Kubernetes clusters with dedicated physical servers or virtual machines (VMs) to host the 5G Core and RAN network functions. These nodes should be equipped with sufficient CPU, memory, and storage resources to handle the demands of 5G workloads.\n- **Containerized Workloads**: Utilize containerization technologies like Docker to package 5G Core and RAN network functions into lightweight, portable containers that can run on any Kubernetes node.\n\n**Networking:**\n- **Overlay Networking**: Implement an overlay network (e.g., Cilium, Calico) to enable communication between Kubernetes pods and nodes while maintaining isolation and security.\n- **SDN Integration**: Integrate Software-Defined Networking (SDN) solutions to manage and control network traffic efficiently, ensuring low latency and high throughput for 5G services.\n\n**Storage:**\n- **Persistent Volumes (PVs)**: Use Kubernetes Persistent Volumes to store critical data and configurations for 5G Core and RAN network functions. Ensure that PVs are backed by high-performance, reliable storage systems (e.g., SSDs, SANs).\n- **StatefulSets**: Employ StatefulSets to manage stateful applications that require stable, unique network identifiers and persistent storage.\n\n**Observability:**\n- **Logging and Monitoring**: Implement logging and monitoring solutions (e.g., ELK stack, Prometheus, Grafana) to track the health and performance of Kubernetes nodes, pods, and services.\n- **Tracing**: Use distributed tracing tools (e.g., Jaeger, Zipkin) to monitor and analyze the flow of requests across microservices, ensuring real-time performance and identifying bottlenecks.\n\n**High Availability:**\n- **HA Kubernetes Clusters**: Deploy Kubernetes clusters with high availability using tools like kubeadm, kops, or managed services (e.g., EKS, GKE) to ensure fault tolerance and minimize downtime.\n- **Multi-Zone Deployment**: Distribute Kubernetes nodes across multiple geographic zones to prevent single points of failure and ensure service continuity.\n\n**Workload Placement:**\n- **Resource Allocation**: Dynamically allocate resources based on workload demands using Kubernetes' Horizontal Pod Autoscaler (HPA) and Vertical Pod Autoscaler (VPA).\n- **Affinity and Anti-Affinity**: Configure pod affinity and anti-affinity rules to ensure optimal distribution of workloads across nodes, avoiding resource contention and ensuring high availability.\n\n**Suitability of Telecom Workloads for Cloud-Native Deployment:**\n- **5G Core Network Functions**: Most 5G Core network functions (e.g., AMF, SMF, UPF) are suitable for cloud-native deployment due to their stateless nature and scalability requirements. Containerization allows for efficient resource utilization and rapid deployment.\n- **RAN Network Functions**: Selected RAN network functions (e.g., BBU, CU, DU) can also be deployed in a cloud-native manner, leveraging Kubernetes for orchestration and scalability. However, real-time performance considerations must be addressed, particularly for functions requiring low latency and deterministic behavior.\n\n**Special Considerations for Real-Time Performance:**\n- **Latency Requirements**: For real-time applications, ensure that Kubernetes nodes are provisioned with sufficient CPU and memory resources to meet latency requirements. Use Quality of Service (QoS) mechanisms to prioritize critical workloads.\n- **Deterministic Behavior**: Implement mechanisms to ensure deterministic behavior for time-sensitive functions, such as jitter buffers and real-time scheduling policies within Kubernetes.\n\nIn conclusion, deploying 5G Core and selected RAN network functions on Kubernetes requires careful consideration of infrastructure, networking, storage, observability, high availability, and workload placement. While most telecom workloads are suitable for cloud-native deployment, real-time performance considerations must be addressed to ensure optimal functionality and user experience.",
+      "input_tokens": 3209,
+      "output_tokens": 845,
+      "total_tokens": 4054,
+      "generation_time_sec": 81.0226731300354,
+      "output_tokens_per_sec": null,
+      "generation_config": {
+        "temperature": 0.01,
+        "top_k": 50,
+        "top_p": 0.95,
+        "repetition_penalty": 1.05,
+        "max_new_tokens": 1024,
+        "do_sample": true
+      },
+      "retriever": {
+        "version": "V1",
+        "k": 7
+      },
+      "retrieval": {
+        "query": "An operator wants to deploy 5G Core and selected RAN network functions on Kubernetes. Propose an architecture covering Kubernetes nodes, networking, storage, observability, high availability and workload placement. Identify which telecom workloads are suitable for cloud-native deployment and which require special consideration for real-time performance.",
+        "k": 7,
+        "timing": {
+          "query_embedding_sec": 0.02574634552001953,
+          "faiss_search_sec": 0.38054871559143066,
+          "total_sec": 0.4062950611114502
+        },
+        "results": [
+          {
+            "rank": 1,
+            "score": 0.7187082767486572,
+            "vector_id": 716990,
+            "chunk_id": "standards/gsma/marked/FASG/FS.40 v3.0/raw.md::chunk_0096",
+            "document_id": "standards/gsma/marked/FASG/FS.40 v3.0/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2688,
+            "evidence_text_sha256": "a64e9e9dfd9cf3fb9f49230e39df0867f045075cd6012d7050db0c813715a0e6"
+          },
+          {
+            "rank": 2,
+            "score": 0.7184730172157288,
+            "vector_id": 1134872,
+            "chunk_id": "open_source/free5gc_labs/lab7/README.md::chunk_0003",
+            "document_id": "open_source/free5gc_labs/lab7/README.md",
+            "source": "open_source",
+            "title": "README",
+            "evidence_text_chars": 496,
+            "evidence_text_sha256": "97c7915b99bc70cfcfed237a45289baae733bd6f65ccbb4079a74d294a32d9ad"
+          },
+          {
+            "rank": 3,
+            "score": 0.7150505781173706,
+            "vector_id": 1447035,
+            "chunk_id": "cloud_native/kubernetes/content/en/blog/_posts/2018/policy-in-kubernetes.md::chunk_0002",
+            "document_id": "cloud_native/kubernetes/content/en/blog/_posts/2018/policy-in-kubernetes.md",
+            "source": "cloud_native",
+            "title": "policy-in-kubernetes",
+            "evidence_text_chars": 299,
+            "evidence_text_sha256": "8232656042dd65c20db1c9fcd36e76aa9fd8329eb844a90f1503777cef5cfd76"
+          },
+          {
+            "rank": 4,
+            "score": 0.7098150253295898,
+            "vector_id": 1134873,
+            "chunk_id": "open_source/free5gc_labs/lab7/README.md::chunk_0004",
+            "document_id": "open_source/free5gc_labs/lab7/README.md",
+            "source": "open_source",
+            "title": "README",
+            "evidence_text_chars": 300,
+            "evidence_text_sha256": "83c378986b9738a4fa8775a8014697ee5264f430676c19b9c01b4f9252977176"
+          },
+          {
+            "rank": 5,
+            "score": 0.7092334032058716,
+            "vector_id": 1114590,
+            "chunk_id": "standards/3gpp_rel18/original/22261-ic0.docx::chunk_0097",
+            "document_id": "standards/3gpp_rel18/original/22261-ic0.docx",
+            "source": "standards",
+            "title": "22261-ic0",
+            "evidence_text_chars": 2153,
+            "evidence_text_sha256": "74399a7357beaee91ccb6bd7fb113be8791545bae8ba66bdeaabeabfc3fed8d5"
+          },
+          {
+            "rank": 6,
+            "score": 0.7080602645874023,
+            "vector_id": 723882,
+            "chunk_id": "standards/gsma/marked/NG/NG.126 v5.0/raw.md::chunk_0041",
+            "document_id": "standards/gsma/marked/NG/NG.126 v5.0/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2906,
+            "evidence_text_sha256": "1ee0dd76e3ea5cbac2ec342fb57b11d563c03cf712106db9644e880eec5a2b62"
+          },
+          {
+            "rank": 7,
+            "score": 0.7029415369033813,
+            "vector_id": 740413,
+            "chunk_id": "standards/oran/marked/WG6/O-RAN.WG6.CADS-v08.01/raw.md::chunk_0010",
+            "document_id": "standards/oran/marked/WG6/O-RAN.WG6.CADS-v08.01/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2826,
+            "evidence_text_sha256": "3c6ccb2acfe7023f2c08193453207edf8fe6a82dc16eebeb60bf838b47dabff1"
+          }
+        ]
+      },
+      "error": null,
+      "timestamp_utc": "2026-08-28T13:18:57.901521+00:00"
+    },
+    {
+      "question_id": "Q18",
+      "category": "RAN Capacity Expansion",
+      "question": "A 5G site is experiencing increasing congestion during the busy hour. The operator has 100 MHz at 3.5 GHz but cannot obtain additional spectrum. Propose at least three engineering approaches to increase capacity. Compare their expected benefits, costs, complexity and impact on coverage.",
+      "expected_points": [
+        "Additional carrier or spectrum options where available",
+        "Massive MIMO optimisation",
+        "Sectorisation",
+        "Small-cell densification",
+        "Beamforming optimisation",
+        "Load balancing",
+        "Scheduler optimisation",
+        "Carrier aggregation considerations",
+        "Capacity versus coverage trade-offs",
+        "Cost and implementation complexity"
+      ],
+      "status": "PASS",
+      "answer": "To address the increasing congestion at a 5G site during busy hours without obtaining additional spectrum, several engineering approaches can be considered. Here are three viable strategies along with their expected benefits, costs, complexity, and impact on coverage:\n\n1. **Advanced Antenna Technologies (e.g., Massive MIMO)**:\n   - **Benefits**: Massive MIMO can significantly improve spectral efficiency by allowing multiple antennas to serve multiple users simultaneously. This approach can enhance capacity without requiring additional spectrum.\n   - **Costs**: Implementing Massive MIMO involves substantial investment in new hardware, including a large number of antennas and baseband processing units. It also requires advanced algorithms for signal processing.\n   - **Complexity**: High. Deploying Massive MIMO requires expertise in antenna design, signal processing, and system integration. Network planning and optimization are also more complex.\n   - **Impact on Coverage**: Minimal impact on coverage since the focus is on improving capacity within the existing footprint.\n\n2. **Cellular Network Optimization (e.g., Carrier Aggregation)**:\n   - **Benefits**: By combining multiple carriers (e.g., combining 3.5 GHz with other available bands), the effective bandwidth can be increased, thereby improving capacity. This approach leverages existing spectrum more efficiently.\n   - **Costs**: Moderate. Requires investment in network upgrades to support carrier aggregation and ensure compatibility across different frequency bands.\n   - **Complexity**: Medium. While carrier aggregation is a standard feature in modern 5G networks, it requires careful network planning and coordination to optimize performance.\n   - **Impact on Coverage**: Minimal impact on coverage, as the focus is on optimizing the use of existing spectrum.\n\n3. **Network Slicing and Edge Computing**:\n   - **Benefits**: Network slicing allows the creation of virtualized networks tailored to specific use cases, which can help manage congestion by prioritizing traffic. Edge computing can offload some processing tasks from the core network, reducing congestion.\n   - **Costs**: High. Implementing network slicing and edge computing requires significant investment in infrastructure, including edge servers and specialized software.\n   - **Complexity**: Very high. Network slicing involves complex orchestration and management systems to create and manage virtual networks. Edge computing also requires distributed architecture and new operational procedures.\n   - **Impact on Coverage**: Minimal impact on coverage, as the focus is on managing network resources and traffic.\n\nEach of these approaches has its trade-offs in terms of cost, complexity, and impact on coverage. While they can help alleviate congestion during busy hours, they do not directly address the underlying issue of spectrum scarcity. Therefore, a combination of these strategies may be necessary to achieve the desired capacity improvements.",
+      "input_tokens": 3795,
+      "output_tokens": 538,
+      "total_tokens": 4333,
+      "generation_time_sec": 57.888672828674316,
+      "output_tokens_per_sec": null,
+      "generation_config": {
+        "temperature": 0.01,
+        "top_k": 50,
+        "top_p": 0.95,
+        "repetition_penalty": 1.05,
+        "max_new_tokens": 1024,
+        "do_sample": true
+      },
+      "retriever": {
+        "version": "V1",
+        "k": 7
+      },
+      "retrieval": {
+        "query": "A 5G site is experiencing increasing congestion during the busy hour. The operator has 100 MHz at 3.5 GHz but cannot obtain additional spectrum. Propose at least three engineering approaches to increase capacity. Compare their expected benefits, costs, complexity and impact on coverage.",
+        "k": 7,
+        "timing": {
+          "query_embedding_sec": 0.024133682250976562,
+          "faiss_search_sec": 0.284512996673584,
+          "total_sec": 0.30864667892456055
+        },
+        "results": [
+          {
+            "rank": 1,
+            "score": 0.6804596781730652,
+            "vector_id": 773940,
+            "chunk_id": "standards/itu/marked/K/T-REC-K.Sup14-201909-I_PDF-E/raw.md::chunk_0018",
+            "document_id": "standards/itu/marked/K/T-REC-K.Sup14-201909-I_PDF-E/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 903,
+            "evidence_text_sha256": "282de55bc3475acd2b5c0d5360b204a2795c0b0d8042bac6ae0b7904bf2a9d7d"
+          },
+          {
+            "rank": 2,
+            "score": 0.6758014559745789,
+            "vector_id": 777790,
+            "chunk_id": "standards/itu/marked/K/T-REC-K.Sup9-201905-I_PDF-E/raw.md::chunk_0009",
+            "document_id": "standards/itu/marked/K/T-REC-K.Sup9-201905-I_PDF-E/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2923,
+            "evidence_text_sha256": "47cb029888131454c39854a1aa96a9e0fcc692337ea47e798e5a67223cdaa66b"
+          },
+          {
+            "rank": 3,
+            "score": 0.6727134585380554,
+            "vector_id": 578898,
+            "chunk_id": "standards/etsi/marked/TR/tr/tr_103541v010101p/raw.md::chunk_0025",
+            "document_id": "standards/etsi/marked/TR/tr/tr_103541v010101p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 1565,
+            "evidence_text_sha256": "150789a43f90e69cca7ea520997762493b043296e3c5bbf630c9f3cdfa1d5d6f"
+          },
+          {
+            "rank": 4,
+            "score": 0.6678386330604553,
+            "vector_id": 1114542,
+            "chunk_id": "standards/3gpp_rel18/original/22261-ic0.docx::chunk_0049",
+            "document_id": "standards/3gpp_rel18/original/22261-ic0.docx",
+            "source": "standards",
+            "title": "22261-ic0",
+            "evidence_text_chars": 2537,
+            "evidence_text_sha256": "f3948455654a32aab247a807f3b6dc9f404b7893fa4379dcea1624c98715f361"
+          },
+          {
+            "rank": 5,
+            "score": 0.6667824983596802,
+            "vector_id": 912310,
+            "chunk_id": "standards/itu/marked/G/T-REC-G.1052-202405-I_PDF-E/raw.md::chunk_0020",
+            "document_id": "standards/itu/marked/G/T-REC-G.1052-202405-I_PDF-E/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2995,
+            "evidence_text_sha256": "3326b679173677c16a1cfe84976758ce6096c7f5fdaf1c164b96ad12b41b824e"
+          },
+          {
+            "rank": 6,
+            "score": 0.66473388671875,
+            "vector_id": 9861,
+            "chunk_id": "standards/etsi/marked/ES/es/es_203700v010201p/raw.md::chunk_0024",
+            "document_id": "standards/etsi/marked/ES/es/es_203700v010201p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2844,
+            "evidence_text_sha256": "1bd540bfe48d3a8fd2ac4fd92b599d0ea7e67d1825702e8e5c9bff5b23e31ee8"
+          },
+          {
+            "rank": 7,
+            "score": 0.6635828018188477,
+            "vector_id": 1505990,
+            "chunk_id": "academic/textbooks/computer_networks_systems_approach/direct/access.rst::chunk_0008",
+            "document_id": "academic/textbooks/computer_networks_systems_approach/direct/access.rst",
+            "source": "academic",
+            "title": "access",
+            "evidence_text_chars": 252,
+            "evidence_text_sha256": "e0567423a99d50c5858ea1a45bb2f78f055c519e9a32b6d050c7dcb6e481fa1b"
+          }
+        ]
+      },
+      "error": null,
+      "timestamp_utc": "2026-08-28T13:19:57.841498+00:00"
+    },
+    {
+      "question_id": "Q19",
+      "category": "Network Failure Isolation",
+      "question": "Following a software upgrade, 5G users experience intermittent PDU session drops across multiple sites. RAN radio indicators remain normal. Develop a fault-isolation methodology across RAN, transport, 5GC, Kubernetes/platform infrastructure and software configuration. Explain the evidence you would collect before identifying the root cause.",
+      "expected_points": [
+        "Correlate issue with software upgrade",
+        "RAN signalling verification",
+        "Transport packet loss and latency checks",
+        "AMF/SMF/UPF investigation",
+        "PDU session signalling analysis",
+        "Kubernetes health and resource checks",
+        "Pod/container restart and event analysis",
+        "Configuration and version comparison",
+        "Logs, metrics and traces",
+        "Rollback or controlled comparison",
+        "Evidence-based root-cause isolation"
+      ],
+      "status": "PASS",
+      "answer": "The requested details are not available in the documentation.",
+      "input_tokens": 5373,
+      "output_tokens": 11,
+      "total_tokens": 5384,
+      "generation_time_sec": 10.007513046264648,
+      "output_tokens_per_sec": null,
+      "generation_config": {
+        "temperature": 0.01,
+        "top_k": 50,
+        "top_p": 0.95,
+        "repetition_penalty": 1.05,
+        "max_new_tokens": 1024,
+        "do_sample": true
+      },
+      "retriever": {
+        "version": "V1",
+        "k": 7
+      },
+      "retrieval": {
+        "query": "Following a software upgrade, 5G users experience intermittent PDU session drops across multiple sites. RAN radio indicators remain normal. Develop a fault-isolation methodology across RAN, transport, 5GC, Kubernetes/platform infrastructure and software configuration. Explain the evidence you would collect before identifying the root cause.",
+        "k": 7,
+        "timing": {
+          "query_embedding_sec": 0.02547597885131836,
+          "faiss_search_sec": 0.26875877380371094,
+          "total_sec": 0.2942347526550293
+        },
+        "results": [
+          {
+            "rank": 1,
+            "score": 0.6913211345672607,
+            "vector_id": 1064687,
+            "chunk_id": "standards/3gpp_rel18/original/23700-60-i00.docx::chunk_0196",
+            "document_id": "standards/3gpp_rel18/original/23700-60-i00.docx",
+            "source": "standards",
+            "title": "23700-60-i00",
+            "evidence_text_chars": 2570,
+            "evidence_text_sha256": "9656f88197fdb2f2dd65ef86c0be998f2d6c8af92f241190f255581456428b28"
+          },
+          {
+            "rank": 2,
+            "score": 0.6873701214790344,
+            "vector_id": 109775,
+            "chunk_id": "standards/etsi/marked/TS/ts/ts_123527v190500p/raw.md::chunk_0027",
+            "document_id": "standards/etsi/marked/TS/ts/ts_123527v190500p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2884,
+            "evidence_text_sha256": "3cb18a5389f765c0cebfe050e40e15647926b24d53044da1eae20d528b10df73"
+          },
+          {
+            "rank": 3,
+            "score": 0.6802315711975098,
+            "vector_id": 1124455,
+            "chunk_id": "open_source/free5gc_docs/docs/blog/20260211/20260211.md::chunk_0004",
+            "document_id": "open_source/free5gc_docs/docs/blog/20260211/20260211.md",
+            "source": "open_source",
+            "title": "20260211",
+            "evidence_text_chars": 2976,
+            "evidence_text_sha256": "521d090596790eb50f53e9f6abdc8f30cd9acf1c9edebc921e7054fa1f57de28"
+          },
+          {
+            "rank": 4,
+            "score": 0.6766191720962524,
+            "vector_id": 109770,
+            "chunk_id": "standards/etsi/marked/TS/ts/ts_123527v190500p/raw.md::chunk_0022",
+            "document_id": "standards/etsi/marked/TS/ts/ts_123527v190500p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2159,
+            "evidence_text_sha256": "c9ee6a0601586381bd925c60a81a4460815bf40408fc2534f9b5a5a7cf36fbeb"
+          },
+          {
+            "rank": 5,
+            "score": 0.6732183694839478,
+            "vector_id": 1064678,
+            "chunk_id": "standards/3gpp_rel18/original/23700-60-i00.docx::chunk_0187",
+            "document_id": "standards/3gpp_rel18/original/23700-60-i00.docx",
+            "source": "standards",
+            "title": "23700-60-i00",
+            "evidence_text_chars": 2777,
+            "evidence_text_sha256": "134442e99db0cb8cd86ae64e6bfc9f3efd7775202bf68a5fbfe7ca4fcc39c145"
+          },
+          {
+            "rank": 6,
+            "score": 0.6725461483001709,
+            "vector_id": 109774,
+            "chunk_id": "standards/etsi/marked/TS/ts/ts_123527v190500p/raw.md::chunk_0026",
+            "document_id": "standards/etsi/marked/TS/ts/ts_123527v190500p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2959,
+            "evidence_text_sha256": "949bca1c333b72e2df581ea883497e4bc1b4c468823249cae96461f6c64d48bf"
+          },
+          {
+            "rank": 7,
+            "score": 0.6721253991127014,
+            "vector_id": 230493,
+            "chunk_id": "standards/etsi/marked/TS/ts/ts_123501v190700p/raw.md::chunk_0869",
+            "document_id": "standards/etsi/marked/TS/ts/ts_123501v190700p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2734,
+            "evidence_text_sha256": "469773884a0fc21e3d0b1ac0f3545692f0bdeb1a49924fdfda7bb5559a9c1b6c"
+          }
+        ]
+      },
+      "error": null,
+      "timestamp_utc": "2026-08-28T13:20:09.766800+00:00"
+    },
+    {
+      "question_id": "Q20",
+      "category": "End-to-End Network Design",
+      "question": "Design an end-to-end 5G SA network for an enterprise requiring high throughput, low latency and reliable connectivity. Cover the RAN, transport, 5G Core, UPF placement, cloud infrastructure, security, synchronization, observability and operational automation. State your assumptions and identify the principal engineering trade-offs.",
+      "expected_points": [
+        "5G SA RAN architecture",
+        "Transport design",
+        "5G Core architecture",
+        "UPF placement and latency",
+        "Cloud infrastructure",
+        "Security architecture",
+        "Synchronization",
+        "Observability",
+        "Automation and lifecycle management",
+        "Reliability and high availability",
+        "Explicit assumptions",
+        "Engineering trade-offs"
+      ],
+      "status": "PASS",
+      "answer": "# End-to-End 5G SA Network Design for Enterprise Requirements\n\n## Assumptions\n- Enterprise requires high throughput (Gbps), low latency (<10ms), and high reliability\n- Deployment scenario: Enterprise-owned infrastructure with potential for hybrid cloud\n- Security requirements: Enterprise-grade encryption, secure management, and compliance\n- Budget constraints: Cost-effective yet scalable solution\n\n## 1. Radio Access Network (RAN)\n### Key Components\n- **gNBs**: Deployed at enterprise premises for high-throughput, low-latency connectivity\n- **eNodeB**: Legacy LTE support for backward compatibility\n- **Antenna System**: High-gain phased array antennas for beamforming and directional coverage\n\n### Trade-offs\n- **Spectrum Utilization**: \n  - *Trade-off*: 5GHz mmWave for high throughput vs. sub-6GHz for better coverage\n  - *Assumption*: Sub-6GHz bands used for enterprise deployment due to better propagation\n- **Cell Density**: \n  - *Trade-off*: Small cells for indoor coverage vs. macro cells for outdoor\n  - *Assumption*: Small cells deployed in high-traffic areas\n\n## 2. Transport Network\n### Key Components\n- **Xn Interface**: 5G Core to RAN (gNB/eNodeB)\n- **S1 Interface**: 5G Core to EPC (if integrated)\n- **N2 Interface**: Control plane (gRPC/HTTP/2)\n- **N3 Interface**: User plane (QoS-aware routing)\n\n### Trade-offs\n- **Latency**: \n  - *Trade-off*: Direct RAN-to-Core vs. transport network\n  - *Assumption*: Direct RAN-to-Core for ultra-low latency\n- **Scalability**: \n  - *Trade-off*: SDN-based transport vs. traditional MPLS\n  - *Assumption*: SDN for dynamic path computation\n\n## 3. 5G Core Network\n### Key Components\n- **AMF (Access Management Function)**: Handles authentication, mobility, and session management\n- **SMF (Session Management Function)**: Manages PDU sessions and QoS\n- **UPF (User Plane Function)**: Separates control and user planes\n- **AF (Application Function)**: Custom enterprise applications (e.g., IoT, M2M)\n\n### Trade-offs\n- **Service-Based Architecture**: \n  - *Trade-off*: Monolithic vs. microservices\n  - *Assumption*: Microservices for scalability and fault isolation\n- **Security**: \n  - *Trade-off*: ZTA (Zero Trust Architecture) vs. traditional perimeter defense\n  - *Assumption*: ZTA with MFA and least-privilege access\n\n## 4. UPF Placement\n### Key Considerations\n- **Distributed UPF**: \n  - *Trade-off*: Centralized vs. distributed UPF\n  - *Assumption*: Distributed UPF for scalability and redundancy\n- **Location**: \n  - *Trade-off*: Edge vs. Cloud\n  - *Assumption*: Edge-deployed UPF for low-latency processing\n\n## 5. Cloud Infrastructure\n### Key Components\n- **Private Cloud**: \n  - *Trade-off*: Public vs. private cloud\n  - *Assumption*: Private cloud for enterprise data isolation\n- **Hybrid Cloud**: \n  - *Trade-off*: On-prem vs. multi-cloud\n  - *Assumption*: Hybrid cloud for workload optimization\n\n### Trade-offs\n- **Resource Allocation**: \n  - *Trade-off*: Static vs. dynamic provisioning\n  - *Assumption*: Dynamic provisioning via Kubernetes for elasticity\n- **Automation**: \n  - *Trade-off*: Manual vs. automated orchestration\n  - *Assumption*: Infrastructure-as-Code (IaC) for reproducibility\n\n## 6. Security\n### Key Measures\n- **Encryption**: \n  - *Trade-off*: AES-256 vs. quantum-resistant algorithms\n  - *Assumption*: AES-256 for current standards\n- **Authentication**: \n  - *Trade-off*: 5G AKA vs. SUA\n  - *Assumption*: SUA for enterprise-grade security\n- **Compliance**: \n  - *Trade-off*: ISO 27001 vs. SOC 2\n  - *Assumption*: SOC 2 Type II for enterprise compliance\n\n## 7. Synchronization\n### Key Components\n- **GNSS**: \n  - *Trade-off*: GPS vs. Galileo\n  - *Assumption*: GPS for global coverage\n- **Time Servers**: \n  - *Trade-off*: NTP vs. PTP\n  - *Assumption*: PTP for sub-millisecond synchronization\n\n## 8. Observability\n### Key Metrics\n- **Latency**: <10ms (critical for enterprise applications)\n- **Throughput**: >100Gbps (enterprise-grade)\n- **Rel",
+      "input_tokens": 4065,
+      "output_tokens": 1024,
+      "total_tokens": 5089,
+      "generation_time_sec": 116.03596138954163,
+      "output_tokens_per_sec": null,
+      "generation_config": {
+        "temperature": 0.01,
+        "top_k": 50,
+        "top_p": 0.95,
+        "repetition_penalty": 1.05,
+        "max_new_tokens": 1024,
+        "do_sample": true
+      },
+      "retriever": {
+        "version": "V1",
+        "k": 7
+      },
+      "retrieval": {
+        "query": "Design an end-to-end 5G SA network for an enterprise requiring high throughput, low latency and reliable connectivity. Cover the RAN, transport, 5G Core, UPF placement, cloud infrastructure, security, synchronization, observability and operational automation. State your assumptions and identify the principal engineering trade-offs.",
+        "k": 7,
+        "timing": {
+          "query_embedding_sec": 0.026079893112182617,
+          "faiss_search_sec": 0.2553715705871582,
+          "total_sec": 0.2814514636993408
+        },
+        "results": [
+          {
+            "rank": 1,
+            "score": 0.7402408123016357,
+            "vector_id": 737196,
+            "chunk_id": "standards/gsma/marked/WAS/WA.51 v2.3/raw.md::chunk_0007",
+            "document_id": "standards/gsma/marked/WAS/WA.51 v2.3/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2242,
+            "evidence_text_sha256": "c93406d2a82388ed6ad6f2e656fafbf9d829d9ab4bf0f00c99e28b1a1ed7ce36"
+          },
+          {
+            "rank": 2,
+            "score": 0.7275344729423523,
+            "vector_id": 737195,
+            "chunk_id": "standards/gsma/marked/WAS/WA.51 v2.3/raw.md::chunk_0006",
+            "document_id": "standards/gsma/marked/WAS/WA.51 v2.3/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2558,
+            "evidence_text_sha256": "199dcb050795722d4364aba0862ba00c8d6bdbc626f14ebb29f91b40443ab182"
+          },
+          {
+            "rank": 3,
+            "score": 0.7262215614318848,
+            "vector_id": 616478,
+            "chunk_id": "standards/etsi/marked/TR/tr/tr_128925v190000p/raw.md::chunk_0005",
+            "document_id": "standards/etsi/marked/TR/tr/tr_128925v190000p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 300,
+            "evidence_text_sha256": "7d37fdb102ebe834bb1b27702be9a7a952a32f17e3c43463c071510e42bdabb8"
+          },
+          {
+            "rank": 4,
+            "score": 0.7109391689300537,
+            "vector_id": 745153,
+            "chunk_id": "standards/oran/marked/WG9/O-RAN.WG9.XTRP-REQ.0-R005-v02.00/raw.md::chunk_0073",
+            "document_id": "standards/oran/marked/WG9/O-RAN.WG9.XTRP-REQ.0-R005-v02.00/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2618,
+            "evidence_text_sha256": "bc3c6a6f2dcbeaa1d85aafaffc5c6a605416c1b2a8388ee525a6f64c03518de1"
+          },
+          {
+            "rank": 5,
+            "score": 0.7071858048439026,
+            "vector_id": 571662,
+            "chunk_id": "standards/etsi/marked/TR/tr/tr_121915v150000p/raw.md::chunk_0015",
+            "document_id": "standards/etsi/marked/TR/tr/tr_121915v150000p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2841,
+            "evidence_text_sha256": "77bfbf7316269199f289d346def2d5a04920a77d29a5c5e5b2c8c1f7087531b6"
+          },
+          {
+            "rank": 6,
+            "score": 0.7016310095787048,
+            "vector_id": 78900,
+            "chunk_id": "standards/etsi/marked/TS/ts/ts_122261v191300p/raw.md::chunk_0027",
+            "document_id": "standards/etsi/marked/TS/ts/ts_122261v191300p/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 1876,
+            "evidence_text_sha256": "ad73fbe3c04bf209b32898741067b86bd16aaee189c2079c950f4a5764864d0c"
+          },
+          {
+            "rank": 7,
+            "score": 0.7008985877037048,
+            "vector_id": 724487,
+            "chunk_id": "standards/gsma/marked/NG/NG.123 v2.0/raw.md::chunk_0026",
+            "document_id": "standards/gsma/marked/NG/NG.123 v2.0/raw.md",
+            "source": "standards",
+            "title": "raw",
+            "evidence_text_chars": 2814,
+            "evidence_text_sha256": "fb1ca4a7f146086770079857c3bfd4e9b0dd3f63909f1ff26b5c93e3d518a543"
+          }
+        ]
+      },
+      "error": null,
+      "timestamp_utc": "2026-08-28T13:22:07.923470+00:00"
+    }
+  ]
+}

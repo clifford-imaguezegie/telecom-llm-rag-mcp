@@ -1,0 +1,139 @@
+{
+  "schema": "module2_result_manifest_v1",
+  "benchmark": {
+    "track1_sha256": "44fc5072f0220200ac6021dc59a772a84db0802a969a513b35146ed9b19b2472",
+    "track2_sha256": "fae5ed4de2222e9642460dd3e7d63e9711519bdee833440fe6e68cefb562df86",
+    "location": "benchmarks/module_1_2/"
+  },
+  "public_export_policy": {
+    "model_answers": "retained",
+    "generation_metadata": "retained where present",
+    "retrieval_rank_score_ids": "retained",
+    "retrieved_source_text": "omitted from public exports",
+    "local_filesystem_paths": "omitted from public exports",
+    "evidence_text_fingerprint": "SHA-256 retained",
+    "reason": "Reduce repository size and avoid republishing long source-document excerpts while preserving retrieval provenance."
+  },
+  "files": [
+    {
+      "track": "Track 1",
+      "system_name": "Essential AI Only",
+      "mode": "LLM_ONLY",
+      "source_filename": "track1_essentialai_llm_results_20260828_101033.json",
+      "source_sha256": "2079f8ef11a5650d5d26b32afb6cde435bd7f2353b24bb3ab0eb317893896acb",
+      "public_export": "track1_essential_ai_only.json",
+      "public_export_sha256": "bb786a14a3180d9865da8d3ea626ca48675e48e9b7a49d5ec3f92b6179e6e037",
+      "questions": 20,
+      "pass": 20,
+      "fail": 0
+    },
+    {
+      "track": "Track 1",
+      "system_name": "Essential AI + RAG",
+      "mode": "RAG_V1",
+      "source_filename": "track1_essentialai_rag_results_20260828_125927.json",
+      "source_sha256": "631c6a2744e105683ec9274414e3db2fd4b91c841e54d6d4ad9259f6a35a37a2",
+      "public_export": "track1_essential_ai_plus_rag.json",
+      "public_export_sha256": "7c42cedf1dc9ac6f312cd36b4057bb75dd2c88263f5b464a544e3e6408eb12dd",
+      "questions": 20,
+      "pass": 20,
+      "fail": 0
+    },
+    {
+      "track": "Track 1",
+      "system_name": "Gemma 4 Only",
+      "mode": "LLM_ONLY",
+      "source_filename": "track1_gemma4_llm_results.json",
+      "source_sha256": "6f73fd16b1adbb0f8fbf34adf1429a3cb07bb1b010fa5af3362f848f726b9e30",
+      "public_export": "track1_gemma_4_only.json",
+      "public_export_sha256": "fd03b291d3a8cf08c2b184814fec411531dab53b580ac6382905325bb1e50a3e",
+      "questions": 20,
+      "pass": 20,
+      "fail": 0
+    },
+    {
+      "track": "Track 1",
+      "system_name": "Gemma 4 + RAG",
+      "mode": "RAG_V1",
+      "source_filename": "track1_gemma4_vllm_rag_results_20260827_193305.json",
+      "source_sha256": "faaacdfa60db58543529dbbe02f50dcb820f5981f038c8dfe5808cbcb1977b8c",
+      "public_export": "track1_gemma_4_plus_rag.json",
+      "public_export_sha256": "1a175cbdc7f20c56ac77278b0c1723864ad9fb2fe2b36aa7a3affcbaeb6f81ca",
+      "questions": 20,
+      "pass": 20,
+      "fail": 0
+    },
+    {
+      "track": "Track 1",
+      "system_name": "Otel 2.0 Only",
+      "mode": "LLM_ONLY",
+      "source_filename": "track1_otel2_llm_results_20260826_232923.json",
+      "source_sha256": "813f357e5b8ee4ac3ad462e41933a0a42e28855600c4d2ffc0986ad10ee330af",
+      "public_export": "track1_otel_2_0_only.json",
+      "public_export_sha256": "e2b8ad4ccafcbafc55ef61f8085ff19604dbc1a6f365af123cab29b1ca4f3aa2",
+      "questions": 20,
+      "pass": 20,
+      "fail": 0
+    },
+    {
+      "track": "Track 2",
+      "system_name": "Essential AI Only",
+      "mode": "LLM_ONLY",
+      "source_filename": "track2_essentialai_llm_results_20260828_103230.json",
+      "source_sha256": "b223e8560e3e7efa16503ee3730914d56f3a157533a48812ede555c3216367a5",
+      "public_export": "track2_essential_ai_only.json",
+      "public_export_sha256": "c47a6d0ca1da2d751f59485c919fb2b50c0bec48a78354ef15f7abebb6efdd42",
+      "questions": 32,
+      "pass": 32,
+      "fail": 0
+    },
+    {
+      "track": "Track 2",
+      "system_name": "Essential AI + RAG",
+      "mode": "RAG_V1",
+      "source_filename": "track2_essentialai_rag_results_20260828_132208.json",
+      "source_sha256": "5c20ce8dc06ff26b3a7254735b540c7640a7eeba1192e123568040f076e51ebb",
+      "public_export": "track2_essential_ai_plus_rag.json",
+      "public_export_sha256": "025485481e12d6b78a4a7eaff8d9b10b6a91aa6f2231fb6bb5d33ff1c0d700ae",
+      "questions": 32,
+      "pass": 23,
+      "fail": 9
+    },
+    {
+      "track": "Track 2",
+      "system_name": "Gemma 4 Only",
+      "mode": "LLM_ONLY",
+      "source_filename": "track2_gemma4_llm_result.json",
+      "source_sha256": "ed18ce4896d3e4a18d546e2cda6a58a4192c7ac80cd0813c8ae8d55f2f690c3b",
+      "public_export": "track2_gemma_4_only.json",
+      "public_export_sha256": "762b07b2baf01121051e270ed378517f36d9b3b8ae712b880a1520126ec27985",
+      "questions": 32,
+      "pass": 32,
+      "fail": 0
+    },
+    {
+      "track": "Track 2",
+      "system_name": "Gemma 4 + RAG",
+      "mode": "RAG_V1",
+      "source_filename": "track2_gemma4_vllm_rag_results_20260827_193951.json",
+      "source_sha256": "6b0e7469bdb3adc18b867921b5ff93ccd098d1b5bdd21e375b35abf7d195eb2b",
+      "public_export": "track2_gemma_4_plus_rag.json",
+      "public_export_sha256": "e790d7a27eb75f518ba47eb95475372ea20e4417315d5de5db883f920d2f856a",
+      "questions": 32,
+      "pass": 32,
+      "fail": 0
+    },
+    {
+      "track": "Track 2",
+      "system_name": "Otel 2.0 Only",
+      "mode": "LLM_ONLY",
+      "source_filename": "track2_otel2_llm_results_20260827_004654.json",
+      "source_sha256": "08b6636d9b5d2cc16a6e742799b13d734db615a9f11701fe8a249844c3c25233",
+      "public_export": "track2_otel_2_0_only.json",
+      "public_export_sha256": "b30143d1bb7c21d3355be8eca3236ad77e48c16e11aef189a79657c58dc5a6e4",
+      "questions": 32,
+      "pass": 32,
+      "fail": 0
+    }
+  ]
+}
