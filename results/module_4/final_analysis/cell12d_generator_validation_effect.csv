@@ -1,0 +1,6 @@
+model,status,n,mean_quality_pct,median_quality_pct
+Gemma 4 12B,Generator validation PASS,15,92.5,100.0
+Qwen3.5 9B,Generator validation FAIL,11,73.18,77.5
+Qwen3.5 9B,Generator validation PASS,5,77.75,85.0
+Qwen3.8 27B,Generator validation FAIL,14,84.02,88.75
+Qwen3.8 27B,Generator validation PASS,2,99.38,99.38

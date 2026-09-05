@@ -1,0 +1,48 @@
+evaluation_id,generator_key,generator_label,question_id,domain,technical_correctness,requirement_coverage,evidence_grounding,evidence_answer_consistency,technical_synthesis,unsupported_claims_control,overall_score,quality_percentage,major_error,unsupported_claims_detected,negative_control_abstention,judge_finish_reason,judge_latency_s,judge_completion_tokens,judge_attempt_count,candidate_original_validation_pass
+gemma4_12b::Q1,gemma4_12b,Gemma 4 12B IT QAT W4A16,Q1,5G Core,3,4,3,4,4,3,3.45,86.25,False,False,,stop,471.86402315099986,6584,1,True
+gemma4_12b::Q2,gemma4_12b,Gemma 4 12B IT QAT W4A16,Q2,Mobility,4,4,4,4,4,4,4.0,100.0,False,False,,stop,527.9053150140026,7333,1,True
+gemma4_12b::Q3,gemma4_12b,Gemma 4 12B IT QAT W4A16,Q3,RAN,4,4,4,4,4,4,4.0,100.0,False,False,,stop,857.936229838997,11880,1,True
+gemma4_12b::Q4,gemma4_12b,Gemma 4 12B IT QAT W4A16,Q4,QoS,4,4,4,4,4,4,4.0,100.0,False,False,,stop,487.53232277499774,6775,1,True
+gemma4_12b::Q5,gemma4_12b,Gemma 4 12B IT QAT W4A16,Q5,Security,4,4,4,4,4,4,4.0,100.0,False,False,,stop,590.3708349519948,8135,1,True
+gemma4_12b::Q6,gemma4_12b,Gemma 4 12B IT QAT W4A16,Q6,Internet Transport,4,4,3,4,4,3,3.75,93.75,False,True,,stop,634.3536467890008,8795,1,True
+gemma4_12b::Q7,gemma4_12b,Gemma 4 12B IT QAT W4A16,Q7,Telecom AI Research,4,4,4,4,4,4,4.0,100.0,False,False,,stop,436.8871120739932,6115,1,True
+gemma4_12b::Q8,gemma4_12b,Gemma 4 12B IT QAT W4A16,Q8,5G SBA + Internet Protocols,3,3,2,3,3,2,2.75,68.75,False,True,,stop,345.82934053299687,4846,1,True
+gemma4_12b::Q9,gemma4_12b,Gemma 4 12B IT QAT W4A16,Q9,O-RAN Architecture,4,4,4,4,4,4,4.0,100.0,False,False,,stop,808.7911483670032,11046,1,True
+gemma4_12b::Q10,gemma4_12b,Gemma 4 12B IT QAT W4A16,Q10,Cloud-Native 5G Core,3,3,3,4,3,3,3.1,77.5,False,True,,stop,528.9717565309984,7293,1,True
+gemma4_12b::Q11,gemma4_12b,Gemma 4 12B IT QAT W4A16,Q11,IETF Security,4,4,4,4,4,4,4.0,100.0,False,False,,stop,468.1445796090047,6531,1,True
+gemma4_12b::Q12,gemma4_12b,Gemma 4 12B IT QAT W4A16,Q12,Telecom AI Research,4,4,4,4,4,4,4.0,100.0,False,False,,stop,433.94823271399946,6073,1,True
+gemma4_12b::Q13,gemma4_12b,Gemma 4 12B IT QAT W4A16,Q13,5G SBA + Cloud Platform,4,4,3,4,4,3,3.75,93.75,False,True,,stop,538.973837503996,7471,1,True
+gemma4_12b::Q14,gemma4_12b,Gemma 4 12B IT QAT W4A16,Q14,AI/ML + 5G QoS and Slicing,3,3,3,3,3,2,2.95,73.75,False,True,,stop,469.31220909699914,6544,1,True
+gemma4_12b::Q15,gemma4_12b,Gemma 4 12B IT QAT W4A16,Q15,Cross-Layer 5G Fault Isolation,4,4,3,4,4,3,3.75,93.75,False,True,,stop,304.7959844029974,4265,1,True
+qwen38_27b::Q1,qwen38_27b,Qwen3.8 27B Official BF16 → Runtime BnB INT4,Q1,5G Core,3,3,3,4,3,2,3.05,76.25,False,True,,stop,448.24921857700247,6234,1,False
+qwen38_27b::Q2,qwen38_27b,Qwen3.8 27B Official BF16 → Runtime BnB INT4,Q2,Mobility,2,3,2,2,2,1,2.2,55.0,True,True,,stop,506.66286541099544,7026,1,False
+qwen38_27b::Q3,qwen38_27b,Qwen3.8 27B Official BF16 → Runtime BnB INT4,Q3,RAN,4,4,4,4,4,2,3.9,97.5,False,True,,stop,480.36925315400003,6738,1,False
+qwen38_27b::Q4,qwen38_27b,Qwen3.8 27B Official BF16 → Runtime BnB INT4,Q4,QoS,4,3,3,4,4,4,3.55,88.75,False,True,,stop,642.0811579839938,8814,1,False
+qwen38_27b::Q5,qwen38_27b,Qwen3.8 27B Official BF16 → Runtime BnB INT4,Q5,Security,4,3,4,4,4,4,3.75,93.75,False,False,,stop,566.9293399660019,7803,1,False
+qwen38_27b::Q6,qwen38_27b,Qwen3.8 27B Official BF16 → Runtime BnB INT4,Q6,Internet Transport,4,4,4,4,4,4,4.0,100.0,False,False,,stop,522.6343908569979,7271,1,False
+qwen38_27b::Q7,qwen38_27b,Qwen3.8 27B Official BF16 → Runtime BnB INT4,Q7,Telecom AI Research,4,4,4,4,4,4,4.0,100.0,False,False,,stop,326.5055354740034,4578,1,True
+qwen38_27b::Q8,qwen38_27b,Qwen3.8 27B Official BF16 → Runtime BnB INT4,Q8,5G SBA + Internet Protocols,3,3,2,3,3,2,2.75,68.75,False,True,,stop,407.0731899149978,5600,1,False
+qwen38_27b::Q9,qwen38_27b,Qwen3.8 27B Official BF16 → Runtime BnB INT4,Q9,O-RAN Architecture,4,4,4,4,4,4,4.0,100.0,False,False,,stop,612.4228216280026,8435,1,False
+qwen38_27b::Q10,qwen38_27b,Qwen3.8 27B Official BF16 → Runtime BnB INT4,Q10,Cloud-Native 5G Core,3,4,3,4,4,3,3.45,86.25,False,True,,stop,290.3972465420011,4041,1,False
+qwen38_27b::Q11,qwen38_27b,Qwen3.8 27B Official BF16 → Runtime BnB INT4,Q11,IETF Security,4,4,3,4,4,2,3.7,92.5,False,True,,stop,474.9425544650003,6599,1,False
+qwen38_27b::Q12,qwen38_27b,Qwen3.8 27B Official BF16 → Runtime BnB INT4,Q12,Telecom AI Research,4,4,3,4,4,3,3.75,93.75,False,True,,stop,533.6724013249986,7410,1,False
+qwen38_27b::Q13,qwen38_27b,Qwen3.8 27B Official BF16 → Runtime BnB INT4,Q13,5G SBA + Cloud Platform,3,2,2,3,2,2,2.4,60.0,False,True,,stop,370.47581938000076,5237,1,False
+qwen38_27b::Q14,qwen38_27b,Qwen3.8 27B Official BF16 → Runtime BnB INT4,Q14,AI/ML + 5G QoS and Slicing,4,3,3,4,4,4,3.55,88.75,False,False,,stop,358.70451753400266,5020,1,False
+qwen38_27b::Q15,qwen38_27b,Qwen3.8 27B Official BF16 → Runtime BnB INT4,Q15,Cross-Layer 5G Fault Isolation,4,2,3,4,2,2,3.0,75.0,False,True,,stop,463.30275422400155,6393,1,False
+qwen38_27b::Q16,qwen38_27b,Qwen3.8 27B Official BF16 → Runtime BnB INT4,Q16,Unsupported Proprietary Knowledge,4,4,4,4,4,3,3.95,98.75,False,True,True,stop,441.5579280989987,6119,1,True
+qwen35_9b::Q1,qwen35_9b,Qwen3.5 9B Official BF16 → Runtime BnB INT4,Q1,5G Core,2,3,2,1,2,1,2.1,52.5,True,True,,stop,320.2090862429977,4528,1,True
+qwen35_9b::Q2,qwen35_9b,Qwen3.5 9B Official BF16 → Runtime BnB INT4,Q2,Mobility,2,3,2,2,2,2,2.25,56.25,False,True,,stop,497.5896141539997,6888,1,False
+qwen35_9b::Q3,qwen35_9b,Qwen3.5 9B Official BF16 → Runtime BnB INT4,Q3,RAN,3,3,2,3,2,1,2.6,65.0,False,True,,stop,424.50761851399875,6071,1,True
+qwen35_9b::Q4,qwen35_9b,Qwen3.5 9B Official BF16 → Runtime BnB INT4,Q4,QoS,3,4,2,4,3,2,3.1,77.5,False,True,,stop,528.9372588100014,7317,1,False
+qwen35_9b::Q5,qwen35_9b,Qwen3.5 9B Official BF16 → Runtime BnB INT4,Q5,Security,2,3,2,2,2,1,2.2,55.0,True,True,,stop,348.1181339709947,4960,1,False
+qwen35_9b::Q6,qwen35_9b,Qwen3.5 9B Official BF16 → Runtime BnB INT4,Q6,Internet Transport,3,4,3,4,4,2,3.4,85.0,False,True,,stop,718.7176557560015,9895,1,True
+qwen35_9b::Q7,qwen35_9b,Qwen3.5 9B Official BF16 → Runtime BnB INT4,Q7,Telecom AI Research,3,4,3,4,4,3,3.45,86.25,False,True,,stop,509.80384379399766,7075,1,True
+qwen35_9b::Q8,qwen35_9b,Qwen3.5 9B Official BF16 → Runtime BnB INT4,Q8,5G SBA + Internet Protocols,2,2,2,1,2,1,1.85,46.25,True,True,,stop,288.4505922639946,4011,1,False
+qwen35_9b::Q9,qwen35_9b,Qwen3.5 9B Official BF16 → Runtime BnB INT4,Q9,O-RAN Architecture,3,4,3,3,3,3,3.25,81.25,False,True,,stop,564.3762962239998,7789,1,False
+qwen35_9b::Q10,qwen35_9b,Qwen3.5 9B Official BF16 → Runtime BnB INT4,Q10,Cloud-Native 5G Core,2,3,2,3,2,1,2.3,57.5,False,True,,stop,337.75370927300537,4701,1,False
+qwen35_9b::Q11,qwen35_9b,Qwen3.5 9B Official BF16 → Runtime BnB INT4,Q11,IETF Security,4,4,3,4,3,3,3.65,91.25,False,True,,stop,441.0315626740048,6154,1,False
+qwen35_9b::Q12,qwen35_9b,Qwen3.5 9B Official BF16 → Runtime BnB INT4,Q12,Telecom AI Research,4,4,4,4,4,4,4.0,100.0,False,False,,stop,568.444355013009,7805,1,False
+qwen35_9b::Q13,qwen35_9b,Qwen3.5 9B Official BF16 → Runtime BnB INT4,Q13,5G SBA + Cloud Platform,3,2,3,3,2,3,2.65,66.25,False,False,,stop,419.0046214470058,5829,1,False
+qwen35_9b::Q14,qwen35_9b,Qwen3.5 9B Official BF16 → Runtime BnB INT4,Q14,AI/ML + 5G QoS and Slicing,4,2,3,4,4,2,3.2,80.0,False,True,,stop,553.3974392319942,7668,1,False
+qwen35_9b::Q15,qwen35_9b,Qwen3.5 9B Official BF16 → Runtime BnB INT4,Q15,Cross-Layer 5G Fault Isolation,4,4,3,4,4,3,3.75,93.75,False,True,,stop,391.6010724499938,5451,1,False
+qwen35_9b::Q16,qwen35_9b,Qwen3.5 9B Official BF16 → Runtime BnB INT4,Q16,Unsupported Proprietary Knowledge,4,4,4,4,4,4,4.0,100.0,False,False,True,stop,321.7262977359933,4529,1,True

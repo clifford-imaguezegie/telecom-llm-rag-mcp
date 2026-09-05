@@ -1,0 +1,4 @@
+generator_key,model,stress_cases,aligned_cases,mean_stress_quality_pct,alignment_rate_pct
+gemma4_12b,Gemma 4 12B,7,4,91.25,57.14285714285714
+qwen38_27b,Qwen3.8 27B,7,6,85.17857142857143,85.71428571428571
+qwen35_9b,Qwen3.5 9B,7,5,81.42857142857143,71.42857142857143

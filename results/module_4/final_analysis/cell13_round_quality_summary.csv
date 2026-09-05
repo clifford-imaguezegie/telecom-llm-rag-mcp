@@ -1,0 +1,10 @@
+generator_key,model,retrieval_rounds,n,mean_quality_pct,mean_e2e_s
+gemma4_12b,Gemma 4 12B,1,2,100.0,43.48
+gemma4_12b,Gemma 4 12B,2,5,94.25,53.81
+gemma4_12b,Gemma 4 12B,3,8,89.53,66.14
+qwen35_9b,Qwen3.5 9B,1,11,70.57,44.15
+qwen35_9b,Qwen3.5 9B,2,1,100.0,64.48
+qwen35_9b,Qwen3.5 9B,3,3,72.5,68.33
+qwen38_27b,Qwen3.8 27B,1,5,97.25,122.06
+qwen38_27b,Qwen3.8 27B,2,6,85.62,144.23
+qwen38_27b,Qwen3.8 27B,3,4,69.06,160.93

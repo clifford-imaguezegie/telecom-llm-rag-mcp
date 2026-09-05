@@ -1,0 +1,37 @@
+{
+  "cell": "12D",
+  "section": "5_independent_evaluation",
+  "analysis_type": "CPU_ONLY_POST_HOC",
+  "artifact_source": "kaggle",
+  "kaggle_dataset": "cliffordimaguezegie/telecom-ai-module-4-outputs",
+  "created_utc": "2026-09-05T11:58:38.266357+00:00",
+  "benchmark_version": "module4_hybrid_eval_v1",
+  "benchmark_sha256": "c6160e33d5d2bd420ddffe7f820590c5becfa9521012d5373f06451bc9b44040",
+  "judge_model": "ibm-granite/granite-4.2-8b",
+  "judge_revision": "7fce579a7fbbad4b1e7703b6850cefd517a4002b",
+  "rubric_sha256": "45d273ca621000ea43e208b233e25b906049de2f57601b9062b130b99e4f1809",
+  "judge_config_sha256": "4e135615780eccd7f7f140c1fb35af55569924ced99a4a87d28c2c2de2413742",
+  "planned_judgments": 48,
+  "valid_judgments": 47,
+  "failed_judgments": 1,
+  "evaluation_completeness_pct": 97.9167,
+  "missing_evaluation_ids": [
+    "gemma4_12b::Q16"
+  ],
+  "fair_primary_comparison": {
+    "question_set": "Q1-Q15",
+    "questions_per_model": 15,
+    "judgments": 45,
+    "reason": "Gemma Q16 independent judgment failed schema validation. Q1-Q15 therefore provides the complete common comparison set."
+  },
+  "q16_policy": {
+    "gemma4_12b": "NOT_EVALUATED_NO_IMPUTATION",
+    "qwen38_27b": "AVAILABLE",
+    "qwen35_9b": "AVAILABLE"
+  },
+  "benchmark_hash_pass": true,
+  "rubric_hash_pass": true,
+  "judge_pilot_pass": true,
+  "composite_score_validation_pass": true,
+  "output_directory": "/content/module4_analysis"
+}

@@ -1,0 +1,43 @@
+model,domain,n,mean_quality_pct
+Gemma 4 12B,5G Core,1,86.25
+Gemma 4 12B,5G SBA + Cloud Platform,1,93.75
+Gemma 4 12B,5G SBA + Internet Protocols,1,68.75
+Gemma 4 12B,AI/ML + 5G QoS and Slicing,1,73.75
+Gemma 4 12B,Cloud-Native 5G Core,1,77.5
+Gemma 4 12B,Cross-Layer 5G Fault Isolation,1,93.75
+Gemma 4 12B,IETF Security,1,100.0
+Gemma 4 12B,Internet Transport,1,93.75
+Gemma 4 12B,Mobility,1,100.0
+Gemma 4 12B,O-RAN Architecture,1,100.0
+Gemma 4 12B,QoS,1,100.0
+Gemma 4 12B,RAN,1,100.0
+Gemma 4 12B,Security,1,100.0
+Gemma 4 12B,Telecom AI Research,2,100.0
+Qwen3.5 9B,5G Core,1,52.5
+Qwen3.5 9B,5G SBA + Cloud Platform,1,66.25
+Qwen3.5 9B,5G SBA + Internet Protocols,1,46.25
+Qwen3.5 9B,AI/ML + 5G QoS and Slicing,1,80.0
+Qwen3.5 9B,Cloud-Native 5G Core,1,57.5
+Qwen3.5 9B,Cross-Layer 5G Fault Isolation,1,93.75
+Qwen3.5 9B,IETF Security,1,91.25
+Qwen3.5 9B,Internet Transport,1,85.0
+Qwen3.5 9B,Mobility,1,56.25
+Qwen3.5 9B,O-RAN Architecture,1,81.25
+Qwen3.5 9B,QoS,1,77.5
+Qwen3.5 9B,RAN,1,65.0
+Qwen3.5 9B,Security,1,55.0
+Qwen3.5 9B,Telecom AI Research,2,93.12
+Qwen3.8 27B,5G Core,1,76.25
+Qwen3.8 27B,5G SBA + Cloud Platform,1,60.0
+Qwen3.8 27B,5G SBA + Internet Protocols,1,68.75
+Qwen3.8 27B,AI/ML + 5G QoS and Slicing,1,88.75
+Qwen3.8 27B,Cloud-Native 5G Core,1,86.25
+Qwen3.8 27B,Cross-Layer 5G Fault Isolation,1,75.0
+Qwen3.8 27B,IETF Security,1,92.5
+Qwen3.8 27B,Internet Transport,1,100.0
+Qwen3.8 27B,Mobility,1,55.0
+Qwen3.8 27B,O-RAN Architecture,1,100.0
+Qwen3.8 27B,QoS,1,88.75
+Qwen3.8 27B,RAN,1,97.5
+Qwen3.8 27B,Security,1,93.75
+Qwen3.8 27B,Telecom AI Research,2,96.88
