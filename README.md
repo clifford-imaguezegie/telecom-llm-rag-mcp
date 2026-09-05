@@ -1,4 +1,4 @@
-# Telecom LLM, RAG & MCP
+# Telecom AI Engineering Platform
 
 An experimental telecom AI engineering project exploring the progressive integration of **Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), Model Context Protocol (MCP), adaptive knowledge access, AI agents, production AI architecture, and autonomous network operations**.
 
