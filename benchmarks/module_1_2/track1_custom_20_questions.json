@@ -1,0 +1,325 @@
+[
+  {
+    "id": "Q01",
+    "category": "5G Core",
+    "question": "What are the primary responsibilities of the AMF in a 5G Standalone network?",
+    "expected_points": [
+      "Access and mobility management",
+      "UE registration management",
+      "NAS signalling termination",
+      "UE authentication and security context handling",
+      "Mobility and reachability management",
+      "Interaction with other 5G Core network functions"
+    ]
+  },
+  {
+    "id": "Q02",
+    "category": "5G Core",
+    "question": "Explain the differences between the AMF, SMF and UPF in the 5G Core.",
+    "expected_points": [
+      "AMF performs access and mobility management",
+      "AMF handles UE registration and NAS signalling",
+      "SMF manages PDU sessions",
+      "SMF performs UPF selection and control",
+      "UPF performs user-plane packet forwarding",
+      "UPF provides connectivity toward external data networks",
+      "Clear control-plane versus user-plane distinction"
+    ]
+  },
+  {
+    "id": "Q03",
+    "category": "5G RAN",
+    "question": "Explain the roles of the CU, DU and RU in a 5G RAN architecture.",
+    "expected_points": [
+      "CU performs higher-layer RAN functions",
+      "DU performs lower-layer and real-time processing",
+      "RU handles radio-frequency and lower-PHY functions",
+      "Functional split between CU, DU and RU",
+      "Relevant interfaces such as F1 and fronthaul",
+      "Relationship between the three components"
+    ]
+  },
+  {
+    "id": "Q04",
+    "category": "5G RAN",
+    "question": "What are the key differences between 4G LTE and 5G NR RAN architecture?",
+    "expected_points": [
+      "5G NR introduces new radio and numerology capabilities",
+      "5G supports wider channel bandwidths",
+      "Massive MIMO and advanced beamforming",
+      "Flexible functional split options",
+      "CU/DU architectural decomposition",
+      "5G supports NSA and SA deployment models",
+      "Differences in latency, capacity and deployment flexibility"
+    ]
+  },
+  {
+    "id": "Q05",
+    "category": "5G SA Procedures",
+    "question": "Describe the major steps involved when a UE registers with a 5G Standalone network.",
+    "expected_points": [
+      "UE establishes radio connection with the gNB",
+      "Initial NAS registration procedure",
+      "AMF selection and interaction",
+      "UE authentication",
+      "Subscription and security context handling",
+      "Registration accept and completion",
+      "Establishment of a usable UE context"
+    ]
+  },
+  {
+    "id": "Q06",
+    "category": "5G SA Procedures",
+    "question": "Explain the process of establishing a PDU session in a 5G Standalone network.",
+    "expected_points": [
+      "UE requests PDU session establishment",
+      "AMF handles signalling and interacts with SMF",
+      "SMF performs session management",
+      "SMF selects and controls the UPF",
+      "Policy and subscription information may influence the session",
+      "IP address or other addressing configuration",
+      "User-plane path is established through the UPF",
+      "N3 connectivity between gNB and UPF"
+    ]
+  },
+  {
+    "id": "Q07",
+    "category": "Open RAN",
+    "question": "What are the O-RAN O-CU, O-DU and O-RU, and how do they interact?",
+    "expected_points": [
+      "O-CU provides higher-layer centralized RAN functions",
+      "O-DU provides distributed lower-layer processing",
+      "O-RU performs radio and lower-PHY functions",
+      "Functional decomposition of the RAN",
+      "Open interfaces between components",
+      "F1 interface between CU and DU",
+      "Open Fronthaul between DU and RU"
+    ]
+  },
+  {
+    "id": "Q08",
+    "category": "Open RAN",
+    "question": "What is the role of the RIC in an Open RAN architecture? Distinguish between the Near-RT RIC and Non-RT RIC.",
+    "expected_points": [
+      "RIC provides intelligent control and optimisation",
+      "Near-RT RIC operates on near-real-time timescales",
+      "Near-RT RIC supports xApps",
+      "Non-RT RIC operates on longer timescales",
+      "Non-RT RIC supports rApps",
+      "Policy, optimisation and analytics functions",
+      "Relationship with SMO and RAN elements"
+    ]
+  },
+  {
+    "id": "Q09",
+    "category": "Cloud-Native Telecom",
+    "question": "What are the benefits and challenges of deploying 5G Core Network Functions as cloud-native workloads?",
+    "expected_points": [
+      "Scalability and elasticity",
+      "Automation and orchestration",
+      "Containerisation",
+      "Improved resource utilisation",
+      "CI/CD and lifecycle automation",
+      "Resilience and high availability",
+      "Latency and performance challenges",
+      "Distributed-system complexity",
+      "Observability and troubleshooting",
+      "Security and operational complexity"
+    ]
+  },
+  {
+    "id": "Q10",
+    "category": "Cloud-Native Telecom",
+    "question": "How can Kubernetes support the deployment and lifecycle management of telecom Network Functions?",
+    "expected_points": [
+      "Container orchestration",
+      "Automated deployment and scheduling",
+      "Scaling and self-healing",
+      "Service discovery and networking",
+      "Rolling updates and lifecycle management",
+      "Resource management",
+      "High availability",
+      "Integration with CNFs and cloud-native infrastructure",
+      "Observability and operational tooling"
+    ]
+  },
+  {
+    "id": "Q11",
+    "category": "Applied Telecom Engineering",
+    "question": "Design a 5G Radio site capable of delivering a peak UE downlink throughput of 1.5 Gbps and uplink throughput of 250 Mbps. Propose suitable spectrum bands and channel bandwidths, radio configuration, antenna configuration, vendor radio and baseband options, and the key system and network requirements needed to achieve these targets. State your assumptions and explain the engineering trade-offs behind your design.",
+    "expected_points": [
+      "Appropriate 5G NR spectrum selection",
+      "Appropriate channel bandwidth",
+      "TDD/FDD consideration",
+      "MIMO configuration",
+      "Antenna configuration",
+      "Modulation considerations",
+      "Carrier aggregation where appropriate",
+      "UE capability requirements",
+      "Radio/baseband capacity requirements",
+      "Transport/backhaul capacity",
+      "5G Core capability",
+      "Vendor equipment considerations",
+      "Coverage versus capacity trade-offs",
+      "Peak versus sustained throughput distinction",
+      "Explicit engineering assumptions"
+    ]
+  },
+  {
+    "id": "Q12",
+    "category": "Applied Telecom Engineering",
+    "question": "A 5G Standalone network has excellent RSRP and SINR, but users are achieving only 400 Mbps downlink throughput when the site is expected to deliver peak UE throughput above 1 Gbps. Develop a systematic troubleshooting approach. Identify the UE, RAN, transport, 5G Core and configuration parameters you would investigate, and explain how you would isolate the bottleneck.",
+    "expected_points": [
+      "Verify UE capability and supported NR bands",
+      "Verify MIMO capability and number of layers",
+      "Check modulation and coding",
+      "Check bandwidth and carrier configuration",
+      "Check carrier aggregation where applicable",
+      "Check PRB utilisation and cell loading",
+      "Check scheduler configuration",
+      "Check radio/baseband performance",
+      "Check transport/backhaul capacity",
+      "Check latency, packet loss and congestion",
+      "Check UPF and 5G Core performance",
+      "Check QoS and policy configuration",
+      "Compare expected versus actual throughput at each layer",
+      "Use controlled testing to isolate the bottleneck"
+    ]
+  },
+  {
+    "id": "Q13",
+    "category": "5G Capacity Planning",
+    "question": "A 5G site has 100 MHz of TDD spectrum at 3.5 GHz and 64T64R massive MIMO. Estimate the peak downlink throughput that could theoretically be achieved for a single UE. State your assumptions regarding modulation, coding, MIMO layers and spectral efficiency, and explain why field throughput would be lower.",
+    "expected_points": [
+      "100 MHz bandwidth",
+      "3.5 GHz TDD operation",
+      "MIMO layer assumptions",
+      "Modulation and coding assumptions",
+      "Spectral-efficiency assumptions",
+      "Theoretical versus practical throughput",
+      "TDD overhead",
+      "Control/reference-signal overhead",
+      "Radio conditions and implementation losses"
+    ]
+  },
+  {
+    "id": "Q14",
+    "category": "5G UL/DL Trade-off",
+    "question": "A 5G SA operator needs to support both 1 Gbps peak DL and 200 Mbps peak UL on a 3.5 GHz TDD network. Propose an appropriate TDD configuration and explain the trade-offs between DL capacity, UL capacity, latency and coverage.",
+    "expected_points": [
+      "Appropriate TDD DL/UL allocation",
+      "DL versus UL capacity trade-off",
+      "UL coverage limitations",
+      "Latency implications",
+      "TDD switching considerations",
+      "Traffic asymmetry assumptions",
+      "Interference considerations"
+    ]
+  },
+  {
+    "id": "Q15",
+    "category": "5G Throughput Troubleshooting",
+    "question": "A 5G SA UE has excellent RSRP and SINR but achieves only 300 Mbps DL when the expected peak throughput is above 1 Gbps. Develop a systematic troubleshooting methodology covering UE capability, NR configuration, scheduler, MIMO, PRBs, transport, UPF and 5GC. Explain how you would isolate the bottleneck.",
+    "expected_points": [
+      "UE capability verification",
+      "NR bandwidth and carrier configuration",
+      "MIMO layers",
+      "Modulation and coding",
+      "PRB allocation and utilisation",
+      "Scheduler behaviour",
+      "Transport/backhaul capacity",
+      "UPF performance",
+      "5GC performance",
+      "QoS and policy",
+      "Controlled isolation methodology"
+    ]
+  },
+  {
+    "id": "Q16",
+    "category": "Open RAN Deployment",
+    "question": "Design a high-level Open RAN deployment for an urban macro site using O-RU, O-DU and O-CU. Specify the key interfaces, fronthaul requirements, synchronization requirements, transport considerations and the major deployment trade-offs compared with an integrated RAN solution.",
+    "expected_points": [
+      "O-RU, O-DU and O-CU placement",
+      "F1 interface",
+      "Open Fronthaul",
+      "Fronthaul bandwidth and latency",
+      "Timing and synchronisation",
+      "Transport requirements",
+      "Compute requirements",
+      "Interoperability considerations",
+      "Operational complexity",
+      "Integrated versus disaggregated RAN trade-offs"
+    ]
+  },
+  {
+    "id": "Q17",
+    "category": "Cloud-Native Telecom",
+    "question": "An operator wants to deploy 5G Core and selected RAN network functions on Kubernetes. Propose an architecture covering Kubernetes nodes, networking, storage, observability, high availability and workload placement. Identify which telecom workloads are suitable for cloud-native deployment and which require special consideration for real-time performance.",
+    "expected_points": [
+      "Kubernetes cluster architecture",
+      "Worker-node design",
+      "Container networking",
+      "Storage considerations",
+      "Observability",
+      "High availability",
+      "Workload placement",
+      "CPU and NUMA considerations",
+      "Real-time workload considerations",
+      "CNF deployment and lifecycle"
+    ]
+  },
+  {
+    "id": "Q18",
+    "category": "RAN Capacity Expansion",
+    "question": "A 5G site is experiencing increasing congestion during the busy hour. The operator has 100 MHz at 3.5 GHz but cannot obtain additional spectrum. Propose at least three engineering approaches to increase capacity. Compare their expected benefits, costs, complexity and impact on coverage.",
+    "expected_points": [
+      "Additional carrier or spectrum options where available",
+      "Massive MIMO optimisation",
+      "Sectorisation",
+      "Small-cell densification",
+      "Beamforming optimisation",
+      "Load balancing",
+      "Scheduler optimisation",
+      "Carrier aggregation considerations",
+      "Capacity versus coverage trade-offs",
+      "Cost and implementation complexity"
+    ]
+  },
+  {
+    "id": "Q19",
+    "category": "Network Failure Isolation",
+    "question": "Following a software upgrade, 5G users experience intermittent PDU session drops across multiple sites. RAN radio indicators remain normal. Develop a fault-isolation methodology across RAN, transport, 5GC, Kubernetes/platform infrastructure and software configuration. Explain the evidence you would collect before identifying the root cause.",
+    "expected_points": [
+      "Correlate issue with software upgrade",
+      "RAN signalling verification",
+      "Transport packet loss and latency checks",
+      "AMF/SMF/UPF investigation",
+      "PDU session signalling analysis",
+      "Kubernetes health and resource checks",
+      "Pod/container restart and event analysis",
+      "Configuration and version comparison",
+      "Logs, metrics and traces",
+      "Rollback or controlled comparison",
+      "Evidence-based root-cause isolation"
+    ]
+  },
+  {
+    "id": "Q20",
+    "category": "End-to-End Network Design",
+    "question": "Design an end-to-end 5G SA network for an enterprise requiring high throughput, low latency and reliable connectivity. Cover the RAN, transport, 5G Core, UPF placement, cloud infrastructure, security, synchronization, observability and operational automation. State your assumptions and identify the principal engineering trade-offs.",
+    "expected_points": [
+      "5G SA RAN architecture",
+      "Transport design",
+      "5G Core architecture",
+      "UPF placement and latency",
+      "Cloud infrastructure",
+      "Security architecture",
+      "Synchronization",
+      "Observability",
+      "Automation and lifecycle management",
+      "Reliability and high availability",
+      "Explicit assumptions",
+      "Engineering trade-offs"
+    ]
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "benchmark_family": "Modules 1-2 Frozen Telecom Benchmark",
+  "shared_by": [
+    "Module 1",
+    "Module 2"
+  ],
+  "track1": {
+    "name": "Custom Telecom Engineering Benchmark",
+    "questions": 20,
+    "sha256_canonical_json": "44fc5072f0220200ac6021dc59a772a84db0802a969a513b35146ed9b19b2472",
+    "file": "track1_custom_20_questions.json"
+  },
+  "track2": {
+    "name": "Industry Telecom Benchmark",
+    "questions": 32,
+    "benchmark_subsets": 8,
+    "questions_per_subset": 4,
+    "sha256_canonical_json": "fae5ed4de2222e9642460dd3e7d63e9711519bdee833440fe6e68cefb562df86",
+    "file": "track2_industry_32_questions.json"
+  },
+  "notes": [
+    "Track 1 question text and expected points are identical across all five uploaded Module 2 result sets.",
+    "Track 2 question IDs and question text are identical across all five uploaded Module 2 result sets.",
+    "Some standalone Gemma exports omit embedded reference metadata; the canonical template restores it from the frozen benchmark rather than treating that omission as a benchmark difference.",
+    "Module 1 originally called the Track 2 identifier evaluation_id; Module 2 result exports use question_id. This public template standardizes the field as question_id."
+  ]
+}
