@@ -1,0 +1,4 @@
+generator_key,model,n,mean_quality_pct,median_quality_pct,min_quality_pct,max_quality_pct,mean_score_4
+gemma4_12b,Gemma 4 12B,15,92.5,100.0,68.75,100.0,3.7
+qwen38_27b,Qwen3.8 27B,15,85.08333333333333,88.75,55.0,100.0,3.4033333333333333
+qwen35_9b,Qwen3.5 9B,15,72.91666666666667,77.5,46.25,100.0,2.9166666666666665

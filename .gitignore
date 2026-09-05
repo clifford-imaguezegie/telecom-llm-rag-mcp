@@ -216,3 +216,31 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ============================================================
+# Telecom AI Engineering Platform — Project-specific exclusions
+# ============================================================
+
+# Local model and Hugging Face caches
+huggingface/
+models/
+*.safetensors
+*.gguf
+
+# Module 4 temporary/runtime artifact folders
+module4_kaggle_outputs/
+module4_kaggle_publish/
+module4_analysis/
+module4_complete_artifacts_*/
+
+# Module 4 archive files
+module4_complete_artifacts_*.zip
+module4_repo_aligned_*.zip
+module4_github_ready_*.zip
+
+# Local experiment/runtime checkpoints that should not enter Git
+*_checkpoint.json
+*.archived_*.json
+
+# Kaggle local credentials
+kaggle.json

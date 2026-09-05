@@ -1,0 +1,4 @@
+generator_key,model,n,major_errors,unsupported_claim_cases,major_error_rate_pct,unsupported_claim_rate_pct
+gemma4_12b,Gemma 4 12B,15,0,6,0.0,40.0
+qwen38_27b,Qwen3.8 27B,15,1,10,6.666666666666667,66.66666666666666
+qwen35_9b,Qwen3.5 9B,15,3,13,20.0,86.66666666666667

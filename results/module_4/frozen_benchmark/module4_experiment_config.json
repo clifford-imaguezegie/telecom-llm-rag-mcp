@@ -1,0 +1,59 @@
+{
+  "module": "Module 4 — RAG + Knowledge-Based MCP Hybrid",
+  "benchmark_version": "module4_hybrid_eval_v1",
+  "benchmark_sha256": "c6160e33d5d2bd420ddffe7f820590c5becfa9521012d5373f06451bc9b44040",
+  "continuity_benchmark": {
+    "version": "module3_eval_v2",
+    "expected_sha256": "d40c0090c371f0a99ea6057bbb3fa8024e6b7d4174e037e7a6cf9fef9b9667f5",
+    "observed_sha256": "d40c0090c371f0a99ea6057bbb3fa8024e6b7d4174e037e7a6cf9fef9b9667f5",
+    "hash_pass": true,
+    "questions": 8
+  },
+  "benchmark_questions": 16,
+  "controlled_retrieval_modes": [
+    "RAG_ONLY",
+    "MCP_ONLY",
+    "HYBRID"
+  ],
+  "controlled_retrieval_comparisons": 48,
+  "formal_generation_policy": "NATURAL_ROUTE_SELECTION",
+  "formal_generation_runs_per_model": 16,
+  "historical_retrieval": {
+    "module2_rag_v1_top_k": 7,
+    "module3_mcp_version_b_top_k": 5
+  },
+  "module4_retrieval": {
+    "policy": "STANDARDIZED_TOP_K_5",
+    "rag_top_k": 5,
+    "mcp_top_k": 5,
+    "fairness_rationale": "RAG and MCP use the same retrieval depth before standalone comparison and Hybrid fusion."
+  },
+  "presented_evidence_controls": {
+    "max_items": 5,
+    "max_chars_per_item": 2500,
+    "max_context_chars": 12500
+  },
+  "hybrid_controls": {
+    "selection_policy": "RRF_WITH_POST_DEDUP_MINIMUM_RETRIEVER_REPRESENTATION",
+    "rag_top_k": 5,
+    "mcp_top_k": 5,
+    "fusion": "RECIPROCAL_RANK_FUSION",
+    "rrf_k": 60,
+    "near_duplicate_threshold": 0.88,
+    "minimum_items_per_retriever": 2,
+    "representation_basis": "DISTINCT_POST_DEDUP_EVIDENCE",
+    "generator_presented_evidence_max": 5,
+    "context_budget_chars": 12500
+  },
+  "retrieval_cache_policy": "retrieve_once_freeze_before_generation",
+  "mcp_quality_controls": {
+    "selector_version": "module4_tcc_technical_quality_v1",
+    "technical_quality_collections": [
+      "IEEE-Access",
+      "OpenAlex"
+    ],
+    "selector_owner": "CELL_3A",
+    "routing_mutated_in_cell5": false,
+    "ranking": "Frozen Module 3 Version B BM25 / matched-term ranking"
+  }
+}

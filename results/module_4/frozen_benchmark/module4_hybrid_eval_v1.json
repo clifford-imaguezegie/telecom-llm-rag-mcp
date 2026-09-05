@@ -1,0 +1,461 @@
+{
+  "version": "module4_hybrid_eval_v1",
+  "sha256": "c6160e33d5d2bd420ddffe7f820590c5becfa9521012d5373f06451bc9b44040",
+  "questions": [
+    {
+      "id": "Q1",
+      "domain": "5G Core",
+      "knowledge_scope": "3GPP",
+      "expected_route": "3gpp",
+      "expected_source_families": [
+        "3GPP"
+      ],
+      "expected_3gpp_specs": [
+        "23.501",
+        "23.502"
+      ],
+      "expected_tcc_collections": [],
+      "expected_elements": [
+        "AMF",
+        "registration",
+        "mobility management",
+        "NAS",
+        "N1",
+        "N2"
+      ],
+      "question": "Explain the role of the AMF in registration and mobility management procedures in a 5G Standalone network.",
+      "benchmark_group": "CONTINUITY",
+      "origin_benchmark": "module3_eval_v2",
+      "stress_class": "CONTINUITY",
+      "expected_mcp_route": "3gpp",
+      "answer_policy": "ANSWER_FROM_EVIDENCE"
+    },
+    {
+      "id": "Q2",
+      "domain": "Mobility",
+      "knowledge_scope": "3GPP",
+      "expected_route": "3gpp",
+      "expected_source_families": [
+        "3GPP"
+      ],
+      "expected_3gpp_specs": [
+        "23.502",
+        "38.300",
+        "38.423"
+      ],
+      "expected_tcc_collections": [],
+      "expected_elements": [
+        "source gNB",
+        "target gNB",
+        "AMF",
+        "handover",
+        "Xn",
+        "N2"
+      ],
+      "question": "Explain how inter-gNB handover operates in a 5G network, including the roles of the source gNB, target gNB and AMF.",
+      "benchmark_group": "CONTINUITY",
+      "origin_benchmark": "module3_eval_v2",
+      "stress_class": "CONTINUITY",
+      "expected_mcp_route": "3gpp",
+      "answer_policy": "ANSWER_FROM_EVIDENCE"
+    },
+    {
+      "id": "Q3",
+      "domain": "RAN",
+      "knowledge_scope": "3GPP",
+      "expected_route": "3gpp",
+      "expected_source_families": [
+        "3GPP"
+      ],
+      "expected_3gpp_specs": [
+        "38.331"
+      ],
+      "expected_tcc_collections": [],
+      "expected_elements": [
+        "radio link failure",
+        "RLF",
+        "RRC",
+        "T310",
+        "N310",
+        "RRC re-establishment"
+      ],
+      "question": "Explain how radio link failure is detected and handled in a 5G NR network.",
+      "benchmark_group": "CONTINUITY",
+      "origin_benchmark": "module3_eval_v2",
+      "stress_class": "CONTINUITY",
+      "expected_mcp_route": "3gpp",
+      "answer_policy": "ANSWER_FROM_EVIDENCE"
+    },
+    {
+      "id": "Q4",
+      "domain": "QoS",
+      "knowledge_scope": "3GPP",
+      "expected_route": "3gpp",
+      "expected_source_families": [
+        "3GPP"
+      ],
+      "expected_3gpp_specs": [
+        "23.501",
+        "23.503"
+      ],
+      "expected_tcc_collections": [],
+      "expected_elements": [
+        "5QI",
+        "QoS Flow",
+        "QFI",
+        "SMF",
+        "UPF",
+        "QoS rules"
+      ],
+      "question": "Explain how 5QI and QoS flows are handled in a 5G network, including the roles of the SMF and UPF.",
+      "benchmark_group": "CONTINUITY",
+      "origin_benchmark": "module3_eval_v2",
+      "stress_class": "CONTINUITY",
+      "expected_mcp_route": "3gpp",
+      "answer_policy": "ANSWER_FROM_EVIDENCE"
+    },
+    {
+      "id": "Q5",
+      "domain": "Security",
+      "knowledge_scope": "3GPP",
+      "expected_route": "3gpp",
+      "expected_source_families": [
+        "3GPP"
+      ],
+      "expected_3gpp_specs": [
+        "33.501"
+      ],
+      "expected_tcc_collections": [],
+      "expected_elements": [
+        "AMF",
+        "AUSF",
+        "UDM",
+        "5G-AKA",
+        "SEAF",
+        "authentication"
+      ],
+      "question": "Explain the 5G authentication procedure and the roles of the AMF, AUSF and UDM.",
+      "benchmark_group": "CONTINUITY",
+      "origin_benchmark": "module3_eval_v2",
+      "stress_class": "CONTINUITY",
+      "expected_mcp_route": "3gpp",
+      "answer_policy": "ANSWER_FROM_EVIDENCE"
+    },
+    {
+      "id": "Q6",
+      "domain": "Internet Transport",
+      "knowledge_scope": "TCC",
+      "expected_route": "tcc",
+      "expected_source_families": [
+        "TCC"
+      ],
+      "expected_3gpp_specs": [],
+      "expected_tcc_collections": [
+        "IETF-RFCs",
+        "IETF-Drafts"
+      ],
+      "expected_elements": [
+        "QUIC",
+        "TLS 1.3",
+        "stream multiplexing",
+        "Connection ID",
+        "connection migration"
+      ],
+      "question": "Explain the key mechanisms of QUIC as defined by the IETF, including connection establishment, stream multiplexing and connection migration.",
+      "benchmark_group": "CONTINUITY",
+      "origin_benchmark": "module3_eval_v2",
+      "stress_class": "CONTINUITY",
+      "expected_mcp_route": "tcc",
+      "answer_policy": "ANSWER_FROM_EVIDENCE"
+    },
+    {
+      "id": "Q7",
+      "domain": "Telecom AI Research",
+      "knowledge_scope": "TCC",
+      "expected_route": "tcc",
+      "expected_source_families": [
+        "TCC"
+      ],
+      "expected_3gpp_specs": [],
+      "expected_tcc_collections": [
+        "IEEE-Access",
+        "OpenAlex"
+      ],
+      "expected_elements": [
+        "traffic prediction",
+        "machine learning",
+        "forecasting",
+        "network management",
+        "benefits",
+        "challenges"
+      ],
+      "question": "According to IEEE and research literature, what are the main benefits and technical challenges of using AI/ML-based traffic prediction for mobile network management?",
+      "benchmark_group": "CONTINUITY",
+      "origin_benchmark": "module3_eval_v2",
+      "stress_class": "CONTINUITY",
+      "expected_mcp_route": "tcc",
+      "answer_policy": "ANSWER_FROM_EVIDENCE"
+    },
+    {
+      "id": "Q8",
+      "domain": "5G SBA + Internet Protocols",
+      "knowledge_scope": "Hybrid",
+      "expected_route": "hybrid",
+      "expected_source_families": [
+        "3GPP",
+        "TCC"
+      ],
+      "expected_3gpp_specs": [
+        "23.501",
+        "33.501"
+      ],
+      "expected_tcc_collections": [
+        "IETF-RFCs",
+        "IETF-Drafts"
+      ],
+      "expected_elements": [
+        "Service-Based Architecture",
+        "AMF",
+        "SMF",
+        "HTTP",
+        "TLS",
+        "3GPP",
+        "IETF"
+      ],
+      "question": "Explain how HTTP and TLS support communication in the 5G Service-Based Architecture. Distinguish the roles and requirements defined by 3GPP for network functions such as the AMF and SMF from the HTTP/TLS transport and security mechanisms defined by the IETF.",
+      "benchmark_group": "CONTINUITY",
+      "origin_benchmark": "module3_eval_v2",
+      "stress_class": "CONTINUITY",
+      "expected_mcp_route": "hybrid",
+      "answer_policy": "ANSWER_FROM_EVIDENCE"
+    },
+    {
+      "id": "Q9",
+      "domain": "O-RAN Architecture",
+      "knowledge_scope": "RAG",
+      "stress_class": "RAG_FAVOURED",
+      "expected_mcp_route": "tcc",
+      "expected_source_families": [],
+      "expected_3gpp_specs": [],
+      "expected_tcc_collections": [
+        "Wikipedia-Telecom"
+      ],
+      "expected_elements": [
+        "non-RT RIC",
+        "near-RT RIC",
+        "rApp",
+        "xApp",
+        "A1",
+        "E2",
+        "policy",
+        "control loop"
+      ],
+      "answer_policy": "ANSWER_FROM_EVIDENCE",
+      "question": "Explain the architectural difference between O-RAN rApps running with the non-RT RIC and xApps running with the near-RT RIC. Describe how A1 and E2 support policy guidance and near-real-time RAN control.",
+      "benchmark_group": "STRESS",
+      "origin_benchmark": "module4_hybrid_eval_v1"
+    },
+    {
+      "id": "Q10",
+      "domain": "Cloud-Native 5G Core",
+      "knowledge_scope": "RAG",
+      "stress_class": "RAG_FAVOURED",
+      "expected_mcp_route": "3gpp",
+      "expected_source_families": [
+        "3GPP"
+      ],
+      "expected_3gpp_specs": [
+        "23.501"
+      ],
+      "expected_tcc_collections": [],
+      "expected_elements": [
+        "Kubernetes",
+        "pod restart",
+        "container logs",
+        "Kubernetes events",
+        "readiness",
+        "liveness",
+        "resource pressure",
+        "networking",
+        "AMF",
+        "SMF"
+      ],
+      "answer_policy": "ANSWER_FROM_EVIDENCE",
+      "question": "A cloud-native 5G Core running on Kubernetes experiences repeated AMF and SMF pod restarts while radio performance remains normal. Develop an evidence-driven investigation method using Kubernetes workload state, events, logs, health probes, resource pressure and platform networking before concluding that the 5G network functions themselves are faulty.",
+      "benchmark_group": "STRESS",
+      "origin_benchmark": "module4_hybrid_eval_v1"
+    },
+    {
+      "id": "Q11",
+      "domain": "IETF Security",
+      "knowledge_scope": "MCP",
+      "stress_class": "MCP_FAVOURED",
+      "expected_mcp_route": "tcc",
+      "expected_source_families": [
+        "TCC"
+      ],
+      "expected_3gpp_specs": [],
+      "expected_tcc_collections": [
+        "IETF-RFCs",
+        "IETF-Drafts"
+      ],
+      "expected_elements": [
+        "TLS 1.3",
+        "ClientHello",
+        "ServerHello",
+        "key exchange",
+        "certificate",
+        "Finished",
+        "authentication"
+      ],
+      "answer_policy": "ANSWER_FROM_EVIDENCE",
+      "question": "According to IETF specifications, explain the main phases of a TLS 1.3 handshake and the evidence exchanged to establish key material, authenticate the peer and confirm that the handshake has completed successfully.",
+      "benchmark_group": "STRESS",
+      "origin_benchmark": "module4_hybrid_eval_v1"
+    },
+    {
+      "id": "Q12",
+      "domain": "Telecom AI Research",
+      "knowledge_scope": "MCP",
+      "stress_class": "MCP_FAVOURED",
+      "expected_mcp_route": "tcc",
+      "expected_source_families": [
+        "TCC"
+      ],
+      "expected_3gpp_specs": [],
+      "expected_tcc_collections": [
+        "IEEE-Access",
+        "OpenAlex"
+      ],
+      "expected_elements": [
+        "anomaly detection",
+        "machine learning",
+        "features",
+        "false positives",
+        "concept drift",
+        "evaluation",
+        "operational deployment"
+      ],
+      "answer_policy": "ANSWER_FROM_EVIDENCE",
+      "question": "According to IEEE and research literature, what technical considerations are important when deploying machine-learning based anomaly detection for telecom network operations? Discuss feature design, evaluation, false positives, concept drift and operational deployment.",
+      "benchmark_group": "STRESS",
+      "origin_benchmark": "module4_hybrid_eval_v1"
+    },
+    {
+      "id": "Q13",
+      "domain": "5G SBA + Cloud Platform",
+      "knowledge_scope": "Hybrid",
+      "stress_class": "HYBRID",
+      "expected_mcp_route": "hybrid",
+      "expected_source_families": [
+        "3GPP",
+        "TCC"
+      ],
+      "expected_3gpp_specs": [
+        "23.501",
+        "33.501"
+      ],
+      "expected_tcc_collections": [
+        "IETF-RFCs",
+        "IETF-Drafts"
+      ],
+      "expected_elements": [
+        "Service-Based Architecture",
+        "AMF",
+        "SMF",
+        "HTTP",
+        "TLS",
+        "Kubernetes",
+        "service discovery",
+        "certificate",
+        "platform evidence",
+        "root-cause isolation"
+      ],
+      "answer_policy": "ANSWER_FROM_EVIDENCE",
+      "question": "Following a Kubernetes ingress or service-mesh change, communication failures appear between AMF and SMF service-based interfaces in a 5G Core. Develop a fault-isolation methodology that distinguishes 3GPP SBA function behaviour, HTTP/TLS protocol evidence and Kubernetes platform or service-routing evidence before identifying the root cause.",
+      "benchmark_group": "STRESS",
+      "origin_benchmark": "module4_hybrid_eval_v1"
+    },
+    {
+      "id": "Q14",
+      "domain": "AI/ML + 5G QoS and Slicing",
+      "knowledge_scope": "Hybrid",
+      "stress_class": "HYBRID",
+      "expected_mcp_route": "hybrid",
+      "expected_source_families": [
+        "3GPP",
+        "TCC"
+      ],
+      "expected_3gpp_specs": [
+        "23.501",
+        "23.503"
+      ],
+      "expected_tcc_collections": [
+        "IEEE-Access",
+        "OpenAlex"
+      ],
+      "expected_elements": [
+        "traffic prediction",
+        "AI/ML",
+        "5QI",
+        "QoS Flow",
+        "network slicing",
+        "S-NSSAI",
+        "SMF",
+        "policy",
+        "closed loop",
+        "evaluation"
+      ],
+      "answer_policy": "ANSWER_FROM_EVIDENCE",
+      "question": "According to IEEE and research literature, an operator wants to use AI/ML traffic prediction to support proactive control of 5G QoS and network-slice resources. Explain how research evidence on traffic forecasting should be combined with 3GPP concepts such as 5QI, QoS flows, S-NSSAI and policy control, and identify safeguards required before such predictions are used in a closed control loop.",
+      "benchmark_group": "STRESS",
+      "origin_benchmark": "module4_hybrid_eval_v1"
+    },
+    {
+      "id": "Q15",
+      "domain": "Cross-Layer 5G Fault Isolation",
+      "knowledge_scope": "Hybrid",
+      "stress_class": "HYBRID",
+      "expected_mcp_route": "3gpp",
+      "expected_source_families": [
+        "3GPP"
+      ],
+      "expected_3gpp_specs": [
+        "23.501",
+        "23.502"
+      ],
+      "expected_tcc_collections": [],
+      "expected_elements": [
+        "PDU session",
+        "RAN",
+        "transport",
+        "5GC",
+        "Kubernetes",
+        "software configuration",
+        "logs",
+        "traces",
+        "timeline correlation",
+        "root cause"
+      ],
+      "answer_policy": "ANSWER_FROM_EVIDENCE",
+      "question": "Following a software and Kubernetes-platform upgrade, 5G users experience intermittent PDU session drops across multiple sites while RAN radio indicators remain normal. Develop a fault-isolation methodology across RAN, transport, 5GC, Kubernetes platform infrastructure and software configuration. Explain the evidence that should be collected before identifying the root cause.",
+      "benchmark_group": "STRESS",
+      "origin_benchmark": "module4_hybrid_eval_v1"
+    },
+    {
+      "id": "Q16",
+      "domain": "Unsupported Proprietary Knowledge",
+      "knowledge_scope": "Unsupported",
+      "stress_class": "RETRIEVAL_TRAP",
+      "expected_mcp_route": null,
+      "expected_source_families": [],
+      "expected_3gpp_specs": [],
+      "expected_tcc_collections": [],
+      "expected_elements": [],
+      "answer_policy": "INSUFFICIENT_EVIDENCE",
+      "question": "What exact root cause, proprietary severity mapping and vendor-prescribed remediation procedure are associated with the private alarm code ZXQ-917 in the Vendor-X 5G Core operations platform?",
+      "benchmark_group": "STRESS",
+      "origin_benchmark": "module4_hybrid_eval_v1"
+    }
+  ]
+}

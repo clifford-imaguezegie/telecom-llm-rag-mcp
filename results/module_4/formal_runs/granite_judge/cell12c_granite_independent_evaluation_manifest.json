@@ -1,0 +1,46 @@
+{
+  "run_version": "module4_independent_evaluation_granite42_8b_formal_v2_capacity_resilient",
+  "benchmark_version": "module4_hybrid_eval_v1",
+  "benchmark_sha256": "c6160e33d5d2bd420ddffe7f820590c5becfa9521012d5373f06451bc9b44040",
+  "judge_model_id": "ibm-granite/granite-4.2-8b",
+  "judge_revision": "7fce579a7fbbad4b1e7703b6850cefd517a4002b",
+  "judge_temperature": 1.0,
+  "judge_top_p": 0.95,
+  "judge_max_tokens": 12288,
+  "judge_max_model_len": 20480,
+  "fault_tolerant_case_execution": true,
+  "judge_standard_thinking": true,
+  "judge_low_effort_override": null,
+  "judge_reasoning_effort_override": null,
+  "judge_thinking_token_budget": null,
+  "rubric_sha256": "45d273ca621000ea43e208b233e25b906049de2f57601b9062b130b99e4f1809",
+  "weights": {
+    "technical_correctness": 0.3,
+    "requirement_coverage": 0.25,
+    "evidence_grounding": 0.2,
+    "evidence_answer_consistency": 0.1,
+    "technical_synthesis": 0.1,
+    "unsupported_claims_control": 0.05
+  },
+  "formal_generator_artifact_sha256": {
+    "gemma4_12b": "155508e7e8d927a5c84c23fed14d57028736a8e32c369c4b41a57aa363b81a22",
+    "qwen38_27b": "8d63f6e268fcd9c055b7f80c8de7d8fab4dbe3b0f1e1ed920ee5afd3c11823d3",
+    "qwen35_9b": "6d29bc5fd3e1455613c6255dc8a0c73a49fa0d58cf2adcbcba6109eb2e49eace"
+  },
+  "evaluation_count": 48,
+  "generator_identity_exposed_to_judge": false,
+  "retrieval_executed_during_evaluation": false,
+  "generator_answers_modified": false,
+  "config_sha256": "4e135615780eccd7f7f140c1fb35af55569924ced99a4a87d28c2c2de2413742",
+  "evaluation_complete": false,
+  "results_path": "/content/module4_runtime/generation/independent_evaluation/judge_granite_4_2_8b/formal/cell12c_granite_independent_evaluation_results.json",
+  "summary_path": "/content/module4_runtime/generation/independent_evaluation/judge_granite_4_2_8b/formal/cell12c_granite_independent_evaluation_summary.csv",
+  "failures_path": "/content/module4_runtime/generation/independent_evaluation/judge_granite_4_2_8b/formal/cell12c_granite_independent_evaluation_failures.json",
+  "checkpoint_path": "/content/module4_runtime/generation/independent_evaluation/judge_granite_4_2_8b/formal/cell12c_granite_independent_evaluation_checkpoint.json",
+  "completed_count": 47,
+  "failed_count": 1,
+  "missing_evaluation_ids": [
+    "gemma4_12b::Q16"
+  ],
+  "updated_utc": "2026-09-05T07:42:24.427712+00:00"
+}
