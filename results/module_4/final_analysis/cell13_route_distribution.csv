@@ -1,0 +1,8 @@
+generator_key,model,selected_mode,questions,route_pct
+gemma4_12b,Gemma 4 12B,HYBRID,9,56.25
+gemma4_12b,Gemma 4 12B,MCP_ONLY,7,43.75
+qwen35_9b,Qwen3.5 9B,HYBRID,7,43.75
+qwen35_9b,Qwen3.5 9B,MCP_ONLY,9,56.25
+qwen38_27b,Qwen3.8 27B,HYBRID,4,25.0
+qwen38_27b,Qwen3.8 27B,MCP_ONLY,10,62.5
+qwen38_27b,Qwen3.8 27B,RAG_ONLY,2,12.5

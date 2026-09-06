@@ -1,0 +1,5 @@
+case_id,purpose,technical_correctness,requirement_coverage,evidence_grounding,evidence_answer_consistency,technical_synthesis,unsupported_claims_control,overall_score,quality_percentage,major_error,unsupported_claims_detected,negative_control_abstention,finish_reason,latency_s,sanity_pass
+P1_STRONG,Strong fully grounded answer,4,4,4,4,4,4,4.0,100.0,False,False,,stop,180.74023370699433,True
+P2_INCOMPLETE,Technically correct but incomplete answer,4,2,4,4,2,4,3.3,82.5,False,False,,stop,267.313501962999,True
+P3_UNSUPPORTED,Confident answer with unsupported technical claims,0,0,0,0,0,0,0.0,0.0,True,True,,stop,192.95501014200272,True
+P4_ABSTAIN,Correct abstention on unsupported proprietary request,4,4,4,4,4,4,4.0,100.0,False,False,True,stop,261.7797510149976,True

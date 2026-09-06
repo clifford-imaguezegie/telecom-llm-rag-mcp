@@ -1,0 +1,30 @@
+{
+  "run_version": "module4_independent_evaluation_granite42_8b_formal_v2_capacity_resilient",
+  "config_sha256": "4e135615780eccd7f7f140c1fb35af55569924ced99a4a87d28c2c2de2413742",
+  "evaluation_complete": false,
+  "failed_count": 1,
+  "failed": {
+    "gemma4_12b::Q16": {
+      "evaluation_id": "gemma4_12b::Q16",
+      "generator_key": "gemma4_12b",
+      "generator_label": "Gemma 4 12B IT QAT W4A16",
+      "question_id": "Q16",
+      "domain": "Unsupported Proprietary Knowledge",
+      "attempt_count": 1,
+      "error_type": "ValueError",
+      "error_message": "Q16 negative_control_abstention must be boolean.",
+      "judge_finish_reason": "stop",
+      "judge_latency_s": 52.41953546700097,
+      "judge_reasoning_chars": 2188,
+      "judge_usage": {
+        "prompt_tokens": 2448,
+        "completion_tokens": 759,
+        "total_tokens": 3207
+      },
+      "judge_final_content_chars": 1184,
+      "generator_identity_exposed_to_judge": false,
+      "failed_utc": "2026-09-05T03:37:44.434934+00:00"
+    }
+  },
+  "updated_utc": "2026-09-05T07:42:24.427322+00:00"
+}

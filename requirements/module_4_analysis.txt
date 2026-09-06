@@ -1,0 +1,4 @@
+# CPU-only post-hoc analysis
+pandas
+numpy
+matplotlib

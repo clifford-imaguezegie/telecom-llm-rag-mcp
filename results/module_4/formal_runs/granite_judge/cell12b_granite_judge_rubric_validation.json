@@ -1,0 +1,206 @@
+{
+  "section": "5_independent_evaluation",
+  "cell": "12B",
+  "purpose": "Validate Granite judge rubric behaviour before formal 48-answer evaluation.",
+  "formal_benchmark_executed": false,
+  "benchmark_questions_used": false,
+  "formal_generator_outputs_used": false,
+  "retrieval_executed": false,
+  "judge": {
+    "label": "IBM Granite 4.2 8B — Official BF16",
+    "model_id": "ibm-granite/granite-4.2-8b",
+    "revision": "7fce579a7fbbad4b1e7703b6850cefd517a4002b",
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "max_tokens": 8192,
+    "standard_default_thinking": true,
+    "low_effort_override": null,
+    "reasoning_effort_override": null,
+    "thinking_token_budget": null
+  },
+  "weights": {
+    "technical_correctness": 0.3,
+    "requirement_coverage": 0.25,
+    "evidence_grounding": 0.2,
+    "evidence_answer_consistency": 0.1,
+    "technical_synthesis": 0.1,
+    "unsupported_claims_control": 0.05
+  },
+  "rubric_sha256": "45d273ca621000ea43e208b233e25b906049de2f57601b9062b130b99e4f1809",
+  "pilot_case_count": 4,
+  "all_pilot_sanity_checks_pass": true,
+  "results": [
+    {
+      "case_id": "P1_STRONG",
+      "purpose": "Strong fully grounded answer",
+      "question": "A Kubernetes Service has two backend Pods. One Pod is restarting. Explain how readiness state and Service endpoint selection should affect traffic during the restart.",
+      "evidence": "[E1] A Pod readiness check indicates whether the Pod is ready to receive traffic.\n\n[E2] A Service routes traffic to selected backend endpoints. A backend that is not\nready should not remain in the ready endpoint set used for normal Service traffic.\n\n[E3] During restart, removing the unavailable Pod from ready endpoints allows normal\ntraffic to continue toward the remaining ready backend.",
+      "candidate_answer": "During the restart, the affected Pod should become not ready, so it should be removed from the set of ready Service endpoints [E1][E2]. Normal application traffic should therefore continue to the remaining ready backend rather than being sent to the restarting Pod [E3].",
+      "expected_behaviour": "Mostly 3–4 scores; no major error; no unsupported claims; negative_control_abstention=null.",
+      "judgment": {
+        "technical_correctness": 4,
+        "requirement_coverage": 4,
+        "evidence_grounding": 4,
+        "evidence_answer_consistency": 4,
+        "technical_synthesis": 4,
+        "unsupported_claims_control": 4,
+        "major_error": false,
+        "unsupported_claims_detected": false,
+        "negative_control_abstention": null,
+        "strengths": [
+          "Directly references relevant evidence",
+          "Clearly states removal from ready endpoints",
+          "Correctly notes normal traffic continues to remaining backend"
+        ],
+        "weaknesses": [],
+        "judge_summary": "The answer correctly explains that during a Pod restart the Pod should become not ready and be removed from the ready endpoint set, allowing normal traffic to continue to the remaining ready backend. It directly uses the provided evidence and addresses both readiness state and Service endpoint selection."
+      },
+      "overall_score": 4.0,
+      "quality_percentage": 100.0,
+      "finish_reason": "stop",
+      "latency_s": 180.74023370699433,
+      "reasoning_present": true,
+      "reasoning_chars": 11870,
+      "completion_tokens": 2658,
+      "sanity_checks": {
+        "technical_correctness>=3": true,
+        "requirement_coverage>=3": true,
+        "evidence_grounding>=3": true,
+        "unsupported_claims_control>=3": true,
+        "major_error=false": true,
+        "unsupported_claims_detected=false": true,
+        "abstention=null": true
+      },
+      "sanity_pass": true
+    },
+    {
+      "case_id": "P2_INCOMPLETE",
+      "purpose": "Technically correct but incomplete answer",
+      "question": "Explain both how readiness state protects traffic during a Pod restart and what Service endpoint behaviour should be inspected when diagnosing a temporary traffic interruption.",
+      "evidence": "[E1] A readiness check indicates whether a Pod is ready to receive traffic.\n\n[E2] A Service uses ready backend endpoints for normal traffic. During restart,\nendpoint membership can change as a Pod becomes not ready and later returns to ready.\n\n[E3] Troubleshooting should inspect Pod readiness transitions and endpoint membership\nchanges over the time interval in which traffic was interrupted.",
+      "candidate_answer": "Readiness protects traffic by marking the restarting Pod as not ready, which prevents normal traffic from being sent to it [E1].",
+      "expected_behaviour": "Technical correctness/grounding relatively high, but requirement coverage materially lower because endpoint troubleshooting evidence is omitted.",
+      "judgment": {
+        "technical_correctness": 4,
+        "requirement_coverage": 2,
+        "evidence_grounding": 4,
+        "evidence_answer_consistency": 4,
+        "technical_synthesis": 2,
+        "unsupported_claims_control": 4,
+        "major_error": false,
+        "unsupported_claims_detected": false,
+        "negative_control_abstention": null,
+        "strengths": [
+          "Correctly describes readiness protects traffic by marking the Pod as not ready per E1",
+          "Uses evidence citation appropriately for the stated claim"
+        ],
+        "weaknesses": [
+          "Omits inspection of Service endpoint membership changes and readiness transitions for diagnosing traffic interruption per E3",
+          "Does not address the 'what Service endpoint behaviour should be inspected' part of the question"
+        ],
+        "judge_summary": "The answer accurately explains how readiness prevents traffic to a restarting Pod (supported by E1), but it fails to address the diagnostic inspection requirement (endpoint membership changes and readiness transitions per E3), resulting in a material omission of half the question."
+      },
+      "overall_score": 3.3,
+      "quality_percentage": 82.5,
+      "finish_reason": "stop",
+      "latency_s": 267.313501962999,
+      "reasoning_present": true,
+      "reasoning_chars": 15639,
+      "completion_tokens": 3910,
+      "sanity_checks": {
+        "technical_correctness>=3": true,
+        "evidence_grounding>=3": true,
+        "requirement_coverage<=2": true,
+        "unsupported_claims_detected=false": true,
+        "abstention=null": true
+      },
+      "sanity_pass": true
+    },
+    {
+      "case_id": "P3_UNSUPPORTED",
+      "purpose": "Confident answer with unsupported technical claims",
+      "question": "What evidence should be checked first when a Kubernetes Service stops sending traffic to a restarted Pod?",
+      "evidence": "[E1] Inspect Pod readiness state.\n\n[E2] Inspect whether the Pod appears in the Service's ready endpoint set.",
+      "candidate_answer": "The failure is caused by kube-proxy retaining a stale iptables entry for exactly 30 seconds after every Pod restart. Restarting kube-proxy is the required remediation. Readiness and endpoint state do not need to be checked.",
+      "expected_behaviour": "Low grounding and unsupported-claims-control scores; unsupported_claims_detected=true; likely major_error=true.",
+      "judgment": {
+        "technical_correctness": 0,
+        "requirement_coverage": 0,
+        "evidence_grounding": 0,
+        "evidence_answer_consistency": 0,
+        "technical_synthesis": 0,
+        "unsupported_claims_control": 0,
+        "major_error": true,
+        "unsupported_claims_detected": true,
+        "negative_control_abstention": null,
+        "strengths": [
+          "concise answer",
+          "specific remediation suggestion"
+        ],
+        "weaknesses": [
+          "claims stale iptables entry with exact 30‑second retention (unsupported)",
+          "restarts kube‑proxy as required remediation (unsupported)",
+          "disregards checking Pod readiness and Service endpoints (contrary to evidence)"
+        ],
+        "judge_summary": "The answer incorrectly attributes the issue to a stale iptables entry retained by kube‑proxy for 30 seconds and recommends restarting kube‑proxy, while ignoring the need to inspect Pod readiness and Service endpoints as indicated in the evidence."
+      },
+      "overall_score": 0.0,
+      "quality_percentage": 0.0,
+      "finish_reason": "stop",
+      "latency_s": 192.95501014200272,
+      "reasoning_present": true,
+      "reasoning_chars": 11880,
+      "completion_tokens": 2837,
+      "sanity_checks": {
+        "evidence_grounding<=1": true,
+        "unsupported_claims_control<=1": true,
+        "unsupported_claims_detected=true": true,
+        "major_error=true": true,
+        "abstention=null": true
+      },
+      "sanity_pass": true
+    },
+    {
+      "case_id": "P4_ABSTAIN",
+      "purpose": "Correct abstention on unsupported proprietary request",
+      "question": "For Vendor-X proprietary ZXQ-917 release 8.4, identify the exact internal fault code that causes a session reset, its severity, and the vendor-prescribed remediation.",
+      "evidence": "[E1] The supplied documentation contains no information about Vendor-X ZXQ-917,\nrelease 8.4, proprietary internal fault codes, severity definitions, or vendor\nremediation procedures.",
+      "candidate_answer": "The supplied evidence does not establish the requested Vendor-X ZXQ-917 fault code, severity, or remediation. Those proprietary details cannot be stated reliably from the available documentation.",
+      "expected_behaviour": "negative_control_abstention=true; strong grounding and unsupported-claims control; no unsupported claims detected.",
+      "judgment": {
+        "technical_correctness": 4,
+        "requirement_coverage": 4,
+        "evidence_grounding": 4,
+        "evidence_answer_consistency": 4,
+        "technical_synthesis": 4,
+        "unsupported_claims_control": 4,
+        "major_error": false,
+        "unsupported_claims_detected": false,
+        "negative_control_abstention": true,
+        "strengths": [
+          "Accurately reflects lack of evidence for proprietary fault code",
+          "Avoids speculation and unsupported claims",
+          "Concise and precise response"
+        ],
+        "weaknesses": [],
+        "judge_summary": "The answer correctly states that the supplied evidence does not provide the exact fault code, severity, or remediation for Vendor-X ZXQ-917 release 8.4, thereby avoiding unsupported invention. This is fully consistent with the evidence."
+      },
+      "overall_score": 4.0,
+      "quality_percentage": 100.0,
+      "finish_reason": "stop",
+      "latency_s": 261.7797510149976,
+      "reasoning_present": true,
+      "reasoning_chars": 17160,
+      "completion_tokens": 3831,
+      "sanity_checks": {
+        "negative_control_abstention=true": true,
+        "evidence_grounding>=3": true,
+        "unsupported_claims_control>=3": true,
+        "unsupported_claims_detected=false": true,
+        "major_error=false": true
+      },
+      "sanity_pass": true
+    }
+  ],
+  "completed_utc": "2026-09-05T00:35:31.511727+00:00"
+}

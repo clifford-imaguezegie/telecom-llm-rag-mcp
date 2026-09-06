@@ -1,0 +1,3 @@
+model,quality_percentage,technical_correctness,requirement_coverage,evidence_grounding,evidence_answer_consistency,technical_synthesis,unsupported_claims_control,unsupported_claims_detected,negative_control_abstention,major_error
+Qwen3.5 9B,100.0,4,4,4,4,4,4,False,True,False
+Qwen3.8 27B,98.75,4,4,4,4,4,3,True,True,False

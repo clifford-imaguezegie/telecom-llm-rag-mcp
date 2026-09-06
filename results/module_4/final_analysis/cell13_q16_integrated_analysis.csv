@@ -1,0 +1,4 @@
+model,selected_mode,retrieval_rounds,rag_calls,mcp_calls,retrieval_stop_reason,answer_validation_pass,completion_tokens,end_to_end_s,quality_percentage,negative_control_abstention,unsupported_claims_detected,major_error,judge_status
+Gemma 4 12B,MCP_ONLY,3,0,3,MAX_RETRIEVAL_ROUNDS,True,183,28.618335562001448,,,,,NOT EVALUATED
+Qwen3.5 9B,MCP_ONLY,3,0,3,MAX_RETRIEVAL_ROUNDS,True,448,39.6743284549957,100.0,True,False,False,EVALUATED
+Qwen3.8 27B,RAG_ONLY,3,3,0,MAX_RETRIEVAL_ROUNDS,True,412,109.3220298640008,98.75,True,True,False,EVALUATED

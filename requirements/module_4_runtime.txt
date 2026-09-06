@@ -1,0 +1,23 @@
+# Module 4 full runtime dependencies
+# Tested architecture was executed in Google Colab with NVIDIA L4.
+# PyTorch/CUDA were provided by the runtime and are intentionally not pinned here.
+
+vllm==0.28.0
+openai
+nest_asyncio
+huggingface_hub
+kagglehub
+kaggle>=2.0,<3
+sentence-transformers==6.0.1
+faiss-cpu==1.15.0
+duckdb==1.5.5
+fastmcp==4.0.2
+tqdm
+jedi
+pandas
+numpy
+matplotlib
+
+# Required by the Qwen runtime-INT4 path used in the formal experiment.
+bitsandbytes==0.50.2
+vllm-bnb-plugin==0.0.2

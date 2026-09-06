@@ -1,0 +1,6 @@
+generator_key,model,answer_validation_pass,n,mean_quality_pct,median_quality_pct,mean_completion_tokens,generation_status
+gemma4_12b,Gemma 4 12B,True,15,92.5,100.0,728.4,PASS
+qwen35_9b,Qwen3.5 9B,False,11,73.18181818181819,77.5,1024.0,FAIL
+qwen35_9b,Qwen3.5 9B,True,5,77.75,85.0,831.4,PASS
+qwen38_27b,Qwen3.8 27B,False,14,84.01785714285714,88.75,1024.0,FAIL
+qwen38_27b,Qwen3.8 27B,True,2,99.375,99.375,673.0,PASS

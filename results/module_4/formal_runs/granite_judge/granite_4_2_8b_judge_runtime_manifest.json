@@ -1,0 +1,49 @@
+{
+  "section": "5_independent_evaluation",
+  "cell": "12A",
+  "purpose": "Prepare IBM Granite 4.2 8B as the independent blind judge for Gemma 4, Qwen3 8B and Qwen3.5 9B formal outputs.",
+  "formal_benchmark_executed": false,
+  "generator_outputs_modified": false,
+  "judge": {
+    "label": "IBM Granite 4.2 8B — Official BF16",
+    "model_id": "ibm-granite/granite-4.2-8b",
+    "revision": "7fce579a7fbbad4b1e7703b6850cefd517a4002b",
+    "served_name": "module4-granite-4.2-8b-judge",
+    "official_checkpoint": true,
+    "precision": "bfloat16"
+  },
+  "standard_behavior": {
+    "thinking": "default_full_thinking",
+    "enable_thinking_override": null,
+    "low_effort_override": null,
+    "reasoning_effort_override": null,
+    "thinking_token_budget": null,
+    "reasoning_parser": "nemotron_v3",
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "max_tokens": 12288
+  },
+  "runtime": {
+    "tensor_parallel_size": 1,
+    "gpu_memory_utilization": 0.97,
+    "max_model_len": 20480,
+    "max_num_seqs": 1,
+    "bge_device": "cpu",
+    "startup_elapsed_s": 106.10605456200574
+  },
+  "smoke_test": {
+    "passed": true,
+    "reasoning_field_present": true,
+    "reasoning_chars": 946,
+    "finish_reason": "stop",
+    "latency_s": 16.463619237001694,
+    "completion_tokens": 239,
+    "final_content": "{\"status\":\"ready\",\"score\":4}"
+  },
+  "evaluation_scope": [
+    "Gemma 4 formal outputs",
+    "Qwen3.8 27B formal outputs",
+    "Qwen3.5 9B formal outputs"
+  ],
+  "created_utc": "2026-09-05T01:22:54.825568+00:00"
+}
