@@ -80,7 +80,7 @@ Key engineering dimensions include:
 | **Module 2** | Telecom RAG V1 + expanded multi-model benchmark | ✅ Completed |
 | **Module 3** | Knowledge-Based MCP + cross-LLM evaluation      | ✅ Completed |
 | **Module 4** | Adaptive RAG + Knowledge-Based MCP Hybrid       | ✅ Completed |
-| **Module 5** | Agentic Telecom AI                              | 🔄 Next     |
+| **Module 5** | Agentic Telecom AI                              | 🔄 In Progress — M05_01 Complete |
 | **Module 6** | Production Architecture + RAG V2                | ⏳ Planned   |
 | **Module 7** | Autonomous Telecom Operations                   | ⏳ Planned   |
 
@@ -118,8 +118,13 @@ The repository is organized by architectural module so that each experimental st
 │   │   ├── 18_version_b_deepseek_v4_runtime.ipynb
 │   │   └── 19_module3_final_ab_cross_llm_analysis.ipynb
 │   │
-│   └── module_4/
-│       └── 20_rag_mcp_hybrid.ipynb
+│   ├── module_4/
+│   │   └── 20_rag_mcp_hybrid.ipynb
+│   │
+│   └── module_5/
+│       ├── M05_00_Implementation_and_Causal_Observability_Reference_v1.ipynb
+│       ├── M05_00_Implementation_and_Causal_Observability_Reference_v1_1.ipynb
+│       └── M05_01_Foundation_and_Healthy_Telemetry_v1.ipynb
 │
 ├── docs/
 │   ├── module_3/
@@ -127,16 +132,24 @@ The repository is organized by architectural module so that each experimental st
 │   │   ├── EVALUATION.md
 │   │   └── supporting review changelogs
 │   │
-│   └── module_4/
+│   ├── module_4/
+│   │   ├── ARCHITECTURE.md
+│   │   ├── EVALUATION.md
+│   │   ├── RESULTS.md
+│   │   ├── ACHIEVEMENTS.md
+│   │   ├── REPRODUCIBILITY.md
+│   │   ├── LIMITATIONS.md
+│   │   ├── ARTIFACTS.md
+│   │   ├── NOTEBOOK_CLEANUP_REPORT.md
+│   │   └── MODULE4_CHANGELOG.md
+│   │
+│   └── module_5/
+│       ├── README.md
 │       ├── ARCHITECTURE.md
-│       ├── EVALUATION.md
-│       ├── RESULTS.md
-│       ├── ACHIEVEMENTS.md
-│       ├── REPRODUCIBILITY.md
-│       ├── LIMITATIONS.md
+│       ├── STATUS.md
 │       ├── ARTIFACTS.md
-│       ├── NOTEBOOK_CLEANUP_REPORT.md
-│       └── MODULE4_CHANGELOG.md
+│       ├── REPRODUCIBILITY.md
+│       └── MODULE5_CHANGELOG.md
 │
 ├── results/
 │   ├── module_1/
@@ -158,14 +171,18 @@ The repository is organized by architectural module so that each experimental st
 │
 ├── requirements/
 │   ├── module_4_runtime.txt
-│   └── module_4_analysis.txt
+│   ├── module_4_analysis.txt
+│   └── module_5_foundation.txt
 │
 ├── scripts/
 │   ├── module_3/
 │   │   └── validate_module3_notebooks.py
 │   │
-│   └── module_4/
-│       └── validate_module4_notebook.py
+│   ├── module_4/
+│   │   └── validate_module4_notebook.py
+│   │
+│   └── module_5/
+│       └── validate_module5_foundation.py
 │
 ├── src/
 │   └── llm/
@@ -1203,11 +1220,13 @@ Module 4 answered:
 
 Module 5 extends the research question to:
 
-> **Can an LLM-driven telecom agent autonomously select and sequence MCP-accessible knowledge, network-observation and controlled-action tools to diagnose realistic 5G network incidents accurately, efficiently and safely?**
+> **Can an LLM-driven telecom agent autonomously select and sequence standards-grounded knowledge, hierarchical RAN telemetry and specialist ML tools to diagnose realistic 5G RAN incidents accurately, efficiently and safely?**
 
-The planned architecture moves from knowledge retrieval into tool-driven network investigation.
+Module 5 moves the project from knowledge-access experiments into a controlled, tool-driven network-investigation architecture.
 
----
+## Module 5 North Star
+
+> **The LLM orchestrates. Deterministic telemetry supplies network truth. Standards knowledge provides grounding. ML supplies probabilistic evidence. Policy controls actions. Verification closes the loop.**
 
 ## Module 5 Target Architecture
 
@@ -1215,60 +1234,123 @@ The planned architecture moves from knowledge retrieval into tool-driven network
 Incident / Engineering Task
            │
            ▼
-      LangGraph Agent
+       LangGraph Agent
            │
-     ┌─────┼───────────────┐
-     │     │               │
-     ▼     ▼               ▼
+   ┌───────┼───────────────┐
+   │       │               │
+   ▼       ▼               ▼
 Semantic  Knowledge     Telemetry
   RAG       MCP            MCP
-     │       │               │
-     └───────┴───────┬───────┘
+   │         │               │
+   └─────────┴───────┬───────┘
                      │
                      ▼
-             Evidence / State
+              Evidence / State
                      │
                      ▼
-              Agent Diagnosis
+               Agent Diagnosis
                      │
                 Action needed?
                   /       \
                 No         Yes
                 │           │
                 │           ▼
-                │     Policy Engine
-                │      /    |    \
+                │      Policy Engine
+                │       /   |   \
                 │   Allow Approval Deny
-                │      │
-                │      ▼
-                │    Action MCP
-                │      │
-                │      ▼
+                │       │
+                │       ▼
+                │     Action MCP
+                │       │
+                │       ▼
                 │   Verification
                 │
                 ▼
-          Final Diagnosis
+           Final Diagnosis
 ```
 
----
+## M05_01 — Foundation + Healthy Telemetry — Completed
 
-## Module 5 Planned Technologies
+The first Module 5 implementation stage is now complete and frozen. It established the controlled 5G RAN Accessibility foundation required before incident injection, ML diagnosis or agent orchestration.
 
-The planned stack includes:
+Completed work includes:
 
-* **LangGraph** — explicit agent state and workflow orchestration
-* **LangSmith** — required trajectory observability
-* **Model Context Protocol** — standardized knowledge, telemetry and action tools
-* **Pydantic** — typed agent/tool schemas
-* **OpenTelemetry** — framework-neutral observability
-* **Prometheus / Grafana** — later network telemetry visualization
-* **Granite 4.2 8B** — primary locally controlled agent model
-* **synthetic standards-shaped 5G telemetry** — controlled V1 environment
-* **open-source executable 5G environment** — later V2 validation
+* broad 3GPP-aligned KPI and telemetry schema,
+* formal Partial and Total DRB Accessibility dependency graphs,
+* exact TS 28.554 / TS 28.552 PM dependency completion,
+* operational observation contracts,
+* deterministic synthetic 5G RAN topology,
+* causal-observability configuration and diagnostic graph,
+* 7-day healthy generator-qualification pilot,
+* qualified 92-day canonical healthy baseline,
+* **8,832 15-minute intervals**,
+* **18,829,824 telemetry observations**,
+* **92 daily Parquet partitions**,
+* private Kaggle persistence for canonical telemetry,
+* immutable provenance reconciliation,
+* M05_01 foundation freeze manifest,
+* and durable persistence of the frozen foundation artifact bundle.
 
-Module 5 will initially remain controlled and simulation-oriented.
+### Durable Module 5 Artifacts
 
-Unrestricted production autonomy is intentionally outside its scope.
+Large/runtime artifacts are intentionally kept outside GitHub. The frozen M05_01 state is persisted in two private Kaggle datasets:
+
+```text
+Canonical healthy telemetry
+cliffordimaguezegie/module5-5g-ran-healthy-telemetry-v1
+
+Frozen foundation artifacts
+cliffordimaguezegie/module5-m05-01-foundation-artifacts-v1
+```
+
+Important frozen identities include:
+
+```text
+M05_01 freeze semantic SHA
+3a519602da5e211df684786441c41669fbfdaac1c0d13254d18187ad5ce874e8
+
+Canonical telemetry semantic SHA
+d6b75444faf53d602edf952f4620fe02f2f3a4ea68431a4889e4829adf008f4d
+
+Foundation persistence semantic SHA
+fb4815ad27a88951b4b5f4d14a942510e07191aeb366929fcfec3701fee20413
+```
+
+## Module 5 Notebook Roadmap
+
+```text
+M05_00
+Architecture / implementation / causal reference
+        ↓
+M05_01
+Foundation + healthy telemetry                     ✅ Complete
+        ↓
+M05_02
+Runtime restore + formal KPI derivation + healthy validation
+        ↓
+M05_03
+Sionna independent radio reference validation
+        ↓
+M05_04
+Controlled incidents + benchmark
+        ↓
+M05_05
+Telemetry MCP
+        ↓
+M05_06
+Specialist ML MCP
+        ↓
+M05_07
+LangGraph agentic investigation
+        ↓
+M05_08
+Policy + Action MCP + verification
+        ↓
+M05_09
+Formal evaluation / closeout
+```
+
+M05_02 will restore the frozen M05_01 foundation and canonical telemetry from durable storage before deriving and validating the formal Accessibility KPIs.
 
 ---
 
@@ -1467,30 +1549,29 @@ Several principles are retained across modules:
 
 ---
 
-## Next
+## In Progress
 
 ### Module 5 — Agentic Telecom AI
 
-Planned work includes:
+**M05_01 — Foundation + Healthy Telemetry is complete and frozen.**
 
-* knowledge tools exposed consistently through MCP,
-* telemetry MCP,
-* controlled action MCP,
-* 5G KPI taxonomy,
-* standards-shaped synthetic telemetry,
-* deterministic fault injection,
-* LangGraph agent state and orchestration,
-* LangSmith trajectory observability,
-* OpenTelemetry instrumentation,
-* agent tool-use qualification,
-* bounded investigation loops,
-* deterministic action policy engine,
-* human approval for service-affecting actions,
-* trajectory-level evaluation,
-* safety evaluation,
-* Granite 4.2 8B primary agent,
-* Granite 3B efficiency baseline,
-* and later transfer testing against an executable open-source 5G environment.
+Completed in M05_01:
+
+* 3GPP-aligned Accessibility KPI/PM foundation,
+* standards-complete dependency graph,
+* causal-observability graph and operational telemetry contract,
+* deterministic 10-site / 30-cell synthetic topology,
+* 7-day generator-qualification pilot,
+* 92-day canonical healthy baseline,
+* 18,829,824 observations across 92 daily Parquet partitions,
+* verified private Kaggle persistence,
+* provenance reconciliation,
+* root-of-trust freeze manifest,
+* and durable frozen-foundation persistence.
+
+**Next implementation stage: M05_02 — Runtime Restore + Formal KPI Derivation + Healthy Validation.**
+
+Subsequent Module 5 stages will add Sionna validation, controlled incidents, Telemetry MCP, specialist ML MCP, LangGraph investigation, policy-controlled actions and formal trajectory-level evaluation.
 
 ---
 
@@ -1544,6 +1625,10 @@ An answer can be technically valuable while still failing structural or generati
 
 Strong retrieval cannot fully compensate for weak synthesis, and strong models cannot always compensate for insufficient evidence.
 
+## 9. Agentic investigation requires explicit network truth before autonomous reasoning
+
+M05_01 established that network-state generation, standards definitions, operational observations and provenance should be frozen independently before incidents, ML evidence or LLM orchestration are introduced. This reduces the risk of allowing an agent to manufacture or retroactively redefine the evidence it is expected to reason over.
+
 ---
 
 # Key Project Principle
@@ -1595,6 +1680,8 @@ Formal experiments preserve, where applicable:
 * deterministic post-hoc analyses.
 
 GitHub contains curated reproducibility artifacts.
+
+For Module 5, the repository carries the executable/reference notebooks, documentation, validator and frozen artifact identities, while the large canonical telemetry and small runtime foundation bundle are stored separately in private Kaggle datasets and referenced by immutable hashes.
 
 Large runtime logs, redundant checkpoints and complete experiment archives are retained separately to avoid turning the repository into a runtime dump.
 
