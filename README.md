@@ -80,7 +80,7 @@ Key engineering dimensions include:
 | **Module 2** | Telecom RAG V1 + expanded multi-model benchmark | ✅ Completed |
 | **Module 3** | Knowledge-Based MCP + cross-LLM evaluation      | ✅ Completed |
 | **Module 4** | Adaptive RAG + Knowledge-Based MCP Hybrid       | ✅ Completed |
-| **Module 5** | Agentic Telecom AI                              | 🔄 In Progress — M05_02 Complete |
+| **Module 5** | Agentic Telecom AI                              | 🔄 In Progress — M05_03 Complete |
 | **Module 6** | Production Architecture + RAG V2                | ⏳ Planned   |
 | **Module 7** | Autonomous Telecom Operations                   | ⏳ Planned   |
 
@@ -125,7 +125,8 @@ The repository is organized by architectural module so that each experimental st
 │       ├── M05_00_Implementation_and_Causal_Observability_Reference_v1.ipynb
 │       ├── M05_00_Implementation_and_Causal_Observability_Reference_v1_1.ipynb
 │       ├── M05_01_Foundation_and_Healthy_Telemetry_v1.ipynb
-│       └── M05_02_Runtime_Restore_KPI_Derivation_and_Healthy_Validation_v1.ipynb
+│       ├── M05_02_Runtime_Restore_KPI_Derivation_and_Healthy_Validation_v1.ipynb
+│       └── M05_03_Controlled_Incidents_and_Benchmark_v1.ipynb
 │
 ├── docs/
 │   ├── module_3/
@@ -152,6 +153,7 @@ The repository is organized by architectural module so that each experimental st
 │       ├── REPRODUCIBILITY.md
 │       ├── M05_01_NOTEBOOK_REVIEW.md
 │       ├── M05_02_NOTEBOOK_REVIEW.md
+│       ├── M05_03_NOTEBOOK_REVIEW.md
 │       └── MODULE5_CHANGELOG.md
 │
 ├── results/
@@ -175,7 +177,8 @@ The repository is organized by architectural module so that each experimental st
 ├── requirements/
 │   ├── module_4_runtime.txt
 │   ├── module_4_analysis.txt
-│   └── module_5_foundation.txt
+│   ├── module_5_foundation.txt
+│   └── module_5_runtime.txt
 │
 ├── scripts/
 │   ├── module_3/
@@ -185,7 +188,8 @@ The repository is organized by architectural module so that each experimental st
 │   │   └── validate_module4_notebook.py
 │   │
 │   └── module_5/
-│       └── validate_module5_foundation.py
+│       ├── validate_module5_foundation.py
+│       └── validate_module5_m05_03.py
 │
 ├── src/
 │   └── llm/
@@ -1225,168 +1229,152 @@ Module 5 extends the research question to:
 
 > **Can an LLM-driven telecom agent autonomously select and sequence standards-grounded knowledge, hierarchical RAN telemetry and specialist ML tools to diagnose realistic 5G RAN incidents accurately, efficiently and safely?**
 
-Module 5 moves the project from knowledge-access experiments into a controlled, tool-driven network-investigation architecture.
+Module 5 moves the project from knowledge-access experiments into controlled network investigation, diagnosis and eventually policy-governed closed-loop operation.
 
 ## Module 5 North Star
 
 > **The LLM orchestrates. Deterministic telemetry supplies network truth. Standards knowledge provides grounding. ML supplies probabilistic evidence. Policy controls actions. Verification closes the loop.**
 
-## Module 5 Target Architecture
+## Completed foundations
+
+**M05_01 — Foundation + Healthy Telemetry** established the deterministic 5G RAN Accessibility network truth:
+
+* 10 sites, 30 NRCellCU and 30 NRCellDU objects across two CU domains,
+* 92-day canonical healthy baseline,
+* 8,832 15-minute intervals,
+* 18,829,824 observations,
+* frozen standards, topology and causal-observability contracts,
+* immutable Google Drive persistence,
+* authoritative M05_01 freeze semantic SHA `4a9f6ecec30613c160b618dfe50e11e63b8f4c8c24d06eac351d5275c744a968`.
+
+**M05_02 — Formal KPI Derivation + Healthy Validation** restored the frozen M05_01 lineage and derived deterministic TS 28.554 Partial and Total DRB Accessibility:
+
+* 794,880 NRCellCU × interval × 5QI KPI records,
+* 26,496 SubNetwork × interval × 5QI KPI records,
+* zero formal hierarchy/range failures,
+* KPI manifest semantic SHA `3b0d6271c0aba98d3cf0ac3907ec21fea7fc113ba865ae8f6f0cdf864dd5104e`,
+* validation receipt semantic SHA `08d12c9564b3d5dff14f4770a3bfbf0d4853df1a3dcbbfd824511102051b66ae`.
+
+## M05_03 — Controlled Incidents + Benchmark — Completed
+
+M05_03 converts selected healthy windows into a controlled troubleshooting benchmark without modifying M05_01 or M05_02.
+
+The benchmark contains:
 
 ```text
-Incident / Engineering Task
-           │
-           ▼
-       LangGraph Agent
-           │
-   ┌───────┼───────────────┐
-   │       │               │
-   ▼       ▼               ▼
-Semantic  Knowledge     Telemetry
-  RAG       MCP            MCP
-   │         │               │
-   └─────────┴───────┬───────┘
-                     │
-                     ▼
-              Evidence / State
-                     │
-                     ▼
-               Agent Diagnosis
-                     │
-                Action needed?
-                  /       \
-                No         Yes
-                │           │
-                │           ▼
-                │      Policy Engine
-                │       /   |   \
-                │   Allow Approval Deny
-                │       │
-                │       ▼
-                │     Action MCP
-                │       │
-                │       ▼
-                │   Verification
-                │
-                ▼
-           Final Diagnosis
+8 case families
+= 1 HEALTHY_CONTROL
++ 7 controlled fault families
+
+4 deterministic episodes per family
+= 32 benchmark cases
+
+24 DEVELOPMENT
+8 held-out EVAL
 ```
 
-## M05_01 — Foundation + Healthy Telemetry — Completed
+Fault families cover cell, site, CU-domain and AMF-facing boundary scopes:
 
-M05_01 is complete and frozen. The stage establishes deterministic network truth for the bounded **5G RAN Accessibility** domain before incident injection, specialist ML diagnosis, agent orchestration or controlled network action.
+* radio interference,
+* radio resource congestion,
+* N2 packet-loss/latency degradation,
+* CU-CP processing pressure,
+* QoS configuration,
+* RRC configuration,
+* AMF-facing boundary instability.
 
-Completed work includes:
+Each four-hour case contains a healthy PRE period, a two-hour controlled incident, and a healthy RECOVERY period. Formal Accessibility KPIs are recomputed from modified PM counters; KPI values are never directly injected.
 
-* broad 3GPP-aligned KPI taxonomy and canonical telemetry schema,
-* formal Partial and Total DRB Accessibility dependency graphs,
-* exact TS 28.554 / TS 28.552 PM dependency completion,
-* standardized and operational observation contracts,
-* deterministic synthetic 5G RAN topology,
-* causal-observability configuration and diagnostic graph,
-* qualified 7-day healthy telemetry pilot,
-* **11 telecom semantic and KPI-readiness qualification checks**,
-* qualified 92-day canonical healthy telemetry V1.1,
-* **8,832 15-minute intervals**,
-* **18,829,824 observations**,
-* **92 daily Parquet partitions**,
-* persisted telemetry qualification receipt,
-* independently verified Google Drive canonical persistence,
-* explicit invalidation of the earlier V1 telemetry lineage,
-* complete **11-artifact Cells 03–12 foundation registry**,
-* corrected **M05_01 V1.2 root-of-trust freeze**,
-* and a verified **17-file frozen foundation bundle**.
-
-### Durable Module 5 Working Artifacts
-
-Large runtime artifacts remain outside GitHub. The authoritative M05_01 working state is stored on Google Drive:
+The benchmark explicitly separates:
 
 ```text
-Frozen foundation bundle V1.2
-/content/drive/MyDrive/Telecom_AI_Engineering_Platform/Module_5/M05_01/foundation/foundation_bundle_v1_2
-
-Canonical 92-day healthy telemetry V1.1
-/content/drive/MyDrive/Telecom_AI_Engineering_Platform/Module_5/M05_01/telemetry/healthy_baseline_v1_1
+Agent-visible evidence
+        from
+Private benchmark truth
 ```
 
-The final foundation bundle contains:
+Agent-visible telemetry, KPIs, events and public case definitions contain no root-cause labels, severity, phase boundaries, expected diagnosis or benchmark answers. The private truth layer remains outside the future Telemetry MCP service.
+
+M05_03 completed all 18 validation gates:
 
 ```text
-11 foundation artifacts
- 4 authoritative control artifacts
- 1 deterministic bundle index
- 1 foundation persistence receipt
-----------------------------------
-17 verified files
+M05_03_CLOSEOUT_PASS=True
+Benchmark cases: 32
+DEVELOPMENT / EVAL: 24 / 8
 ```
 
-Important authoritative identities:
+Authoritative M05_03 semantic identities:
 
 ```text
-M05_00 historical parent SHA
-9c4db1552791510d3237fd8c7ff93cd7ae66d614d42fed0da7a268bf77fa910e
+Roadmap amendment
+49e934eee8af16281615a923248ee29768e5ca9d282cdd194712a0fcb260b057
 
-M05_01 freeze V1.2 semantic SHA
-4a9f6ecec30613c160b618dfe50e11e63b8f4c8c24d06eac351d5275c744a968
+Benchmark manifest
+005232cb9326334e9a03f0a751b6eff325ffad4bc13c42caf48df8773193f7e7
 
-Foundation bundle index semantic SHA
-55c8ef51f905945fb825fad3bb35b932ccf7e140f5ffe9d85d3430071ff7143b
-
-Foundation persistence semantic SHA
-936b605cb1ce3c2d2b2977fed537df65c5e61e19e26ff655f89b27b919d62879
-
-Telemetry qualification semantic SHA
-fc3c38f980209b1d5a9504b30f98efa6636ba7eedc153ef4f4d1e7bb49be156a
-
-Canonical telemetry semantic SHA
-c1fb3a49eacd63f45a98986322d536b74d21e585ff8bc49a4649ef11b3b34cd7
-
-M05_02 KPI manifest semantic SHA
-3b0d6271c0aba98d3cf0ac3907ec21fea7fc113ba865ae8f6f0cdf864dd5104e
-
-M05_02 validation receipt semantic SHA
-08d12c9564b3d5dff14f4770a3bfbf0d4853df1a3dcbbfd824511102051b66ae
+Validation receipt
+59a0658f880fae4f8acea6358ad74702839a46eeb46e4c17e48b6c9013f8daca
 ```
 
-The earlier V1 telemetry and its dependent freeze lineage are retained only as historical provenance and are **not authorized for M05_02 restoration**. Kaggle persistence of the final Module 5 artifacts is deferred until final platform clean-up.
+### Roadmap amendment
+
+M05_02 historically authorized a Sionna radio-reference stage. That historical receipt is preserved unchanged. M05_03 records a separate roadmap amendment that **defers Sionna** and makes Controlled Incidents + Benchmark the active M05_03 stage.
+
+Sionna remains an optional future radio-physics reference if a later experiment requires independent propagation/channel validation; it is not a competing PM-counter or KPI truth source.
 
 ## Module 5 Notebook Roadmap
 
 ```text
-M05_00
-Architecture / implementation / causal reference
-        ↓
-M05_01
-Foundation + healthy telemetry                     ✅ Complete
-        ↓
-M05_02
-Runtime restore + formal KPI derivation + healthy validation ✅ Complete
-        ↓
-M05_03
-Sionna independent radio reference validation
-        ↓
-M05_04
-Controlled incidents + benchmark
-        ↓
-M05_05
-Telemetry MCP
-        ↓
-M05_06
-Specialist ML MCP
-        ↓
-M05_07
-LangGraph agentic investigation
-        ↓
-M05_08
-Policy + Action MCP + verification
-        ↓
-M05_09
-Formal evaluation / closeout
+M05_00  Architecture / causal reference
+   ↓
+M05_01  Foundation + healthy telemetry             ✅ Complete
+   ↓
+M05_02  Formal KPI derivation + healthy baseline   ✅ Complete
+   ↓
+M05_03  Controlled incidents + benchmark           ✅ Complete
+   ↓
+M05_04  Telemetry MCP
+   ↓
+M05_05  Specialist ML MCP
+   ↓
+M05_06  LangGraph agentic investigation
+   ↓
+M05_07  Policy + Action MCP + verification
+   ↓
+M05_08  Formal evaluation + closeout
 ```
 
-M05_02 restored the authoritative V1.2 foundation bundle and V1.1 canonical telemetry from Google Drive, verified their frozen identities, and deterministically derived and validated the formal TS 28.554 Partial and Total DRB Accessibility KPIs. The next stage is M05_03 — Sionna independent radio reference validation.
+## Closed-loop alignment
 
----
+The platform will use TM Forum Autonomous Networks / closed-loop concepts as an architectural reference, while retaining an engineering decomposition that is implementable and measurable rather than claiming strict TM Forum conformance.
+
+Our executable loop is:
+
+```text
+Intent
+  ↓
+Awareness / Observe
+  ↓
+Analyse
+  ↓
+Decide
+  ↓
+Policy & Safety
+  ↓
+Execute
+  ↓
+Verify
+  ↓
+Close / Escalate / Re-enter
+```
+
+This maps naturally across M05_04–M05_08. TM Forum's I-AADE and closed-loop work provide the reference concepts; the explicit Policy/Safety and verification controls are retained as implementation guardrails. Later Module 7 work can connect this operating loop to telecom-native rApp/xApp architecture.
+
+## Next
+
+**M05_04 — Telemetry MCP Service**
+
+M05_04 will expose deterministic, hierarchical investigation tools over the **agent-visible** M05_03 benchmark only. It must not load `M05_03/private/`.
 
 # Module 6 — Production Architecture + RAG V2
 
@@ -1587,26 +1575,25 @@ Several principles are retained across modules:
 
 ### Module 5 — Agentic Telecom AI
 
-**M05_02 — Runtime Restore + Formal KPI Derivation + Healthy Validation is complete.**
+**M05_03 — Controlled Incidents + Benchmark is complete and validated.**
 
-The Module 5 foundation now includes:
+The current Module 5 state includes:
 
-* frozen M05_01 V1.2 standards/causal foundation,
-* corrected 92-day canonical V1.1 healthy telemetry,
-* 18,829,824 observations across 92 daily Parquet partitions,
-* deterministic Partial and Total DRB Accessibility derivation,
-* 794,880 validated NRCellCU × interval × 5QI KPI records,
-* 26,496 validated SubNetwork × interval × 5QI KPI records,
-* healthy cell-level and SubNetwork reference baselines,
-* immutable Google Drive KPI persistence,
-* KPI derivation manifest and validation receipt,
-* and `M05_02_CLOSEOUT_PASS=True`.
+* frozen M05_01 standards/causal foundation and 92-day healthy network truth,
+* validated M05_02 formal Partial and Total DRB Accessibility baseline,
+* 32 controlled benchmark cases across 8 case families,
+* 24 DEVELOPMENT and 8 held-out EVAL cases,
+* deterministic incident signatures with positive and exclusion evidence,
+* controlled non-causal distractors,
+* formal KPI recomputation from PM-counter changes rather than direct KPI injection,
+* strict public-evidence/private-truth separation,
+* immutable Google Drive benchmark persistence,
+* benchmark manifest and validation receipt,
+* and `M05_03_CLOSEOUT_PASS=True`.
 
-**Next implementation stage: M05_03 — Sionna Radio Reference Validation.**
+**Next implementation stage: M05_04 — Telemetry MCP Service.**
 
-Subsequent Module 5 stages will add controlled incidents, Telemetry MCP, specialist ML MCP, LangGraph investigation, policy-controlled actions and formal trajectory-level evaluation.
-
----
+M05_04 will provide the future agent with bounded hierarchical access to KPIs, PM measurements, radio/resource/transport/processing state, configuration, events and topology while keeping the M05_03 private truth layer inaccessible.
 
 ## Later
 
@@ -1662,6 +1649,10 @@ Strong retrieval cannot fully compensate for weak synthesis, and strong models c
 
 M05_01 established that network-state generation, standards definitions, operational observations and provenance should be frozen independently before incidents, ML evidence or LLM orchestration are introduced. This reduces the risk of allowing an agent to manufacture or retroactively redefine the evidence it is expected to reason over.
 
+## 10. Agent benchmarks require hidden truth and discriminative evidence
+
+M05_03 demonstrated that a useful troubleshooting benchmark needs more than degraded KPIs. Each incident should have controlled causal signatures, exclusion evidence, plausible competing hypotheses, topology/chronology context, held-out evaluation cases and a strict boundary between agent-visible evidence and private benchmark truth.
+
 ---
 
 # Key Project Principle
@@ -1714,7 +1705,7 @@ Formal experiments preserve, where applicable:
 
 GitHub contains curated reproducibility artifacts.
 
-For Module 5, the repository carries the executable/reference notebooks, documentation, validator and frozen artifact identities, while the large canonical telemetry and small runtime foundation bundle are stored separately in private Kaggle datasets and referenced by immutable hashes.
+For Module 5, the repository carries the executable/reference notebooks, documentation, static validators and frozen artifact identities. Large telemetry, KPI products and M05_03 benchmark artifacts are stored on Google Drive and referenced by immutable hashes. Private M05_03 ground truth is intentionally excluded from Git.
 
 Large runtime logs, redundant checkpoints and complete experiment archives are retained separately to avoid turning the repository into a runtime dump.
 

@@ -1,0 +1,13 @@
+# Module 5 — active runtime dependencies through M05_03
+# M05_01 foundation requirements remain documented separately in
+# requirements/module_5_foundation.txt.
+#
+# M05_02/M05_03 are CPU-oriented deterministic data/KPI workflows.
+# No GPU, LLM, ML-training or Sionna dependency is required here.
+
+numpy
+pandas
+pydantic
+pyarrow
+jedi
+duckdb>=1.1,<2

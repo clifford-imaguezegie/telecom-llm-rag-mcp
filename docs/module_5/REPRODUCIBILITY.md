@@ -1,84 +1,110 @@
 # Module 5 Reproducibility
 
-## M05_01 execution model
+## Reproducibility principle
 
-M05_01 now uses a gated pilot-to-canonical workflow rather than the earlier two-pass Cell 13 procedure.
+Module 5 separates expensive data generation from deterministic downstream restoration. Once a stage is frozen, later notebooks validate immutable identities rather than rebuilding prior stages unless the upstream lineage itself changes.
 
-A clean rebuild should execute:
+## M05_01 — network-truth foundation
 
-1. Cells 01–12 — standards, graph, topology and observation foundation.
-2. Cell 13 — generate the 7-day V1.1 pilot.
-3. Cell 14 — structural/basic integrity qualification; require `DATA_OVERVIEW_PASS=True`.
-4. Cell 15 — telecom semantic and KPI-readiness validation; require `PILOT_QUALIFICATION_PASS=True`.
-5. Cell 16 — generate the 92-day canonical healthy baseline.
-6. Cell 17 — persisted canonical confirmation; require `CANONICAL_CONFIRMATION_PASS=True`.
-7. Cell 18 — persist the telemetry qualification receipt.
-8. Cell 19 — persist and independently verify canonical telemetry on Google Drive.
-9. Cell 20 then Cell 21 — preserve the intermediate V1.1 supersession/freeze control lineage.
-10. Cell 20A then Cell 21A — reconcile the complete 11-artifact foundation registry and establish the authoritative V1.2 freeze.
-11. Cell 22 — persist the frozen foundation bundle and require `M05_01_CLOSEOUT_PASS=True`.
+M05_01 generated and qualified the synthetic healthy baseline, then froze:
 
-The Cell 20A / Cell 21A correction changes control metadata only. It does not regenerate or modify the foundation semantic state or V1.1 telemetry.
+- foundation bundle V1.2,
+- canonical healthy telemetry V1.1,
+- standards/topology/causal contracts,
+- persistence and qualification receipts.
 
-## Why the V1.2 correction exists
+Root identities:
 
-The final foundation audit identified:
+```text
+M05_01 freeze     4a9f6ecec30613c160b618dfe50e11e63b8f4c8c24d06eac351d5275c744a968
+Healthy telemetry c1fb3a49eacd63f45a98986322d536b74d21e585ff8bc49a4649ef11b3b34cd7
+```
 
-- a 63-character transcription of the Cell 03 schema SHA in the intermediate control record,
-- omission of the Cell 03 KPI taxonomy from the frozen foundation inventory,
-- byte-SHA drift for timestamp-bearing Cells 04 and 06 while their deterministic semantic SHAs remained unchanged.
+The older V1 telemetry is superseded and is not an authorized restore source.
 
-The corrected V1.2 registry freezes the exact current bytes and verified semantic identities of all 11 foundation artifacts.
+## M05_02 — deterministic KPI truth
 
-## Completed M05_02 workflow
+M05_02 restored M05_01 and derived formal Accessibility KPIs deterministically. It persisted NRCellCU/SubNetwork KPI products and a manifest/receipt.
 
-M05_02 **restored rather than rebuilt** M05_01:
+```text
+M05_02 manifest 3b0d6271c0aba98d3cf0ac3907ec21fea7fc113ba865ae8f6f0cdf864dd5104e
+M05_02 receipt  08d12c9564b3d5dff14f4770a3bfbf0d4853df1a3dcbbfd824511102051b66ae
+```
 
-1. mount Google Drive;
-2. load the frozen foundation bundle V1.2;
-3. verify the bundle index, persistence receipt and V1.2 freeze;
-4. reconstruct and verify all 11 foundation artifacts;
-5. load the canonical telemetry V1.1;
-6. verify the canonical manifest and dataset semantic identity;
-7. derive formal TS 28.554 KPI values deterministically;
-8. validate the healthy KPI baseline;
-9. persist NRCellCU and SubNetwork KPI Parquets immutably;
-10. persist the KPI derivation manifest and validation receipt;
-11. require `M05_02_CLOSEOUT_PASS=True`.
+Downstream notebooks do not normally replay the full 92-partition verification and complete KPI derivation.
 
-## Root-of-trust identities
+## M05_03 — controlled benchmark workflow
 
-- M05_01 freeze V1.2 semantic SHA: `4a9f6ecec30613c160b618dfe50e11e63b8f4c8c24d06eac351d5275c744a968`
-- foundation identity reconciliation semantic SHA: `8366a6e8bee9ddfdbcc665a668caac50e1bba86c02730f48277250206279e4d9`
-- foundation bundle index semantic SHA: `55c8ef51f905945fb825fad3bb35b932ccf7e140f5ffe9d85d3430071ff7143b`
-- foundation persistence semantic SHA: `936b605cb1ce3c2d2b2977fed537df65c5e61e19e26ff655f89b27b919d62879`
-- telemetry qualification semantic SHA: `fc3c38f980209b1d5a9504b30f98efa6636ba7eedc153ef4f4d1e7bb49be156a`
-- canonical dataset semantic SHA: `c1fb3a49eacd63f45a98986322d536b74d21e585ff8bc49a4649ef11b3b34cd7`
-- canonical manifest artifact SHA: `e856ffe3f7ed97e6ad4592e999e5fd3adf5993f80ac72cdada1f374ab6543411`
+M05_03 executes the following gated workflow:
+
+1. consolidated M05_01/M05_02 provenance restore;
+2. explicit roadmap amendment and benchmark contract;
+3. healthy telemetry runtime/evidence inventory;
+4. topology inventory;
+5. freeze the 8-family incident design;
+6. create 32 deterministic non-overlapping case windows;
+7. copy healthy windows into an independent working set;
+8. apply numeric incident overlays only during INCIDENT periods;
+9. apply controlled state/event/distractor overlays;
+10. sanitize agent-visible telemetry and run leakage gates;
+11. recompute formal M05_02 Accessibility KPIs from PM counters;
+12. validate KPI mathematics and exact untouched-period reproduction;
+13. validate causal signatures and exclusion evidence;
+14. validate diagnosability;
+15. separate public cases from private ground truth;
+16. isolate 24 DEVELOPMENT from 8 held-out EVAL cases;
+17. persist immutable outputs;
+18. freeze benchmark manifest and validation receipt;
+19. close out with `M05_03_CLOSEOUT_PASS=True`.
+
+### Deterministic case contract
+
+```text
+8 families × 4 episodes = 32 cases
+3 DEVELOPMENT + 1 EVAL per family
+4 hours / case
+16 × 15-minute intervals / case
+```
+
+Every case starts from copied M05_01 healthy telemetry. M05_01/M05_02 are read-only.
+
+## M05_03 validation identities
+
+```text
+Roadmap amendment 49e934eee8af16281615a923248ee29768e5ca9d282cdd194712a0fcb260b057
+Benchmark manifest 005232cb9326334e9a03f0a751b6eff325ffad4bc13c42caf48df8773193f7e7
+Validation receipt 59a0658f880fae4f8acea6358ad74702839a46eeb46e4c17e48b6c9013f8daca
+Reviewed notebook  1fce555bf96adc3a8f27b0f08da9717b6ac93345b783e4b57d44336d91e0df7e
+```
+
+## Review / cleanup rule
+
+The final M05_03 Git notebook review made no semantic change to the benchmark. It preserved successful execution evidence, corrected no remaining experiment logic, removed transient progress-widget metadata, normalized successful execution numbering and finalized observations.
+
+Therefore a full rerun is **not required** merely because the reviewed Git notebook has a different presentation/metadata state from the raw Colab copy.
+
+## M05_04 restore rule
+
+M05_04 should begin with one consolidated restore/provenance gate that validates:
+
+- M05_03 manifest/receipt semantic identities;
+- byte identities of the agent-visible telemetry/KPI/event/case artifacts;
+- scenario/case counts and expected schemas;
+- absence of private-truth fields;
+- authorized next stage.
+
+M05_04 should **not** rebuild incidents and must **not** read `M05_03/private/`.
+
+## DEVELOPMENT/EVAL leakage guardrail
+
+The 24 DEVELOPMENT labels may support later feature/model development. The 8 held-out EVAL answers remain private until formal evaluation.
+
+`scenario_id` and absolute timestamps must not be used as predictive ML features because deterministic scheduling/IDs could become shortcut signals unrelated to telecom causality.
+
+## Runtime
+
+M05_03 is CPU-oriented. It uses Python, Pandas/PyArrow and DuckDB; no GPU, LLM, ML training or Sionna runtime is required.
 
 ## Data boundary
 
-All M05_01 telemetry is synthetic. No production operator data, subscriber information or customer network telemetry is included.
-
-
-## Preferred M05_03+ restore workflow
-
-M05_03 and later notebooks should not replay the full M05_02 restore/derivation ceremony.
-
-A normal downstream notebook should begin with one consolidated upstream bootstrap/provenance cell that:
-
-1. mounts Google Drive;
-2. locates the required M05_01/M05_02 upstream artifacts;
-3. verifies the expected semantic SHA identities;
-4. verifies the required KPI file SHA-256 identities;
-5. rejects superseded lineage;
-6. exposes one upstream-restore PASS gate.
-
-The full 92-partition re-hash and formal Accessibility re-derivation are repeated only when the authoritative upstream lineage changes or when a notebook is explicitly auditing those artifacts.
-
-### M05_02 downstream identities
-
-- NRCellCU KPI SHA-256: `709c9883bad799dec3907624a7590f5e44356d9fef7c00f4446d165fd1b2223f`
-- SubNetwork KPI SHA-256: `18d5a60ca91139242e85e9f5468346a66bedf70f8736e01507568f2afb9c42ba`
-- KPI derivation manifest semantic SHA: `3b0d6271c0aba98d3cf0ac3907ec21fea7fc113ba865ae8f6f0cdf864dd5104e`
-- validation receipt semantic SHA: `08d12c9564b3d5dff14f4770a3bfbf0d4853df1a3dcbbfd824511102051b66ae`
+All M05_01–M05_03 telemetry is synthetic. No production network or subscriber data is required for reproduction.

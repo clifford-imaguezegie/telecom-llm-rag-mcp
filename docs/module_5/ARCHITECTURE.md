@@ -21,80 +21,165 @@ RAG   Knowledge  Telemetry   ML MCP
        MCP         MCP
  └────────┴─────────┴──────────┘
           ↓
-Evidence + agent state
+Evidence + hypotheses
           ↓
-Diagnosis / next investigation step
+Diagnosis / decision
           ↓
-Deterministic policy / approval gate
+Deterministic policy / safety gate
           ↓
 Action MCP
           ↓
 Post-action verification
+          ↓
+Close / retry / escalate
 ```
 
-## Staged implementation
+## Revised staged implementation
 
 | Stage | Purpose | Status |
 |---|---|---|
 | M05_00 | architecture / implementation / causal reference | maintained reference |
 | M05_01 | foundation + healthy telemetry | **complete / frozen** |
-| M05_02 | runtime restore + formal KPI derivation + healthy validation | **complete / validated** |
-| M05_03 | Sionna independent radio reference validation | **next** |
-| M05_04 | controlled incidents + benchmark | planned |
-| M05_05 | Telemetry MCP | planned |
-| M05_06 | specialist ML MCP | planned |
-| M05_07 | LangGraph agentic investigation | planned |
-| M05_08 | policy + Action MCP + verification | planned |
-| M05_09 | formal evaluation / closeout | planned |
+| M05_02 | formal KPI derivation + healthy validation | **complete / validated** |
+| M05_03 | controlled incidents + benchmark | **complete / validated** |
+| M05_04 | Telemetry MCP | **next** |
+| M05_05 | specialist ML MCP | planned |
+| M05_06 | LangGraph agentic investigation | planned |
+| M05_07 | policy + Action MCP + verification | planned |
+| M05_08 | formal evaluation / closeout | planned |
 
-## M05_01 bounded domain
+## Roadmap amendment / Sionna
 
-The first bounded operational domain is **5G RAN Accessibility**. The foundation distinguishes formal standardized KPIs/PM dependencies from synthetic operational diagnostics. RACH is treated as supporting pre-RRC diagnostic evidence rather than being mislabeled as a TS 28.554 Accessibility KPI.
+M05_02 was frozen when the next planned stage was `M05_03_SIONNA_RADIO_REFERENCE_VALIDATION`. That historical receipt is not rewritten.
 
-## M05_01 environment
-
-- 10 synthetic sites / DUs
-- 3 sectors per site
-- 30 logical cells
-- 30 `NRCellCU` objects
-- 30 `NRCellDU` objects
-- two CU domains plus shared CU-CP/CU-UP/N2/E1 and local F1 observation scopes
-- 15-minute PM observation interval
-- healthy-only canonical baseline
-
-M05_01 contains no injected incidents, hidden fault labels, specialist ML inference or autonomous action.
-
-## M05_01 frozen handover state
-
-M05_01 closes with two independently verified Google Drive restore sources:
+M05_03 records an explicit roadmap amendment:
 
 ```text
-Foundation bundle V1.2
-/content/drive/MyDrive/Telecom_AI_Engineering_Platform/Module_5/M05_01/foundation/foundation_bundle_v1_2
-
-Canonical telemetry V1.1
-/content/drive/MyDrive/Telecom_AI_Engineering_Platform/Module_5/M05_01/telemetry/healthy_baseline_v1_1
+Previous planned stage : Sionna radio reference
+Decision               : DEFER_SIONNA
+Current stage          : M05_03_CONTROLLED_INCIDENTS_AND_BENCHMARK
+M05_02 mutated         : NO
 ```
 
-The authoritative freeze semantic SHA is `4a9f6ecec30613c160b618dfe50e11e63b8f4c8c24d06eac351d5275c744a968` and the canonical telemetry semantic SHA is `c1fb3a49eacd63f45a98986322d536b74d21e585ff8bc49a4649ef11b3b34cd7`.
+Sionna remains an optional later specialist reference for propagation/channel or radio-physics validation if a specific experiment needs it. M05_01/M05_02 remain the single network-truth and formal-KPI foundation.
 
-The earlier V1 telemetry lineage is invalidated for downstream use. Kaggle publication of the corrected artifacts is deferred until final Module 5 clean-up.
+Roadmap-amendment semantic SHA:
 
+`49e934eee8af16281615a923248ee29768e5ca9d282cdd194712a0fcb260b057`
 
-## M05_02 validated handover state
-
-M05_02 independently restored the frozen M05_01 lineage and established reusable deterministic KPI truth without introducing fault injection, ML inference or LLM inference.
+## M05_03 benchmark architecture
 
 ```text
-M05_01 frozen foundation + canonical telemetry
-        ↓
-M05_02 deterministic PM binding and KPI derivation
-        ↓
-Validated NRCellCU and SubNetwork Accessibility KPI products
-        ↓
-M05_03 independent Sionna radio reference validation
+Frozen healthy telemetry + M05_02 formulas
+                  ↓
+       Copy selected windows
+                  ↓
+     Controlled causal overlays
+                  ↓
+ PM + operational + event evidence
+                  ↓
+ Recompute formal Accessibility KPIs
+                  ↓
+       Leakage / math / causal gates
+             ┌────┴────┐
+             ↓         ↓
+      Agent-visible   Private truth
+        benchmark      benchmark
+             ↓
+     M05_04 Telemetry MCP
 ```
 
-The validated M05_02 result space contains 794,880 `NRCellCU × 15-minute interval × 5QI` KPI records and 26,496 `SubNetwork × 15-minute interval × 5QI` KPI records.
+### Case bank
 
-Downstream stages restore and verify the M05_02 manifest/receipt identities rather than repeating the 92-partition physical verification and full KPI derivation workflow.
+The first formal bank has 8 case families:
+
+1. `HEALTHY_CONTROL`
+2. `RADIO_INTERFERENCE`
+3. `RADIO_RESOURCE_CONGESTION`
+4. `N2_PACKET_LOSS_LATENCY`
+5. `CU_CP_PROCESSING_PRESSURE`
+6. `QOS_CONFIGURATION`
+7. `RRC_CONFIGURATION`
+8. `AMF_FACING_BOUNDARY`
+
+Each family has four deterministic episodes: three DEVELOPMENT cases and one held-out EVAL case. Each episode is four hours: one hour PRE, two hours INCIDENT and one hour RECOVERY.
+
+### Causal design
+
+Every non-control case is validated for:
+
+- at least two changed direct-evidence metrics,
+- unchanged declared exclusion evidence,
+- plausible competing hypotheses,
+- target topology scope,
+- controlled chronology,
+- no changes outside the incident period,
+- one mild non-causal operational distractor,
+- measurable target-KPI degradation.
+
+Healthy controls contain no injected changes.
+
+### KPI integrity
+
+M05_03 does not inject formal KPI values. It modifies copied PM/operational evidence and reruns the deterministic M05_02 Partial/Total DRB Accessibility logic.
+
+All 46,080 expected `scenario × NRCellCU × interval × 5QI` KPI records passed range, denominator, hierarchy and aggregation validation. PRE, RECOVERY and HEALTHY_CONTROL values reproduce M05_02 exactly.
+
+## Public/private truth boundary
+
+The future agent may consume only:
+
+```text
+M05_03/benchmark/
+```
+
+It must not consume:
+
+```text
+M05_03/private/
+```
+
+The private layer contains root-cause family, target, severity/phase information, expected diagnosis and held-out evaluation truth. This boundary is a hard experimental control, not merely a prompt instruction.
+
+## TM Forum-aligned closed-loop target
+
+Module 5 uses TM Forum Autonomous Networks and Closed Loop Automation concepts as an architectural reference, without claiming that our engineering decomposition is an official TM Forum eight-step model or a formal conformance implementation.
+
+TM Forum material uses Intent/Awareness/Analysis/Decision/Execution (I-AADE) in Autonomous Networks solution work and also documents closed-loop/self-healing patterns. Our implementation makes policy/safety and outcome verification explicit:
+
+```text
+1. Intent
+2. Awareness / Observe
+3. Analyse
+4. Decide
+5. Policy & Safety
+6. Execute
+7. Verify
+8. Close / Escalate / Re-enter
+```
+
+Mapping to the active roadmap:
+
+```text
+M05_03  controlled conditions + hidden benchmark truth
+M05_04  Awareness via Telemetry MCP
+M05_05  specialist analytical / probabilistic evidence
+M05_06  Awareness → Analysis → Decision via LangGraph
+M05_07  Policy → Execution → Verification
+M05_08  formal feedback / trajectory assessment
+```
+
+Reference context includes TM Forum IG1551 (Autonomous Operations and Closed Loops), IG1373 (Self-Healing and Closed-Loop Automation), IG1253 (Intent in Autonomous Networks), and I-AADE-based Autonomous Networks solution packages. This is **standards/reference alignment, not a conformance claim**.
+
+## M05_04 architectural contract
+
+M05_04 should:
+
+- restore M05_03 through the benchmark manifest/receipt and byte identities;
+- expose deterministic telemetry tools rather than handing the agent raw files;
+- support cell, site, CU-domain and boundary-level queries;
+- provide KPI decomposition, measurements, radio/resource/transport/processing state, events/configuration and topology;
+- preserve bounded query contracts and deterministic responses;
+- never load or expose the private truth directory.
+
+The intent is to create the agent's **eyes and ears** before adding specialist ML or LLM orchestration.
