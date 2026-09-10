@@ -1,11 +1,10 @@
 # Module 5 — M05_01 foundation/runtime dependencies
 # M05_01 installs missing packages dynamically in Colab; this file
-# documents the minimal external Python package surface used by the
-# foundation notebook.
+# documents the external Python package surface used by the active
+# foundation + healthy telemetry workflow.
 
 numpy
 pandas
 pydantic
 pyarrow
 jedi
-kaggle==2.2.4

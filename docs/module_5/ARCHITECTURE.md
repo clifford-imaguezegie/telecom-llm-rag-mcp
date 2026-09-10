@@ -63,3 +63,19 @@ The first bounded operational domain is **5G RAN Accessibility**. The foundation
 - healthy-only canonical baseline
 
 M05_01 contains no injected incidents, hidden fault labels, specialist ML inference or autonomous action.
+
+## M05_01 frozen handover state
+
+M05_01 closes with two independently verified Google Drive restore sources:
+
+```text
+Foundation bundle V1.2
+/content/drive/MyDrive/Telecom_AI_Engineering_Platform/Module_5/M05_01/foundation/foundation_bundle_v1_2
+
+Canonical telemetry V1.1
+/content/drive/MyDrive/Telecom_AI_Engineering_Platform/Module_5/M05_01/telemetry/healthy_baseline_v1_1
+```
+
+The authoritative freeze semantic SHA is `4a9f6ecec30613c160b618dfe50e11e63b8f4c8c24d06eac351d5275c744a968` and the canonical telemetry semantic SHA is `c1fb3a49eacd63f45a98986322d536b74d21e585ff8bc49a4649ef11b3b34cd7`.
+
+The earlier V1 telemetry lineage is invalidated for downstream use. Kaggle publication of the corrected artifacts is deferred until final Module 5 clean-up.

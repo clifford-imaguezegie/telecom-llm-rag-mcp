@@ -149,6 +149,7 @@ The repository is organized by architectural module so that each experimental st
 │       ├── STATUS.md
 │       ├── ARTIFACTS.md
 │       ├── REPRODUCIBILITY.md
+│       ├── M05_01_NOTEBOOK_REVIEW.md
 │       └── MODULE5_CHANGELOG.md
 │
 ├── results/
@@ -1271,50 +1272,75 @@ Semantic  Knowledge     Telemetry
 
 ## M05_01 — Foundation + Healthy Telemetry — Completed
 
-The first Module 5 implementation stage is now complete and frozen. It established the controlled 5G RAN Accessibility foundation required before incident injection, ML diagnosis or agent orchestration.
+M05_01 is complete and frozen. The stage establishes deterministic network truth for the bounded **5G RAN Accessibility** domain before incident injection, specialist ML diagnosis, agent orchestration or controlled network action.
 
 Completed work includes:
 
-* broad 3GPP-aligned KPI and telemetry schema,
+* broad 3GPP-aligned KPI taxonomy and canonical telemetry schema,
 * formal Partial and Total DRB Accessibility dependency graphs,
 * exact TS 28.554 / TS 28.552 PM dependency completion,
-* operational observation contracts,
+* standardized and operational observation contracts,
 * deterministic synthetic 5G RAN topology,
 * causal-observability configuration and diagnostic graph,
-* 7-day healthy generator-qualification pilot,
-* qualified 92-day canonical healthy baseline,
+* qualified 7-day healthy telemetry pilot,
+* **11 telecom semantic and KPI-readiness qualification checks**,
+* qualified 92-day canonical healthy telemetry V1.1,
 * **8,832 15-minute intervals**,
-* **18,829,824 telemetry observations**,
+* **18,829,824 observations**,
 * **92 daily Parquet partitions**,
-* private Kaggle persistence for canonical telemetry,
-* immutable provenance reconciliation,
-* M05_01 foundation freeze manifest,
-* and durable persistence of the frozen foundation artifact bundle.
+* persisted telemetry qualification receipt,
+* independently verified Google Drive canonical persistence,
+* explicit invalidation of the earlier V1 telemetry lineage,
+* complete **11-artifact Cells 03–12 foundation registry**,
+* corrected **M05_01 V1.2 root-of-trust freeze**,
+* and a verified **17-file frozen foundation bundle**.
 
-### Durable Module 5 Artifacts
+### Durable Module 5 Working Artifacts
 
-Large/runtime artifacts are intentionally kept outside GitHub. The frozen M05_01 state is persisted in two private Kaggle datasets:
+Large runtime artifacts remain outside GitHub. The authoritative M05_01 working state is stored on Google Drive:
 
 ```text
-Canonical healthy telemetry
-cliffordimaguezegie/module5-5g-ran-healthy-telemetry-v1
+Frozen foundation bundle V1.2
+/content/drive/MyDrive/Telecom_AI_Engineering_Platform/Module_5/M05_01/foundation/foundation_bundle_v1_2
 
-Frozen foundation artifacts
-cliffordimaguezegie/module5-m05-01-foundation-artifacts-v1
+Canonical 92-day healthy telemetry V1.1
+/content/drive/MyDrive/Telecom_AI_Engineering_Platform/Module_5/M05_01/telemetry/healthy_baseline_v1_1
 ```
 
-Important frozen identities include:
+The final foundation bundle contains:
 
 ```text
-M05_01 freeze semantic SHA
-3a519602da5e211df684786441c41669fbfdaac1c0d13254d18187ad5ce874e8
+11 foundation artifacts
+ 4 authoritative control artifacts
+ 1 deterministic bundle index
+ 1 foundation persistence receipt
+----------------------------------
+17 verified files
+```
 
-Canonical telemetry semantic SHA
-d6b75444faf53d602edf952f4620fe02f2f3a4ea68431a4889e4829adf008f4d
+Important authoritative identities:
+
+```text
+M05_00 historical parent SHA
+9c4db1552791510d3237fd8c7ff93cd7ae66d614d42fed0da7a268bf77fa910e
+
+M05_01 freeze V1.2 semantic SHA
+4a9f6ecec30613c160b618dfe50e11e63b8f4c8c24d06eac351d5275c744a968
+
+Foundation bundle index semantic SHA
+55c8ef51f905945fb825fad3bb35b932ccf7e140f5ffe9d85d3430071ff7143b
 
 Foundation persistence semantic SHA
-fb4815ad27a88951b4b5f4d14a942510e07191aeb366929fcfec3701fee20413
+936b605cb1ce3c2d2b2977fed537df65c5e61e19e26ff655f89b27b919d62879
+
+Telemetry qualification semantic SHA
+fc3c38f980209b1d5a9504b30f98efa6636ba7eedc153ef4f4d1e7bb49be156a
+
+Canonical telemetry semantic SHA
+c1fb3a49eacd63f45a98986322d536b74d21e585ff8bc49a4649ef11b3b34cd7
 ```
+
+The earlier V1 telemetry and its dependent freeze lineage are retained only as historical provenance and are **not authorized for M05_02 restoration**. Kaggle persistence of the final Module 5 artifacts is deferred until final platform clean-up.
 
 ## Module 5 Notebook Roadmap
 
@@ -1350,7 +1376,7 @@ M05_09
 Formal evaluation / closeout
 ```
 
-M05_02 will restore the frozen M05_01 foundation and canonical telemetry from durable storage before deriving and validating the formal Accessibility KPIs.
+M05_02 will restore the authoritative V1.2 foundation bundle and V1.1 canonical telemetry from Google Drive, verify their frozen identities, and then deterministically derive and validate the two formal TS 28.554 RAN Accessibility KPIs.
 
 ---
 

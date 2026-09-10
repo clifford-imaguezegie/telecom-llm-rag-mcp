@@ -5,40 +5,57 @@
 The Git repository contains the curated artifacts needed to understand, validate and continue Module 5:
 
 - M05_00 historical and current reference notebooks
-- executed / cleaned M05_01 notebook
-- architecture, status and reproducibility documentation
+- reviewed M05_01 implementation notebook
+- architecture, status, artifact and reproducibility documentation
+- M05_01 notebook review record
 - foundation requirements
-- static validation script
+- static Module 5 validation script
 
-## Private durable artifacts
+Large runtime-generated telemetry remains outside Git.
 
-Large or runtime-generated datasets are intentionally not committed to Git.
+## Authoritative durable working artifacts
 
-### Canonical healthy telemetry
+### Canonical healthy telemetry V1.1
 
 ```text
-cliffordimaguezegie/module5-5g-ran-healthy-telemetry-v1
+/content/drive/MyDrive/Telecom_AI_Engineering_Platform/Module_5/M05_01/telemetry/healthy_baseline_v1_1
 ```
 
 - 92-day healthy baseline
 - 92 daily Parquet partitions
 - 18,829,824 observations
-- dataset semantic SHA: `d6b75444faf53d602edf952f4620fe02f2f3a4ea68431a4889e4829adf008f4d`
+- 8,832 15-minute intervals
+- canonical dataset semantic SHA: `c1fb3a49eacd63f45a98986322d536b74d21e585ff8bc49a4649ef11b3b34cd7`
+- canonical manifest artifact SHA: `e856ffe3f7ed97e6ad4592e999e5fd3adf5993f80ac72cdada1f374ab6543411`
+- telemetry qualification semantic SHA: `fc3c38f980209b1d5a9504b30f98efa6636ba7eedc153ef4f4d1e7bb49be156a`
+- partition, manifest, event-channel and qualification identities verified on Google Drive
 
-### Frozen foundation bundle
+### Frozen foundation bundle V1.2
 
 ```text
-cliffordimaguezegie/module5-m05-01-foundation-artifacts-v1
+/content/drive/MyDrive/Telecom_AI_Engineering_Platform/Module_5/M05_01/foundation/foundation_bundle_v1_2
 ```
 
-- 23 frozen JSON foundation artifacts
-- one deterministic bundle index
-- 24 verified remote files
-- bundle index semantic SHA: `a24c052f9f79ccbd1d8b246765b0506bc817b14d89038239fea4ca58d19c8305`
-- persistence semantic SHA: `fb4815ad27a88951b4b5f4d14a942510e07191aeb366929fcfec3701fee20413`
+- 11 authoritative Cells 03–12 foundation artifacts
+- 4 authoritative control artifacts
+- 1 deterministic bundle index
+- 1 foundation persistence receipt
+- 17 verified files in total
+- no Parquet telemetry duplicated
+- no superseded V1 artifacts included
+- freeze semantic SHA: `4a9f6ecec30613c160b618dfe50e11e63b8f4c8c24d06eac351d5275c744a968`
+- bundle index semantic SHA: `55c8ef51f905945fb825fad3bb35b932ccf7e140f5ffe9d85d3430071ff7143b`
+- bundle index artifact SHA: `bdeee58930d9a13334640132e7a12fa9ace6222a19cfc2c8626e1fd430fd9b8f`
+- foundation persistence semantic SHA: `936b605cb1ce3c2d2b2977fed537df65c5e61e19e26ff655f89b27b919d62879`
+
+## Superseded historical lineage
+
+The earlier `MODULE5_HEALTHY_TELEMETRY_V1` dataset was invalidated for formal KPI-readiness reasons and must not be restored by M05_02.
+
+The historical private Kaggle V1 dataset and its dependent freeze/bundle lineage are retained only as superseded provenance. Final Kaggle publication of the corrected Module 5 artifacts is deferred until platform clean-up.
 
 ## Provenance rule
 
-`M05_00_..._v1.ipynb` is preserved because its exact byte SHA is referenced by M05_01 provenance. `M05_00_..._v1_1.ipynb` is a post-M05_01 documentation refresh and does not rewrite that historical identity.
+`M05_00_Implementation_and_Causal_Observability_Reference_v1.ipynb` is preserved because its exact byte SHA `9c4db1552791510d3237fd8c7ff93cd7ae66d614d42fed0da7a268bf77fa910e` is referenced by M05_01 provenance. The V1.1 M05_00 notebook is a documentation refresh and does not rewrite that historical identity.
 
-Private Kaggle datasets are not public data sources and must not be presented as production/operator telemetry. The M05_01 telemetry is synthetic.
+All M05_01 telemetry is synthetic and must not be represented as production operator telemetry.
