@@ -30,9 +30,9 @@ The final foundation audit identified:
 
 The corrected V1.2 registry freezes the exact current bytes and verified semantic identities of all 11 foundation artifacts.
 
-## Preferred M05_02 workflow
+## Completed M05_02 workflow
 
-M05_02 should **restore rather than rebuild** M05_01:
+M05_02 **restored rather than rebuilt** M05_01:
 
 1. mount Google Drive;
 2. load the frozen foundation bundle V1.2;
@@ -41,7 +41,10 @@ M05_02 should **restore rather than rebuild** M05_01:
 5. load the canonical telemetry V1.1;
 6. verify the canonical manifest and dataset semantic identity;
 7. derive formal TS 28.554 KPI values deterministically;
-8. validate the healthy KPI baseline.
+8. validate the healthy KPI baseline;
+9. persist NRCellCU and SubNetwork KPI Parquets immutably;
+10. persist the KPI derivation manifest and validation receipt;
+11. require `M05_02_CLOSEOUT_PASS=True`.
 
 ## Root-of-trust identities
 
@@ -56,3 +59,26 @@ M05_02 should **restore rather than rebuild** M05_01:
 ## Data boundary
 
 All M05_01 telemetry is synthetic. No production operator data, subscriber information or customer network telemetry is included.
+
+
+## Preferred M05_03+ restore workflow
+
+M05_03 and later notebooks should not replay the full M05_02 restore/derivation ceremony.
+
+A normal downstream notebook should begin with one consolidated upstream bootstrap/provenance cell that:
+
+1. mounts Google Drive;
+2. locates the required M05_01/M05_02 upstream artifacts;
+3. verifies the expected semantic SHA identities;
+4. verifies the required KPI file SHA-256 identities;
+5. rejects superseded lineage;
+6. exposes one upstream-restore PASS gate.
+
+The full 92-partition re-hash and formal Accessibility re-derivation are repeated only when the authoritative upstream lineage changes or when a notebook is explicitly auditing those artifacts.
+
+### M05_02 downstream identities
+
+- NRCellCU KPI SHA-256: `709c9883bad799dec3907624a7590f5e44356d9fef7c00f4446d165fd1b2223f`
+- SubNetwork KPI SHA-256: `18d5a60ca91139242e85e9f5468346a66bedf70f8736e01507568f2afb9c42ba`
+- KPI derivation manifest semantic SHA: `3b0d6271c0aba98d3cf0ac3907ec21fea7fc113ba865ae8f6f0cdf864dd5104e`
+- validation receipt semantic SHA: `08d12c9564b3d5dff14f4770a3bfbf0d4853df1a3dcbbfd824511102051b66ae`

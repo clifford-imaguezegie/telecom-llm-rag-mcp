@@ -80,7 +80,7 @@ Key engineering dimensions include:
 | **Module 2** | Telecom RAG V1 + expanded multi-model benchmark | ✅ Completed |
 | **Module 3** | Knowledge-Based MCP + cross-LLM evaluation      | ✅ Completed |
 | **Module 4** | Adaptive RAG + Knowledge-Based MCP Hybrid       | ✅ Completed |
-| **Module 5** | Agentic Telecom AI                              | 🔄 In Progress — M05_01 Complete |
+| **Module 5** | Agentic Telecom AI                              | 🔄 In Progress — M05_02 Complete |
 | **Module 6** | Production Architecture + RAG V2                | ⏳ Planned   |
 | **Module 7** | Autonomous Telecom Operations                   | ⏳ Planned   |
 
@@ -124,7 +124,8 @@ The repository is organized by architectural module so that each experimental st
 │   └── module_5/
 │       ├── M05_00_Implementation_and_Causal_Observability_Reference_v1.ipynb
 │       ├── M05_00_Implementation_and_Causal_Observability_Reference_v1_1.ipynb
-│       └── M05_01_Foundation_and_Healthy_Telemetry_v1.ipynb
+│       ├── M05_01_Foundation_and_Healthy_Telemetry_v1.ipynb
+│       └── M05_02_Runtime_Restore_KPI_Derivation_and_Healthy_Validation_v1.ipynb
 │
 ├── docs/
 │   ├── module_3/
@@ -150,6 +151,7 @@ The repository is organized by architectural module so that each experimental st
 │       ├── ARTIFACTS.md
 │       ├── REPRODUCIBILITY.md
 │       ├── M05_01_NOTEBOOK_REVIEW.md
+│       ├── M05_02_NOTEBOOK_REVIEW.md
 │       └── MODULE5_CHANGELOG.md
 │
 ├── results/
@@ -1338,6 +1340,12 @@ fc3c38f980209b1d5a9504b30f98efa6636ba7eedc153ef4f4d1e7bb49be156a
 
 Canonical telemetry semantic SHA
 c1fb3a49eacd63f45a98986322d536b74d21e585ff8bc49a4649ef11b3b34cd7
+
+M05_02 KPI manifest semantic SHA
+3b0d6271c0aba98d3cf0ac3907ec21fea7fc113ba865ae8f6f0cdf864dd5104e
+
+M05_02 validation receipt semantic SHA
+08d12c9564b3d5dff14f4770a3bfbf0d4853df1a3dcbbfd824511102051b66ae
 ```
 
 The earlier V1 telemetry and its dependent freeze lineage are retained only as historical provenance and are **not authorized for M05_02 restoration**. Kaggle persistence of the final Module 5 artifacts is deferred until final platform clean-up.
@@ -1352,7 +1360,7 @@ M05_01
 Foundation + healthy telemetry                     ✅ Complete
         ↓
 M05_02
-Runtime restore + formal KPI derivation + healthy validation
+Runtime restore + formal KPI derivation + healthy validation ✅ Complete
         ↓
 M05_03
 Sionna independent radio reference validation
@@ -1376,7 +1384,7 @@ M05_09
 Formal evaluation / closeout
 ```
 
-M05_02 will restore the authoritative V1.2 foundation bundle and V1.1 canonical telemetry from Google Drive, verify their frozen identities, and then deterministically derive and validate the two formal TS 28.554 RAN Accessibility KPIs.
+M05_02 restored the authoritative V1.2 foundation bundle and V1.1 canonical telemetry from Google Drive, verified their frozen identities, and deterministically derived and validated the formal TS 28.554 Partial and Total DRB Accessibility KPIs. The next stage is M05_03 — Sionna independent radio reference validation.
 
 ---
 
@@ -1579,25 +1587,24 @@ Several principles are retained across modules:
 
 ### Module 5 — Agentic Telecom AI
 
-**M05_01 — Foundation + Healthy Telemetry is complete and frozen.**
+**M05_02 — Runtime Restore + Formal KPI Derivation + Healthy Validation is complete.**
 
-Completed in M05_01:
+The Module 5 foundation now includes:
 
-* 3GPP-aligned Accessibility KPI/PM foundation,
-* standards-complete dependency graph,
-* causal-observability graph and operational telemetry contract,
-* deterministic 10-site / 30-cell synthetic topology,
-* 7-day generator-qualification pilot,
-* 92-day canonical healthy baseline,
+* frozen M05_01 V1.2 standards/causal foundation,
+* corrected 92-day canonical V1.1 healthy telemetry,
 * 18,829,824 observations across 92 daily Parquet partitions,
-* verified private Kaggle persistence,
-* provenance reconciliation,
-* root-of-trust freeze manifest,
-* and durable frozen-foundation persistence.
+* deterministic Partial and Total DRB Accessibility derivation,
+* 794,880 validated NRCellCU × interval × 5QI KPI records,
+* 26,496 validated SubNetwork × interval × 5QI KPI records,
+* healthy cell-level and SubNetwork reference baselines,
+* immutable Google Drive KPI persistence,
+* KPI derivation manifest and validation receipt,
+* and `M05_02_CLOSEOUT_PASS=True`.
 
-**Next implementation stage: M05_02 — Runtime Restore + Formal KPI Derivation + Healthy Validation.**
+**Next implementation stage: M05_03 — Sionna Radio Reference Validation.**
 
-Subsequent Module 5 stages will add Sionna validation, controlled incidents, Telemetry MCP, specialist ML MCP, LangGraph investigation, policy-controlled actions and formal trajectory-level evaluation.
+Subsequent Module 5 stages will add controlled incidents, Telemetry MCP, specialist ML MCP, LangGraph investigation, policy-controlled actions and formal trajectory-level evaluation.
 
 ---
 

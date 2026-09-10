@@ -38,8 +38,8 @@ Post-action verification
 |---|---|---|
 | M05_00 | architecture / implementation / causal reference | maintained reference |
 | M05_01 | foundation + healthy telemetry | **complete / frozen** |
-| M05_02 | runtime restore + formal KPI derivation + healthy validation | next |
-| M05_03 | Sionna independent radio reference validation | planned |
+| M05_02 | runtime restore + formal KPI derivation + healthy validation | **complete / validated** |
+| M05_03 | Sionna independent radio reference validation | **next** |
 | M05_04 | controlled incidents + benchmark | planned |
 | M05_05 | Telemetry MCP | planned |
 | M05_06 | specialist ML MCP | planned |
@@ -79,3 +79,22 @@ Canonical telemetry V1.1
 The authoritative freeze semantic SHA is `4a9f6ecec30613c160b618dfe50e11e63b8f4c8c24d06eac351d5275c744a968` and the canonical telemetry semantic SHA is `c1fb3a49eacd63f45a98986322d536b74d21e585ff8bc49a4649ef11b3b34cd7`.
 
 The earlier V1 telemetry lineage is invalidated for downstream use. Kaggle publication of the corrected artifacts is deferred until final Module 5 clean-up.
+
+
+## M05_02 validated handover state
+
+M05_02 independently restored the frozen M05_01 lineage and established reusable deterministic KPI truth without introducing fault injection, ML inference or LLM inference.
+
+```text
+M05_01 frozen foundation + canonical telemetry
+        ↓
+M05_02 deterministic PM binding and KPI derivation
+        ↓
+Validated NRCellCU and SubNetwork Accessibility KPI products
+        ↓
+M05_03 independent Sionna radio reference validation
+```
+
+The validated M05_02 result space contains 794,880 `NRCellCU × 15-minute interval × 5QI` KPI records and 26,496 `SubNetwork × 15-minute interval × 5QI` KPI records.
+
+Downstream stages restore and verify the M05_02 manifest/receipt identities rather than repeating the 92-partition physical verification and full KPI derivation workflow.
