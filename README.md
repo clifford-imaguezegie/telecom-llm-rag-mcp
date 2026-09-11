@@ -79,7 +79,7 @@ Key engineering dimensions include:
 | **Module 1** | Standalone LLM baseline                         | ✅ Completed |
 | **Module 2** | Telecom RAG V1 + expanded multi-model benchmark | ✅ Completed |
 | **Module 3** | Knowledge-Based MCP + cross-LLM evaluation      | ✅ Completed |
-| **Module 4** | Adaptive RAG + Knowledge-Based MCP Hybrid       | ✅ Completed |
+| **Module 4** | Adaptive RAG + Knowledge-Based MCP Hybrid + Knowledge Orchestration Runtime | ✅ Completed |
 | **Module 5** | Agentic Telecom AI                              | 🔄 In Progress — M05_03 Complete |
 | **Module 6** | Production Architecture + RAG V2                | ⏳ Planned   |
 | **Module 7** | Autonomous Telecom Operations                   | ⏳ Planned   |
@@ -119,7 +119,8 @@ The repository is organized by architectural module so that each experimental st
 │   │   └── 19_module3_final_ab_cross_llm_analysis.ipynb
 │   │
 │   ├── module_4/
-│   │   └── 20_rag_mcp_hybrid.ipynb
+│   │   ├── 20_rag_mcp_hybrid.ipynb
+│   │   └── 21_module4_knowledge_orchestration_runtime.ipynb
 │   │
 │   └── module_5/
 │       ├── M05_00_Implementation_and_Causal_Observability_Reference_v1.ipynb
@@ -143,7 +144,11 @@ The repository is organized by architectural module so that each experimental st
 │   │   ├── LIMITATIONS.md
 │   │   ├── ARTIFACTS.md
 │   │   ├── NOTEBOOK_CLEANUP_REPORT.md
-│   │   └── MODULE4_CHANGELOG.md
+│   │   ├── MODULE4_CHANGELOG.md
+│   │   ├── KNOWLEDGE_ORCHESTRATION_RUNTIME.md
+│   │   ├── NOTEBOOK21_GUIDE.md
+│   │   ├── NOTEBOOK21_VALIDATION.md
+│   │   └── DEPLOYMENT_RUNTIME.md
 │   │
 │   └── module_5/
 │       ├── README.md
@@ -1219,6 +1224,122 @@ docs/module_4/EVALUATION.md
 
 ---
 
+# Module 4 Deployment Runtime — Telecom AI Knowledge Orchestration
+
+After completing the formal Module 4 research experiment, a separate deployment-oriented notebook was created to package the validated knowledge-access concepts into a flexible runtime:
+
+```text
+notebooks/module_4/21_module4_knowledge_orchestration_runtime.ipynb
+```
+
+Notebook 21 does **not** replace the frozen Module 4 experiment in `20_rag_mcp_hybrid.ipynb`.
+
+Instead, it adapts the research architecture for a practical CPU-first deployment runtime.
+
+The deployment runtime combines:
+
+* deterministic pre-LLM security controls,
+* Granite knowledge-scope routing,
+* hosted Gemma 4 generation through OpenRouter,
+* full Semantic RAG V1,
+* MCP Version A remote query-time knowledge access,
+* LLM-selected `RAG_ONLY` / `MCP_ONLY` / `HYBRID` retrieval,
+* requirement-bounded adaptive evidence acquisition,
+* live external grounding through Open-WebSearch CLI,
+* deterministic local date/time handling,
+* stable general-knowledge fallback,
+* and connected-corpus evidence-relative comparative evaluation.
+
+The high-level runtime architecture is:
+
+```text
+User Question
+      ↓
+Deterministic Security
+      ↓
+Granite Knowledge-Scope Router
+      ├── Connected Technical Corpus
+      │      ↓
+      │   Gemma Retrieval Planner
+      │      ├── RAG_ONLY
+      │      ├── MCP_ONLY
+      │      └── HYBRID
+      │      ↓
+      │   Adaptive Evidence Loop
+      │      ↓
+      │   Grounded Gemma Answer
+      │      ↓
+      │   Frozen Granite Comparative Judge
+      │
+      ├── Live External Scope
+      │      ├── Direct date/time → Local Python Runtime
+      │      └── Changing public facts → Open-WebSearch CLI
+      │
+      └── Stable General Knowledge
+             ↓
+          Gemma Fallback + Scope Caveat
+```
+
+### Why MCP Version A is used in Notebook 21
+
+The formal Module 4 experiment reused the persistent Version B MCP architecture to preserve experimental continuity.
+
+The deployment notebook intentionally uses **MCP Version A** instead because it provides the same query-time telecom knowledge access without requiring the approximately 69 GB persistent Version B deployment footprint.
+
+This is a deployment adaptation rather than a revision of the frozen Module 4 experiment.
+
+### Canonical deployment runtime
+
+The final deployment implementation is:
+
+> **Cell 4D / internal runtime 6Y v1.3**
+
+Legacy identifiers such as `MODULE 4C.6Y` and `4C6*` remain inside the validated code for compatibility and regression avoidance.
+
+### Fresh sequential validation
+
+The canonical clean-run question was:
+
+```text
+What is 5G?
+```
+
+Observed result:
+
+| Validation element | Result |
+| ------------------ | ------ |
+| Granite knowledge route | `TELECOM_GROUNDED` |
+| Retrieval architecture | `RAG_ONLY` |
+| Retrieval rounds | 1 |
+| Evidence items | 5 |
+| Context | 12,500 characters |
+| Requirement-bounded sufficiency | `True` |
+| Baseline claims | 21 |
+| Grounded claims | 15 |
+| Baseline evidence-relative risk | 26.7% — MODERATE |
+| Grounded evidence-relative risk | 0.0% — LOW |
+| Grounded supported claims | 15 / 15 |
+| Complete 4C.6Y validation | `PASS` |
+
+Additional validated knowledge-scope behaviours include:
+
+* **live external grounding** for current/person queries,
+* **local deterministic runtime** for date/time questions,
+* and **stable general-knowledge fallback** when neither connected technical knowledge nor live external information is required.
+
+The deployment runtime therefore extends the Module 4 research conclusion from adaptive retrieval selection into **adaptive knowledge-source orchestration**.
+
+Detailed deployment-runtime documentation is available in:
+
+```text
+docs/module_4/KNOWLEDGE_ORCHESTRATION_RUNTIME.md
+docs/module_4/NOTEBOOK21_GUIDE.md
+docs/module_4/NOTEBOOK21_VALIDATION.md
+docs/module_4/DEPLOYMENT_RUNTIME.md
+```
+
+---
+
 # Module 5 — Agentic Telecom AI
 
 Module 4 answered:
@@ -1566,8 +1687,18 @@ Several principles are retained across modules:
 * fault-tolerant checkpointing,
 * CPU-only post-hoc analysis,
 * portable experiment archival,
-* cleaned executed notebook,
-* curated GitHub reproducibility package.
+* cleaned executed research notebook,
+* curated GitHub reproducibility package,
+* deployment-oriented Notebook 21 knowledge-orchestration runtime,
+* hosted Gemma 4 + Granite knowledge-scope routing,
+* deployment reuse of RAG V1 + MCP Version A,
+* adaptive `RAG_ONLY` / `MCP_ONLY` / `HYBRID` knowledge access,
+* live external grounding through Open-WebSearch CLI,
+* deterministic local date/time path,
+* stable general-knowledge fallback,
+* fresh sequential deployment-runtime validation,
+* 15 / 15 grounded claims supported on the canonical 5G validation run,
+* 0.0% connected-evidence-relative grounded risk on that validation run.
 
 ---
 
@@ -1652,6 +1783,19 @@ M05_01 established that network-state generation, standards definitions, operati
 ## 10. Agent benchmarks require hidden truth and discriminative evidence
 
 M05_03 demonstrated that a useful troubleshooting benchmark needs more than degraded KPIs. Each incident should have controlled causal signatures, exclusion evidence, plausible competing hypotheses, topology/chronology context, held-out evaluation cases and a strict boundary between agent-visible evidence and private benchmark truth.
+
+## 11. Knowledge-source orchestration is broader than retrieval routing
+
+The Module 4 deployment runtime showed that a practical AI system should decide **where authoritative knowledge should come from before deciding how to retrieve it**.
+
+The resulting hierarchy separates:
+
+* connected controlled technical knowledge,
+* live external public information,
+* deterministic local runtime utilities,
+* and stable general model knowledge.
+
+Within the connected technical path, adaptive RAG / MCP / Hybrid selection remains available.
 
 ---
 
